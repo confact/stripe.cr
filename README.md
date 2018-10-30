@@ -62,7 +62,7 @@ charge = stripe.create_charge(amount: 1000, currency: "usd", customer: customer)
 
 ☑️ Retrieve a customer
 
-⬜️ Update a customer
+☑️ Update a customer
 
 ⬜️ Delete a customer
 
