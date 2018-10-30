@@ -1,75 +1,51 @@
 class Stripe
-  record CreateCustomer::Shipping,
-    address : Address,
-    name : String,
-    phone : String? = nil do
-    record Address,
-      line1 : String,
-      city : String? = nil,
-      country : String? = nil,
-      line2 : String? = nil,
-      postal_code : String? = nil,
-      state : String? = nil do
-      def to_nt
-        {% begin %}
-        {
-          {% for x in %w(line1 city country line2 postal_code state) %}
-            {{x}}: {{x.id}},
-          {% end %}
-        }
-      {% end %}
-      end
-    end
-
-    def to_nt
-      {
-        address: address.to_nt,
-        name:    name,
-        phone:   phone,
-      }
-    end
-  end
-
-  record CreateCustomer::TaxInfo,
-    tax_id : String,
-    type : Type do
-    enum Type
-      Vat
-    end
-
-    def to_nt
-      {
-        tax_id: tax_id,
-        type:   type.to_s,
-      }
-    end
-  end
-
   def create_customer(
     account_balance : Int32? = nil,
     coupon : String? = nil,
-    default_source : String? = nil,
+    default_source : String | Token? = nil,
     description : String | Token? = nil,
     email : String? = nil,
     invoice_prefix : String? = nil,
     metadata : Hash? = nil,
-    shipping : CreateCustomer::Shipping? = nil,
-    source : String | Token? = nil,
-    tax_info : CreateCustomer::TaxInfo? = nil
-  )
-    default_source = default_source.as(Token).id if default_source.is_a?(Token)
-    source = source.as(Token).id if source.is_a?(Token)
+    shipping : T? = nil,
+    source : String | Token | PaymentMethods::Card? = nil,
+    tax_info : U? = nil
+  ) : Customer forall T, U
+    case default_source
+    when Token
+      default_source = default_source.id
+    end
+
+    validate shipping, {{T}} do
+      type address do
+        type line1 : String
+        type city : String? = nil
+        type country : String? = nil
+        type line2 : String? = nil
+        type postal_code : String? = nil
+        type state : String? = nil
+      end
+
+      type name : String
+      type phone : String? = nil
+    end
+
+    case source
+    when Token, PaymentMethods::Card
+      source = source.id
+    end
+
+    validate tax_info, {{U}} do
+      type tax_id : String
+      type type : Customer::TaxInfo::Type
+    end
 
     io = IO::Memory.new
     builder = HTTP::Params::Builder.new(io)
 
-    {% for x in %w(account_balance coupon default_source description email invoice_prefix source) %}
+    {% for x in %w(account_balance coupon default_source description email invoice_prefix metadata shipping source tax_info) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
-
-    builder.add("metadata", metadata) unless metadata.nil?
-    builder.add("shipping", shipping.to_nt) unless shipping.nil?
-    builder.add("tax_info", tax_info.to_nt) unless tax_info.nil?
 
     response = @client.post("/v1/customers", form: io.to_s)
 

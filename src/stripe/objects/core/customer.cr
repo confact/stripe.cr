@@ -5,8 +5,12 @@ struct Stripe::Customer
   struct TaxInfo
     include JSON::Serializable
 
+    enum Type
+      Vat
+    end
+
     getter tax_id : String
-    getter type : String
+    getter type : Type
   end
 
   struct TaxInfoVerification

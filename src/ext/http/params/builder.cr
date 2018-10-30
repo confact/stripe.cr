@@ -1,10 +1,14 @@
 require "http/params"
 
 class HTTP::Params::Builder
+  def add(key, value : Number | Bool)
+    add(key, value.to_s)
+  end
+
   def add(key, value : Hash | NamedTuple, path : Array(String)? = nil)
     value.each do |k, v|
       if v.is_a?(Hash) || v.is_a?(NamedTuple)
-        _path = path ? path.dup : [key]
+        _path = path ? path.dup : [key.to_s]
         add(k, v, _path.push(k.to_s))
       elsif v.nil?
         # Skip nil values
@@ -16,8 +20,8 @@ class HTTP::Params::Builder
           _key = "#{key}[#{k}]"
         end
 
-        # Values are converted to strings
-        add(_key, v.to_s)
+        # Values are *tried* to be converted to strings
+        add(_key, v.try &.to_s)
       end
     end
 

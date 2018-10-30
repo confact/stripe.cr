@@ -1,38 +1,29 @@
 class Stripe
-  record CreateCardToken::Card,
-    exp_month : Int32,
-    exp_year : Int32,
-    number : String,
-    currency : String? = nil,
-    cvc : Int32? = nil,
-    name : String? = nil,
-    address_line1 : String? = nil,
-    address_line2 : String? = nil,
-    address_city : String? = nil,
-    address_state : String? = nil,
-    address_zip : String? = nil,
-    address_country : String? = nil do
-    def to_nt
-      {% begin %}
-        {
-          {% for x in %w(exp_month exp_year number currency cvc name address_line1 address_line2 address_city address_state address_zip address_country) %}
-            {{x}}: {{x.id}},
-          {% end %}
-        }
-      {% end %}
-    end
-  end
-
   def create_card_token(
-    card : CreateCardToken::Card? = nil,
+    card : T? = nil,
     customer : String | Customer? = nil
-  )
+  ) : Token forall T
+    validate card, {{T}} do
+      type exp_month : Int32
+      type exp_year : Int32
+      type number : String
+      type currency : String? = nil
+      type cvc : Int32? = nil
+      type name : String? = nil
+      type address_line1 : String? = nil
+      type address_line2 : String? = nil
+      type address_city : String? = nil
+      type address_state : String? = nil
+      type address_zip : String? = nil
+      type address_country : String? = nil
+    end
+
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
     io = IO::Memory.new
     builder = HTTP::Params::Builder.new(io)
 
-    builder.add("card", card.to_nt)
+    builder.add("card", card) if card
     builder.add("customer", customer) if customer
 
     response = @client.post("/v1/tokens", form: io.to_s)

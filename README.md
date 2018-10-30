@@ -19,12 +19,12 @@ require "stripe"
 
 stripe = Stripe.new("YOUR_API_TOKEN")
 
-token = stripe.create_card_token(card: Stripe::CreateCardToken::Card.new(
+token = stripe.create_card_token(card: {
   number: "4242424242424242",
   exp_month: 12,
   exp_year: 2019,
   cvc: 123,
-))
+})
 
 customer = stripe.create_customer(source: token)
 charge = stripe.create_charge(amount: 1000, currency: "usd", customer: customer)
