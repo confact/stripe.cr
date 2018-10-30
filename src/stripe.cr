@@ -1,6 +1,6 @@
 require "json"
 require "http/client"
-require "../ext/**"
+require "./ext/**"
 
 class Stripe
   BASE_URL = URI.parse("https://api.stripe.com")
