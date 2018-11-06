@@ -21,7 +21,7 @@ class Stripe
         {%
           declaration = exp.args[0]
 
-          unless source == Nil || source <= Stripe::Unset
+          unless source == Nil || source.resolve <= Stripe::Unset
             if declaration.value.is_a?(Nop)
               raise "Missing #{arg}[#{declaration.var}] argument" unless source.named_args[declaration.var]
             end
@@ -42,7 +42,7 @@ class Stripe
         %}
       {% else %}
         {% name = exp.args[0] %}
-        {% unless source == Nil || source <= Stripe::Unset %}
+        {% unless source == Nil || source.resolve <= Stripe::Unset %}
           {% new_source = source.named_args[name.symbolize] %}
           {% if new_source.is_a?(Generic) && new_source.name.stringify == "NamedTuple" %}
             validate({{"#{arg}[#{name}]".id}}, {{new_source}}) {{exp.block}}
