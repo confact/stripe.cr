@@ -40,7 +40,7 @@ class Stripe
 
     case source
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
-      source = source.id
+      source = source.not_nil!.id
     end
 
     io = IO::Memory.new

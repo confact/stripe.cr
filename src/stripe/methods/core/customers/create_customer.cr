@@ -32,7 +32,7 @@ class Stripe
 
     case source
     when Token, PaymentMethods::Card
-      source = source.id
+      source = source.not_nil!.id
     end
 
     validate tax_info, {{U}} do
