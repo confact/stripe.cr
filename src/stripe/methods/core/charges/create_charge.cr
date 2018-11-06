@@ -44,7 +44,7 @@ class Stripe
     end
 
     io = IO::Memory.new
-    builder = HTTP::Params::Builder.new(io)
+    builder = ParamsBuilder.new(io)
 
     {% for x in %w(amount currency application_fee capture customer description destination metadata on_behalf_of receipt_email shipping source statement_descriptor transfer_group) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?

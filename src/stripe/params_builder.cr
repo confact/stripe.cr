@@ -1,6 +1,6 @@
 require "http/params"
 
-class HTTP::Params::Builder
+class Stripe::ParamsBuilder < HTTP::Params::Builder
   def add(key, value : Number | Bool)
     add(key, value.to_s)
   end
@@ -20,8 +20,10 @@ class HTTP::Params::Builder
           _key = "#{key}[#{k}]"
         end
 
-        # Values are *tried* to be converted to strings
-        add(_key, v.try &.to_s)
+        case v
+        when Enum then add(_key, v.to_s.underscore)
+        else           add(_key, v.to_s)
+        end
       end
     end
 

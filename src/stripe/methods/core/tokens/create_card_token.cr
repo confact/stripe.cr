@@ -21,7 +21,7 @@ class Stripe
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
     io = IO::Memory.new
-    builder = HTTP::Params::Builder.new(io)
+    builder = ParamsBuilder.new(io)
 
     builder.add("card", card) if card
     builder.add("customer", customer) if customer
