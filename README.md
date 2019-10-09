@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   stripe:
-    github: vladfaust/stripe.cr
+    github: confact/stripe.cr
 ```
 
 ## Usage
@@ -38,104 +38,127 @@ charge = stripe.create_charge(amount: 1000, currency: "usd", customer: customer)
 
 ##### Balance
 
-☑️ Retrieve balance
+- [x] Retrieve balance
 
-⬜️ Retrieve a balance transaction
+- [ ] Retrieve a balance transaction
 
-⬜️ List all balance history
+- [ ] List all balance history
 
 ##### Charges
 
-☑️ Create a charge
+- [x] Create a charge
 
-⬜️ Retrieve a charge
+- [ ] Retrieve a charge
 
-⬜️ Update a charge
+- [ ] Update a charge
 
-⬜️ Capture a charge
+- [ ] Capture a charge
 
-⬜️ List all charges
+- [ ] List all charges
+
+##### Subscriptions
+- [x] Create a Subscription
+
+- [x] Retrieve a Subscription
+
+- [x] Update a Subscription
+
+- [ ] Delete a Subscription
+
+- [ ] List all Subscriptions
+
+##### Setup Intent
+
+- [x] Create a Setup Intent
+
+- [x] Retrieve a Setup Intent
+
+- [ ] Update a Setup Intent
+
+- [ ] Delete a Setup Intent
+
+- [ ] List all Setup Intents
 
 ##### Customers
 
-☑️ Create a customer
+- [x] Create a customer
 
-☑️ Retrieve a customer
+- [x] Retrieve a customer
 
-☑️ Update a customer
+- [x] Update a customer
 
-⬜️ Delete a customer
+- [ ] Delete a customer
 
-⬜️ List all customers
+- [ ] List all customers
 
 ##### Tokens
 
-☑️ Create a card token
+- [x] Create a card token
 
-⬜️ Create a bank account token
+- [ ] Create a bank account token
 
-⬜️ Create a PII token
+- [ ] Create a PII token
 
-⬜️ Create an account token
+- [ ] Create an account token
 
-⬜️ Retrieve a token
+- [ ] Retrieve a token
 
 ### Objects
 
 #### Core
 
-☑️ Balance
+- [x] Balance
 
-⬜️ Balance transaction
+- [ ] Balance transaction
 
-☑️ Charge
+- [x] Charge
 
-☑️ Customer
+- [x] Customer
 
-⬜️ Dispute
+- [ ] Dispute
 
-⬜️ Dispute evidence
+- [ ] Dispute evidence
 
-⬜️ Event
+- [ ] Event
 
-⬜️ File
+- [ ] File
 
-⬜️ File link
+- [ ] File link
 
-⬜️ Payout
+- [ ] Payout
 
-⬜️ Product
+- [ ] Product
 
-☑️ Refund
+- [x] Refund
 
-☑️ Token
+- [x] Token
 
 #### Payment methods
 
-☑️ Bank account
+- [x] Bank account
 
-☑️ Card
+- [x] Card
 
-⬜️ Source
+- [ ] Source
 
 #### Connect
 
 
-⬜️ Account
+- [ ] Account
 
-⬜️ Login link
+- [ ] Login link
 
-⬜️ Application fee refund
+- [ ] Application fee refund
 
-⬜️ Application fee
+- [ ] Application fee
 
-⬜️ Country spec
+- [ ] Country spec
 
-⬜️ Top-up
+- [ ] Top-up
 
-⬜️ Transfer
+- [ ] Transfer
 
-⬜️ Transfer reversal
+- [ ] Transfer reversal
 
 ## Development
 
@@ -143,7 +166,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/vladfaust/stripe.cr/fork>)
+1. Fork it (<https://github.com/confact/stripe.cr/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -151,4 +174,5 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [vladfaust](https://github.com/vladfaust) Vlad Faust - creator, maintainer
+- [confact](https://github.com/confact) Håkan Nylén - maintainer,
+- [vladfaust](https://github.com/vladfaust) Vlad Faust - creator

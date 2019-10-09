@@ -41,7 +41,7 @@ struct Stripe::Customer
   getter livemode : Bool
   getter metadata : Hash(String, String)
   getter shipping : Shipping?
-  getter sources : List(PaymentMethods::Card | PaymentMethods::BankAccount)?
+  getter sources : List(PaymentMethods::Card | PaymentMethods::BankAccount)
   # getter subscriptions : List?
   getter tax_info : TaxInfo?
   getter tax_info_verification : TaxInfoVerification?
