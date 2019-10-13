@@ -2,6 +2,16 @@
 struct Stripe::Subscription
   include JSON::Serializable
 
+  enum Status
+    Incomplete
+    IncompleteExpired
+    Trailing
+    Active
+    PastDue
+    Canceled
+    Unpaid
+  end
+
   struct Item
     include JSON::Serializable
 
@@ -62,6 +72,9 @@ struct Stripe::Subscription
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter start_date : Time
+
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Subscription::Status))]
+  getter status : Status
 
   getter items : List(Item)
 end

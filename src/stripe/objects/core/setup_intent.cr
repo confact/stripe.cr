@@ -1,6 +1,14 @@
 struct Stripe::SetupIntent
   include JSON::Serializable
 
+  enum Status
+    RequiresPaymentMethod
+    RequiresConfirmation
+    RequiresAction
+    Processing
+    Canceled
+    Succeeded
+  end
 
   getter id : String
   getter application : String?
@@ -16,6 +24,8 @@ struct Stripe::SetupIntent
   getter last_setup_error : Hash(String, String | PaymentMethods::Card | PaymentMethods::BankAccount)?
   getter metadata : Hash(String, String)?
   getter payment_method_types : Array(String)
-  getter status : String
+
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::SetupIntent::Status))]
+  getter status : Status
   getter usage : String
 end
