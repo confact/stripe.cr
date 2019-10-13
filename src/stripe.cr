@@ -15,6 +15,16 @@ class Stripe
     end
   end
 
+  def initialize(api_key : String, api_version : String)
+    @client = HTTP::Client.new(BASE_URL)
+    @client.before_request do |request|
+      request.headers["Authorization"] = "Bearer #{api_key}"
+      unless api_version == Nil
+        request.headers["Stripe-Version"] = api_version
+      end
+    end
+  end
+
   private macro validate(arg, source, &block)
     {% for exp in block.body.expressions %}
       {% if !exp.block %}
