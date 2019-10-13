@@ -103,6 +103,19 @@ charge = stripe.create_charge(amount: 1000, currency: "usd", customer: customer)
 
 - [ ] Retrieve a token
 
+##### Invoices
+
+- [x] Create a invoice
+
+- [x] Retrieve a invoice
+
+- [x] Update a invoice
+
+- [ ] Delete a invoice
+
+- [ ] List all invoices
+
+
 ### Objects
 
 #### Core
