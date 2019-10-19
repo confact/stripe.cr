@@ -30,6 +30,16 @@ customer = stripe.create_customer(source: token)
 charge = stripe.create_charge(amount: 1000, currency: "usd", customer: customer)
 ```
 
+### custom API version
+
+You can set custom api version if needed.
+
+```crystal
+require "stripe"
+
+stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
+```
+
 ## Progress
 
 ### API methods
