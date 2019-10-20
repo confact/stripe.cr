@@ -40,6 +40,30 @@ require "stripe"
 stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
 ```
 
+### Example of setting up a subscription
+
+Here is a simple way to setup a subscription by using setupintent.
+
+1. First create setup intent to get a secret we will give the frontend:
+```crystal
+setupintent = stripe.create_setup_intent
+```
+
+2. Use stripe elements.js or checkout with the setup intent secret (`client_secret`).
+3. After the form is filled and stripe send the token to back to us with the card token, lets start create the stuff for that token.
+3. create a customer with that token:
+```crystal
+  intent = stripe.retrieve_setup_intent(token)
+  customer = stripe.create_customer(email: user.email,
+                                     description: user.name,
+                                     payment_method: intent.payment_method,
+                                     invoice_settings: { default_payment_method: intent.payment_method })
+```
+4. create a subscription with that customer
+```crystal
+subscription = stripe.create_subscription(customer: customer, off_session: true, plan: STRIPE_PLAN_ID, trial_end: team.trial_due_at)
+```
+
 ## Progress
 
 ### API methods
@@ -73,7 +97,7 @@ stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
 
 - [x] Update a Subscription
 
-- [ ] Delete a Subscription
+- [x] Delete a Subscription
 
 - [ ] List all Subscriptions
 
@@ -82,6 +106,8 @@ stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
 - [x] Create a Setup Intent
 
 - [x] Retrieve a Setup Intent
+
+- [x] Confirm a Setup Intent
 
 - [ ] Update a Setup Intent
 
@@ -97,7 +123,7 @@ stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
 
 - [x] Update a customer
 
-- [ ] Delete a customer
+- [x] Delete a customer
 
 - [ ] List all customers
 
