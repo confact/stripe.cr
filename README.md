@@ -46,13 +46,14 @@ Here is a simple way to setup a subscription by using setupintent.
 
 1. First create setup intent to get a secret we will give the frontend:
 ```crystal
-setupintent = stripe.create_setup_intent
+  intent = stripe.create_setup_intent
 ```
 
 2. Use stripe elements.js or checkout with the setup intent secret (`client_secret`).
 3. After the form is filled and stripe send the token to back to us with the card token, lets start create the stuff for that token.
 3. create a customer with that token:
 ```crystal
+  token = params['StripeToken'] # or what the param for the token is called for you.
   intent = stripe.retrieve_setup_intent(token)
   customer = stripe.create_customer(email: user.email,
                                      description: user.name,
