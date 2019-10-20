@@ -19,9 +19,7 @@ class Stripe
     @client = HTTP::Client.new(BASE_URL)
     @client.before_request do |request|
       request.headers["Authorization"] = "Bearer #{api_key}"
-      unless api_version == Nil
-        request.headers["Stripe-Version"] = api_version
-      end
+      request.headers["Stripe-Version"] = api_version
     end
   end
 
