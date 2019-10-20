@@ -68,10 +68,10 @@ struct Stripe::Subscription
   getter plan : Stripe::Plan?
 
   @[JSON::Field(converter: Time::EpochConverter)]
-  getter start : Time
+  getter start : Time?
 
   @[JSON::Field(converter: Time::EpochConverter)]
-  getter start_date : Time
+  getter start_date : Time?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Subscription::Status))]
   getter status : Status
