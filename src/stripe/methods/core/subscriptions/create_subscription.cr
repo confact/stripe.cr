@@ -13,6 +13,8 @@ class Stripe
       default_source = default_source.id
     end
 
+    customer = customer.as(Customer).id if customer.is_a?(Customer)
+
     case default_payment_method
     when Token, PaymentMethods::Card
       default_payment_method = default_payment_method.not_nil!.id
