@@ -28,7 +28,7 @@ struct Stripe::Customer
   end
 
   getter id : String
-  getter account_balance : Int32
+  getter account_balance : Int32?
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time
