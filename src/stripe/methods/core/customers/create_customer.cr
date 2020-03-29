@@ -13,43 +13,6 @@ class Stripe
     tax_info : U? = nil,
     invoice_settings : U? = nil
   ) : Customer forall T, U
-    case default_source
-    when Token
-      default_source = default_source.id
-    end
-
-    validate shipping, {{T}} do
-      type address do
-        type line1 : String
-        type city : String? = nil
-        type country : String? = nil
-        type line2 : String? = nil
-        type postal_code : String? = nil
-        type state : String? = nil
-      end
-
-      type name : String
-      type phone : String? = nil
-    end
-
-    case source
-    when Token, PaymentMethods::Card
-      source = source.not_nil!.id
-    end
-
-    case payment_method
-    when Token
-      payment_method = payment_method.not_nil!.id
-    end
-
-    validate invoice_settings, {{T}} do
-      type default_payment_method : String
-    end
-
-    validate tax_info, {{U}} do
-      type tax_id : String
-      type type : Customer::TaxInfo::Type
-    end
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
