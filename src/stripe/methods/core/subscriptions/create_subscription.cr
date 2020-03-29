@@ -8,23 +8,6 @@ class Stripe
     metadata : Hash? = nil,
     items : U? = nil
   ) : Subscription forall T, U
-    case default_source
-    when Token
-      default_source = default_source.id
-    end
-
-    customer = customer.as(Customer).id if customer.is_a?(Customer)
-
-    case default_payment_method
-    when Token, PaymentMethods::Card
-      default_payment_method = default_payment_method.not_nil!.id
-    end
-
-    validate items, {{U}} do
-      type id : String,
-      type quantity : Int32,
-      type plan : String
-    end
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
