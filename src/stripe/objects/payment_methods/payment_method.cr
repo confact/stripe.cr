@@ -1,6 +1,12 @@
 struct Stripe::PaymentMethod
   include JSON::Serializable
 
+  struct BillingDetails
+    getter address : Stripe::Shipping::Address?
+    getter email : String?
+    getter name : String?
+    getter phone : String?
+  end
 
   getter id : String
   getter created : Time
@@ -9,7 +15,8 @@ struct Stripe::PaymentMethod
   getter type : String?
   getter livemode : Bool
 
-  getter billing_details : Stripe::Shipping::Address
+
+  getter billing_details : BillingDetails?
 
   getter card : Stripe::PaymentMethods::Card
 end
