@@ -14,6 +14,16 @@ class Stripe
     invoice_settings : U? = nil
   ) : Customer forall T, U
 
+    case source
+    when Token, PaymentMethods::Card, PaymentMethods::BankAccount
+      source = source.not_nil!.id
+    end
+
+    case payment_method
+    when Token, Stripe::PaymentMethod
+      source = source.not_nil!.id
+    end
+
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
