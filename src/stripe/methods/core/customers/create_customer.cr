@@ -42,7 +42,7 @@ class Stripe
       payment_method = payment_method.not_nil!.id
     end
 
-    validate invoice_settings, {{U}} do
+    validate invoice_settings, {{T}} do
       type default_payment_method : String
     end
 
