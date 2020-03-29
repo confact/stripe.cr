@@ -5,7 +5,7 @@ struct Stripe::Subscription
   enum Status
     Incomplete
     IncompleteExpired
-    Trailing
+    Trialing
     Active
     PastDue
     Canceled
