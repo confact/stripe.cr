@@ -17,27 +17,6 @@ class Stripe
   ) : Charge forall T, U
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
-    validate destination, {{T}} do
-      type account : String
-      type amount : Int32? = nil
-    end
-
-    validate shipping, {{U}} do
-      type address do
-        type line1 : String
-        type city : String? = nil
-        type country : String? = nil
-        type line2 : String? = nil
-        type postal_code : String? = nil
-        type state : String? = nil
-      end
-
-      type name : String
-      type carrier : String? = nil
-      type phone : String? = nil
-      type tracking_number : String? = nil
-    end
-
     case source
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
       source = source.not_nil!.id
