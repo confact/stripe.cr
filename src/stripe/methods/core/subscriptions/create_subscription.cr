@@ -15,6 +15,8 @@ class Stripe
     
     default_source = default_source.not_nil!.id if default_source.is_a?(Token)
     default_payment_method = default_payment_method.not_nil!.id if default_payment_method.is_a?(Token)
+    
+    trial_end = trial_end.to_rfc3339 unless trial_end.nil?
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
