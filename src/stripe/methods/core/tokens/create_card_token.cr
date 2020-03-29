@@ -3,20 +3,6 @@ class Stripe
     card : T? = nil,
     customer : String | Customer? = nil
   ) : Token forall T
-    validate card, {{T}} do
-      type exp_month : Int32
-      type exp_year : Int32
-      type number : String
-      type currency : String? = nil
-      type cvc : Int32? = nil
-      type name : String? = nil
-      type address_line1 : String? = nil
-      type address_line2 : String? = nil
-      type address_city : String? = nil
-      type address_state : String? = nil
-      type address_zip : String? = nil
-      type address_country : String? = nil
-    end
 
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
