@@ -7,13 +7,14 @@ class Stripe
     default_payment_method : String | Token? = nil,
     off_session : Bool? = nil,
     metadata : Hash? = nil,
-    items : U? = nil
+    items : U? = nil,
+    trial_end : Time? = nil
   ) : Subscription forall T, U
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(customer coupon plan default_source off_session metadata default_payment_method items) %}
+    {% for x in %w(customer coupon plan default_source off_session metadata default_payment_method items trial_end) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
