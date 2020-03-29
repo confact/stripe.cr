@@ -6,7 +6,7 @@ class Stripe
     description : String | Token? = nil,
     email : String? = nil,
     invoice_prefix : String? = nil,
-    payment_method : String | Token? = nil,
+    payment_method : String? | Token? | Stripe::PaymentMethod? = nil,
     metadata : Hash? = nil,
     shipping : T? = nil,
     source : String | Token | PaymentMethods::Card? = nil,
