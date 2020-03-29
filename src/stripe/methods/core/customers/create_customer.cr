@@ -54,7 +54,7 @@ class Stripe
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(account_balance coupon default_source payment_method description email invoice_prefix metadata shipping source tax_info) %}
+    {% for x in %w(account_balance coupon default_source payment_method description email invoice_prefix invoice_settings metadata shipping source tax_info) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
