@@ -37,8 +37,13 @@ class Stripe
       source = source.not_nil!.id
     end
 
+    case payment_method
+    when Token
+      payment_method = payment_method.not_nil!.id
+    end
+
     validate invoice_settings, {{U}} do
-      type default_payment_method : String | Token
+      type default_payment_method : String
     end
 
     validate tax_info, {{U}} do
