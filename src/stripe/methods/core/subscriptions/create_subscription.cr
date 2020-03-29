@@ -10,6 +10,11 @@ class Stripe
     items : U? = nil,
     trial_end : Time? = nil
   ) : Subscription forall T, U
+    
+    customer = customer.not_nil!.id if customer.is_a?(Customer)
+    
+    default_source = default_source.not_nil!.id if default_source.is_a?(Token)
+    default_payment_method = default_payment_method.not_nil!.id if default_payment_method.is_a?(Token)
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
