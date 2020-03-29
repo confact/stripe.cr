@@ -3,7 +3,7 @@ struct Stripe::PaymentMethod
 
   struct BillingDetails
     include JSON::Serializable
-    
+
     getter address : Stripe::Shipping::Address?
     getter email : String?
     getter name : String?
@@ -20,5 +20,5 @@ struct Stripe::PaymentMethod
 
   getter billing_details : BillingDetails?
 
-  getter card : Stripe::PaymentMethods::Card
+  getter card : Stripe::PaymentMethods::Card?
 end
