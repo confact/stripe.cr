@@ -19,6 +19,4 @@ struct Stripe::PaymentMethod
 
 
   getter billing_details : BillingDetails?
-
-  getter card : Stripe::PaymentMethods::Card?
 end
