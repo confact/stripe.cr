@@ -6,10 +6,12 @@ class Stripe
     description : String | Token? = nil,
     email : String? = nil,
     invoice_prefix : String? = nil,
+    payment_method : String | Token? = nil,
     metadata : Hash? = nil,
     shipping : T? = nil,
     source : String | Token | PaymentMethods::Card? = nil,
-    tax_info : U? = nil
+    tax_info : U? = nil,
+    invoice_settings : U? = nil
   ) : Customer forall T, U
     case default_source
     when Token
@@ -35,6 +37,10 @@ class Stripe
       source = source.not_nil!.id
     end
 
+    validate invoice_settings, {{U}} do
+      type default_payment_method : String | Token
+    end
+
     validate tax_info, {{U}} do
       type tax_id : String
       type type : Customer::TaxInfo::Type
@@ -43,7 +49,7 @@ class Stripe
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(account_balance coupon default_source description email invoice_prefix metadata shipping source tax_info) %}
+    {% for x in %w(account_balance coupon default_source payment_method description email invoice_prefix metadata shipping source tax_info) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
