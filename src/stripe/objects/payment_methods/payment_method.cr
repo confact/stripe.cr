@@ -2,6 +2,8 @@ struct Stripe::PaymentMethod
   include JSON::Serializable
 
   struct BillingDetails
+    include JSON::Serializable
+    
     getter address : Stripe::Shipping::Address?
     getter email : String?
     getter name : String?
