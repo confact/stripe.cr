@@ -10,12 +10,12 @@ class Stripe
     items : U? = nil,
     trial_end : Time? = nil
   ) : Subscription forall T, U
-    
+
     customer = customer.not_nil!.id if customer.is_a?(Customer)
-    
+
     default_source = default_source.not_nil!.id if default_source.is_a?(Token)
     default_payment_method = default_payment_method.not_nil!.id if default_payment_method.is_a?(Token)
-    
+
     trial_end = trial_end.to_rfc3339 unless trial_end.nil?
 
     io = IO::Memory.new
@@ -25,7 +25,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/subscription", form: io.to_s)
+    response = @client.post("/v1/subscriptions", form: io.to_s)
 
     if response.status_code == 200
       return Subscription.from_json(response.body)
