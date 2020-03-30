@@ -6,7 +6,7 @@ class Stripe
     on_behalf_of : String? = nil,
     usage : String? = nil,
     payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = nil,
-    return_url : String? = nil,
+    return_url : String? = nil
   ) : SetupIntent forall T, U
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 

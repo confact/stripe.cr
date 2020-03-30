@@ -6,7 +6,7 @@ class Stripe
     default_source : String | Token? | Unset = Unset.new,
     default_payment_method : String | Token? | Unset = Unset.new,
     metadata : Hash? | Unset = Unset.new,
-    items : U? | Unset = Unset.new,
+    items : U? | Unset = Unset.new
   ) : Subscription forall T, U
     default_source = default_source.as(Token).id if default_source.is_a?(Token)
 
@@ -14,8 +14,8 @@ class Stripe
 
     validate items, {{U}} do
       type id : String,
-      type quantity : Int32,
-      type plan : String
+        type quantity : Int32,
+          type plan : String
     end
 
     customer = customer.as(Customer).id if customer.is_a?(Customer)
@@ -28,7 +28,7 @@ class Stripe
     {% end %}
 
     case subscription
-    when String   then sub_id = subscription
+    when String       then sub_id = subscription
     when Subscription then sub_id = subscription.id
     end
 

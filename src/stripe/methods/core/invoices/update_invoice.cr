@@ -20,7 +20,7 @@ class Stripe
     {% end %}
 
     case invoice
-    when String   then invoice_id = invoice
+    when String  then invoice_id = invoice
     when Invoice then invoice_id = invoice.id
     end
 

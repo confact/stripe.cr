@@ -1,9 +1,15 @@
 name: stripe
-version: 0.1.0
+version: 0.2.0
 
 authors:
   - Vlad Faust <mail@vladfaust.com>
+  - Håkan Nylén <hakan@dun.se>
 
-crystal: 0.31.1
+crystal: 0.33.0
+
+development_dependencies:
+  webmock:
+    github: manastech/webmock.cr
+    branch: master
 
 license: MIT

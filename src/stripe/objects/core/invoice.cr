@@ -57,6 +57,8 @@ struct Stripe::Invoice
   getter billing_reason : String?
   getter charge : String?
 
+  getter payment_intent : String? | Stripe::PaymentIntent?
+
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Invoice::CollectionMethod))]
   getter collection_method : CollectionMethod
   getter customer : String?
@@ -64,7 +66,7 @@ struct Stripe::Invoice
   getter customer_email : String?
   getter customer_name : String?
   getter customer_phone : String?
-  getter customer_shipping : Hash(String, String | Hash(String, String))
+  getter customer_shipping : Hash(String, String | Hash(String, String))?
   getter customer_tax_exempt : String?
 
   getter default_tax_rates : Array(Hash(String, String | Bool | Time | Hash(String, String)))?
@@ -79,5 +81,4 @@ struct Stripe::Invoice
   getter hosted_invoice_url : String?
 
   getter livemode : Bool
-
 end

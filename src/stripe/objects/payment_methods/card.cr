@@ -40,15 +40,19 @@ struct Stripe::PaymentMethods::Card
   @[JSON::Field(converter: Enum::StringConverter(Stripe::PaymentMethods::Card::Check))]
   getter cvc_check : Check?
   getter dynamic_last4 : String?
-  getter exp_month : UInt8
-  getter exp_year : UInt16
-  getter fingerprint : String
+  getter exp_month : UInt8?
+  getter exp_year : UInt16?
+  getter fingerprint : String?
+
+  getter customer : String? | Stripe::Customer?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::PaymentMethods::Card::Funding))]
-  getter funding : Funding
-  getter last4 : String
+  getter funding : Funding?
+  getter last4 : String?
   getter metadata : Hash(String, String)?
   getter name : String?
+
+  getter object : String?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::PaymentMethods::Card::TokenizationMethod))]
   getter tokenization_method : TokenizationMethod?

@@ -1,6 +1,18 @@
 require "http/params"
 
 class Stripe::ParamsBuilder < HTTP::Params::Builder
+  def add(key, value : Array(String))
+    value.each_with_index do |v, i|
+      add("#{key}[#{i}]", v.to_s)
+    end
+  end
+
+  def add(key, value : Array(Hash))
+    value.each_with_index do |v, i|
+      add("#{key}[#{i}]", v)
+    end
+  end
+
   def add(key, value : Number | Bool)
     add(key, value.to_s)
   end

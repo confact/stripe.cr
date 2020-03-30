@@ -12,7 +12,7 @@ struct Stripe::Token
   getter id : String
   getter bank_account : PaymentMethods::BankAccount?
   getter card : PaymentMethods::Card?
-  getter client_ip : String
+  getter client_ip : String?
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time

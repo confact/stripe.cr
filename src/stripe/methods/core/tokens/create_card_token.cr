@@ -3,7 +3,6 @@ class Stripe
     card : T? = nil,
     customer : String | Customer? = nil
   ) : Token forall T
-
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
     io = IO::Memory.new

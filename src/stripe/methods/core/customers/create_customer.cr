@@ -13,7 +13,6 @@ class Stripe
     tax_info : U? = nil,
     invoice_settings : U? = nil
   ) : Customer forall T, U
-
     case source
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
       source = source.not_nil!.id

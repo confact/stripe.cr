@@ -46,7 +46,7 @@ struct Stripe::Subscription
   getter collection_method : String?
 
   @[JSON::Field(converter: Time::EpochConverter)]
-  getter created : Time
+  getter created : Time?
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter current_period_end : Time
@@ -58,11 +58,10 @@ struct Stripe::Subscription
   getter default_payment_method : String?
   getter default_source : String?
   getter default_tax_rates : Array(Stripe::TaxRate)?
-  getter livemode : Bool
-  getter latest_invoice : String?
+  getter livemode : Bool?
+  getter latest_invoice : String? | Stripe::Invoice?
   getter pending_setup_intent : String?
   getter quantity : Int32
-  getter livemode : Bool
   getter schedule : String?
 
   getter plan : Stripe::Plan?
@@ -76,5 +75,5 @@ struct Stripe::Subscription
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Subscription::Status))]
   getter status : Status
 
-  getter items : List(Item)
+  getter items : List(Item)?
 end

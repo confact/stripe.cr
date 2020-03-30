@@ -20,8 +20,8 @@ class Stripe
 
     validate items, {{U}} do
       type id : String,
-      type quantity : Int32,
-      type plan : String
+        type quantity : Int32,
+          type plan : String
     end
 
     io = IO::Memory.new

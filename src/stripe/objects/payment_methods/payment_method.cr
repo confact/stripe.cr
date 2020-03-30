@@ -19,6 +19,5 @@ struct Stripe::PaymentMethod
   getter type : String?
   getter livemode : Bool
 
-
   getter billing_details : BillingDetails?
 end

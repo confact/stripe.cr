@@ -2,7 +2,7 @@ class Stripe
   def confirm_setup_intent(
     intent : String | SetupIntent? = nil,
     payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = nil,
-    return_url : String? = nil,
+    return_url : String? = nil
   ) : SetupIntent forall T, U
     intent = intent.as(SetupIntent).id if intent.is_a?(SetupIntent)
 

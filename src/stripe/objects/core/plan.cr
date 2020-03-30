@@ -1,12 +1,11 @@
 struct Stripe::Plan
   include JSON::Serializable
 
-
   getter id : String
-  getter active : Bool
+  getter active : Bool?
   getter aggregate_usage : String?
-  getter amount : Int32
-  getter amount_decimal : String
+  getter amount : Int32?
+  getter amount_decimal : String?
 
   getter billing_scheme : String?
 
@@ -21,5 +20,5 @@ struct Stripe::Plan
   getter tiers : Hash(String, String | Int32)?
   getter tiers_mode : String?
   getter trial_period_days : Int32?
-  getter usage_type : String
+  getter usage_type : String?
 end
