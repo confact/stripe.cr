@@ -36,4 +36,26 @@ describe Stripe::ParamsBuilder do
 
     io.to_s.should eq("test%5B0%5D%5Btest%5D=test2&test%5B1%5D%5Btest22%5D=test23")
   end
+
+  it "can handle array with NamedTuple" do
+
+    data = [{
+      number: "4242424242424242",
+      exp_month: 12,
+      exp_year: 2019,
+      cvc: 123,
+    }, {
+      number: "4242424242424242",
+      exp_month: 12,
+      exp_year: 2019,
+      cvc: 123,
+    }]
+
+    io = IO::Memory.new
+    builder = Stripe::ParamsBuilder.new(io)
+
+    builder.add("test", data)
+
+    io.to_s.should eq("test%5B0%5D%5Bnumber%5D=4242424242424242&test%5B0%5D%5Bexp_month%5D=12&test%5B0%5D%5Bexp_year%5D=2019&test%5B0%5D%5Bcvc%5D=123&test%5B1%5D%5Bnumber%5D=4242424242424242&test%5B1%5D%5Bexp_month%5D=12&test%5B1%5D%5Bexp_year%5D=2019&test%5B1%5D%5Bcvc%5D=123")
+  end
 end
