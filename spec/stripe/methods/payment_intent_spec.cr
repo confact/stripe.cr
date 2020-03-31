@@ -8,7 +8,7 @@ describe Stripe::PaymentIntent do
     stripe = Stripe.new("test")
     intent = stripe.create_payment_intent
 
-    intent.id.should eq("pi_1GSdxwIfhoELGSZwHJ9Kcws7")
+    intent.id.should eq("pi_1EUnwX4XsdaddaBS0K7XUB5v")
   end
 
   it "retrieve payment intent" do
@@ -17,6 +17,6 @@ describe Stripe::PaymentIntent do
 
     stripe = Stripe.new("test")
     intent = stripe.retrieve_payment_intent("asddad")
-    intent.id.should eq("pi_1GSdxwIfhoELGSZwHJ9Kcws7")
+    intent.id.should eq("pi_1EUnwX4XsdaddaBS0K7XUB5v")
   end
 end
