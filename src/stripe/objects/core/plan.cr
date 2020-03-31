@@ -16,7 +16,7 @@ struct Stripe::Plan
   getter interval_count : Int32?
   getter livemode : Bool
   getter metadata : Hash(String, String)?
-  getter product : String?
+  getter product : String? | Stripe::Product?
   getter tiers : Hash(String, String | Int32)?
   getter tiers_mode : String?
   getter trial_period_days : Int32?

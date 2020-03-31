@@ -11,5 +11,7 @@ development_dependencies:
   webmock:
     github: manastech/webmock.cr
     branch: master
+  coverage:
+    github: anykeyh/crystal-coverage
 
 license: MIT

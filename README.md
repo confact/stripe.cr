@@ -2,6 +2,10 @@
 
 Stripe API wrapper for Crystal.
 
+### Notice
+
+This api wrapper was tested on api version `2020-03-02` but have been trying to make it flexible with `String?` and correspondent in the types.
+
 ## Installation
 
 Add this to your application's `shard.yml`:
@@ -42,28 +46,33 @@ stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
 
 ### Example of setting up a subscription
 
-Here is a simple way to setup a subscription by using setupintent.
+Here is a simple way to setup a subscription by using payment_method.
 
-1. First create setup intent to get a secret we will give the frontend:
-```crystal
-  intent = stripe.create_setup_intent
-```
+Follow the instruction for setting up an subscription at stripe: [https://stripe.com/docs/billing/subscriptions/set-up-subscription](https://stripe.com/docs/billing/subscriptions/set-up-subscription)
 
-2. Use stripe elements.js or checkout with the setup intent secret (`client_secret`).
-3. After the form is filled and stripe send the token to back to us with the card token, lets start create the stuff for that token.
-3. create a customer with that token:
+When the step is at server code, check the code below that is corresponding towards the ruby code for same step.
+
+Setting up an customer:
 ```crystal
   token = params['StripeToken'] # or what the param for the token is called for you.
-  intent = stripe.retrieve_setup_intent(token)
-  customer = stripe.create_customer(email: user.email,
-                                     description: user.name,
-                                     payment_method: intent.payment_method,
-                                     invoice_settings: { default_payment_method: intent.payment_method })
+  customer = stripe.create_customer(email: email,
+                         description: name, # just example
+                         payment_method: token, # or token.payment_method.id  
+                         # depends what you do in the frontend to handle the token.
+                         invoice_settings: { default_payment_method: token })
+
 ```
-4. create a subscription with that customer
+
+create a subscription with that customer:
 ```crystal
-subscription = stripe.create_subscription(customer: customer, off_session: true, plan: STRIPE_PLAN_ID, trial_end: team.trial_due_at)
+stripe.create_subscription(customer: customer,
+plan: STRIPE_PLAN_ID,
+expand: ["latest_invoice.payment_intent"]) # yes - create_subscription support expand.
 ```
+
+The rest is frontend to check SCA and more. You should not need to do more than this on the backend.
+
+But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](https://stripe.com/docs/billing/subscriptions/set-up-subscription) for the frontend part to make sure it works for SCA and other things.
 
 ## Progress
 
@@ -112,9 +121,27 @@ subscription = stripe.create_subscription(customer: customer, off_session: true,
 
 - [ ] Update a Setup Intent
 
+- [ ] Cancel a Setup Intent
+
 - [ ] Delete a Setup Intent
 
 - [ ] List all Setup Intents
+
+##### Payment Intent
+
+- [x] Create a Payment Intent
+
+- [x] Retrieve a Payment Intent
+
+- [x] Confirm a Payment Intent
+
+- [ ] Update a Payment Intent
+
+- [ ] Cancel a Payment Intent
+
+- [ ] Delete a Payment Intent
+
+- [ ] List all Payment Intents
 
 ##### Customers
 
@@ -163,7 +190,15 @@ subscription = stripe.create_subscription(customer: customer, off_session: true,
 
 - [x] Charge
 
+- [x] Plan
+
+- [x] Product
+
 - [x] Customer
+
+- [x] Subscription
+
+- [x] Invoice
 
 - [ ] Dispute
 
@@ -177,13 +212,17 @@ subscription = stripe.create_subscription(customer: customer, off_session: true,
 
 - [ ] Payout
 
-- [ ] Product
-
 - [x] Refund
 
 - [x] Token
 
+- [x] Payment Intent
+
+- [x] Setup Intent
+
 #### Payment methods
+
+- [x] Payment Method
 
 - [x] Bank account
 

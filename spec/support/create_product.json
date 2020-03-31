@@ -1,0 +1,16 @@
+{
+  "id": "prod_H01khqrDN7Hn1R",
+  "object": "product",
+  "active": true,
+  "attributes": [],
+  "created": 1585490477,
+  "description": null,
+  "images": [],
+  "livemode": false,
+  "metadata": {},
+  "name": "Monthly membership base fee",
+  "statement_descriptor": "MICROGIT",
+  "type": "service",
+  "unit_label": "seat",
+  "updated": 1585490518
+}

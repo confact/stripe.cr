@@ -1,6 +1,7 @@
 class Stripe
   def update_subscription(
     subscription : String | Subscription,
+    cancel_at_period_end : Bool = Unset.new,
     customer : String | Customer? | Unset = Unset.new,
     coupon : String? | Unset = Unset.new,
     default_source : String | Token? | Unset = Unset.new,
@@ -12,18 +13,12 @@ class Stripe
 
     default_payment_method = default_payment_method.as(Token).id if default_payment_method.is_a?(Token)
 
-    validate items, {{U}} do
-      type id : String,
-        type quantity : Int32,
-          type plan : String
-    end
-
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(customer coupon default_source metadata default_payment_method items) %}
+    {% for x in %w(customer coupon default_source cancel_at_period_end metadata default_payment_method items) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.is_a?(Unset)
     {% end %}
 

@@ -17,14 +17,14 @@ struct Stripe::SetupIntent
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time
-  getter customer : String?
+  getter customer : String? | Stripe::Customer?
   getter client_secret : String?
   getter description : String?
   getter livemode : Bool
   getter last_setup_error : Hash(String, String | PaymentMethods::Card | PaymentMethods::BankAccount)?
   getter metadata : Hash(String, String)?
-  getter payment_method_types : Array(String)
-  getter payment_method : String?
+  getter payment_method_types : Array(String | Stripe::PaymentMethod)
+  getter payment_method : String? | Stripe::PaymentMethod?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::SetupIntent::Status))]
   getter status : Status

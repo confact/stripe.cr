@@ -100,8 +100,8 @@ struct Stripe::Charge
   getter metadata : Hash(String, String)?
   getter on_behalf_of : String?
   getter order : String?
-  getter outcome : Outcome
-  getter paid : Bool
+  getter outcome : Outcome?
+  getter paid : Bool?
   getter payment_intent : String?
   getter receipt_email : String?
   getter receipt_number : String?

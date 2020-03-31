@@ -14,7 +14,7 @@ struct Stripe::PaymentMethod
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time
-  getter customer : String?
+  getter customer : String? | Stripe::Customer?
   getter description : String?
   getter type : String?
   getter livemode : Bool

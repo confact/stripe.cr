@@ -14,26 +14,7 @@ class Stripe
   ) : Customer forall T, U
     default_source = default_source.as(Token).id if default_source.is_a?(Token)
 
-    validate shipping, {{T}} do
-      type address do
-        type line1 : String
-        type city : String? = nil
-        type country : String? = nil
-        type line2 : String? = nil
-        type postal_code : String? = nil
-        type state : String? = nil
-      end
-
-      type name : String
-      type phone : String? = nil
-    end
-
     source = source.as(Token).id if source.is_a?(Token)
-
-    validate tax_info, {{U}} do
-      type tax_id : String
-      type type : Customer::TaxInfo::Type
-    end
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)

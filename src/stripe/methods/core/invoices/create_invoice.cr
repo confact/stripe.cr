@@ -18,12 +18,6 @@ class Stripe
       default_payment_method = default_payment_method.not_nil!.id
     end
 
-    validate items, {{U}} do
-      type id : String,
-        type quantity : Int32,
-          type plan : String
-    end
-
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
@@ -31,7 +25,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/invoice", form: io.to_s)
+    response = @client.post("/v1/invoices", form: io.to_s)
 
     if response.status_code == 200
       return Invoice.from_json(response.body)

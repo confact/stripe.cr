@@ -11,7 +11,7 @@
   "created": 1585592981,
   "current_period_end": 1588271381,
   "current_period_start": 1585592981,
-  "customer": "cus_H0TJH3pEzhdwVs",
+  "customer": "cus_4QHS5k9YC2TcST",
   "days_until_due": null,
   "default_payment_method": null,
   "default_source": null,
@@ -59,7 +59,9 @@
   },
   "latest_invoice": null,
   "livemode": false,
-  "metadata": {},
+  "metadata": {
+    "order_id": "6735"
+  },
   "next_pending_invoice_item_invoice": null,
   "pause_collection": null,
   "pending_invoice_item_interval": null,
