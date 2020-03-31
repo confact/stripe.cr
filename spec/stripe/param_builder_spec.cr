@@ -38,17 +38,16 @@ describe Stripe::ParamsBuilder do
   end
 
   it "can handle array with NamedTuple" do
-
     data = [{
-      number: "4242424242424242",
+      number:    "4242424242424242",
       exp_month: 12,
-      exp_year: 2019,
-      cvc: 123,
+      exp_year:  2019,
+      cvc:       123,
     }, {
-      number: "4242424242424242",
+      number:    "4242424242424242",
       exp_month: 12,
-      exp_year: 2019,
-      cvc: 123,
+      exp_year:  2019,
+      cvc:       123,
     }]
 
     io = IO::Memory.new

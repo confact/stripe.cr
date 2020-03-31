@@ -18,5 +18,4 @@ struct Stripe::Product
   getter statement_descriptor : String
   getter type : String
   getter unit_label : String
-
 end

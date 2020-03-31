@@ -17,9 +17,7 @@ class Stripe
     trial_period_days : Int32? = nil,
     usage_type : String? = nil
   ) : Plan forall T, U
-
     product = product.as(Product).id if product.is_a?(Product)
-
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)

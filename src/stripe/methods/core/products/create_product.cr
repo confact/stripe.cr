@@ -9,7 +9,6 @@ class Stripe
     unit_label : String? = nil,
     type : String? = nil
   ) : Product forall T, U
-
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
