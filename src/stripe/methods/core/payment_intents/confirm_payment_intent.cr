@@ -1,5 +1,5 @@
-class Stripe
-  def confirm_payment_intent(
+struct Stripe::PaymentIntent
+  def self.confirm(
     intent : String | PaymentIntent? = nil,
     payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = nil,
     return_url : String? = nil
@@ -18,7 +18,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/payment_intents/#{intent}/confirm", form: io.to_s)
+    response = Stripe.client.post("/v1/payment_intents/#{intent}/confirm", form: io.to_s)
 
     if response.status_code == 200
       return PaymentIntent.from_json(response.body)

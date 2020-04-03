@@ -1,5 +1,5 @@
-class Stripe
-  def update_invoice(
+struct Stripe::Invoice
+  def self.update(
     invoice : String | Invoice,
     auto_advance : Bool? = nil,
     default_source : String | Token? = nil,
@@ -24,7 +24,7 @@ class Stripe
     when Invoice then invoice_id = invoice.id
     end
 
-    response = @client.post("/v1/invoices/#{invoice_id}", form: io.to_s)
+    response = Stripe.client.post("/v1/invoices/#{invoice_id}", form: io.to_s)
 
     if response.status_code == 200
       return Invoice.from_json(response.body)

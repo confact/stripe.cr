@@ -1,5 +1,5 @@
-class Stripe
-  def create_charge(
+struct Stripe::Charge
+  def self.create(
     amount : Int32,
     currency : String,
     application_fee : Int32? = nil,
@@ -29,7 +29,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/charges", form: io.to_s)
+    response = Stripe.client.post("/v1/charges", form: io.to_s)
 
     if response.status_code == 200
       return Charge.from_json(response.body)

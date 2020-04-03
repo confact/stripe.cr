@@ -1,5 +1,5 @@
-class Stripe
-  def create_customer(
+struct Stripe::Customer
+  def self.create(
     account_balance : Int32? = nil,
     coupon : String? = nil,
     default_source : String | Token? = nil,
@@ -30,7 +30,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/customers", form: io.to_s)
+    response = Stripe.client.post("/v1/customers", form: io.to_s)
 
     if response.status_code == 200
       return Customer.from_json(response.body)

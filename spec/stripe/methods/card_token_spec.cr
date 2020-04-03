@@ -5,8 +5,7 @@ describe Stripe::Token do
     WebMock.stub(:post, "https://api.stripe.com/v1/tokens")
       .to_return(status: 200, body: File.read("spec/support/create_card_token.json"), headers: {"Content-Type" => "application/json"})
 
-    stripe = Stripe.new("test")
-    token = stripe.create_card_token(card: {
+    token = Stripe::Token.create(card: {
       number:    "4242424242424242",
       exp_month: 12,
       exp_year:  2019,

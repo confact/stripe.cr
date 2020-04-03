@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_subscription(id : String)
-    response = @client.get("/v1/subscriptions/#{id}")
+struct Stripe::Subscription
+  def self.retrieve(id : String)
+    response = Stripe.client.get("/v1/subscriptions/#{id}")
 
     if response.status_code == 200
       return Subscription.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def retrieve_subscription(subscription : Subscription)
-    retrieve_subscription(subscription.id)
+  def self.retrieve(subscription : Subscription)
+    retrieve(subscription.id)
   end
 end

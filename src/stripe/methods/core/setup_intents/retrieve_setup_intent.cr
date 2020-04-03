@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_setup_intent(id : String)
-    response = @client.get("/v1/setup_intents/#{id}")
+struct Stripe::SetupIntent
+  def self.retrieve(id : String)
+    response = Stripe.client.get("/v1/setup_intents/#{id}")
 
     if response.status_code == 200
       return SetupIntent.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def retrieve_setup_intent(setup_intent : SetupIntent)
-    retrieve_setup_intent(setup_intent.id)
+  def self.retrieve(setup_intent : SetupIntent)
+    retrieve(setup_intent.id)
   end
 end

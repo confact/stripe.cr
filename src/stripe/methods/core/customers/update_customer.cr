@@ -1,5 +1,5 @@
-class Stripe
-  def update_customer(
+struct Stripe::Customer
+  def self.update(
     customer : String | Customer,
     account_balance : Int32 | Unset = Unset.new,
     coupon : String? | Unset = Unset.new,
@@ -28,7 +28,7 @@ class Stripe
     when Customer then customer_id = customer.id
     end
 
-    response = @client.post("/v1/customers/#{customer_id}", form: io.to_s)
+    response = Stripe.client.post("/v1/customers/#{customer_id}", form: io.to_s)
 
     if response.status_code == 200
       return Customer.from_json(response.body)

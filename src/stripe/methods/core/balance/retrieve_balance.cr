@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_balance
-    response = @client.get("/v1/balance")
+struct Stripe::Balance
+  def self.retrieve
+    response = Stripe.client.get("/v1/balance")
 
     if response.status_code == 200
       Balance.from_json(response.body)

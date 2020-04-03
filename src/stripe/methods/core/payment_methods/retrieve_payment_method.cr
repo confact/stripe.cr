@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_payment_method(id : String)
-    response = @client.get("/v1/payment_methods/#{id}")
+struct Stripe::PaymentMethod
+  def self.retrieve(id : String)
+    response = Stripe.client.get("/v1/payment_methods/#{id}")
 
     if response.status_code == 200
       return PaymentMethod.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def retrieve_payment_method(payment_method : PaymentMethod)
-    retrieve_payment_method(payment_method.id)
+  def self.retrieve(payment_method : PaymentMethod)
+    retrieve(payment_method.id)
   end
 end

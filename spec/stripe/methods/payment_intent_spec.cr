@@ -5,8 +5,7 @@ describe Stripe::PaymentIntent do
     WebMock.stub(:post, "https://api.stripe.com/v1/payment_intents")
       .to_return(status: 200, body: File.read("spec/support/create_payment_intent.json"), headers: {"Content-Type" => "application/json"})
 
-    stripe = Stripe.new("test")
-    intent = stripe.create_payment_intent
+    intent = Stripe::PaymentIntent.create
 
     intent.id.should eq("pi_1EUnwX4XsdaddaBS0K7XUB5v")
   end
@@ -15,8 +14,7 @@ describe Stripe::PaymentIntent do
     WebMock.stub(:get, "https://api.stripe.com/v1/payment_intents/asddad")
       .to_return(status: 200, body: File.read("spec/support/retrieve_payment_intent.json"), headers: {"Content-Type" => "application/json"})
 
-    stripe = Stripe.new("test")
-    intent = stripe.retrieve_payment_intent("asddad")
+    intent = Stripe::PaymentIntent.retrieve("asddad")
     intent.id.should eq("pi_1EUnwX4XsdaddaBS0K7XUB5v")
   end
 end

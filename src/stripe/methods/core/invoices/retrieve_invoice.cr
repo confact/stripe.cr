@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_invoice(id : String)
-    response = @client.get("/v1/invoices/#{id}")
+struct Stripe::Invoice
+  def self.retrieve(id : String)
+    response = Stripe.client.get("/v1/invoices/#{id}")
 
     if response.status_code == 200
       return Invoice.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def retrieve_invoice(invoice : Invoice)
-    retrieve_invoice(invoice.id)
+  def self.retrieve(invoice : Invoice)
+    retrieve(invoice.id)
   end
 end

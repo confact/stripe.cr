@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_payment_intent(id : String)
-    response = @client.get("/v1/payment_intents/#{id}")
+struct Stripe::PaymentIntent
+  def self.retrieve(id : String)
+    response = Stripe.client.get("/v1/payment_intents/#{id}")
 
     if response.status_code == 200
       return PaymentIntent.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def retrieve_payment_intent(setup_intent : PaymentIntent)
-    retrieve_payment_intent(setup_intent.id)
+  def self.retrieve(setup_intent : PaymentIntent)
+    retrieve(setup_intent.id)
   end
 end

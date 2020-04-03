@@ -1,5 +1,5 @@
-class Stripe
-  def create_setup_intent(
+struct Stripe::SetupIntent
+  def self.create(
     customer : String | Customer? = nil,
     description : String? = nil,
     metadata : Hash(String, String)? = nil,
@@ -22,7 +22,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/setup_intents", form: io.to_s)
+    response = Stripe.client.post("/v1/setup_intents", form: io.to_s)
 
     if response.status_code == 200
       return SetupIntent.from_json(response.body)

@@ -1,6 +1,6 @@
-class Stripe
-  def retrieve_customer(id : String)
-    response = @client.get("/v1/customers/#{id}")
+struct Stripe::Customer
+  def self.retrieve(id : String)
+    response = Stripe.client.get("/v1/customers/#{id}")
 
     if response.status_code == 200
       return Customer.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def retrieve_customer(customer : Customer)
-    retrieve_customer(customer.id)
+  def self.retrieve(customer : Customer)
+    retrieve(customer.id)
   end
 end

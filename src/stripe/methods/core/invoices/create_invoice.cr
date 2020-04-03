@@ -1,5 +1,5 @@
-class Stripe
-  def create_invoice(
+struct Stripe::Invoice
+  def self.create(
     customer : String | Customer? = nil,
     auto_advance : Bool? = nil,
     default_source : String | Token? = nil,
@@ -25,7 +25,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/invoices", form: io.to_s)
+    response = Stripe.client.post("/v1/invoices", form: io.to_s)
 
     if response.status_code == 200
       return Invoice.from_json(response.body)
