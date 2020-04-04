@@ -11,7 +11,6 @@ struct Stripe::Source
     token : String? = nil,
     usage : String? = nil
   ) : Source forall T, U
-
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 

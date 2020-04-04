@@ -6,10 +6,10 @@ describe Stripe::Source do
       .to_return(status: 200, body: File.read("spec/support/create_source.json"), headers: {"Content-Type" => "application/json"})
 
     source = Stripe::Source.create(type: "ach_credit_transfer",
-    currency: "usd",
-    owner: {
-      email: "jenny.rosen@example.com",
-    })
+      currency: "usd",
+      owner: {
+        email: "jenny.rosen@example.com",
+      })
     source.id.should eq("src_1GU6ZMIfhoELGSZwMRGuGNbX")
     source.owner.not_nil!.email.should eq("jenny.rosen@example.com")
   end

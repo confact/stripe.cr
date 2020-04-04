@@ -2,7 +2,7 @@ struct Stripe::Customer
   def self.detach_source(
     customer : String,
     source : String
-    )
+  )
     response = Stripe.client.delete("/v1/customers/#{customer}/sources/#{source}")
 
     if response.status_code == 200

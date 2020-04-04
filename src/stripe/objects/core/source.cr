@@ -16,7 +16,6 @@ struct Stripe::Source
     getter email : String?
     getter name : String?
     getter phone : String?
-
   end
 
   getter id : String
