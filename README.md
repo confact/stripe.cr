@@ -96,7 +96,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Create a charge
 
-- [ ] Retrieve a charge
+- [x] Retrieve a charge
 
 - [ ] Update a charge
 
@@ -242,7 +242,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Card
 
-- [ ] Source
+- [x] Source
 
 #### Connect
 

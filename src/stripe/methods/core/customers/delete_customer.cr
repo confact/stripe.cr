@@ -3,7 +3,7 @@ struct Stripe::Customer
     response = Stripe.client.delete("/v1/customers/#{id}")
 
     if response.status_code == 200
-      return Nil
+      return Customer.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

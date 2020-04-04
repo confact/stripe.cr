@@ -30,16 +30,18 @@ struct Stripe::Customer
   getter id : String
   getter account_balance : Int32?
 
+  getter deleted : Bool? = false
+
   @[JSON::Field(converter: Time::EpochConverter)]
-  getter created : Time
+  getter created : Time?
   getter currency : String?
   getter default_source : String?
-  getter delinquent : Bool
+  getter delinquent : Bool?
   getter description : String?
   getter email : String?
   getter invoice_prefix : String?
-  getter livemode : Bool
-  getter metadata : Hash(String, String)
+  getter livemode : Bool?
+  getter metadata : Hash(String, String)?
   getter shipping : Shipping?
   getter sources : List(PaymentMethods::Card | PaymentMethods::BankAccount)?
   # getter subscriptions : List?

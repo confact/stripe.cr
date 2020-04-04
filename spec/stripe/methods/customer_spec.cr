@@ -25,4 +25,12 @@ describe Stripe::Customer do
     customer = Stripe::Customer.update(customer: "assaas", email: "test@ex.com")
     customer.id.should eq("cus_H0TJWPA6bGxoTk")
   end
+
+  it "delete customer" do
+    WebMock.stub(:delete, "https://api.stripe.com/v1/customers/assaas")
+      .to_return(status: 200, body: File.read("spec/support/delete_customer.json"), headers: {"Content-Type" => "application/json"})
+
+    customer = Stripe::Customer.delete("assaas")
+    customer.deleted.should eq(true)
+  end
 end
