@@ -1,6 +1,9 @@
 struct Stripe::PaymentIntent
   def self.create(
-    customer : String | Customer? = nil,
+    amount : Int32,
+    currency : String,
+    confirm : Bool? = nil,
+    customer : String | Stripe::Customer? = nil,
     description : String? = nil,
     metadata : Hash(String, String)? = nil,
     on_behalf_of : String? = nil,
@@ -21,7 +24,7 @@ struct Stripe::PaymentIntent
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(customer description metadata usage on_behalf_of payment_method_types payment_method receipt_email setup_future_usage return_url) %}
+    {% for x in %w(amount currency customer description metadata usage on_behalf_of payment_method_types payment_method receipt_email setup_future_usage return_url) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
