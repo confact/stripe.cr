@@ -9,12 +9,13 @@ struct Stripe::Source
     statement_descriptor : String? = nil,
     flow : String? = nil,
     token : String? = nil,
-    usage : String? = nil
+    usage : String? = nil,
+    expand : Array(String)? = nil
   ) : Source forall T, U
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(type amount currency metadata owner redirect statement_descriptor flow token usage) %}
+    {% for x in %w(type amount currency metadata owner redirect statement_descriptor flow token usage expand) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 

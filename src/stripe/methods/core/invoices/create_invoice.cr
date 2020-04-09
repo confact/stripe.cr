@@ -11,11 +11,15 @@ struct Stripe::Invoice
     case default_source
     when Token
       default_source = default_source.id
+    when Nil
+      default_source = nil
     end
 
     case default_payment_method
     when Token, PaymentMethods::Card
       default_payment_method = default_payment_method.not_nil!.id
+    when Nil
+      default_payment_method = nil
     end
 
     io = IO::Memory.new

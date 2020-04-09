@@ -1,7 +1,8 @@
 struct Stripe::Token
   def self.create(
     card : T? = nil,
-    customer : String | Customer? = nil
+    customer : String | Customer? = nil,
+    expand : Array(String)? = nil
   ) : Token forall T
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
@@ -10,6 +11,7 @@ struct Stripe::Token
 
     builder.add("card", card) if card
     builder.add("customer", customer) if customer
+    builder.add("expand", expand) if expand
 
     response = Stripe.client.post("/v1/tokens", form: io.to_s)
 
