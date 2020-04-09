@@ -22,7 +22,7 @@ describe Stripe::Subscription do
       .to_return(status: 200, body: File.read("spec/support/list_subscriptions.json"), headers: {"Content-Type" => "application/json"})
 
     subscriptions = Stripe::Subscription.list
-    subscriptions.data.first.id.should eq("cus_H4637xPCSXL0I7")
+    subscriptions.first.id.should eq("su_1GVxr04XsdaddaBSSq4mVJi1")
   end
 
   it "update subscription" do

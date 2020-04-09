@@ -1,4 +1,4 @@
-struct Stripe::Subscription
+class Stripe::Subscription
   def self.list(
     customer : String? = nil,
     plan : String? = nil,

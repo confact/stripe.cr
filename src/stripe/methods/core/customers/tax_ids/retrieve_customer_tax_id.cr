@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.retrieve_tax_id(
     id : String,
     tax_id : String

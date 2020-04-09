@@ -1,4 +1,4 @@
-struct Stripe::PaymentMethods::BankAccount
+class Stripe::PaymentMethods::BankAccount
   include JSON::Serializable
 
   enum AccountHolderType

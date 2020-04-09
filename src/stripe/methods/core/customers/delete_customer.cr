@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.delete(id : String)
     response = Stripe.client.delete("/v1/customers/#{id}")
 

@@ -1,4 +1,4 @@
-struct Stripe::PaymentIntent
+class Stripe::PaymentIntent
   def self.retrieve(id : String)
     response = Stripe.client.get("/v1/payment_intents/#{id}")
 

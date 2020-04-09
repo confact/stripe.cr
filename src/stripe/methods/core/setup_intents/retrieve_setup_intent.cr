@@ -1,4 +1,4 @@
-struct Stripe::SetupIntent
+class Stripe::SetupIntent
   def self.retrieve(id : String)
     response = Stripe.client.get("/v1/setup_intents/#{id}")
 

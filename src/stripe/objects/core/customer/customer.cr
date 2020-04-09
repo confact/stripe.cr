@@ -1,8 +1,8 @@
 # https://stripe.com/docs/api/customers/object
-struct Stripe::Customer
+class Stripe::Customer
   include JSON::Serializable
 
-  struct TaxInfo
+  class TaxInfo
     include JSON::Serializable
 
     enum Type
@@ -13,7 +13,7 @@ struct Stripe::Customer
     getter type : Type
   end
 
-  struct TaxInfoVerification
+  class TaxInfoVerification
     include JSON::Serializable
 
     enum Status

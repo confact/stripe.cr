@@ -1,4 +1,4 @@
-struct Stripe::SetupIntent
+class Stripe::SetupIntent
   def self.confirm(
     intent : String | SetupIntent? = nil,
     payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = nil,

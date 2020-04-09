@@ -1,4 +1,4 @@
-struct Stripe::Plan
+class Stripe::Plan
   include JSON::Serializable
 
   getter id : String

@@ -1,4 +1,4 @@
-struct Stripe::List(T)
+class Stripe::List(T)
   include JSON::Serializable
   include Enumerable(T)
 

@@ -23,7 +23,7 @@ describe Stripe::Customer do
       .to_return(status: 200, body: File.read("spec/support/list_customers.json"), headers: {"Content-Type" => "application/json"})
 
     customers = Stripe::Customer.list
-    customers.data.first.id.should eq("cus_H4637xPCSXL0I7")
+    customers.first.id.should eq("cus_H4637xPCSXL0I7")
   end
 
   it "update customer" do

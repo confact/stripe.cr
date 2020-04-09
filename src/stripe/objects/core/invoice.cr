@@ -1,4 +1,4 @@
-struct Stripe::Invoice
+class Stripe::Invoice
   include JSON::Serializable
 
   enum CollectionMethod
@@ -6,7 +6,7 @@ struct Stripe::Invoice
     SendInvoice
   end
 
-  struct LineItem
+  class LineItem
     include JSON::Serializable
 
     getter id : String

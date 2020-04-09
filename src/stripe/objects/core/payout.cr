@@ -1,5 +1,5 @@
 # https://stripe.com/docs/api/payouts/object
-struct Stripe::Payout
+class Stripe::Payout
   include JSON::Serializable
 
   enum Status

@@ -1,4 +1,4 @@
-struct Stripe::Refund
+class Stripe::Refund
   def self.retrieve(id : String) : Refund
     response = Stripe.client.get("/v1/refunds/#{id}")
 

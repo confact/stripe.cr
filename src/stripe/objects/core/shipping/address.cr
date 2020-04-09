@@ -1,4 +1,4 @@
-struct Stripe::Shipping::Address
+class Stripe::Shipping::Address
   include JSON::Serializable
 
   getter city : String?

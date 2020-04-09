@@ -1,4 +1,4 @@
-struct Stripe::Refund
+class Stripe::Refund
   include JSON::Serializable
 
   enum FailureReason

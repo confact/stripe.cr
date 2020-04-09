@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.create(
     account_balance : Int32? = nil,
     coupon : String? = nil,

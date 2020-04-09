@@ -1,4 +1,4 @@
-struct Stripe::PaymentIntent
+class Stripe::PaymentIntent
   include JSON::Serializable
 
   enum Status

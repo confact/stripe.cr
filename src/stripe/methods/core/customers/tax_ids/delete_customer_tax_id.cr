@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.delete_tax_id(id : String, tax_id : String)
     response = Stripe.client.delete("/v1/customers/#{id}/tax_ids/#{tax_id}")
 

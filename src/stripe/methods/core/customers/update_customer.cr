@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.update(
     customer : String | Customer,
     account_balance : Int32 | Unset = Unset.new,

@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.list(
     email : String? = nil,
     created : Hash(String, Int32)? = nil,
