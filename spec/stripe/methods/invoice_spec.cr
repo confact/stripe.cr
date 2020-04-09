@@ -17,6 +17,14 @@ describe Stripe::Invoice do
     invoice.id.should eq("in_1GSSMkIfhoELGSZww9EgmgFP")
   end
 
+  it "listing invoices" do
+    WebMock.stub(:get, "https://api.stripe.com/v1/invoices")
+      .to_return(status: 200, body: File.read("spec/support/list_invoice.json"), headers: {"Content-Type" => "application/json"})
+
+    invoices = Stripe::Invoice.list
+    invoices.first.id.should eq("in_1GVxr0IfhoELGSZwxN9g4m2K")
+  end
+
   it "update invoice" do
     WebMock.stub(:post, "https://api.stripe.com/v1/invoices/assaas")
       .to_return(status: 200, body: File.read("spec/support/update_invoice.json"), headers: {"Content-Type" => "application/json"})
