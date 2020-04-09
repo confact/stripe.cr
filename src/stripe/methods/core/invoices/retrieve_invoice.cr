@@ -1,4 +1,4 @@
-struct Stripe::Invoice
+class Stripe::Invoice
   def self.retrieve(id : String)
     response = Stripe.client.get("/v1/invoices/#{id}")
 

@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.detach_source(
     customer : String,
     source : String

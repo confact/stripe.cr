@@ -1,4 +1,4 @@
-struct Stripe::PaymentMethods::Card
+class Stripe::PaymentMethods::Card
   include JSON::Serializable
 
   enum Check

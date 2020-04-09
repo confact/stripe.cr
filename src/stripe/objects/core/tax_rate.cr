@@ -1,4 +1,4 @@
-struct Stripe::TaxRate
+class Stripe::TaxRate
   include JSON::Serializable
 
   getter id : String

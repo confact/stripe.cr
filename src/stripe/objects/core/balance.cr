@@ -1,8 +1,8 @@
 # https://stripe.com/docs/api/balance/balance_object
-struct Stripe::Balance
+class Stripe::Balance
   include JSON::Serializable
 
-  struct Funds
+  class Funds
     include JSON::Serializable
 
     getter currency : String

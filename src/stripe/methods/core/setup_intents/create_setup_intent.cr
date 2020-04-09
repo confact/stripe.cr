@@ -1,4 +1,4 @@
-struct Stripe::SetupIntent
+class Stripe::SetupIntent
   def self.create(
     customer : String | Customer? = nil,
     description : String? = nil,

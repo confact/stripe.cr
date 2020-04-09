@@ -1,4 +1,4 @@
-struct Stripe::Source
+class Stripe::Source
   def self.create(
     type : String,
     amount : Int32? = nil,

@@ -1,4 +1,4 @@
-struct Stripe::SetupIntent
+class Stripe::SetupIntent
   include JSON::Serializable
 
   enum Status

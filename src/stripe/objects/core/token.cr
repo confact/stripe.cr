@@ -1,5 +1,5 @@
 # https://stripe.com/docs/api/tokens/object
-struct Stripe::Token
+class Stripe::Token
   include JSON::Serializable
 
   enum Type

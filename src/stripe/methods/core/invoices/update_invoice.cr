@@ -1,4 +1,4 @@
-struct Stripe::Invoice
+class Stripe::Invoice
   def self.update(
     invoice : String | Invoice,
     auto_advance : Bool? = nil,

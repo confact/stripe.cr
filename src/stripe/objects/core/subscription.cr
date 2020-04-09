@@ -1,5 +1,5 @@
 # https://stripe.com/docs/api/subscriptions/object
-struct Stripe::Subscription
+class Stripe::Subscription
   include JSON::Serializable
 
   enum Status
@@ -12,7 +12,7 @@ struct Stripe::Subscription
     Unpaid
   end
 
-  struct Item
+  class Item
     include JSON::Serializable
 
     getter id : String

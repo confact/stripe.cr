@@ -1,4 +1,4 @@
-struct Stripe::Source
+class Stripe::Source
   include JSON::Serializable
 
   enum Status
@@ -9,7 +9,7 @@ struct Stripe::Source
     Pending
   end
 
-  struct Owner
+  class Owner
     include JSON::Serializable
 
     getter address : Hash(String, String | Nil)?

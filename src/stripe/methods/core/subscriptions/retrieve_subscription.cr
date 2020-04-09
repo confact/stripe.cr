@@ -1,4 +1,4 @@
-struct Stripe::Subscription
+class Stripe::Subscription
   def self.retrieve(id : String)
     response = Stripe.client.get("/v1/subscriptions/#{id}")
 

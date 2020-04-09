@@ -3,7 +3,7 @@ require "http/client"
 require "./ext/**"
 
 class Stripe
-  struct Unset
+  class Unset
   end
 
   @@api_key : String?

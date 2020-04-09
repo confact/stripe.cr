@@ -1,4 +1,4 @@
-struct Stripe::Plan
+class Stripe::Plan
   def self.create(
     currency : String,
     interval : String,

@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.create_source(
     customer : String | Stripe::Customer,
     source : String | Stripe::Source

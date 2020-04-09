@@ -1,4 +1,4 @@
-struct Stripe::Balance
+class Stripe::Balance
   def self.retrieve
     response = Stripe.client.get("/v1/balance")
 

@@ -1,5 +1,5 @@
 # https://stripe.com/docs/api/coupons/object
-struct Stripe::Coupon
+class Stripe::Coupon
   include JSON::Serializable
 
   getter id : String

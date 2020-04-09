@@ -1,4 +1,4 @@
-struct Stripe::PaymentIntent
+class Stripe::PaymentIntent
   def self.create(
     amount : Int32,
     currency : String,

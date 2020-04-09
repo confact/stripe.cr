@@ -1,4 +1,4 @@
-struct Stripe::Subscription
+class Stripe::Subscription
   def self.update(
     subscription : String | Subscription,
     cancel_at_period_end : Bool = Unset.new,

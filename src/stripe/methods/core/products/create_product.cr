@@ -1,4 +1,4 @@
-struct Stripe::Product
+class Stripe::Product
   def self.create(
     name : String,
     active : Bool? = nil,

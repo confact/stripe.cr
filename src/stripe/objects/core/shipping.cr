@@ -1,4 +1,4 @@
-struct Stripe::Shipping
+class Stripe::Shipping
   include JSON::Serializable
 
   getter address : Address

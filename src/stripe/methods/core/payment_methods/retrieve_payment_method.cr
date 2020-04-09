@@ -1,4 +1,4 @@
-struct Stripe::PaymentMethod
+class Stripe::PaymentMethod
   def self.retrieve(id : String)
     response = Stripe.client.get("/v1/payment_methods/#{id}")
 

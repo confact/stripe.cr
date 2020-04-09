@@ -1,4 +1,4 @@
-struct Stripe::Refund
+class Stripe::Refund
   def self.create(
     charge : String | Stripe::Charge? = nil,
     amount : Int32? = nil,

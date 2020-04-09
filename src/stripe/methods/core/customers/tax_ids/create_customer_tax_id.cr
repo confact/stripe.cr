@@ -1,4 +1,4 @@
-struct Stripe::Customer
+class Stripe::Customer
   def self.create_tax_id(
     customer : String | Stripe::Customer,
     type : String,

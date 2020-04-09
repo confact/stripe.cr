@@ -1,4 +1,4 @@
-struct Stripe::Customer::TaxID
+class Stripe::Customer::TaxID
   include JSON::Serializable
 
   getter id : String

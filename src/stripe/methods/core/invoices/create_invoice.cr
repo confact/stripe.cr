@@ -1,4 +1,4 @@
-struct Stripe::Invoice
+class Stripe::Invoice
   def self.create(
     customer : String | Customer? = nil,
     auto_advance : Bool? = nil,

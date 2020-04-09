@@ -1,4 +1,4 @@
-struct Stripe::Token
+class Stripe::Token
   def self.create(
     card : T? = nil,
     customer : String | Customer? = nil,

@@ -1,4 +1,4 @@
-struct Stripe::Charge
+class Stripe::Charge
   def self.create(
     amount : Int32,
     currency : String,
