@@ -4,10 +4,8 @@ class Stripe::Refund
     amount : Int32? = nil,
     metadata : Hash? = nil,
     payment_intent : String | Stripe::PaymentIntent? = nil,
-    reason : String? = nil,
-
+    reason : String? = nil
   ) : Refund forall T, U
-
     charge = charge.not_nil!.id if charge.is_a?(Stripe::Charge)
 
     payment_intent = payment_intent.not_nil!.id if payment_intent.is_a?(Stripe::PaymentIntent)

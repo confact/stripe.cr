@@ -6,7 +6,6 @@ class Stripe::Customer
     starting_after : String? = nil,
     ending_before : String? = nil
   ) : List(Customer)
-
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
