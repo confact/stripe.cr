@@ -18,6 +18,14 @@ describe Stripe::Customer do
     customer.id.should eq("cus_H0TJWPA6bGxoTk")
   end
 
+  it "list customer" do
+    WebMock.stub(:get, "https://api.stripe.com/v1/customers")
+      .to_return(status: 200, body: File.read("spec/support/list_customers.json"), headers: {"Content-Type" => "application/json"})
+
+    customers = Stripe::Customer.list
+    customers.data.first.id.should eq("cus_H4637xPCSXL0I7")
+  end
+
   it "update customer" do
     WebMock.stub(:post, "https://api.stripe.com/v1/customers/assaas")
       .to_return(status: 200, body: File.read("spec/support/update_customer.json"), headers: {"Content-Type" => "application/json"})
