@@ -1,11 +1,13 @@
 # Changelog
 
 
-## 1.0
+## v1.0
 * Added this changelog file
 * Supporting Crystal 0.34
-* Changed structure of the calls, using class methods and class variables for api key. Will use less memory and be much cleaner.
-* Added expand to these entities create methods: Customer, Charge, SetupIntent, PaymentIntent, and Token 
+* Moving all structs to classes to fix compiler issues
+* Changed classure of the calls, using class methods and class variables for api key. Will use less memory and be much cleaner.
+* Added expand to these entities create methods: Customer, Charge, SetupIntent, PaymentIntent, and Token
+* Made List Enumerable - So all Enumerable's methods works on lists
 
 ### Added api calls
 * Create source
@@ -18,6 +20,9 @@
 * Retrieve charge
 * create refund
 * retrieve refund
+* list customers
+* list subscriptions
+* list invoices
 
 ### Added Entities
 * Coupons
@@ -26,7 +31,7 @@
 * Source
 
 
-## 0.2
+## v0.2 (2020-03-31)
 * Added some core entities
 * Fixed bug in Charges
 * Removed validations macro
