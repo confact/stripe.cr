@@ -6,8 +6,7 @@ class Stripe::SetupIntent
   ) : SetupIntent forall T, U
     intent = intent.as(SetupIntent).id if intent.is_a?(SetupIntent)
 
-    case payment_method
-    when Token, PaymentMethods::Card, PaymentMethods::BankAccount
+    if payment_method.is_a?(Token | PaymentMethods::Card | PaymentMethods::BankAccount)
       payment_method = payment_method.not_nil!.id
     end
 

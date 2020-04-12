@@ -5,7 +5,7 @@
 * Added this changelog file
 * Supporting Crystal 0.34
 * Moving all structs to classes to fix compiler issues
-* Changed classure of the calls, using class methods and class variables for api key. Will use less memory and be much cleaner.
+* Changed structure of the calls, using class methods and class variables for api key. Will use less memory and be much cleaner.
 * Added expand to these entities create methods: Customer, Charge, SetupIntent, PaymentIntent, and Token
 * Made List Enumerable - So all Enumerable's methods works on lists
 
@@ -23,6 +23,8 @@
 * list customers
 * list subscriptions
 * list invoices
+* list payment intents
+* list setup intents
 
 ### Added Entities
 * Coupons

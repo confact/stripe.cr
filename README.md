@@ -104,6 +104,18 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] List all charges
 
+##### Sources
+
+- [x] Create a source
+
+- [x] Retrieve a source
+
+- [x] Attach a source to customer
+
+- [x] Detach a source from customer
+
+- [ ] Update a source
+
 ##### Subscriptions
 - [x] Create a Subscription
 
@@ -113,7 +125,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Delete a Subscription
 
-- [ ] List all Subscriptions
+- [x] List all Subscriptions
 
 ##### Setup Intent
 
@@ -157,7 +169,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Delete a customer
 
-- [ ] List all customers
+- [x] List all customers
 
 ##### Customer Tax IDs
 
@@ -166,6 +178,16 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [x] Retrieve a customer tax ID
 
 - [x] Delete a customer tax ID
+
+##### Refund
+
+- [x] Create a refund
+
+- [x] Retrieve a refund
+
+- [ ] Update a refund
+
+- [ ] List all refunds
 
 ##### Tokens
 
@@ -189,7 +211,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Delete a invoice
 
-- [ ] List all invoices
+- [x] List all invoices
 
 
 ### Objects

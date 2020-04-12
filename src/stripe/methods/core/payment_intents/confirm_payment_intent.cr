@@ -7,11 +7,8 @@ class Stripe::PaymentIntent
   ) : PaymentIntent forall T, U
     intent = intent.as(PaymentIntent).id if intent.is_a?(PaymentIntent)
 
-    case payment_method
-    when Token, PaymentMethods::Card, PaymentMethods::BankAccount
+    if payment_method.is_a?(Token | PaymentMethods::Card | PaymentMethods::BankAccount)
       payment_method = payment_method.not_nil!.id
-    when Nil
-      payment_method = nil
     end
 
     io = IO::Memory.new
