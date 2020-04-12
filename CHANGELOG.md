@@ -25,6 +25,8 @@
 * list invoices
 * list payment intents
 * list setup intents
+* create tax rate
+* retrieve tax rate
 
 ### Added Entities
 * Coupons

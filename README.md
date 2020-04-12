@@ -141,7 +141,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Delete a Setup Intent
 
-- [ ] List all Setup Intents
+- [x] List all Setup Intents
 
 ##### Payment Intent
 
@@ -157,7 +157,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Delete a Payment Intent
 
-- [ ] List all Payment Intents
+- [x] List all Payment Intents
 
 ##### Customers
 
@@ -188,6 +188,16 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [ ] Update a refund
 
 - [ ] List all refunds
+
+##### Tax Rate
+
+- [x] Create a tax rate
+
+- [x] retrieve a tax rate
+
+- [ ] Update a tax rate
+
+- [ ] List all tax rates
 
 ##### Tokens
 
@@ -249,6 +259,8 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [ ] Payout
 
 - [x] Refund
+
+- [x] Tax Rate
 
 - [x] Token
 
