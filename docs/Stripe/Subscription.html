@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.33.0">
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="github.com/confact/stripe.cr">
+  <title>Stripe::Subscription - github.com/confact/stripe.cr</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Enum" data-name="enum">
+      <a href="../Enum.html">Enum</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Enum/StringConverter" data-name="enum::stringconverter(t)">
+      <a href="../Enum/StringConverter.html">StringConverter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/confact/stripe.cr/Stripe" data-name="stripe">
+      <a href="../Stripe.html">Stripe</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Balance" data-name="stripe::balance">
+      <a href="../Stripe/Balance.html">Balance</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Balance/Funds" data-name="stripe::balance::funds">
+      <a href="../Stripe/Balance/Funds.html">Funds</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Charge" data-name="stripe::charge">
+      <a href="../Stripe/Charge.html">Charge</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Charge/FraudDetails" data-name="stripe::charge::frauddetails">
+      <a href="../Stripe/Charge/FraudDetails.html">FraudDetails</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/FraudDetails/StripeReport" data-name="stripe::charge::frauddetails::stripereport">
+      <a href="../Stripe/Charge/FraudDetails/StripeReport.html">StripeReport</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/FraudDetails/UserReport" data-name="stripe::charge::frauddetails::userreport">
+      <a href="../Stripe/Charge/FraudDetails/UserReport.html">UserReport</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Charge/Outcome" data-name="stripe::charge::outcome">
+      <a href="../Stripe/Charge/Outcome.html">Outcome</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/Outcome/NetworkStatus" data-name="stripe::charge::outcome::networkstatus">
+      <a href="../Stripe/Charge/Outcome/NetworkStatus.html">NetworkStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/Outcome/Reason" data-name="stripe::charge::outcome::reason">
+      <a href="../Stripe/Charge/Outcome/Reason.html">Reason</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/Outcome/RiskLevel" data-name="stripe::charge::outcome::risklevel">
+      <a href="../Stripe/Charge/Outcome/RiskLevel.html">RiskLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/Outcome/Type" data-name="stripe::charge::outcome::type">
+      <a href="../Stripe/Charge/Outcome/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Charge/Status" data-name="stripe::charge::status">
+      <a href="../Stripe/Charge/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Coupon" data-name="stripe::coupon">
+      <a href="../Stripe/Coupon.html">Coupon</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Customer" data-name="stripe::customer">
+      <a href="../Stripe/Customer.html">Customer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Customer/TaxID" data-name="stripe::customer::taxid">
+      <a href="../Stripe/Customer/TaxID.html">TaxID</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Customer/TaxInfo" data-name="stripe::customer::taxinfo">
+      <a href="../Stripe/Customer/TaxInfo.html">TaxInfo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Customer/TaxInfo/Type" data-name="stripe::customer::taxinfo::type">
+      <a href="../Stripe/Customer/TaxInfo/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Customer/TaxInfoVerification" data-name="stripe::customer::taxinfoverification">
+      <a href="../Stripe/Customer/TaxInfoVerification.html">TaxInfoVerification</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Customer/TaxInfoVerification/Status" data-name="stripe::customer::taxinfoverification::status">
+      <a href="../Stripe/Customer/TaxInfoVerification/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Error" data-name="stripe::error">
+      <a href="../Stripe/Error.html">Error</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Error/Type" data-name="stripe::error::type">
+      <a href="../Stripe/Error/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Invoice" data-name="stripe::invoice">
+      <a href="../Stripe/Invoice.html">Invoice</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Invoice/CollectionMethod" data-name="stripe::invoice::collectionmethod">
+      <a href="../Stripe/Invoice/CollectionMethod.html">CollectionMethod</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Invoice/LineItem" data-name="stripe::invoice::lineitem">
+      <a href="../Stripe/Invoice/LineItem.html">LineItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Invoice/Status" data-name="stripe::invoice::status">
+      <a href="../Stripe/Invoice/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/List" data-name="stripe::list(t)">
+      <a href="../Stripe/List.html">List</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/ParamsBuilder" data-name="stripe::paramsbuilder">
+      <a href="../Stripe/ParamsBuilder.html">ParamsBuilder</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/PaymentIntent" data-name="stripe::paymentintent">
+      <a href="../Stripe/PaymentIntent.html">PaymentIntent</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentIntent/Status" data-name="stripe::paymentintent::status">
+      <a href="../Stripe/PaymentIntent/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethod" data-name="stripe::paymentmethod">
+      <a href="../Stripe/PaymentMethod.html">PaymentMethod</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethod/BillingDetails" data-name="stripe::paymentmethod::billingdetails">
+      <a href="../Stripe/PaymentMethod/BillingDetails.html">BillingDetails</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods" data-name="stripe::paymentmethods">
+      <a href="../Stripe/PaymentMethods.html">PaymentMethods</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/BankAccount" data-name="stripe::paymentmethods::bankaccount">
+      <a href="../Stripe/PaymentMethods/BankAccount.html">BankAccount</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/BankAccount/AccountHolderType" data-name="stripe::paymentmethods::bankaccount::accountholdertype">
+      <a href="../Stripe/PaymentMethods/BankAccount/AccountHolderType.html">AccountHolderType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/BankAccount/Status" data-name="stripe::paymentmethods::bankaccount::status">
+      <a href="../Stripe/PaymentMethods/BankAccount/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/Card" data-name="stripe::paymentmethods::card">
+      <a href="../Stripe/PaymentMethods/Card.html">Card</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/Card/Check" data-name="stripe::paymentmethods::card::check">
+      <a href="../Stripe/PaymentMethods/Card/Check.html">Check</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/Card/Funding" data-name="stripe::paymentmethods::card::funding">
+      <a href="../Stripe/PaymentMethods/Card/Funding.html">Funding</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/PaymentMethods/Card/TokenizationMethod" data-name="stripe::paymentmethods::card::tokenizationmethod">
+      <a href="../Stripe/PaymentMethods/Card/TokenizationMethod.html">TokenizationMethod</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Payout" data-name="stripe::payout">
+      <a href="../Stripe/Payout.html">Payout</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Payout/Status" data-name="stripe::payout::status">
+      <a href="../Stripe/Payout/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Plan" data-name="stripe::plan">
+      <a href="../Stripe/Plan.html">Plan</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Product" data-name="stripe::product">
+      <a href="../Stripe/Product.html">Product</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Refund" data-name="stripe::refund">
+      <a href="../Stripe/Refund.html">Refund</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Refund/FailureReason" data-name="stripe::refund::failurereason">
+      <a href="../Stripe/Refund/FailureReason.html">FailureReason</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Refund/Reason" data-name="stripe::refund::reason">
+      <a href="../Stripe/Refund/Reason.html">Reason</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Refund/Status" data-name="stripe::refund::status">
+      <a href="../Stripe/Refund/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/SetupIntent" data-name="stripe::setupintent">
+      <a href="../Stripe/SetupIntent.html">SetupIntent</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/SetupIntent/Status" data-name="stripe::setupintent::status">
+      <a href="../Stripe/SetupIntent/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Shipping" data-name="stripe::shipping">
+      <a href="../Stripe/Shipping.html">Shipping</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Shipping/Address" data-name="stripe::shipping::address">
+      <a href="../Stripe/Shipping/Address.html">Address</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Source" data-name="stripe::source">
+      <a href="../Stripe/Source.html">Source</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Source/Owner" data-name="stripe::source::owner">
+      <a href="../Stripe/Source/Owner.html">Owner</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Source/Status" data-name="stripe::source::status">
+      <a href="../Stripe/Source/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/confact/stripe.cr/Stripe/Subscription" data-name="stripe::subscription">
+      <a href="../Stripe/Subscription.html">Subscription</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Subscription/Item" data-name="stripe::subscription::item">
+      <a href="../Stripe/Subscription/Item.html">Item</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Subscription/Status" data-name="stripe::subscription::status">
+      <a href="../Stripe/Subscription/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/TaxRate" data-name="stripe::taxrate">
+      <a href="../Stripe/TaxRate.html">TaxRate</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/confact/stripe.cr/Stripe/Token" data-name="stripe::token">
+      <a href="../Stripe/Token.html">Token</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Token/Type" data-name="stripe::token::type">
+      <a href="../Stripe/Token/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/confact/stripe.cr/Stripe/Unset" data-name="stripe::unset">
+      <a href="../Stripe/Unset.html">Unset</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Stripe::Subscription
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Stripe/Subscription.html">Stripe::Subscription</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>https://stripe.com/docs/api/subscriptions/object</p>
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">JSON::Serializable</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/create_subscription.cr#L1" target="_blank">
+        stripe/methods/core/subscriptions/create_subscription.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/delete_subscription.cr#L1" target="_blank">
+        stripe/methods/core/subscriptions/delete_subscription.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/list_subscription.cr#L1" target="_blank">
+        stripe/methods/core/subscriptions/list_subscription.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L1" target="_blank">
+        stripe/methods/core/subscriptions/retrieve_subscription.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/update_subscription.cr#L1" target="_blank">
+        stripe/methods/core/subscriptions/update_subscription.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L2" target="_blank">
+        stripe/objects/core/subscription.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#create(customer:String%7CCustomer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String%7CToken?=nil,default_payment_method:String%7CToken?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method" class="signature"><strong>.create</strong>(customer : String | Customer? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | Token? = <span class="n">nil</span>, default_payment_method : String | Token? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Subscription forall T, U</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new(pull:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update(subscription:String%7CSubscription,cancel_at_period_end:Bool=Unset.new,customer:String%7CCustomer?%7CUnset=Unset.new,coupon:String?%7CUnset=Unset.new,default_source:String%7CToken?%7CUnset=Unset.new,default_payment_method:String%7CToken?%7CUnset=Unset.new,metadata:Hash?%7CUnset=Unset.new,items:U?%7CUnset=Unset.new):SubscriptionforallT,U-class-method" class="signature"><strong>.update</strong>(subscription : String | Subscription, cancel_at_period_end : Bool = <span class="t">Unset</span>.<span class="k">new</span>, customer : String | Customer? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, coupon : String? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, default_source : String | Token? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, default_payment_method : String | Token? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, metadata : Hash? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, items : U? | Unset = <span class="t">Unset</span>.<span class="k">new</span>) : Subscription forall T, U</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#delete(id:String)-class-method" class="signature"><strong>.delete</strong>(id : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete(subscription:Subscription)-class-method" class="signature"><strong>.delete</strong>(subscription : Subscription)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list(customer:String?=nil,plan:String?=nil,status:String?%7CStripe::Subscription::Status?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):Stripe::List(Stripe::Subscription)-class-method" class="signature"><strong>.list</strong>(customer : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, status : String? | Stripe::Subscription::Status? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : Stripe::List(Stripe::Subscription)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#retrieve(id:String)-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#retrieve(subscription:Subscription)-class-method" class="signature"><strong>.retrieve</strong>(subscription : Subscription)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#application_fee_percent:Float32?-instance-method" class="signature"><strong>#application_fee_percent</strong> : Float32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#billing:String?-instance-method" class="signature"><strong>#billing</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#billing_cycle_anchor:Time?-instance-method" class="signature"><strong>#billing_cycle_anchor</strong> : Time?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#billing_thresholds:Hash(String,Int32%7CBool)?-instance-method" class="signature"><strong>#billing_thresholds</strong> : Hash(String, Int32 | Bool)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cancel_at:Time?-instance-method" class="signature"><strong>#cancel_at</strong> : Time?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cancel_at_period_end:Bool-instance-method" class="signature"><strong>#cancel_at_period_end</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#canceled_at:Time?-instance-method" class="signature"><strong>#canceled_at</strong> : Time?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#collection_method:String?-instance-method" class="signature"><strong>#collection_method</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#created:Time?-instance-method" class="signature"><strong>#created</strong> : Time?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#current_period_end:Time-instance-method" class="signature"><strong>#current_period_end</strong> : Time</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#current_period_start:Time-instance-method" class="signature"><strong>#current_period_start</strong> : Time</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method" class="signature"><strong>#customer</strong> : String | Nil | Stripe::Customer | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#days_until_due:Int32?-instance-method" class="signature"><strong>#days_until_due</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_payment_method:String%7CNil%7CStripe::PaymentMethod%7CNil-instance-method" class="signature"><strong>#default_payment_method</strong> : String | Nil | Stripe::PaymentMethod | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_source:String?-instance-method" class="signature"><strong>#default_source</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_tax_rates:Array(Stripe::TaxRate)?-instance-method" class="signature"><strong>#default_tax_rates</strong> : Array(Stripe::TaxRate)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#items:Stripe::List(Item)?-instance-method" class="signature"><strong>#items</strong> : Stripe::List(Item)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#latest_invoice:String%7CNil%7CStripe::Invoice%7CNil-instance-method" class="signature"><strong>#latest_invoice</strong> : String | Nil | Stripe::Invoice | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#livemode:Bool?-instance-method" class="signature"><strong>#livemode</strong> : Bool?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pending_setup_intent:String%7CNil%7CStripe::SetupIntent%7CNil-instance-method" class="signature"><strong>#pending_setup_intent</strong> : String | Nil | Stripe::SetupIntent | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#plan:Stripe::Plan?-instance-method" class="signature"><strong>#plan</strong> : Stripe::Plan?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#quantity:Int32-instance-method" class="signature"><strong>#quantity</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#schedule:String?-instance-method" class="signature"><strong>#schedule</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#start:Time?-instance-method" class="signature"><strong>#start</strong> : Time?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#start_date:Time?-instance-method" class="signature"><strong>#start_date</strong> : Time?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="create(customer:String|Customer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String|Token?=nil,default_payment_method:String|Token?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">
+      <div class="signature">
+        
+        def self.<strong>create</strong>(customer : String | <a href="../Stripe/Customer.html">Customer</a>? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
+
+        <a class="method-permalink" href="#create(customer:String%7CCustomer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String%7CToken?=nil,default_payment_method:String%7CToken?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/create_subscription.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(pull : JSON::PullParser)
+
+        <a class="method-permalink" href="#new(pull:JSON::PullParser)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update(subscription:String|Subscription,cancel_at_period_end:Bool=Unset.new,customer:String|Customer?|Unset=Unset.new,coupon:String?|Unset=Unset.new,default_source:String|Token?|Unset=Unset.new,default_payment_method:String|Token?|Unset=Unset.new,metadata:Hash?|Unset=Unset.new,items:U?|Unset=Unset.new):SubscriptionforallT,U-class-method">
+      <div class="signature">
+        
+        def self.<strong>update</strong>(subscription : String | <a href="../Stripe/Subscription.html">Subscription</a>, cancel_at_period_end : Bool = <span class="t">Unset</span>.<span class="k">new</span>, customer : String | <a href="../Stripe/Customer.html">Customer</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, coupon : String? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, metadata : Hash? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, items : U? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
+
+        <a class="method-permalink" href="#update(subscription:String%7CSubscription,cancel_at_period_end:Bool=Unset.new,customer:String%7CCustomer?%7CUnset=Unset.new,coupon:String?%7CUnset=Unset.new,default_source:String%7CToken?%7CUnset=Unset.new,default_payment_method:String%7CToken?%7CUnset=Unset.new,metadata:Hash?%7CUnset=Unset.new,items:U?%7CUnset=Unset.new):SubscriptionforallT,U-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/update_subscription.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="delete(id:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>delete</strong>(id : String)
+
+        <a class="method-permalink" href="#delete(id:String)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/delete_subscription.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete(subscription:Subscription)-class-method">
+      <div class="signature">
+        
+        def self.<strong>delete</strong>(subscription : <a href="../Stripe/Subscription.html">Subscription</a>)
+
+        <a class="method-permalink" href="#delete(subscription:Subscription)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/delete_subscription.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list(customer:String?=nil,plan:String?=nil,status:String?|Stripe::Subscription::Status?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):Stripe::List(Stripe::Subscription)-class-method">
+      <div class="signature">
+        
+        def self.<strong>list</strong>(customer : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, status : String? | <a href="../Stripe/Subscription/Status.html">Stripe::Subscription::Status</a>? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../Stripe/List.html">Stripe::List</a>(<a href="../Stripe/Subscription.html">Stripe::Subscription</a>)
+
+        <a class="method-permalink" href="#list(customer:String?=nil,plan:String?=nil,status:String?%7CStripe::Subscription::Status?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):Stripe::List(Stripe::Subscription)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/list_subscription.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="retrieve(id:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>retrieve</strong>(id : String)
+
+        <a class="method-permalink" href="#retrieve(id:String)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="retrieve(subscription:Subscription)-class-method">
+      <div class="signature">
+        
+        def self.<strong>retrieve</strong>(subscription : <a href="../Stripe/Subscription.html">Subscription</a>)
+
+        <a class="method-permalink" href="#retrieve(subscription:Subscription)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="application_fee_percent:Float32?-instance-method">
+      <div class="signature">
+        
+        def <strong>application_fee_percent</strong> : Float32?
+
+        <a class="method-permalink" href="#application_fee_percent:Float32?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="billing:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>billing</strong> : String?
+
+        <a class="method-permalink" href="#billing:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L34" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="billing_cycle_anchor:Time?-instance-method">
+      <div class="signature">
+        
+        def <strong>billing_cycle_anchor</strong> : Time?
+
+        <a class="method-permalink" href="#billing_cycle_anchor:Time?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="billing_thresholds:Hash(String,Int32|Bool)?-instance-method">
+      <div class="signature">
+        
+        def <strong>billing_thresholds</strong> : Hash(String, Int32 | Bool)?
+
+        <a class="method-permalink" href="#billing_thresholds:Hash(String,Int32%7CBool)?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cancel_at:Time?-instance-method">
+      <div class="signature">
+        
+        def <strong>cancel_at</strong> : Time?
+
+        <a class="method-permalink" href="#cancel_at:Time?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cancel_at_period_end:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>cancel_at_period_end</strong> : Bool
+
+        <a class="method-permalink" href="#cancel_at_period_end:Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="canceled_at:Time?-instance-method">
+      <div class="signature">
+        
+        def <strong>canceled_at</strong> : Time?
+
+        <a class="method-permalink" href="#canceled_at:Time?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="collection_method:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>collection_method</strong> : String?
+
+        <a class="method-permalink" href="#collection_method:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L46" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="created:Time?-instance-method">
+      <div class="signature">
+        
+        def <strong>created</strong> : Time?
+
+        <a class="method-permalink" href="#created:Time?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="current_period_end:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>current_period_end</strong> : Time
+
+        <a class="method-permalink" href="#current_period_end:Time-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="current_period_start:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>current_period_start</strong> : Time
+
+        <a class="method-permalink" href="#current_period_start:Time-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="customer:String|Nil|Stripe::Customer|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>customer</strong> : String | Nil | <a href="../Stripe/Customer.html">Stripe::Customer</a> | Nil
+
+        <a class="method-permalink" href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="days_until_due:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>days_until_due</strong> : Int32?
+
+        <a class="method-permalink" href="#days_until_due:Int32?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_payment_method:String|Nil|Stripe::PaymentMethod|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>default_payment_method</strong> : String | Nil | <a href="../Stripe/PaymentMethod.html">Stripe::PaymentMethod</a> | Nil
+
+        <a class="method-permalink" href="#default_payment_method:String%7CNil%7CStripe::PaymentMethod%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L58" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_source:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>default_source</strong> : String?
+
+        <a class="method-permalink" href="#default_source:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_tax_rates:Array(Stripe::TaxRate)?-instance-method">
+      <div class="signature">
+        
+        def <strong>default_tax_rates</strong> : Array(<a href="../Stripe/TaxRate.html">Stripe::TaxRate</a>)?
+
+        <a class="method-permalink" href="#default_tax_rates:Array(Stripe::TaxRate)?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L60" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id:String-instance-method">
+      <div class="signature">
+        
+        def <strong>id</strong> : String
+
+        <a class="method-permalink" href="#id:String-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="items:Stripe::List(Item)?-instance-method">
+      <div class="signature">
+        
+        def <strong>items</strong> : <a href="../Stripe/List.html">Stripe::List</a>(<a href="../Stripe/Subscription/Item.html">Item</a>)?
+
+        <a class="method-permalink" href="#items:Stripe::List(Item)?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="latest_invoice:String|Nil|Stripe::Invoice|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>latest_invoice</strong> : String | Nil | <a href="../Stripe/Invoice.html">Stripe::Invoice</a> | Nil
+
+        <a class="method-permalink" href="#latest_invoice:String%7CNil%7CStripe::Invoice%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="livemode:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>livemode</strong> : Bool?
+
+        <a class="method-permalink" href="#livemode:Bool?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pending_setup_intent:String|Nil|Stripe::SetupIntent|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>pending_setup_intent</strong> : String | Nil | <a href="../Stripe/SetupIntent.html">Stripe::SetupIntent</a> | Nil
+
+        <a class="method-permalink" href="#pending_setup_intent:String%7CNil%7CStripe::SetupIntent%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="plan:Stripe::Plan?-instance-method">
+      <div class="signature">
+        
+        def <strong>plan</strong> : <a href="../Stripe/Plan.html">Stripe::Plan</a>?
+
+        <a class="method-permalink" href="#plan:Stripe::Plan?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L67" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="quantity:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>quantity</strong> : Int32
+
+        <a class="method-permalink" href="#quantity:Int32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L64" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="schedule:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>schedule</strong> : String?
+
+        <a class="method-permalink" href="#schedule:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="start:Time?-instance-method">
+      <div class="signature">
+        
+        def <strong>start</strong> : Time?
+
+        <a class="method-permalink" href="#start:Time?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="start_date:Time?-instance-method">
+      <div class="signature">
+        
+        def <strong>start_date</strong> : Time?
+
+        <a class="method-permalink" href="#start_date:Time?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="status:Status-instance-method">
+      <div class="signature">
+        
+        def <strong>status</strong> : <a href="../Stripe/Subscription/Status.html">Status</a>
+
+        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/70585b3afb4f22685d263f9782574e76b391ba55/src/stripe/objects/core/subscription.cr#L76" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
