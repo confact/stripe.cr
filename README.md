@@ -2,6 +2,8 @@
 
 Stripe API wrapper for Crystal.
 
+This version (>1.0) is changed to follow Ruby's method and class structure. We will follow `Stripe::Class.method` but follow crystal parameters to take care of the types automatically.
+
 ### Notice
 
 This api wrapper was tested on api version `2020-03-02` but have been trying to make it flexible with `String?` and correspondent in the types.
@@ -21,27 +23,29 @@ dependencies:
 ```crystal
 require "stripe"
 
-stripe = Stripe.new("YOUR_API_TOKEN")
+Stripe.api_key = "YOUR_API_TOKEN"
 
-token = stripe.create_card_token(card: {
+token = Stripe::Token.create(card: {
   number: "4242424242424242",
   exp_month: 12,
   exp_year: 2019,
   cvc: 123,
 })
 
-customer = stripe.create_customer(source: token)
-charge = stripe.create_charge(amount: 1000, currency: "usd", customer: customer)
+customer = Stripe::Customer.create(source: token)
+charge = Stripe::Charge.create(amount: 1000, currency: "usd", customer: customer)
 ```
 
 ### custom API version
 
 You can set custom api version if needed.
+Version need to be set before first api call is called. otherwise it won't be used.
 
 ```crystal
 require "stripe"
 
-stripe = Stripe.new("YOUR_API_TOKEN", "2019-03-29")
+Stripe.api_key = "YOUR_API_TOKEN"
+Stripe.version = "2019-03-29"
 ```
 
 ### Example of setting up a subscription
@@ -55,7 +59,7 @@ When the step is at server code, check the code below that is corresponding towa
 Setting up an customer:
 ```crystal
   token = params['StripeToken'] # or what the param for the token is called for you.
-  customer = stripe.create_customer(email: email,
+  customer = Stripe::Customer.create(email: email,
                          description: name, # just example
                          payment_method: token, # or token.payment_method.id  
                          # depends what you do in the frontend to handle the token.
@@ -65,7 +69,7 @@ Setting up an customer:
 
 create a subscription with that customer:
 ```crystal
-stripe.create_subscription(customer: customer,
+Stripe::Subscription.create(customer: customer,
 plan: STRIPE_PLAN_ID,
 expand: ["latest_invoice.payment_intent"]) # yes - create_subscription support expand.
 ```
@@ -92,13 +96,25 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Create a charge
 
-- [ ] Retrieve a charge
+- [x] Retrieve a charge
 
 - [ ] Update a charge
 
 - [ ] Capture a charge
 
 - [ ] List all charges
+
+##### Sources
+
+- [x] Create a source
+
+- [x] Retrieve a source
+
+- [x] Attach a source to customer
+
+- [x] Detach a source from customer
+
+- [ ] Update a source
 
 ##### Subscriptions
 - [x] Create a Subscription
@@ -109,7 +125,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Delete a Subscription
 
-- [ ] List all Subscriptions
+- [x] List all Subscriptions
 
 ##### Setup Intent
 
@@ -125,7 +141,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Delete a Setup Intent
 
-- [ ] List all Setup Intents
+- [x] List all Setup Intents
 
 ##### Payment Intent
 
@@ -141,7 +157,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Delete a Payment Intent
 
-- [ ] List all Payment Intents
+- [x] List all Payment Intents
 
 ##### Customers
 
@@ -153,7 +169,35 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Delete a customer
 
-- [ ] List all customers
+- [x] List all customers
+
+##### Customer Tax IDs
+
+- [x] Create a customer tax ID
+
+- [x] Retrieve a customer tax ID
+
+- [x] Delete a customer tax ID
+
+##### Refund
+
+- [x] Create a refund
+
+- [x] Retrieve a refund
+
+- [ ] Update a refund
+
+- [ ] List all refunds
+
+##### Tax Rate
+
+- [x] Create a tax rate
+
+- [x] retrieve a tax rate
+
+- [ ] Update a tax rate
+
+- [ ] List all tax rates
 
 ##### Tokens
 
@@ -177,7 +221,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Delete a invoice
 
-- [ ] List all invoices
+- [x] List all invoices
 
 
 ### Objects
@@ -195,6 +239,8 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [x] Product
 
 - [x] Customer
+
+- [x] Customer Tax ID
 
 - [x] Subscription
 
@@ -214,6 +260,8 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Refund
 
+- [x] Tax Rate
+
 - [x] Token
 
 - [x] Payment Intent
@@ -228,7 +276,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Card
 
-- [ ] Source
+- [x] Source
 
 #### Connect
 

@@ -1,7 +1,7 @@
-struct Stripe::PaymentMethod
+class Stripe::PaymentMethod
   include JSON::Serializable
 
-  struct BillingDetails
+  class BillingDetails
     include JSON::Serializable
 
     getter address : Stripe::Shipping::Address?

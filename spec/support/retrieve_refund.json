@@ -1,0 +1,16 @@
+{
+  "id": "re_1GVxr1IfhoELGSZwsYg0cUmI",
+  "object": "refund",
+  "amount": 100,
+  "balance_transaction": null,
+  "charge": "ch_1GVxr0IfhoELGSZwRJLTtEnV",
+  "created": 1586429007,
+  "currency": "sek",
+  "metadata": {},
+  "payment_intent": null,
+  "reason": null,
+  "receipt_number": null,
+  "source_transfer_reversal": null,
+  "status": "succeeded",
+  "transfer_reversal": null
+}

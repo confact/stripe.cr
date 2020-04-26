@@ -1,12 +1,13 @@
-struct Stripe::TaxRate
+class Stripe::TaxRate
   include JSON::Serializable
 
   getter id : String
-  getter object : String?
   getter inclusive : Bool
   getter object : String?
   getter customer : String?
   getter active : Bool
+
+  @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time
   getter description : String?
   getter jurisdiction : String?

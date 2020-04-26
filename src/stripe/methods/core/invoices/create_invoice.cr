@@ -1,5 +1,5 @@
-class Stripe
-  def create_invoice(
+class Stripe::Invoice
+  def self.create(
     customer : String | Customer? = nil,
     auto_advance : Bool? = nil,
     default_source : String | Token? = nil,
@@ -11,11 +11,15 @@ class Stripe
     case default_source
     when Token
       default_source = default_source.id
+    when Nil
+      default_source = nil
     end
 
     case default_payment_method
     when Token, PaymentMethods::Card
       default_payment_method = default_payment_method.not_nil!.id
+    when Nil
+      default_payment_method = nil
     end
 
     io = IO::Memory.new
@@ -25,7 +29,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/invoices", form: io.to_s)
+    response = Stripe.client.post("/v1/invoices", form: io.to_s)
 
     if response.status_code == 200
       return Invoice.from_json(response.body)

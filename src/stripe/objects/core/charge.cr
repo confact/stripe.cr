@@ -1,8 +1,8 @@
 # https://stripe.com/docs/api/charges/object
-struct Stripe::Charge
+class Stripe::Charge
   include JSON::Serializable
 
-  struct FraudDetails
+  class FraudDetails
     include JSON::Serializable
 
     enum UserReport
@@ -21,7 +21,7 @@ struct Stripe::Charge
     getter user_report : StripeReport?
   end
 
-  struct Outcome
+  class Outcome
     include JSON::Serializable
 
     enum NetworkStatus

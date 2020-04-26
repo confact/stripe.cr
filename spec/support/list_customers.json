@@ -1,0 +1,52 @@
+{
+  "object": "list",
+  "url": "/v1/customers",
+  "has_more": false,
+  "data": [
+    {
+      "id": "cus_H4637xPCSXL0I7",
+      "object": "customer",
+      "address": null,
+      "balance": 0,
+      "created": 1586429006,
+      "currency": "sek",
+      "default_source": null,
+      "delinquent": false,
+      "description": null,
+      "discount": null,
+      "email": null,
+      "invoice_prefix": "9591E49",
+      "invoice_settings": {
+        "custom_fields": null,
+        "default_payment_method": null,
+        "footer": null
+      },
+      "livemode": false,
+      "metadata": {},
+      "name": null,
+      "next_invoice_sequence": 1,
+      "phone": null,
+      "preferred_locales": [],
+      "shipping": null,
+      "sources": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "url": "/v1/customers/cus_H4637xPCSXL0I7/sources"
+      },
+      "subscriptions": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "url": "/v1/customers/cus_H4637xPCSXL0I7/subscriptions"
+      },
+      "tax_exempt": "none",
+      "tax_ids": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "url": "/v1/customers/cus_H4637xPCSXL0I7/tax_ids"
+      }
+    }
+  ]
+}

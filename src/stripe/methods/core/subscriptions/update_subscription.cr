@@ -1,5 +1,5 @@
-class Stripe
-  def update_subscription(
+class Stripe::Subscription
+  def self.update(
     subscription : String | Subscription,
     cancel_at_period_end : Bool = Unset.new,
     customer : String | Customer? | Unset = Unset.new,
@@ -27,7 +27,7 @@ class Stripe
     when Subscription then sub_id = subscription.id
     end
 
-    response = @client.post("/v1/subscriptions/#{sub_id}", form: io.to_s)
+    response = Stripe.client.post("/v1/subscriptions/#{sub_id}", form: io.to_s)
 
     if response.status_code == 200
       return Subscription.from_json(response.body)

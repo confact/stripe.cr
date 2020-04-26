@@ -1,4 +1,4 @@
-struct Stripe::Product
+class Stripe::Product
   include JSON::Serializable
 
   getter id : String

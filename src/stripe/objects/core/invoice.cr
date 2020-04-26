@@ -1,4 +1,4 @@
-struct Stripe::Invoice
+class Stripe::Invoice
   include JSON::Serializable
 
   enum CollectionMethod
@@ -6,7 +6,15 @@ struct Stripe::Invoice
     SendInvoice
   end
 
-  struct LineItem
+  enum Status
+    Draft
+    Open
+    Paid
+    Uncollectible
+    Void
+  end
+
+  class LineItem
     include JSON::Serializable
 
     getter id : String
@@ -31,7 +39,7 @@ struct Stripe::Invoice
 
     getter plan : Stripe::Plan?
 
-    getter subscription : String?
+    getter subscription : String? | Stripe::Subscription?
     getter subscription_item : String?
 
     getter type : String?
@@ -72,6 +80,9 @@ struct Stripe::Invoice
   getter default_tax_rates : Array(Hash(String, String | Bool | Time | Hash(String, String)))?
 
   getter description : String?
+
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Invoice::Status))]
+  getter status : Status
 
   getter ending_balance : Int32?
 

@@ -1,5 +1,5 @@
-class Stripe
-  def create_subscription(
+class Stripe::Subscription
+  def self.create(
     customer : String | Customer? = nil,
     coupon : String? = nil,
     plan : String? = nil,
@@ -25,7 +25,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/subscriptions", form: io.to_s)
+    response = Stripe.client.post("/v1/subscriptions", form: io.to_s)
 
     if response.status_code == 200
       return Subscription.from_json(response.body)

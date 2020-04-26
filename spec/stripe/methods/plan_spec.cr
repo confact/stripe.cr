@@ -5,8 +5,7 @@ describe Stripe::Plan do
     WebMock.stub(:post, "https://api.stripe.com/v1/plans")
       .to_return(status: 200, body: File.read("spec/support/create_plan.json"), headers: {"Content-Type" => "application/json"})
 
-    stripe = Stripe.new("test")
-    plan = stripe.create_plan(amount: 200, currency: "usd", interval: "month", id: "gold", product: "asdadssad")
+    plan = Stripe::Plan.create(amount: 200, currency: "usd", interval: "month", id: "gold", product: "asdadssad")
     plan.id.should eq("gold")
   end
 end

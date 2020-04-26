@@ -1,7 +1,8 @@
-class Stripe
-  def create_card_token(
+class Stripe::Token
+  def self.create(
     card : T? = nil,
-    customer : String | Customer? = nil
+    customer : String | Customer? = nil,
+    expand : Array(String)? = nil
   ) : Token forall T
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
@@ -10,8 +11,9 @@ class Stripe
 
     builder.add("card", card) if card
     builder.add("customer", customer) if customer
+    builder.add("expand", expand) if expand
 
-    response = @client.post("/v1/tokens", form: io.to_s)
+    response = Stripe.client.post("/v1/tokens", form: io.to_s)
 
     if response.status_code == 200
       return Token.from_json(response.body)

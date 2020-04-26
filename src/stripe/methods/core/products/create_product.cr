@@ -1,5 +1,5 @@
-class Stripe
-  def create_product(
+class Stripe::Product
+  def self.create(
     name : String,
     active : Bool? = nil,
     description : String? = nil,
@@ -16,7 +16,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/products", form: io.to_s)
+    response = Stripe.client.post("/v1/products", form: io.to_s)
 
     if response.status_code == 200
       return Product.from_json(response.body)

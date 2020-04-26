@@ -1,5 +1,5 @@
-class Stripe
-  def create_plan(
+class Stripe::Plan
+  def self.create(
     currency : String,
     interval : String,
     product : String | Product,
@@ -26,7 +26,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/plans", form: io.to_s)
+    response = Stripe.client.post("/v1/plans", form: io.to_s)
 
     if response.status_code == 200
       return Plan.from_json(response.body)

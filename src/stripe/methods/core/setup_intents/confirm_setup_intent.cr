@@ -1,13 +1,12 @@
-class Stripe
-  def confirm_setup_intent(
+class Stripe::SetupIntent
+  def self.confirm(
     intent : String | SetupIntent? = nil,
     payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = nil,
     return_url : String? = nil
   ) : SetupIntent forall T, U
     intent = intent.as(SetupIntent).id if intent.is_a?(SetupIntent)
 
-    case payment_method
-    when Token, PaymentMethods::Card, PaymentMethods::BankAccount
+    if payment_method.is_a?(Token | PaymentMethods::Card | PaymentMethods::BankAccount)
       payment_method = payment_method.not_nil!.id
     end
 
@@ -18,7 +17,7 @@ class Stripe
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/setup_intents/#{intent}/confirm", form: io.to_s)
+    response = Stripe.client.post("/v1/setup_intents/#{intent}/confirm", form: io.to_s)
 
     if response.status_code == 200
       return SetupIntent.from_json(response.body)

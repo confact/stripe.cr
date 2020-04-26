@@ -1,5 +1,5 @@
-class Stripe
-  def create_charge(
+class Stripe::Charge
+  def self.create(
     amount : Int32,
     currency : String,
     application_fee : Int32? = nil,
@@ -13,23 +13,26 @@ class Stripe
     shipping : U? = nil,
     source : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = nil,
     statement_descriptor : String? = nil,
-    transfer_group : String? = nil
+    transfer_group : String? = nil,
+    expand : Array(String)? = nil
   ) : Charge forall T, U
     customer = customer.as(Customer).id if customer.is_a?(Customer)
 
     case source
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
       source = source.not_nil!.id
+    when Nil
+      source = nil
     end
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(amount currency application_fee capture customer description destination metadata on_behalf_of receipt_email shipping source statement_descriptor transfer_group) %}
+    {% for x in %w(amount currency application_fee capture customer description destination metadata on_behalf_of receipt_email shipping source statement_descriptor transfer_group expand) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = @client.post("/v1/charges", form: io.to_s)
+    response = Stripe.client.post("/v1/charges", form: io.to_s)
 
     if response.status_code == 200
       return Charge.from_json(response.body)

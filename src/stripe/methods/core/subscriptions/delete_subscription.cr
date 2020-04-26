@@ -1,6 +1,6 @@
-class Stripe
-  def delete_subscription(id : String)
-    response = @client.delete("/v1/subscriptions/#{id}")
+class Stripe::Subscription
+  def self.delete(id : String)
+    response = Stripe.client.delete("/v1/subscriptions/#{id}")
 
     if response.status_code == 200
       return Subscription.from_json(response.body)
@@ -9,7 +9,7 @@ class Stripe
     end
   end
 
-  def delete_subscription(subscription : Subscription)
-    delete_subscription(subscription.id)
+  def self.delete(subscription : Subscription)
+    delete(subscription.id)
   end
 end

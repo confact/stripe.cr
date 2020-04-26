@@ -1,4 +1,4 @@
-struct Stripe::Refund
+class Stripe::Refund
   include JSON::Serializable
 
   enum FailureReason
@@ -22,7 +22,7 @@ struct Stripe::Refund
 
   getter id : String
   getter amount : Int32
-  getter balance_transaction : String
+  getter balance_transaction : String?
   getter charge : String
 
   @[JSON::Field(converter: Time::EpochConverter)]
@@ -39,8 +39,10 @@ struct Stripe::Refund
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Refund::Reason))]
   getter reason : Reason?
 
-  getter receipt_number : String
+  getter receipt_number : String?
   getter source_transfer_reversal : String?
+
+  getter payment_intent : String? | Stripe::PaymentIntent?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Refund::Status))]
   getter status : Status
