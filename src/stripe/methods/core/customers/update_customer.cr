@@ -4,9 +4,12 @@ class Stripe::Customer
     account_balance : Int32 | Unset = Unset.new,
     coupon : String? | Unset = Unset.new,
     default_source : String | Token | Unset = Unset.new,
+    name : String | Token? | Unset = Unset.new,
     description : String | Token? | Unset = Unset.new,
     email : String? | Unset = Unset.new,
+    phone : String? | Unset = Unset.new,
     invoice_prefix : String | Unset = Unset.new,
+    invoice_settings : U? | Unset = Unset.new,
     metadata : Hash? | Unset = Unset.new,
     shipping : T? | Unset = Unset.new,
     source : String | Token | Unset = Unset.new,
@@ -19,7 +22,7 @@ class Stripe::Customer
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(account_balance coupon default_source description email invoice_prefix metadata shipping source tax_info) %}
+    {% for x in %w(account_balance coupon default_source name description email phone invoice_prefix invoice_settings metadata shipping source tax_info) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.is_a?(Unset)
     {% end %}
 

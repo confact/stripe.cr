@@ -37,8 +37,10 @@ class Stripe::Customer
   getter currency : String?
   getter default_source : String?
   getter delinquent : Bool?
+  getter name : String?
   getter description : String?
   getter email : String?
+  getter phone : String?
   getter invoice_prefix : String?
   getter livemode : Bool?
   getter metadata : Hash(String, String)?

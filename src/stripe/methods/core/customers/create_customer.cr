@@ -3,8 +3,10 @@ class Stripe::Customer
     account_balance : Int32? = nil,
     coupon : String? = nil,
     default_source : String | Token? = nil,
+    name : String | Token? = nil,
     description : String | Token? = nil,
     email : String? = nil,
+    phone : String? = nil,
     invoice_prefix : String? = nil,
     payment_method : String? | Token? | Stripe::PaymentMethod? = nil,
     metadata : Hash? = nil,
@@ -31,7 +33,7 @@ class Stripe::Customer
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(account_balance coupon default_source payment_method description email invoice_prefix invoice_settings metadata shipping source tax_info expand) %}
+    {% for x in %w(account_balance coupon default_source payment_method name description email phone invoice_prefix invoice_settings metadata shipping source tax_info expand) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
