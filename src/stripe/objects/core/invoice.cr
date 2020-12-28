@@ -86,6 +86,8 @@ class Stripe::Invoice
 
   getter ending_balance : Int32?
 
+  getter lines : List(LineItem)?
+
   @[JSON::Field(converter: Time::EpochConverter)]
   getter due_date : Time?
   getter invoice_pdf : String?
