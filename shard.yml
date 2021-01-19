@@ -11,9 +11,6 @@ development_dependencies:
   webmock:
     github: manastech/webmock.cr
     branch: master
-  coverage:
-    github: anykeyh/crystal-coverage
-    branch: master
   ameba:
     github: crystal-ameba/ameba
     branch: master
