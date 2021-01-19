@@ -13,5 +13,9 @@ development_dependencies:
     branch: master
   coverage:
     github: anykeyh/crystal-coverage
+    branch: master
+  ameba:
+    github: crystal-ameba/ameba
+    branch: master
 
 license: MIT
