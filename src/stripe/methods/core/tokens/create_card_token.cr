@@ -16,7 +16,7 @@ class Stripe::Token
     response = Stripe.client.post("/v1/tokens", form: io.to_s)
 
     if response.status_code == 200
-      return Token.from_json(response.body)
+      Token.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

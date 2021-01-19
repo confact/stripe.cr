@@ -1,0 +1,7 @@
+# This is temporarily in place to make it easier to integrate Ameba into the application.
+Lint/UselessAssign:
+  Description: Disallows useless variable assignments
+  Excluded:
+    - src/stripe/methods/core/**/*.cr
+  Enabled: true
+  Severity: Warning

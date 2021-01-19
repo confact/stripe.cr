@@ -3,7 +3,7 @@ class Stripe::Subscription
     response = Stripe.client.delete("/v1/subscriptions/#{id}")
 
     if response.status_code == 200
-      return Subscription.from_json(response.body)
+      Subscription.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

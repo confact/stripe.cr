@@ -32,7 +32,7 @@ class Stripe
 
     self.reset_client
 
-    return @@client.not_nil!
+    @@client.not_nil!
   end
 
   def self.reset_client

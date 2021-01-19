@@ -34,7 +34,7 @@ class Stripe::PaymentIntent
     response = Stripe.client.post("/v1/payment_intents", form: io.to_s)
 
     if response.status_code == 200
-      return PaymentIntent.from_json(response.body)
+      PaymentIntent.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end
