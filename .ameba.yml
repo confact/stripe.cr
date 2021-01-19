@@ -1,4 +1,5 @@
 # This is temporarily in place to make it easier to integrate Ameba into the application.
+# Once https://github.com/crystal-ameba/ameba/issues/194 is resolved, we can remove it.
 Lint/UselessAssign:
   Description: Disallows useless variable assignments
   Excluded:
