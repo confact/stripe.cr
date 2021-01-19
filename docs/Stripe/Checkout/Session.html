@@ -18,7 +18,7 @@
 </svg>
 
   <meta id="repository-name" content="stripe">
-  <title>Stripe::Invoice::LineItem - stripe sd-github-actions-switch-dev</title>
+  <title>Stripe::Checkout::Session - stripe sd-github-actions-switch-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -166,12 +166,12 @@
       
     </li>
   
-  <li class="parent " data-id="stripe/Stripe/Checkout" data-name="stripe::checkout">
+  <li class="parent open current" data-id="stripe/Stripe/Checkout" data-name="stripe::checkout">
       <a href="../../Stripe/Checkout.html">Checkout</a>
       
         <ul>
   
-  <li class="parent " data-id="stripe/Stripe/Checkout/Session" data-name="stripe::checkout::session">
+  <li class="parent open current" data-id="stripe/Stripe/Checkout/Session" data-name="stripe::checkout::session">
       <a href="../../Stripe/Checkout/Session.html">Session</a>
       
         <ul>
@@ -271,7 +271,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="stripe/Stripe/Invoice" data-name="stripe::invoice">
+  <li class="parent " data-id="stripe/Stripe/Invoice" data-name="stripe::invoice">
       <a href="../../Stripe/Invoice.html">Invoice</a>
       
         <ul>
@@ -281,7 +281,7 @@
       
     </li>
   
-  <li class=" current" data-id="stripe/Stripe/Invoice/LineItem" data-name="stripe::invoice::lineitem">
+  <li class=" " data-id="stripe/Stripe/Invoice/LineItem" data-name="stripe::invoice::lineitem">
       <a href="../../Stripe/Invoice/LineItem.html">LineItem</a>
       
     </li>
@@ -550,15 +550,26 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Stripe::Invoice::LineItem
+  <span class="kind">class</span> Stripe::Checkout::Session
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Stripe/Invoice/LineItem.html">Stripe::Invoice::LineItem</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>https://stripe.com/docs/api/checkout/sessions/object</p>
 
 
 
@@ -631,7 +642,22 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create(customer:String%7CCustomer,currency:String,amount:Int32?=nil,quantity:Int32?=nil,description:String?=nil,unit_amount:Int32?=nil,invoice:String%7CInvoice?=nil,subscription:String%7CSubscription?=nil,metadata:Hash(String,String)?=nil):Invoice::LineItemforallT,U-class-method" class="signature"><strong>.create</strong>(customer : String | Customer, currency : String, amount : Int32? = <span class="n">nil</span>, quantity : Int32? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, unit_amount : Int32? = <span class="n">nil</span>, invoice : String | Invoice? = <span class="n">nil</span>, subscription : String | Subscription? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>) : Invoice::LineItem forall T, U</a>
+        <a href="#create(mode:String%7CStripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?%7CStripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple())?=nil,expand:Array(String)?=nil):Stripe::Checkout::Session-class-method" class="signature"><strong>.create</strong>(mode : String | Stripe::Checkout::Session::Mode, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | Stripe::Customer? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple())? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Stripe::Checkout::Session</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list(payment_intent:String?%7CStripe::PaymentIntent?=nil,subscription:String?%7CStripe::Subscription?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Checkout::Session)-class-method" class="signature"><strong>.list</strong>(payment_intent : String? | Stripe::PaymentIntent? = <span class="n">nil</span>, subscription : String? | Stripe::Subscription? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::Checkout::Session)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#retrieve(id:String)-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#retrieve(session:Session)-class-method" class="signature"><strong>.retrieve</strong>(session : Session)</a>
         
       </li>
     
@@ -650,12 +676,32 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#amount:Int32?-instance-method" class="signature"><strong>#amount</strong> : Int32?</a>
+        <a href="#allow_promotion_codes:Bool?-instance-method" class="signature"><strong>#allow_promotion_codes</strong> : Bool?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created:Time?-instance-method" class="signature"><strong>#created</strong> : Time?</a>
+        <a href="#amount_subtotal:Int32?-instance-method" class="signature"><strong>#amount_subtotal</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#amount_total:Int32?-instance-method" class="signature"><strong>#amount_total</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#billing_address_collection:BillingAddressCollection?-instance-method" class="signature"><strong>#billing_address_collection</strong> : BillingAddressCollection?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cancel_url:String-instance-method" class="signature"><strong>#cancel_url</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_reference_id:String?-instance-method" class="signature"><strong>#client_reference_id</strong> : String?</a>
         
       </li>
     
@@ -665,12 +711,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#description:String?-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method" class="signature"><strong>#customer</strong> : String | Nil | Stripe::Customer | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#discountable:Bool?-instance-method" class="signature"><strong>#discountable</strong> : Bool?</a>
+        <a href="#customer_email:String?-instance-method" class="signature"><strong>#customer_email</strong> : String?</a>
         
       </li>
     
@@ -680,12 +726,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#invoice_item:String?-instance-method" class="signature"><strong>#invoice_item</strong> : String?</a>
+        <a href="#line_items:Array(Hash(String,String%7CInt32))?-instance-method" class="signature"><strong>#line_items</strong> : Array(Hash(String, String | Int32))?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#livemode:Bool-instance-method" class="signature"><strong>#livemode</strong> : Bool</a>
+        <a href="#livemode:Bool?-instance-method" class="signature"><strong>#livemode</strong> : Bool?</a>
         
       </li>
     
@@ -695,22 +741,47 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#period:Hash(String,Int32)?-instance-method" class="signature"><strong>#period</strong> : Hash(String, Int32)?</a>
+        <a href="#mode:String%7CMode-instance-method" class="signature"><strong>#mode</strong> : String | Mode</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#plan:Stripe::Plan?-instance-method" class="signature"><strong>#plan</strong> : Stripe::Plan?</a>
+        <a href="#object:String?-instance-method" class="signature"><strong>#object</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#proration:Bool-instance-method" class="signature"><strong>#proration</strong> : Bool</a>
+        <a href="#payment_intent:String%7CNil%7CStripe::PaymentIntent%7CNil-instance-method" class="signature"><strong>#payment_intent</strong> : String | Nil | Stripe::PaymentIntent | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#quantity:Int32-instance-method" class="signature"><strong>#quantity</strong> : Int32</a>
+        <a href="#payment_method_types:Array(String)-instance-method" class="signature"><strong>#payment_method_types</strong> : Array(String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payment_status:PaymentStatus-instance-method" class="signature"><strong>#payment_status</strong> : PaymentStatus</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#setup_intent:String%7CNil%7CStripe::SetupIntent%7CNil-instance-method" class="signature"><strong>#setup_intent</strong> : String | Nil | Stripe::SetupIntent | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#shipping:Hash(String,String%7CHash(String,String))?-instance-method" class="signature"><strong>#shipping</strong> : Hash(String, String | Hash(String, String))?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#shipping_address_collection:Hash(String,Array(String))?-instance-method" class="signature"><strong>#shipping_address_collection</strong> : Hash(String, Array(String))?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#submit_type:SubmitType?-instance-method" class="signature"><strong>#submit_type</strong> : SubmitType?</a>
         
       </li>
     
@@ -720,17 +791,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#subscription_item:String?-instance-method" class="signature"><strong>#subscription_item</strong> : String?</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#tax_rates:Array(Stripe::TaxRate)?-instance-method" class="signature"><strong>#tax_rates</strong> : Array(Stripe::TaxRate)?</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#type:String?-instance-method" class="signature"><strong>#type</strong> : String?</a>
+        <a href="#success_url:String-instance-method" class="signature"><strong>#success_url</strong> : String</a>
         
       </li>
     
@@ -810,12 +871,54 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="create(customer:String|Customer,currency:String,amount:Int32?=nil,quantity:Int32?=nil,description:String?=nil,unit_amount:Int32?=nil,invoice:String|Invoice?=nil,subscription:String|Subscription?=nil,metadata:Hash(String,String)?=nil):Invoice::LineItemforallT,U-class-method">
+    <div class="entry-detail" id="create(mode:String|Stripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?|Stripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple())?=nil,expand:Array(String)?=nil):Stripe::Checkout::Session-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(customer : String | <a href="../../Stripe/Customer.html">Customer</a>, currency : String, amount : Int32? = <span class="n">nil</span>, quantity : Int32? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, unit_amount : Int32? = <span class="n">nil</span>, invoice : String | <a href="../../Stripe/Invoice.html">Invoice</a>? = <span class="n">nil</span>, subscription : String | <a href="../../Stripe/Subscription.html">Subscription</a>? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>) : <a href="../../Stripe/Invoice/LineItem.html">Invoice::LineItem</a> forall T, U
+        def self.<strong>create</strong>(mode : String | <a href="../../Stripe/Checkout/Session/Mode.html">Stripe::Checkout::Session::Mode</a>, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | <a href="../../Stripe/Customer.html">Stripe::Customer</a>? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple())? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>
 
-        <a class="method-permalink" href="#create(customer:String%7CCustomer,currency:String,amount:Int32?=nil,quantity:Int32?=nil,description:String?=nil,unit_amount:Int32?=nil,invoice:String%7CInvoice?=nil,subscription:String%7CSubscription?=nil,metadata:Hash(String,String)?=nil):Invoice::LineItemforallT,U-class-method">#</a>
+        <a class="method-permalink" href="#create(mode:String%7CStripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?%7CStripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple())?=nil,expand:Array(String)?=nil):Stripe::Checkout::Session-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list(payment_intent:String?|Stripe::PaymentIntent?=nil,subscription:String?|Stripe::Subscription?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Checkout::Session)-class-method">
+      <div class="signature">
+        
+        def self.<strong>list</strong>(payment_intent : String? | <a href="../../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a>? = <span class="n">nil</span>, subscription : String? | <a href="../../Stripe/Subscription.html">Stripe::Subscription</a>? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../../Stripe/List.html">List</a>(<a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>)
+
+        <a class="method-permalink" href="#list(payment_intent:String?%7CStripe::PaymentIntent?=nil,subscription:String?%7CStripe::Subscription?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Checkout::Session)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="retrieve(id:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>retrieve</strong>(id : String)
+
+        <a class="method-permalink" href="#retrieve(id:String)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="retrieve(session:Session)-class-method">
+      <div class="signature">
+        
+        def self.<strong>retrieve</strong>(session : <a href="../../Stripe/Checkout/Session.html">Session</a>)
+
+        <a class="method-permalink" href="#retrieve(session:Session)-class-method">#</a>
       </div>
       
       <br/>
@@ -836,12 +939,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="amount:Int32?-instance-method">
+    <div class="entry-detail" id="allow_promotion_codes:Bool?-instance-method">
       <div class="signature">
         
-        def <strong>amount</strong> : Int32?
+        def <strong>allow_promotion_codes</strong> : Bool?
 
-        <a class="method-permalink" href="#amount:Int32?-instance-method">#</a>
+        <a class="method-permalink" href="#allow_promotion_codes:Bool?-instance-method">#</a>
       </div>
       
       <br/>
@@ -850,12 +953,68 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created:Time?-instance-method">
+    <div class="entry-detail" id="amount_subtotal:Int32?-instance-method">
       <div class="signature">
         
-        def <strong>created</strong> : Time?
+        def <strong>amount_subtotal</strong> : Int32?
 
-        <a class="method-permalink" href="#created:Time?-instance-method">#</a>
+        <a class="method-permalink" href="#amount_subtotal:Int32?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="amount_total:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>amount_total</strong> : Int32?
+
+        <a class="method-permalink" href="#amount_total:Int32?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="billing_address_collection:BillingAddressCollection?-instance-method">
+      <div class="signature">
+        
+        def <strong>billing_address_collection</strong> : <a href="../../Stripe/Checkout/Session/BillingAddressCollection.html">BillingAddressCollection</a>?
+
+        <a class="method-permalink" href="#billing_address_collection:BillingAddressCollection?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cancel_url:String-instance-method">
+      <div class="signature">
+        
+        def <strong>cancel_url</strong> : String
+
+        <a class="method-permalink" href="#cancel_url:String-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_reference_id:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>client_reference_id</strong> : String?
+
+        <a class="method-permalink" href="#client_reference_id:String?-instance-method">#</a>
       </div>
       
       <br/>
@@ -878,12 +1037,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String?-instance-method">
+    <div class="entry-detail" id="customer:String|Nil|Stripe::Customer|Nil-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : String?
+        def <strong>customer</strong> : String | Nil | <a href="../../Stripe/Customer.html">Stripe::Customer</a> | Nil
 
-        <a class="method-permalink" href="#description:String?-instance-method">#</a>
+        <a class="method-permalink" href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -892,12 +1051,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="discountable:Bool?-instance-method">
+    <div class="entry-detail" id="customer_email:String?-instance-method">
       <div class="signature">
         
-        def <strong>discountable</strong> : Bool?
+        def <strong>customer_email</strong> : String?
 
-        <a class="method-permalink" href="#discountable:Bool?-instance-method">#</a>
+        <a class="method-permalink" href="#customer_email:String?-instance-method">#</a>
       </div>
       
       <br/>
@@ -920,12 +1079,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="invoice_item:String?-instance-method">
+    <div class="entry-detail" id="line_items:Array(Hash(String,String|Int32))?-instance-method">
       <div class="signature">
         
-        def <strong>invoice_item</strong> : String?
+        def <strong>line_items</strong> : Array(Hash(String, String | Int32))?
 
-        <a class="method-permalink" href="#invoice_item:String?-instance-method">#</a>
+        <a class="method-permalink" href="#line_items:Array(Hash(String,String%7CInt32))?-instance-method">#</a>
       </div>
       
       <br/>
@@ -934,12 +1093,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="livemode:Bool-instance-method">
+    <div class="entry-detail" id="livemode:Bool?-instance-method">
       <div class="signature">
         
-        def <strong>livemode</strong> : Bool
+        def <strong>livemode</strong> : Bool?
 
-        <a class="method-permalink" href="#livemode:Bool-instance-method">#</a>
+        <a class="method-permalink" href="#livemode:Bool?-instance-method">#</a>
       </div>
       
       <br/>
@@ -962,12 +1121,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="period:Hash(String,Int32)?-instance-method">
+    <div class="entry-detail" id="mode:String|Mode-instance-method">
       <div class="signature">
         
-        def <strong>period</strong> : Hash(String, Int32)?
+        def <strong>mode</strong> : String | <a href="../../Stripe/Checkout/Session/Mode.html">Mode</a>
 
-        <a class="method-permalink" href="#period:Hash(String,Int32)?-instance-method">#</a>
+        <a class="method-permalink" href="#mode:String%7CMode-instance-method">#</a>
       </div>
       
       <br/>
@@ -976,12 +1135,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="plan:Stripe::Plan?-instance-method">
+    <div class="entry-detail" id="object:String?-instance-method">
       <div class="signature">
         
-        def <strong>plan</strong> : <a href="../../Stripe/Plan.html">Stripe::Plan</a>?
+        def <strong>object</strong> : String?
 
-        <a class="method-permalink" href="#plan:Stripe::Plan?-instance-method">#</a>
+        <a class="method-permalink" href="#object:String?-instance-method">#</a>
       </div>
       
       <br/>
@@ -990,12 +1149,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="proration:Bool-instance-method">
+    <div class="entry-detail" id="payment_intent:String|Nil|Stripe::PaymentIntent|Nil-instance-method">
       <div class="signature">
         
-        def <strong>proration</strong> : Bool
+        def <strong>payment_intent</strong> : String | Nil | <a href="../../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a> | Nil
 
-        <a class="method-permalink" href="#proration:Bool-instance-method">#</a>
+        <a class="method-permalink" href="#payment_intent:String%7CNil%7CStripe::PaymentIntent%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1004,12 +1163,82 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="quantity:Int32-instance-method">
+    <div class="entry-detail" id="payment_method_types:Array(String)-instance-method">
       <div class="signature">
         
-        def <strong>quantity</strong> : Int32
+        def <strong>payment_method_types</strong> : Array(String)
 
-        <a class="method-permalink" href="#quantity:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#payment_method_types:Array(String)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payment_status:PaymentStatus-instance-method">
+      <div class="signature">
+        
+        def <strong>payment_status</strong> : <a href="../../Stripe/Checkout/Session/PaymentStatus.html">PaymentStatus</a>
+
+        <a class="method-permalink" href="#payment_status:PaymentStatus-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="setup_intent:String|Nil|Stripe::SetupIntent|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>setup_intent</strong> : String | Nil | <a href="../../Stripe/SetupIntent.html">Stripe::SetupIntent</a> | Nil
+
+        <a class="method-permalink" href="#setup_intent:String%7CNil%7CStripe::SetupIntent%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="shipping:Hash(String,String|Hash(String,String))?-instance-method">
+      <div class="signature">
+        
+        def <strong>shipping</strong> : Hash(String, String | Hash(String, String))?
+
+        <a class="method-permalink" href="#shipping:Hash(String,String%7CHash(String,String))?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="shipping_address_collection:Hash(String,Array(String))?-instance-method">
+      <div class="signature">
+        
+        def <strong>shipping_address_collection</strong> : Hash(String, Array(String))?
+
+        <a class="method-permalink" href="#shipping_address_collection:Hash(String,Array(String))?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="submit_type:SubmitType?-instance-method">
+      <div class="signature">
+        
+        def <strong>submit_type</strong> : <a href="../../Stripe/Checkout/Session/SubmitType.html">SubmitType</a>?
+
+        <a class="method-permalink" href="#submit_type:SubmitType?-instance-method">#</a>
       </div>
       
       <br/>
@@ -1032,40 +1261,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="subscription_item:String?-instance-method">
+    <div class="entry-detail" id="success_url:String-instance-method">
       <div class="signature">
         
-        def <strong>subscription_item</strong> : String?
+        def <strong>success_url</strong> : String
 
-        <a class="method-permalink" href="#subscription_item:String?-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="tax_rates:Array(Stripe::TaxRate)?-instance-method">
-      <div class="signature">
-        
-        def <strong>tax_rates</strong> : Array(<a href="../../Stripe/TaxRate.html">Stripe::TaxRate</a>)?
-
-        <a class="method-permalink" href="#tax_rates:Array(Stripe::TaxRate)?-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="type:String?-instance-method">
-      <div class="signature">
-        
-        def <strong>type</strong> : String?
-
-        <a class="method-permalink" href="#type:String?-instance-method">#</a>
+        <a class="method-permalink" href="#success_url:String-instance-method">#</a>
       </div>
       
       <br/>

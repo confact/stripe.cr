@@ -18,7 +18,7 @@
 </svg>
 
   <meta id="repository-name" content="stripe">
-  <title>Stripe::Source::Owner - stripe sd-github-actions-switch-dev</title>
+  <title>Stripe::BillingPortal::Session - stripe sd-github-actions-switch-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -86,12 +86,12 @@
       
     </li>
   
-  <li class="parent " data-id="stripe/Stripe/BillingPortal" data-name="stripe::billingportal">
+  <li class="parent open current" data-id="stripe/Stripe/BillingPortal" data-name="stripe::billingportal">
       <a href="../../Stripe/BillingPortal.html">BillingPortal</a>
       
         <ul>
   
-  <li class=" " data-id="stripe/Stripe/BillingPortal/Session" data-name="stripe::billingportal::session">
+  <li class=" current" data-id="stripe/Stripe/BillingPortal/Session" data-name="stripe::billingportal::session">
       <a href="../../Stripe/BillingPortal/Session.html">Session</a>
       
     </li>
@@ -471,12 +471,12 @@
       
     </li>
   
-  <li class="parent open current" data-id="stripe/Stripe/Source" data-name="stripe::source">
+  <li class="parent " data-id="stripe/Stripe/Source" data-name="stripe::source">
       <a href="../../Stripe/Source.html">Source</a>
       
         <ul>
   
-  <li class=" current" data-id="stripe/Stripe/Source/Owner" data-name="stripe::source::owner">
+  <li class=" " data-id="stripe/Stripe/Source/Owner" data-name="stripe::source::owner">
       <a href="../../Stripe/Source/Owner.html">Owner</a>
       
     </li>
@@ -550,15 +550,26 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Stripe::Source::Owner
+  <span class="kind">class</span> Stripe::BillingPortal::Session
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Stripe/Source/Owner.html">Stripe::Source::Owner</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Stripe/BillingPortal/Session.html">Stripe::BillingPortal::Session</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>https://stripe.com/docs/api/customer_portal</p>
 
 
 
@@ -620,6 +631,23 @@
 
 
 
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#create(customer:String%7CStripe::Customer,return_url:String?=nil,expand:Array(String)?=nil):Stripe::BillingPortal::Session-class-method" class="signature"><strong>.create</strong>(customer : String | Stripe::Customer, return_url : String? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Stripe::BillingPortal::Session</a>
+        
+      </li>
+    
+  </ul>
+
 
 
   <h2>
@@ -633,22 +661,37 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#address:Hash(String,String?)?-instance-method" class="signature"><strong>#address</strong> : Hash(String, String?)?</a>
+        <a href="#created:Time?-instance-method" class="signature"><strong>#created</strong> : Time?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#email:String?-instance-method" class="signature"><strong>#email</strong> : String?</a>
+        <a href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method" class="signature"><strong>#customer</strong> : String | Nil | Stripe::Customer | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name:String?-instance-method" class="signature"><strong>#name</strong> : String?</a>
+        <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#phone:String?-instance-method" class="signature"><strong>#phone</strong> : String?</a>
+        <a href="#livemode:Bool?-instance-method" class="signature"><strong>#livemode</strong> : Bool?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#object:String?-instance-method" class="signature"><strong>#object</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#return_url:String-instance-method" class="signature"><strong>#return_url</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#url:String?-instance-method" class="signature"><strong>#url</strong> : String?</a>
         
       </li>
     
@@ -719,6 +762,30 @@
 
 
 
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="create(customer:String|Stripe::Customer,return_url:String?=nil,expand:Array(String)?=nil):Stripe::BillingPortal::Session-class-method">
+      <div class="signature">
+        
+        def self.<strong>create</strong>(customer : String | <a href="../../Stripe/Customer.html">Stripe::Customer</a>, return_url : String? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../../Stripe/BillingPortal/Session.html">Stripe::BillingPortal::Session</a>
+
+        <a class="method-permalink" href="#create(customer:String%7CStripe::Customer,return_url:String?=nil,expand:Array(String)?=nil):Stripe::BillingPortal::Session-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
 
 
   <h2>
@@ -730,12 +797,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="address:Hash(String,String?)?-instance-method">
+    <div class="entry-detail" id="created:Time?-instance-method">
       <div class="signature">
         
-        def <strong>address</strong> : Hash(String, String?)?
+        def <strong>created</strong> : Time?
 
-        <a class="method-permalink" href="#address:Hash(String,String?)?-instance-method">#</a>
+        <a class="method-permalink" href="#created:Time?-instance-method">#</a>
       </div>
       
       <br/>
@@ -744,12 +811,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="email:String?-instance-method">
+    <div class="entry-detail" id="customer:String|Nil|Stripe::Customer|Nil-instance-method">
       <div class="signature">
         
-        def <strong>email</strong> : String?
+        def <strong>customer</strong> : String | Nil | <a href="../../Stripe/Customer.html">Stripe::Customer</a> | Nil
 
-        <a class="method-permalink" href="#email:String?-instance-method">#</a>
+        <a class="method-permalink" href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -758,12 +825,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name:String?-instance-method">
+    <div class="entry-detail" id="id:String-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : String?
+        def <strong>id</strong> : String
 
-        <a class="method-permalink" href="#name:String?-instance-method">#</a>
+        <a class="method-permalink" href="#id:String-instance-method">#</a>
       </div>
       
       <br/>
@@ -772,12 +839,54 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="phone:String?-instance-method">
+    <div class="entry-detail" id="livemode:Bool?-instance-method">
       <div class="signature">
         
-        def <strong>phone</strong> : String?
+        def <strong>livemode</strong> : Bool?
 
-        <a class="method-permalink" href="#phone:String?-instance-method">#</a>
+        <a class="method-permalink" href="#livemode:Bool?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="object:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>object</strong> : String?
+
+        <a class="method-permalink" href="#object:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="return_url:String-instance-method">
+      <div class="signature">
+        
+        def <strong>return_url</strong> : String
+
+        <a class="method-permalink" href="#return_url:String-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="url:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>url</strong> : String?
+
+        <a class="method-permalink" href="#url:String?-instance-method">#</a>
       </div>
       
       <br/>
