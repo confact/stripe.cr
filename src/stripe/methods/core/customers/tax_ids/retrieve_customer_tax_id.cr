@@ -6,7 +6,7 @@ class Stripe::Customer
     response = Stripe.client.get("/v1/customers/#{id}/tax_ids/#{tax_id}")
 
     if response.status_code == 200
-      return Customer::TaxID.from_json(response.body)
+      Customer::TaxID.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

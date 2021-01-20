@@ -17,7 +17,7 @@ class Stripe::Subscription
     response = Stripe.client.get("/v1/subscriptions", form: io.to_s)
 
     if response.status_code == 200
-      return List(Stripe::Subscription).from_json(response.body)
+      List(Stripe::Subscription).from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

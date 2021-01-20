@@ -3,7 +3,7 @@ class Stripe::TaxRate
     response = Stripe.client.get("/v1/tax_rates/#{id}")
 
     if response.status_code == 200
-      return TaxRate.from_json(response.body)
+      TaxRate.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

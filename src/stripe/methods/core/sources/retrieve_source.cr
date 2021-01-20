@@ -3,7 +3,7 @@ class Stripe::Source
     response = Stripe.client.get("/v1/sources/#{id}")
 
     if response.status_code == 200
-      return Source.from_json(response.body)
+      Source.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

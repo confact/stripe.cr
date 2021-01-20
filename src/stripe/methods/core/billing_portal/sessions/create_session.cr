@@ -17,7 +17,7 @@ class Stripe::BillingPortal::Session
     response = Stripe.client.post("/v1/billing_portal/sessions", form: io.to_s)
 
     if response.status_code == 200
-      return Stripe::BillingPortal::Session.from_json(response.body)
+      Stripe::BillingPortal::Session.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

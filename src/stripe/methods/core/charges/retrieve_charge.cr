@@ -3,7 +3,7 @@ class Stripe::Charge
     response = Stripe.client.get("/v1/charges/#{id}")
 
     if response.status_code == 200
-      return Charge.from_json(response.body)
+      Charge.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end
