@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="stripe">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="stripe">
+  <title>stripe master</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          stripe
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="stripe/Enum" data-name="enum">
+      <a href="Enum.html">Enum</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Enum/StringConverter" data-name="enum::stringconverter(t)">
+      <a href="Enum/StringConverter.html">StringConverter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe" data-name="stripe">
+      <a href="Stripe.html">Stripe</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="stripe/Stripe/Balance" data-name="stripe::balance">
+      <a href="Stripe/Balance.html">Balance</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Balance/Funds" data-name="stripe::balance::funds">
+      <a href="Stripe/Balance/Funds.html">Funds</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/BillingPortal" data-name="stripe::billingportal">
+      <a href="Stripe/BillingPortal.html">BillingPortal</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/BillingPortal/Session" data-name="stripe::billingportal::session">
+      <a href="Stripe/BillingPortal/Session.html">Session</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Charge" data-name="stripe::charge">
+      <a href="Stripe/Charge.html">Charge</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="stripe/Stripe/Charge/FraudDetails" data-name="stripe::charge::frauddetails">
+      <a href="Stripe/Charge/FraudDetails.html">FraudDetails</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/FraudDetails/StripeReport" data-name="stripe::charge::frauddetails::stripereport">
+      <a href="Stripe/Charge/FraudDetails/StripeReport.html">StripeReport</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/FraudDetails/UserReport" data-name="stripe::charge::frauddetails::userreport">
+      <a href="Stripe/Charge/FraudDetails/UserReport.html">UserReport</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Charge/Outcome" data-name="stripe::charge::outcome">
+      <a href="Stripe/Charge/Outcome.html">Outcome</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/Outcome/NetworkStatus" data-name="stripe::charge::outcome::networkstatus">
+      <a href="Stripe/Charge/Outcome/NetworkStatus.html">NetworkStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/Outcome/Reason" data-name="stripe::charge::outcome::reason">
+      <a href="Stripe/Charge/Outcome/Reason.html">Reason</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/Outcome/RiskLevel" data-name="stripe::charge::outcome::risklevel">
+      <a href="Stripe/Charge/Outcome/RiskLevel.html">RiskLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/Outcome/Type" data-name="stripe::charge::outcome::type">
+      <a href="Stripe/Charge/Outcome/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Charge/Status" data-name="stripe::charge::status">
+      <a href="Stripe/Charge/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Checkout" data-name="stripe::checkout">
+      <a href="Stripe/Checkout.html">Checkout</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="stripe/Stripe/Checkout/Session" data-name="stripe::checkout::session">
+      <a href="Stripe/Checkout/Session.html">Session</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Checkout/Session/BillingAddressCollection" data-name="stripe::checkout::session::billingaddresscollection">
+      <a href="Stripe/Checkout/Session/BillingAddressCollection.html">BillingAddressCollection</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Checkout/Session/Mode" data-name="stripe::checkout::session::mode">
+      <a href="Stripe/Checkout/Session/Mode.html">Mode</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Checkout/Session/PaymentStatus" data-name="stripe::checkout::session::paymentstatus">
+      <a href="Stripe/Checkout/Session/PaymentStatus.html">PaymentStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Checkout/Session/SubmitType" data-name="stripe::checkout::session::submittype">
+      <a href="Stripe/Checkout/Session/SubmitType.html">SubmitType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Coupon" data-name="stripe::coupon">
+      <a href="Stripe/Coupon.html">Coupon</a>
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Customer" data-name="stripe::customer">
+      <a href="Stripe/Customer.html">Customer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Customer/TaxID" data-name="stripe::customer::taxid">
+      <a href="Stripe/Customer/TaxID.html">TaxID</a>
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Customer/TaxInfo" data-name="stripe::customer::taxinfo">
+      <a href="Stripe/Customer/TaxInfo.html">TaxInfo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Customer/TaxInfo/Type" data-name="stripe::customer::taxinfo::type">
+      <a href="Stripe/Customer/TaxInfo/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Customer/TaxInfoVerification" data-name="stripe::customer::taxinfoverification">
+      <a href="Stripe/Customer/TaxInfoVerification.html">TaxInfoVerification</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Customer/TaxInfoVerification/Status" data-name="stripe::customer::taxinfoverification::status">
+      <a href="Stripe/Customer/TaxInfoVerification/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Error" data-name="stripe::error">
+      <a href="Stripe/Error.html">Error</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Error/Type" data-name="stripe::error::type">
+      <a href="Stripe/Error/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Invoice" data-name="stripe::invoice">
+      <a href="Stripe/Invoice.html">Invoice</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Invoice/CollectionMethod" data-name="stripe::invoice::collectionmethod">
+      <a href="Stripe/Invoice/CollectionMethod.html">CollectionMethod</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Invoice/LineItem" data-name="stripe::invoice::lineitem">
+      <a href="Stripe/Invoice/LineItem.html">LineItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Invoice/Status" data-name="stripe::invoice::status">
+      <a href="Stripe/Invoice/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/List" data-name="stripe::list(t)">
+      <a href="Stripe/List.html">List</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/ParamsBuilder" data-name="stripe::paramsbuilder">
+      <a href="Stripe/ParamsBuilder.html">ParamsBuilder</a>
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/PaymentIntent" data-name="stripe::paymentintent">
+      <a href="Stripe/PaymentIntent.html">PaymentIntent</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentIntent/Status" data-name="stripe::paymentintent::status">
+      <a href="Stripe/PaymentIntent/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/PaymentMethod" data-name="stripe::paymentmethod">
+      <a href="Stripe/PaymentMethod.html">PaymentMethod</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentMethod/BillingDetails" data-name="stripe::paymentmethod::billingdetails">
+      <a href="Stripe/PaymentMethod/BillingDetails.html">BillingDetails</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/PaymentMethods" data-name="stripe::paymentmethods">
+      <a href="Stripe/PaymentMethods.html">PaymentMethods</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="stripe/Stripe/PaymentMethods/BankAccount" data-name="stripe::paymentmethods::bankaccount">
+      <a href="Stripe/PaymentMethods/BankAccount.html">BankAccount</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentMethods/BankAccount/AccountHolderType" data-name="stripe::paymentmethods::bankaccount::accountholdertype">
+      <a href="Stripe/PaymentMethods/BankAccount/AccountHolderType.html">AccountHolderType</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentMethods/BankAccount/Status" data-name="stripe::paymentmethods::bankaccount::status">
+      <a href="Stripe/PaymentMethods/BankAccount/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/PaymentMethods/Card" data-name="stripe::paymentmethods::card">
+      <a href="Stripe/PaymentMethods/Card.html">Card</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentMethods/Card/Check" data-name="stripe::paymentmethods::card::check">
+      <a href="Stripe/PaymentMethods/Card/Check.html">Check</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentMethods/Card/Funding" data-name="stripe::paymentmethods::card::funding">
+      <a href="Stripe/PaymentMethods/Card/Funding.html">Funding</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/PaymentMethods/Card/TokenizationMethod" data-name="stripe::paymentmethods::card::tokenizationmethod">
+      <a href="Stripe/PaymentMethods/Card/TokenizationMethod.html">TokenizationMethod</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Payout" data-name="stripe::payout">
+      <a href="Stripe/Payout.html">Payout</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Payout/Status" data-name="stripe::payout::status">
+      <a href="Stripe/Payout/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Plan" data-name="stripe::plan">
+      <a href="Stripe/Plan.html">Plan</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Product" data-name="stripe::product">
+      <a href="Stripe/Product.html">Product</a>
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Refund" data-name="stripe::refund">
+      <a href="Stripe/Refund.html">Refund</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Refund/FailureReason" data-name="stripe::refund::failurereason">
+      <a href="Stripe/Refund/FailureReason.html">FailureReason</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Refund/Reason" data-name="stripe::refund::reason">
+      <a href="Stripe/Refund/Reason.html">Reason</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Refund/Status" data-name="stripe::refund::status">
+      <a href="Stripe/Refund/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/SetupIntent" data-name="stripe::setupintent">
+      <a href="Stripe/SetupIntent.html">SetupIntent</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/SetupIntent/Status" data-name="stripe::setupintent::status">
+      <a href="Stripe/SetupIntent/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Shipping" data-name="stripe::shipping">
+      <a href="Stripe/Shipping.html">Shipping</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Shipping/Address" data-name="stripe::shipping::address">
+      <a href="Stripe/Shipping/Address.html">Address</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Source" data-name="stripe::source">
+      <a href="Stripe/Source.html">Source</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Source/Owner" data-name="stripe::source::owner">
+      <a href="Stripe/Source/Owner.html">Owner</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Source/Status" data-name="stripe::source::status">
+      <a href="Stripe/Source/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Subscription" data-name="stripe::subscription">
+      <a href="Stripe/Subscription.html">Subscription</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Subscription/Item" data-name="stripe::subscription::item">
+      <a href="Stripe/Subscription/Item.html">Item</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Subscription/Status" data-name="stripe::subscription::status">
+      <a href="Stripe/Subscription/Status.html">Status</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/TaxRate" data-name="stripe::taxrate">
+      <a href="Stripe/TaxRate.html">TaxRate</a>
+      
+    </li>
+  
+  <li class="parent " data-id="stripe/Stripe/Token" data-name="stripe::token">
+      <a href="Stripe/Token.html">Token</a>
+      
+        <ul>
+  
+  <li class=" " data-id="stripe/Stripe/Token/Type" data-name="stripe::token::type">
+      <a href="Stripe/Token/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/Unset" data-name="stripe::unset">
+      <a href="Stripe/Unset.html">Unset</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1><a id="stripe" class="anchor" href="#stripe">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Stripe</h1>
+
+<p><img src="https://github.com/confact/stripe.cr/workflows/Shard%20CI/badge.svg" alt="Shard CI"/>
+<a href="https://confact.github.io/stripe.cr" target="_blank"><img src="https://img.shields.io/website?down_color=red&down_message=Offline&label=API%20Documentation&up_message=Online&url=https%3A%2F%2Fconfact.github.io%2Fstripe.cr%2F" alt="API Documentation Website"/></a>
+<a href="https://github.com/confact/stripe.cr/releases" target="_blank"><img src="https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release" alt="GitHub release"/></a></p>
+
+<p>Stripe API wrapper for Crystal.</p>
+
+<p>This version (>1.0) is changed to follow Ruby's method and class structure. We will follow <code>Stripe::Class.method</code> but follow crystal parameters to take care of the types automatically.</p>
+
+<h3><a id="notice" class="anchor" href="#notice">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Notice</h3>
+
+<p>This api wrapper was tested on api version <code>2020-03-02</code> but have been trying to make it flexible with <code>String?</code> and correspondent in the types.</p>
+
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
+
+<p>Add this to your application's <code>shard.yml</code>:</p>
+
+<pre><code class="language-yaml">dependencies:
+  stripe:
+    github: confact/stripe.cr</code></pre>
+
+<h2><a id="usage" class="anchor" href="#usage">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Usage</h2>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;stripe&quot;</span>
+
+<span class="t">Stripe</span>.api_key <span class="o">=</span> <span class="s">&quot;YOUR_API_TOKEN&quot;</span>
+
+token <span class="o">=</span> <span class="t">Stripe</span><span class="t">::</span><span class="t">Token</span>.create(card: {
+  number: <span class="s">&quot;4242424242424242&quot;</span>,
+  exp_month: <span class="n">12</span>,
+  exp_year: <span class="n">2019</span>,
+  cvc: <span class="n">123</span>,
+})
+
+customer <span class="o">=</span> <span class="t">Stripe</span><span class="t">::</span><span class="t">Customer</span>.create(source: token)
+charge <span class="o">=</span> <span class="t">Stripe</span><span class="t">::</span><span class="t">Charge</span>.create(amount: <span class="n">1000</span>, currency: <span class="s">&quot;usd&quot;</span>, customer: customer)</code></pre>
+
+<h3><a id="custom-api-version" class="anchor" href="#custom-api-version">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>custom API version</h3>
+
+<p>You can set custom api version if needed.
+Version need to be set before first api call is called. otherwise it won't be used.</p>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;stripe&quot;</span>
+
+<span class="t">Stripe</span>.api_key <span class="o">=</span> <span class="s">&quot;YOUR_API_TOKEN&quot;</span>
+<span class="t">Stripe</span>.version <span class="o">=</span> <span class="s">&quot;2019-03-29&quot;</span></code></pre>
+
+<h3><a id="example-of-setting-up-a-subscription" class="anchor" href="#example-of-setting-up-a-subscription">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Example of setting up a subscription</h3>
+
+<p>Here is a simple way to setup a subscription by using payment_method.</p>
+
+<p>Follow the instruction for setting up an subscription at stripe: <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription" target="_blank">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a></p>
+
+<p>When the step is at server code, check the code below that is corresponding towards the ruby code for same step.</p>
+
+<p>Setting up an customer:</p>
+
+<pre><code class="language-crystal">  token <span class="o">=</span> params[</code></pre>
+
+<p>create a subscription with that customer:</p>
+
+<pre><code class="language-crystal"><span class="t">Stripe</span><span class="t">::</span><span class="t">Subscription</span>.create(customer: customer,
+plan: <span class="t">STRIPE_PLAN_ID</span>,
+expand: [<span class="s">&quot;latest_invoice.payment_intent&quot;</span>]) <span class="c"># yes - create_subscription support expand.</span></code></pre>
+
+<p>The rest is frontend to check SCA and more. You should not need to do more than this on the backend.</p>
+
+<p>But follow <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription" target="_blank">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a> for the frontend part to make sure it works for SCA and other things.</p>
+
+<h2><a id="progress" class="anchor" href="#progress">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Progress</h2>
+
+<h3><a id="api-methods" class="anchor" href="#api-methods">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>API methods</h3>
+
+<h4><a id="core" class="anchor" href="#core">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Core</h4>
+
+<h5><a id="balance" class="anchor" href="#balance">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Balance</h5>
+
+<ul><li>[x] Retrieve balance</li></ul>
+
+<ul><li>[ ] Retrieve a balance transaction</li></ul>
+
+<ul><li>[ ] List all balance history</li></ul>
+
+<h5><a id="charges" class="anchor" href="#charges">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Charges</h5>
+
+<ul><li>[x] Create a charge</li></ul>
+
+<ul><li>[x] Retrieve a charge</li></ul>
+
+<ul><li>[ ] Update a charge</li></ul>
+
+<ul><li>[ ] Capture a charge</li></ul>
+
+<ul><li>[ ] List all charges</li></ul>
+
+<h5><a id="sources" class="anchor" href="#sources">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Sources</h5>
+
+<ul><li>[x] Create a source</li></ul>
+
+<ul><li>[x] Retrieve a source</li></ul>
+
+<ul><li>[x] Attach a source to customer</li></ul>
+
+<ul><li>[x] Detach a source from customer</li></ul>
+
+<ul><li>[ ] Update a source</li></ul>
+
+<h5><a id="subscriptions" class="anchor" href="#subscriptions">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Subscriptions</h5>
+
+<ul><li>[x] Create a Subscription</li></ul>
+
+<ul><li>[x] Retrieve a Subscription</li></ul>
+
+<ul><li>[x] Update a Subscription</li></ul>
+
+<ul><li>[x] Delete a Subscription</li></ul>
+
+<ul><li>[x] List all Subscriptions</li></ul>
+
+<h5><a id="setup-intent" class="anchor" href="#setup-intent">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Setup Intent</h5>
+
+<ul><li>[x] Create a Setup Intent</li></ul>
+
+<ul><li>[x] Retrieve a Setup Intent</li></ul>
+
+<ul><li>[x] Confirm a Setup Intent</li></ul>
+
+<ul><li>[ ] Update a Setup Intent</li></ul>
+
+<ul><li>[ ] Cancel a Setup Intent</li></ul>
+
+<ul><li>[ ] Delete a Setup Intent</li></ul>
+
+<ul><li>[x] List all Setup Intents</li></ul>
+
+<h5><a id="payment-intent" class="anchor" href="#payment-intent">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Payment Intent</h5>
+
+<ul><li>[x] Create a Payment Intent</li></ul>
+
+<ul><li>[x] Retrieve a Payment Intent</li></ul>
+
+<ul><li>[x] Confirm a Payment Intent</li></ul>
+
+<ul><li>[ ] Update a Payment Intent</li></ul>
+
+<ul><li>[ ] Cancel a Payment Intent</li></ul>
+
+<ul><li>[ ] Delete a Payment Intent</li></ul>
+
+<ul><li>[x] List all Payment Intents</li></ul>
+
+<h5><a id="customers" class="anchor" href="#customers">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Customers</h5>
+
+<ul><li>[x] Create a customer</li></ul>
+
+<ul><li>[x] Retrieve a customer</li></ul>
+
+<ul><li>[x] Update a customer</li></ul>
+
+<ul><li>[x] Delete a customer</li></ul>
+
+<ul><li>[x] List all customers</li></ul>
+
+<h5><a id="customer-tax-i-ds" class="anchor" href="#customer-tax-i-ds">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Customer Tax IDs</h5>
+
+<ul><li>[x] Create a customer tax ID</li></ul>
+
+<ul><li>[x] Retrieve a customer tax ID</li></ul>
+
+<ul><li>[x] Delete a customer tax ID</li></ul>
+
+<h5><a id="refund" class="anchor" href="#refund">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Refund</h5>
+
+<ul><li>[x] Create a refund</li></ul>
+
+<ul><li>[x] Retrieve a refund</li></ul>
+
+<ul><li>[ ] Update a refund</li></ul>
+
+<ul><li>[ ] List all refunds</li></ul>
+
+<h5><a id="tax-rate" class="anchor" href="#tax-rate">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Tax Rate</h5>
+
+<ul><li>[x] Create a tax rate</li></ul>
+
+<ul><li>[x] retrieve a tax rate</li></ul>
+
+<ul><li>[ ] Update a tax rate</li></ul>
+
+<ul><li>[ ] List all tax rates</li></ul>
+
+<h5><a id="tokens" class="anchor" href="#tokens">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Tokens</h5>
+
+<ul><li>[x] Create a card token</li></ul>
+
+<ul><li>[ ] Create a bank account token</li></ul>
+
+<ul><li>[ ] Create a PII token</li></ul>
+
+<ul><li>[ ] Create an account token</li></ul>
+
+<ul><li>[ ] Retrieve a token</li></ul>
+
+<h5><a id="invoices" class="anchor" href="#invoices">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Invoices</h5>
+
+<ul><li>[x] Create a invoice</li></ul>
+
+<ul><li>[x] Retrieve a invoice</li></ul>
+
+<ul><li>[x] Update a invoice</li></ul>
+
+<ul><li>[ ] Delete a invoice</li></ul>
+
+<ul><li>[x] List all invoices</li></ul>
+
+<h3><a id="objects" class="anchor" href="#objects">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Objects</h3>
+
+<h4><a id="core" class="anchor" href="#core">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Core</h4>
+
+<ul><li>[x] Balance</li></ul>
+
+<ul><li>[ ] Balance transaction</li></ul>
+
+<ul><li>[x] Charge</li></ul>
+
+<ul><li>[x] Plan</li></ul>
+
+<ul><li>[x] Product</li></ul>
+
+<ul><li>[x] Customer</li></ul>
+
+<ul><li>[x] Customer Tax ID</li></ul>
+
+<ul><li>[x] Subscription</li></ul>
+
+<ul><li>[x] Invoice</li></ul>
+
+<ul><li>[ ] Dispute</li></ul>
+
+<ul><li>[ ] Dispute evidence</li></ul>
+
+<ul><li>[ ] Event</li></ul>
+
+<ul><li>[ ] File</li></ul>
+
+<ul><li>[ ] File link</li></ul>
+
+<ul><li>[ ] Payout</li></ul>
+
+<ul><li>[x] Refund</li></ul>
+
+<ul><li>[x] Tax Rate</li></ul>
+
+<ul><li>[x] Token</li></ul>
+
+<ul><li>[x] Payment Intent</li></ul>
+
+<ul><li>[x] Setup Intent</li></ul>
+
+<h4><a id="payment-methods" class="anchor" href="#payment-methods">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Payment methods</h4>
+
+<ul><li>[x] Payment Method</li></ul>
+
+<ul><li>[x] Bank account</li></ul>
+
+<ul><li>[x] Card</li></ul>
+
+<ul><li>[x] Source</li></ul>
+
+<h4><a id="connect" class="anchor" href="#connect">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Connect</h4>
+
+<ul><li>[ ] Account</li></ul>
+
+<ul><li>[ ] Login link</li></ul>
+
+<ul><li>[ ] Application fee refund</li></ul>
+
+<ul><li>[ ] Application fee</li></ul>
+
+<ul><li>[ ] Country spec</li></ul>
+
+<ul><li>[ ] Top-up</li></ul>
+
+<ul><li>[ ] Transfer</li></ul>
+
+<ul><li>[ ] Transfer reversal</li></ul>
+
+<h2><a id="development" class="anchor" href="#development">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Development</h2>
+
+<p><span class="flag orange">TODO</span>  Write development instructions here</p>
+
+<h2><a id="contributing" class="anchor" href="#contributing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributing</h2>
+
+<ol><li>Fork it (&lt;https://github.com/confact/stripe.cr/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2><a id="contributors" class="anchor" href="#contributors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributors</h2>
+
+<ul><li><a href="https://github.com/confact" target="_blank">confact</a> Håkan Nylén - maintainer,</li><li><a href="https://github.com/vladfaust" target="_blank">vladfaust</a> Vlad Faust - creator</li></ul>
+</div>
+</body>
+</html>
