@@ -1,6 +1,7 @@
 # Stripe
 
 ![Shard CI](https://github.com/confact/stripe.cr/workflows/Shard%20CI/badge.svg)
+[![API Documentation Website](https://img.shields.io/website?down_color=red&down_message=Offline&label=API%20Documentation&up_message=Online&url=https%3A%2F%2Fconfact.github.io%2Fstripe.cr%2F)](https://confact.github.io/stripe.cr)
 [![GitHub release](https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release)](https://github.com/confact/stripe.cr/releases)
 
 Stripe API wrapper for Crystal.
