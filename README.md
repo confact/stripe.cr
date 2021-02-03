@@ -1,5 +1,9 @@
 # Stripe
 
+![Shard CI](https://github.com/confact/stripe.cr/workflows/Shard%20CI/badge.svg)
+[![API Documentation Website](https://img.shields.io/website?down_color=red&down_message=Offline&label=API%20Documentation&up_message=Online&url=https%3A%2F%2Fconfact.github.io%2Fstripe.cr%2F)](https://confact.github.io/stripe.cr)
+[![GitHub release](https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release)](https://github.com/confact/stripe.cr/releases)
+
 Stripe API wrapper for Crystal.
 
 This version (>1.0) is changed to follow Ruby's method and class structure. We will follow `Stripe::Class.method` but follow crystal parameters to take care of the types automatically.
@@ -57,17 +61,19 @@ Follow the instruction for setting up an subscription at stripe: [https://stripe
 When the step is at server code, check the code below that is corresponding towards the ruby code for same step.
 
 Setting up an customer:
+
 ```crystal
   token = params['StripeToken'] # or what the param for the token is called for you.
   customer = Stripe::Customer.create(email: email,
                          description: name, # just example
-                         payment_method: token, # or token.payment_method.id  
+                         payment_method: token, # or token.payment_method.id
                          # depends what you do in the frontend to handle the token.
                          invoice_settings: { default_payment_method: token })
 
 ```
 
 create a subscription with that customer:
+
 ```crystal
 Stripe::Subscription.create(customer: customer,
 plan: STRIPE_PLAN_ID,
@@ -117,6 +123,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [ ] Update a source
 
 ##### Subscriptions
+
 - [x] Create a Subscription
 
 - [x] Retrieve a Subscription
@@ -223,7 +230,6 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] List all invoices
 
-
 ### Objects
 
 #### Core
@@ -279,7 +285,6 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [x] Source
 
 #### Connect
-
 
 - [ ] Account
 

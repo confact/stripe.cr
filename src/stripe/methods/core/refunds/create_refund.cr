@@ -20,7 +20,7 @@ class Stripe::Refund
     response = Stripe.client.post("/v1/refunds", form: io.to_s)
 
     if response.status_code == 200
-      return Refund.from_json(response.body)
+      Refund.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

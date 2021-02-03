@@ -16,7 +16,7 @@ class Stripe::Customer
     response = Stripe.client.get("/v1/customers", form: io.to_s)
 
     if response.status_code == 200
-      return List(Customer).from_json(response.body)
+      List(Customer).from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

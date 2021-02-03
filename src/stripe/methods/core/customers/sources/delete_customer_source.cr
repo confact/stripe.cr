@@ -6,7 +6,7 @@ class Stripe::Customer
     response = Stripe.client.delete("/v1/customers/#{customer}/sources/#{source}")
 
     if response.status_code == 200
-      return Source.from_json(response.body)
+      Source.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end

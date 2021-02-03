@@ -3,7 +3,7 @@ class Stripe::Customer
     response = Stripe.client.delete("/v1/customers/#{id}/tax_ids/#{tax_id}")
 
     if response.status_code == 200
-      return Nil
+      Nil
     else
       raise Error.from_json(response.body, "error")
     end
