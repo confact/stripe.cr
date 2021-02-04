@@ -17,7 +17,7 @@ class Stripe::PaymentMethod
       payment_method
     end
 
-    response = Stripe.client.post("/v1/payment_methods/#{payment_method_id}/attach", form: io)
+    response = Stripe.client.post("/v1/payment_methods/#{payment_method_id}/attach", form: io.to_s)
 
     if response.status_code == 200
       PaymentMethod.from_json(response.body)
