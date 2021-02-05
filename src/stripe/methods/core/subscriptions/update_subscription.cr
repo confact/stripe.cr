@@ -1,13 +1,14 @@
 class Stripe::Subscription
   def self.update(
     subscription : String | Subscription,
-    cancel_at_period_end : Bool = Unset.new,
+    cancel_at_period_end : Bool  | Unset = Unset.new,
     customer : String | Customer? | Unset = Unset.new,
     coupon : String? | Unset = Unset.new,
     default_source : String | Token? | Unset = Unset.new,
     default_payment_method : String | Token? | Unset = Unset.new,
     metadata : Hash? | Unset = Unset.new,
-    items : U? | Unset = Unset.new
+    items : U? | Unset = Unset.new,
+    add_invoice_items : U? | Unset = Unset.new
   ) : Subscription forall T, U
     default_source = default_source.as(Token).id if default_source.is_a?(Token)
 
@@ -18,7 +19,7 @@ class Stripe::Subscription
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(customer coupon default_source cancel_at_period_end metadata default_payment_method items) %}
+    {% for x in %w(customer coupon default_source cancel_at_period_end metadata default_payment_method items add_invoice_items) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.is_a?(Unset)
     {% end %}
 

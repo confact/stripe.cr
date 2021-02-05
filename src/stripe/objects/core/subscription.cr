@@ -20,6 +20,7 @@ class Stripe::Subscription
     getter billing_thresholds : Hash(String, Int32)?
 
     getter plan : Stripe::Plan?
+    getter price : Stripe::Price?
 
     @[JSON::Field(converter: Time::EpochConverter)]
     getter created : Time?
@@ -58,6 +59,7 @@ class Stripe::Subscription
   getter default_payment_method : String? | Stripe::PaymentMethod?
   getter default_source : String?
   getter default_tax_rates : Array(Stripe::TaxRate)?
+  getter discount : Stripe::Discount?
   getter livemode : Bool?
   getter latest_invoice : String? | Stripe::Invoice?
   getter pending_setup_intent : String? | Stripe::SetupIntent?

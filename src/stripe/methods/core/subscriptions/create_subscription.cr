@@ -8,6 +8,7 @@ class Stripe::Subscription
     off_session : Bool? = nil,
     metadata : Hash? = nil,
     items : U? = nil,
+    add_invoice_items : U? | Unset = Unset.new,
     trial_end : Time? = nil,
     expand : Array(String)? = nil
   ) : Subscription forall T, U
@@ -21,7 +22,7 @@ class Stripe::Subscription
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(customer coupon plan default_source off_session metadata default_payment_method items expand trial_end) %}
+    {% for x in %w(customer coupon plan default_source off_session metadata default_payment_method items add_invoice_items expand trial_end) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
