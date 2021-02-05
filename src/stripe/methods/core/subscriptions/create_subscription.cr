@@ -8,7 +8,7 @@ class Stripe::Subscription
     off_session : Bool? = nil,
     metadata : Hash? = nil,
     items : U? = nil,
-    add_invoice_items : U? | Unset = Unset.new,
+    add_invoice_items : U? = nil,
     trial_end : Time? = nil,
     expand : Array(String)? = nil
   ) : Subscription forall T, U
