@@ -3,21 +3,16 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="generator" content="Crystal Docs 0.35.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
+
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
 
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="stripe">
+  <meta name="repository-name" content="stripe">
   <title>Stripe::Error - stripe master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
@@ -25,6 +20,11 @@
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
@@ -63,6 +63,11 @@
   
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Exception" data-name="exception">
+      <a href="../Exception.html">Exception</a>
       
     </li>
   
@@ -555,7 +560,7 @@
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Stripe/Error.html">Stripe::Error</a></li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Stripe/Error.html">Stripe::Error</a></li><li class="superclass"><a href="../Exception.html">Exception</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -563,6 +568,20 @@
 
 
 
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">JSON::Serializable</li>
+    
+  </ul>
 
 
 
@@ -583,7 +602,7 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L1" target="_blank">
         stripe/error.cr
       </a>
     
@@ -605,7 +624,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(__temp_52:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_52 : JSON::PullParser)</a>
+        <a href="#new(pull:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
         
       </li>
     
@@ -626,77 +645,72 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#charge:Union(String,Nil)-instance-method" class="signature"><strong>#charge</strong> : Union(String, Nil)</a>
+        <a href="#charge:String?-instance-method" class="signature"><strong>#charge</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#charge=(_charge:Union(String,Nil))-instance-method" class="signature"><strong>#charge=</strong>(_charge : Union(String, Nil))</a>
+        <a href="#charge=(charge:String?)-instance-method" class="signature"><strong>#charge=</strong>(charge : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#code:Union(String,Nil)-instance-method" class="signature"><strong>#code</strong> : Union(String, Nil)</a>
+        <a href="#code:String?-instance-method" class="signature"><strong>#code</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#code=(_code:Union(String,Nil))-instance-method" class="signature"><strong>#code=</strong>(_code : Union(String, Nil))</a>
+        <a href="#code=(code:String?)-instance-method" class="signature"><strong>#code=</strong>(code : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#decline_code:Union(String,Nil)-instance-method" class="signature"><strong>#decline_code</strong> : Union(String, Nil)</a>
+        <a href="#decline_code:String?-instance-method" class="signature"><strong>#decline_code</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#decline_code=(_decline_code:Union(String,Nil))-instance-method" class="signature"><strong>#decline_code=</strong>(_decline_code : Union(String, Nil))</a>
+        <a href="#decline_code=(decline_code:String?)-instance-method" class="signature"><strong>#decline_code=</strong>(decline_code : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#doc_url:Union(String,Nil)-instance-method" class="signature"><strong>#doc_url</strong> : Union(String, Nil)</a>
+        <a href="#doc_url:String?-instance-method" class="signature"><strong>#doc_url</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#doc_url=(_doc_url:Union(String,Nil))-instance-method" class="signature"><strong>#doc_url=</strong>(_doc_url : Union(String, Nil))</a>
+        <a href="#doc_url=(doc_url:String?)-instance-method" class="signature"><strong>#doc_url=</strong>(doc_url : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#message:Union(String,Nil)-instance-method" class="signature"><strong>#message</strong> : Union(String, Nil)</a>
+        <a href="#message:String?-instance-method" class="signature"><strong>#message</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#message=(_message:Union(String,Nil))-instance-method" class="signature"><strong>#message=</strong>(_message : Union(String, Nil))</a>
+        <a href="#message=(message:String?)-instance-method" class="signature"><strong>#message=</strong>(message : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#param:Union(String,Nil)-instance-method" class="signature"><strong>#param</strong> : Union(String, Nil)</a>
+        <a href="#param:String?-instance-method" class="signature"><strong>#param</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#param=(_param:Union(String,Nil))-instance-method" class="signature"><strong>#param=</strong>(_param : Union(String, Nil))</a>
+        <a href="#param=(param:String?)-instance-method" class="signature"><strong>#param=</strong>(param : String?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#type:Stripe::Error::Type-instance-method" class="signature"><strong>#type</strong> : Stripe::Error::Type</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:Type-instance-method" class="signature"><strong>#type</strong> : Type</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#type=(_type:Type)-instance-method" class="signature"><strong>#type=</strong>(_type : Type)</a>
+        <a href="#type=(type:Stripe::Error::Type)-instance-method" class="signature"><strong>#type=</strong>(type : Stripe::Error::Type)</a>
         
       </li>
     
@@ -707,6 +721,16 @@
 
 
 <div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
   
     
 
@@ -750,18 +774,18 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(__temp_52:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_52 : JSON::PullParser)
+        def self.<strong>new</strong>(pull : JSON::PullParser)
 
-        <a class="method-permalink" href="#new(__temp_52:JSON::PullParser)-class-method">#</a>
+        <a class="method-permalink" href="#new(pull:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -780,242 +804,226 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="charge:Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="charge:String?-instance-method">
       <div class="signature">
         
-        def <strong>charge</strong> : Union(String, Nil)
+        def <strong>charge</strong> : String?
 
-        <a class="method-permalink" href="#charge:Union(String,Nil)-instance-method">#</a>
+        <a class="method-permalink" href="#charge:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="charge=(_charge:Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="charge=(charge:String?)-instance-method">
       <div class="signature">
         
-        def <strong>charge=</strong>(_charge : Union(String, Nil))
+        def <strong>charge=</strong>(charge : String?)
 
-        <a class="method-permalink" href="#charge=(_charge:Union(String,Nil))-instance-method">#</a>
+        <a class="method-permalink" href="#charge=(charge:String?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="code:Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="code:String?-instance-method">
       <div class="signature">
         
-        def <strong>code</strong> : Union(String, Nil)
+        def <strong>code</strong> : String?
 
-        <a class="method-permalink" href="#code:Union(String,Nil)-instance-method">#</a>
+        <a class="method-permalink" href="#code:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="code=(_code:Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="code=(code:String?)-instance-method">
       <div class="signature">
         
-        def <strong>code=</strong>(_code : Union(String, Nil))
+        def <strong>code=</strong>(code : String?)
 
-        <a class="method-permalink" href="#code=(_code:Union(String,Nil))-instance-method">#</a>
+        <a class="method-permalink" href="#code=(code:String?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="decline_code:Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="decline_code:String?-instance-method">
       <div class="signature">
         
-        def <strong>decline_code</strong> : Union(String, Nil)
+        def <strong>decline_code</strong> : String?
 
-        <a class="method-permalink" href="#decline_code:Union(String,Nil)-instance-method">#</a>
+        <a class="method-permalink" href="#decline_code:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="decline_code=(_decline_code:Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="decline_code=(decline_code:String?)-instance-method">
       <div class="signature">
         
-        def <strong>decline_code=</strong>(_decline_code : Union(String, Nil))
+        def <strong>decline_code=</strong>(decline_code : String?)
 
-        <a class="method-permalink" href="#decline_code=(_decline_code:Union(String,Nil))-instance-method">#</a>
+        <a class="method-permalink" href="#decline_code=(decline_code:String?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="doc_url:Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="doc_url:String?-instance-method">
       <div class="signature">
         
-        def <strong>doc_url</strong> : Union(String, Nil)
+        def <strong>doc_url</strong> : String?
 
-        <a class="method-permalink" href="#doc_url:Union(String,Nil)-instance-method">#</a>
+        <a class="method-permalink" href="#doc_url:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="doc_url=(_doc_url:Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="doc_url=(doc_url:String?)-instance-method">
       <div class="signature">
         
-        def <strong>doc_url=</strong>(_doc_url : Union(String, Nil))
+        def <strong>doc_url=</strong>(doc_url : String?)
 
-        <a class="method-permalink" href="#doc_url=(_doc_url:Union(String,Nil))-instance-method">#</a>
+        <a class="method-permalink" href="#doc_url=(doc_url:String?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="message:Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="message:String?-instance-method">
       <div class="signature">
         
-        def <strong>message</strong> : Union(String, Nil)
+        def <strong>message</strong> : String?
 
-        <a class="method-permalink" href="#message:Union(String,Nil)-instance-method">#</a>
+        <a class="method-permalink" href="#message:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="message=(_message:Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="message=(message:String?)-instance-method">
       <div class="signature">
         
-        def <strong>message=</strong>(_message : Union(String, Nil))
+        def <strong>message=</strong>(message : String?)
 
-        <a class="method-permalink" href="#message=(_message:Union(String,Nil))-instance-method">#</a>
+        <a class="method-permalink" href="#message=(message:String?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="param:Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="param:String?-instance-method">
       <div class="signature">
         
-        def <strong>param</strong> : Union(String, Nil)
+        def <strong>param</strong> : String?
 
-        <a class="method-permalink" href="#param:Union(String,Nil)-instance-method">#</a>
+        <a class="method-permalink" href="#param:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="param=(_param:Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="param=(param:String?)-instance-method">
       <div class="signature">
         
-        def <strong>param=</strong>(_param : Union(String, Nil))
+        def <strong>param=</strong>(param : String?)
 
-        <a class="method-permalink" href="#param=(_param:Union(String,Nil))-instance-method">#</a>
+        <a class="method-permalink" href="#param=(param:String?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+    <div class="entry-detail" id="type:Stripe::Error::Type-instance-method">
       <div class="signature">
         
-        def <strong>to_json</strong>(json : JSON::Builder)
+        def <strong>type</strong> : <a href="../Stripe/Error/Type.html">Stripe::Error::Type</a>
 
-        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
+        <a class="method-permalink" href="#type:Stripe::Error::Type-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="type:Type-instance-method">
+    <div class="entry-detail" id="type=(type:Stripe::Error::Type)-instance-method">
       <div class="signature">
         
-        def <strong>type</strong> : <a href="../Stripe/Error/Type.html">Type</a>
+        def <strong>type=</strong>(type : <a href="../Stripe/Error/Type.html">Stripe::Error::Type</a>)
 
-        <a class="method-permalink" href="#type:Type-instance-method">#</a>
+        <a class="method-permalink" href="#type=(type:Stripe::Error::Type)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="type=(_type:Type)-instance-method">
-      <div class="signature">
-        
-        def <strong>type=</strong>(_type : <a href="../Stripe/Error/Type.html">Type</a>)
-
-        <a class="method-permalink" href="#type=(_type:Type)-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/confact/stripe.cr/blob/54696c79715767321563a2a116e1d3391d02440b/src/stripe/error.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/141611c037fe16e76b70220299145eb12580ebbb/src/stripe/error.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>

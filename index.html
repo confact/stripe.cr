@@ -3,21 +3,16 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="generator" content="Crystal Docs 0.35.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
+
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/doc.js"></script>
 
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="stripe">
+  <meta name="repository-name" content="stripe">
   <title>stripe master</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
@@ -25,6 +20,11 @@
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
@@ -63,6 +63,11 @@
   
 </ul>
 
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Exception" data-name="exception">
+      <a href="Exception.html">Exception</a>
       
     </li>
   
@@ -555,8 +560,8 @@
 </a>Stripe</h1>
 
 <p><img src="https://github.com/confact/stripe.cr/workflows/Shard%20CI/badge.svg" alt="Shard CI"/>
-<a href="https://confact.github.io/stripe.cr" target="_blank"><img src="https://img.shields.io/website?down_color=red&down_message=Offline&label=API%20Documentation&up_message=Online&url=https%3A%2F%2Fconfact.github.io%2Fstripe.cr%2F" alt="API Documentation Website"/></a>
-<a href="https://github.com/confact/stripe.cr/releases" target="_blank"><img src="https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release" alt="GitHub release"/></a></p>
+<a href="https://confact.github.io/stripe.cr"><img src="https://img.shields.io/website?down_color=red&down_message=Offline&label=API%20Documentation&up_message=Online&url=https%3A%2F%2Fconfact.github.io%2Fstripe.cr%2F" alt="API Documentation Website"/></a>
+<a href="https://github.com/confact/stripe.cr/releases"><img src="https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release" alt="GitHub release"/></a></p>
 
 <p>Stripe API wrapper for Crystal.</p>
 
@@ -624,13 +629,19 @@ Version need to be set before first api call is called. otherwise it won't be us
 
 <p>Here is a simple way to setup a subscription by using payment_method.</p>
 
-<p>Follow the instruction for setting up an subscription at stripe: <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription" target="_blank">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a></p>
+<p>Follow the instruction for setting up an subscription at stripe: <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a></p>
 
 <p>When the step is at server code, check the code below that is corresponding towards the ruby code for same step.</p>
 
 <p>Setting up an customer:</p>
 
-<pre><code class="language-crystal">  token <span class="o">=</span> params[</code></pre>
+<pre><code class="language-crystal">  token = params['StripeToken'] # or what the param for the token is called for you.
+  customer = Stripe::Customer.create(email: email,
+                         description: name, # just example
+                         payment_method: token, # or token.payment_method.id
+                         # depends what you do in the frontend to handle the token.
+                         invoice_settings: { default_payment_method: token })
+</code></pre>
 
 <p>create a subscription with that customer:</p>
 
@@ -640,7 +651,7 @@ expand: [<span class="s">&quot;latest_invoice.payment_intent&quot;</span>]) <spa
 
 <p>The rest is frontend to check SCA and more. You should not need to do more than this on the backend.</p>
 
-<p>But follow <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription" target="_blank">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a> for the frontend part to make sure it works for SCA and other things.</p>
+<p>But follow <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a> for the frontend part to make sure it works for SCA and other things.</p>
 
 <h2><a id="progress" class="anchor" href="#progress">
   <svg class="octicon-link" aria-hidden="true">
@@ -958,7 +969,7 @@ expand: [<span class="s">&quot;latest_invoice.payment_intent&quot;</span>]) <spa
   </svg>
 </a>Contributors</h2>
 
-<ul><li><a href="https://github.com/confact" target="_blank">confact</a> Håkan Nylén - maintainer,</li><li><a href="https://github.com/vladfaust" target="_blank">vladfaust</a> Vlad Faust - creator</li></ul>
+<ul><li><a href="https://github.com/confact">confact</a> Håkan Nylén - maintainer,</li><li><a href="https://github.com/vladfaust">vladfaust</a> Vlad Faust - creator</li></ul>
 </div>
 </body>
 </html>
