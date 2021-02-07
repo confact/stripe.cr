@@ -1,4 +1,6 @@
 class Stripe::Error < Exception
+  include JSON::Serializable
+
   enum Type
     ApiConnectionError
     ApiError
@@ -9,17 +11,12 @@ class Stripe::Error < Exception
     RateLimitError
   end
 
-  JSON.mapping({
-    type: {
-      type:      Type,
-      converter: Enum::StringConverter(Type),
-    },
-    charge:       String?,
-    code:         String?,
-    decline_code: String?,
-    doc_url:      String?,
-    message:      String?,
-    param:        String?,
-    # source:       Source?, # TODO
-  })
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Error::Type))]
+  property type : Stripe::Error::Type
+  property charge : String?
+  property code : String?
+  property decline_code : String?
+  property doc_url : String?
+  property message : String?
+  property param : String?
 end
