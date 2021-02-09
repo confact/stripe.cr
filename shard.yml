@@ -5,7 +5,7 @@ authors:
   - Vlad Faust <mail@vladfaust.com>
   - Håkan Nylén <hakan@dun.se>
 
-crystal: 0.35.1
+crystal: 0.36.1
 
 development_dependencies:
   webmock:
