@@ -284,6 +284,8 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Source
 
+- [x] Attach a payment method to a customer
+
 #### Connect
 
 - [ ] Account

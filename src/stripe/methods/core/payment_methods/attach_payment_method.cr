@@ -11,11 +11,11 @@ class Stripe::PaymentMethod
     end
 
     payment_method_id = case payment_method
-    when PaymentMethod
-      payment_method.id
-    when String
-      payment_method
-    end
+                        when PaymentMethod
+                          payment_method.id
+                        when String
+                          payment_method
+                        end
 
     response = Stripe.client.post("/v1/payment_methods/#{payment_method_id}/attach", form: io.to_s)
 
