@@ -302,6 +302,46 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Transfer reversal
 
+##### Prices
+
+- [ ] Create a price
+
+- [ ] Retrieve a price
+
+- [ ] Update a price
+
+- [ ] List all prices
+
+##### Discounts
+
+- [ ] Create a discount
+
+- [ ] Retrieve a discount
+
+- [ ] Update a discount
+
+- [ ] List all discounts
+
+##### Promotion codes
+
+- [ ] Create a promotion code
+
+- [ ] Retrieve a promotion code
+
+- [ ] Update a promotion codes
+
+- [ ] List all promotion codes
+
+##### Coupons
+
+- [ ] Create a coupon
+
+- [ ] Retrieve a coupon
+
+- [ ] Update a coupon
+
+- [ ] List all coupons
+
 ## Development
 
 TODO: Write development instructions here

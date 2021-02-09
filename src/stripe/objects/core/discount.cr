@@ -7,7 +7,7 @@ class Stripe::Discount
   getter coupon : Stripe::Coupon?
   getter customer : String? | Stripe::Customer?
 
-  #gotta rename these since `end` is not cool as a property name in Crystal
+  # gotta rename these since `end` is not cool as a property name in Crystal
   @[JSON::Field(converter: Time::EpochConverter, key: "end")]
   getter end_date : Time?
   @[JSON::Field(converter: Time::EpochConverter, key: "start")]

@@ -1,7 +1,7 @@
 class Stripe::Subscription
   def self.update(
     subscription : String | Subscription,
-    cancel_at_period_end : Bool  | Unset = Unset.new,
+    cancel_at_period_end : Bool | Unset = Unset.new,
     customer : String | Customer? | Unset = Unset.new,
     coupon : String? | Unset = Unset.new,
     default_source : String | Token? | Unset = Unset.new,
