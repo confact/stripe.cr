@@ -261,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="stripe/Stripe/Discount" data-name="stripe::discount">
+      <a href="../Stripe/Discount.html">Discount</a>
+      
+    </li>
+  
   <li class="parent " data-id="stripe/Stripe/Error" data-name="stripe::error">
       <a href="../Stripe/Error.html">Error</a>
       
@@ -416,8 +421,18 @@
       
     </li>
   
+  <li class=" " data-id="stripe/Stripe/Price" data-name="stripe::price">
+      <a href="../Stripe/Price.html">Price</a>
+      
+    </li>
+  
   <li class=" " data-id="stripe/Stripe/Product" data-name="stripe::product">
       <a href="../Stripe/Product.html">Product</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/PromotionCode" data-name="stripe::promotioncode">
+      <a href="../Stripe/PromotionCode.html">PromotionCode</a>
       
     </li>
   
@@ -613,7 +628,7 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L2" target="_blank">
         stripe/objects/core/coupon.cr
       </a>
     
@@ -656,7 +671,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#amount_off:Int32-instance-method" class="signature"><strong>#amount_off</strong> : Int32</a>
+        <a href="#amount_off:Int32?-instance-method" class="signature"><strong>#amount_off</strong> : Int32?</a>
         
       </li>
     
@@ -666,22 +681,27 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#currency:String-instance-method" class="signature"><strong>#currency</strong> : String</a>
+        <a href="#currency:String?-instance-method" class="signature"><strong>#currency</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#duration:String-instance-method" class="signature"><strong>#duration</strong> : String</a>
+        <a href="#duration:String?-instance-method" class="signature"><strong>#duration</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#duration_in_months:Int32-instance-method" class="signature"><strong>#duration_in_months</strong> : Int32</a>
+        <a href="#duration_in_months:Int32?-instance-method" class="signature"><strong>#duration_in_months</strong> : Int32?</a>
         
       </li>
     
       <li class="entry-summary">
         <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#livemode:Bool?-instance-method" class="signature"><strong>#livemode</strong> : Bool?</a>
         
       </li>
     
@@ -696,7 +716,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#percent_off:Float32-instance-method" class="signature"><strong>#percent_off</strong> : Float32</a>
+        <a href="#name:String?-instance-method" class="signature"><strong>#name</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#percent_off:Float32?-instance-method" class="signature"><strong>#percent_off</strong> : Float32?</a>
         
       </li>
     
@@ -706,7 +731,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#times_redeemed:Int32-instance-method" class="signature"><strong>#times_redeemed</strong> : Int32</a>
+        <a href="#times_redeemed:Int32?-instance-method" class="signature"><strong>#times_redeemed</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid:Bool?-instance-method" class="signature"><strong>#valid</strong> : Bool?</a>
         
       </li>
     
@@ -771,7 +801,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -790,18 +820,18 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="amount_off:Int32-instance-method">
+    <div class="entry-detail" id="amount_off:Int32?-instance-method">
       <div class="signature">
         
-        def <strong>amount_off</strong> : Int32
+        def <strong>amount_off</strong> : Int32?
 
-        <a class="method-permalink" href="#amount_off:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#amount_off:Int32?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -817,55 +847,55 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="currency:String-instance-method">
+    <div class="entry-detail" id="currency:String?-instance-method">
       <div class="signature">
         
-        def <strong>currency</strong> : String
+        def <strong>currency</strong> : String?
 
-        <a class="method-permalink" href="#currency:String-instance-method">#</a>
+        <a class="method-permalink" href="#currency:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="duration:String-instance-method">
+    <div class="entry-detail" id="duration:String?-instance-method">
       <div class="signature">
         
-        def <strong>duration</strong> : String
+        def <strong>duration</strong> : String?
 
-        <a class="method-permalink" href="#duration:String-instance-method">#</a>
+        <a class="method-permalink" href="#duration:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="duration_in_months:Int32-instance-method">
+    <div class="entry-detail" id="duration_in_months:Int32?-instance-method">
       <div class="signature">
         
-        def <strong>duration_in_months</strong> : Int32
+        def <strong>duration_in_months</strong> : Int32?
 
-        <a class="method-permalink" href="#duration_in_months:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#duration_in_months:Int32?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -881,7 +911,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="livemode:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>livemode</strong> : Bool?
+
+        <a class="method-permalink" href="#livemode:Bool?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -897,7 +943,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -913,23 +959,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="percent_off:Float32-instance-method">
+    <div class="entry-detail" id="name:String?-instance-method">
       <div class="signature">
         
-        def <strong>percent_off</strong> : Float32
+        def <strong>name</strong> : String?
 
-        <a class="method-permalink" href="#percent_off:Float32-instance-method">#</a>
+        <a class="method-permalink" href="#name:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="percent_off:Float32?-instance-method">
+      <div class="signature">
+        
+        def <strong>percent_off</strong> : Float32?
+
+        <a class="method-permalink" href="#percent_off:Float32?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -945,23 +1007,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="times_redeemed:Int32-instance-method">
+    <div class="entry-detail" id="times_redeemed:Int32?-instance-method">
       <div class="signature">
         
-        def <strong>times_redeemed</strong> : Int32
+        def <strong>times_redeemed</strong> : Int32?
 
-        <a class="method-permalink" href="#times_redeemed:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#times_redeemed:Int32?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/coupon.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>valid</strong> : Bool?
+
+        <a class="method-permalink" href="#valid:Bool?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/coupon.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>

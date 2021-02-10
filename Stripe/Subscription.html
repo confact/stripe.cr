@@ -261,6 +261,11 @@
       
     </li>
   
+  <li class=" " data-id="stripe/Stripe/Discount" data-name="stripe::discount">
+      <a href="../Stripe/Discount.html">Discount</a>
+      
+    </li>
+  
   <li class="parent " data-id="stripe/Stripe/Error" data-name="stripe::error">
       <a href="../Stripe/Error.html">Error</a>
       
@@ -416,8 +421,18 @@
       
     </li>
   
+  <li class=" " data-id="stripe/Stripe/Price" data-name="stripe::price">
+      <a href="../Stripe/Price.html">Price</a>
+      
+    </li>
+  
   <li class=" " data-id="stripe/Stripe/Product" data-name="stripe::product">
       <a href="../Stripe/Product.html">Product</a>
+      
+    </li>
+  
+  <li class=" " data-id="stripe/Stripe/PromotionCode" data-name="stripe::promotioncode">
+      <a href="../Stripe/PromotionCode.html">PromotionCode</a>
       
     </li>
   
@@ -613,42 +628,42 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/create_subscription.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/create_subscription.cr#L1" target="_blank">
         stripe/methods/core/subscriptions/create_subscription.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/delete_subscription.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/delete_subscription.cr#L1" target="_blank">
         stripe/methods/core/subscriptions/delete_subscription.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/list_subscription.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/list_subscription.cr#L1" target="_blank">
         stripe/methods/core/subscriptions/list_subscription.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L1" target="_blank">
         stripe/methods/core/subscriptions/retrieve_subscription.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/update_subscription.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/update_subscription.cr#L1" target="_blank">
         stripe/methods/core/subscriptions/update_subscription.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L2" target="_blank">
         stripe/objects/core/subscription.cr
       </a>
     
@@ -670,7 +685,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create(customer:String%7CCustomer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String%7CToken?=nil,default_payment_method:String%7CToken?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method" class="signature"><strong>.create</strong>(customer : String | Customer? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | Token? = <span class="n">nil</span>, default_payment_method : String | Token? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Subscription forall T, U</a>
+        <a href="#create(customer:String%7CCustomer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String%7CToken?=nil,default_payment_method:String%7CToken?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,add_invoice_items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method" class="signature"><strong>.create</strong>(customer : String | Customer? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | Token? = <span class="n">nil</span>, default_payment_method : String | Token? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, add_invoice_items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Subscription forall T, U</a>
         
       </li>
     
@@ -680,7 +695,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#update(subscription:String%7CSubscription,cancel_at_period_end:Bool=Unset.new,customer:String%7CCustomer?%7CUnset=Unset.new,coupon:String?%7CUnset=Unset.new,default_source:String%7CToken?%7CUnset=Unset.new,default_payment_method:String%7CToken?%7CUnset=Unset.new,metadata:Hash?%7CUnset=Unset.new,items:U?%7CUnset=Unset.new):SubscriptionforallT,U-class-method" class="signature"><strong>.update</strong>(subscription : String | Subscription, cancel_at_period_end : Bool = <span class="t">Unset</span>.<span class="k">new</span>, customer : String | Customer? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, coupon : String? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, default_source : String | Token? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, default_payment_method : String | Token? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, metadata : Hash? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, items : U? | Unset = <span class="t">Unset</span>.<span class="k">new</span>) : Subscription forall T, U</a>
+        <a href="#update(subscription:String%7CSubscription,cancel_at_period_end:Bool%7CUnset=Unset.new,customer:String%7CCustomer?%7CUnset=Unset.new,coupon:String?%7CUnset=Unset.new,default_source:String%7CToken?%7CUnset=Unset.new,default_payment_method:String%7CToken?%7CUnset=Unset.new,metadata:Hash?%7CUnset=Unset.new,items:U?%7CUnset=Unset.new,add_invoice_items:U?%7CUnset=Unset.new):SubscriptionforallT,U-class-method" class="signature"><strong>.update</strong>(subscription : String | Subscription, cancel_at_period_end : Bool | Unset = <span class="t">Unset</span>.<span class="k">new</span>, customer : String | Customer? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, coupon : String? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, default_source : String | Token? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, default_payment_method : String | Token? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, metadata : Hash? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, items : U? | Unset = <span class="t">Unset</span>.<span class="k">new</span>, add_invoice_items : U? | Unset = <span class="t">Unset</span>.<span class="k">new</span>) : Subscription forall T, U</a>
         
       </li>
     
@@ -818,6 +833,11 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#discount:Stripe::Discount?-instance-method" class="signature"><strong>#discount</strong> : Stripe::Discount?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
         
       </li>
@@ -922,18 +942,18 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="create(customer:String|Customer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String|Token?=nil,default_payment_method:String|Token?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">
+    <div class="entry-detail" id="create(customer:String|Customer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String|Token?=nil,default_payment_method:String|Token?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,add_invoice_items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(customer : String | <a href="../Stripe/Customer.html">Customer</a>? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
+        def self.<strong>create</strong>(customer : String | <a href="../Stripe/Customer.html">Customer</a>? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, add_invoice_items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
 
-        <a class="method-permalink" href="#create(customer:String%7CCustomer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String%7CToken?=nil,default_payment_method:String%7CToken?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">#</a>
+        <a class="method-permalink" href="#create(customer:String%7CCustomer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String%7CToken?=nil,default_payment_method:String%7CToken?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,add_invoice_items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/create_subscription.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/create_subscription.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -949,23 +969,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="update(subscription:String|Subscription,cancel_at_period_end:Bool=Unset.new,customer:String|Customer?|Unset=Unset.new,coupon:String?|Unset=Unset.new,default_source:String|Token?|Unset=Unset.new,default_payment_method:String|Token?|Unset=Unset.new,metadata:Hash?|Unset=Unset.new,items:U?|Unset=Unset.new):SubscriptionforallT,U-class-method">
+    <div class="entry-detail" id="update(subscription:String|Subscription,cancel_at_period_end:Bool|Unset=Unset.new,customer:String|Customer?|Unset=Unset.new,coupon:String?|Unset=Unset.new,default_source:String|Token?|Unset=Unset.new,default_payment_method:String|Token?|Unset=Unset.new,metadata:Hash?|Unset=Unset.new,items:U?|Unset=Unset.new,add_invoice_items:U?|Unset=Unset.new):SubscriptionforallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>update</strong>(subscription : String | <a href="../Stripe/Subscription.html">Subscription</a>, cancel_at_period_end : Bool = <span class="t">Unset</span>.<span class="k">new</span>, customer : String | <a href="../Stripe/Customer.html">Customer</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, coupon : String? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, metadata : Hash? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, items : U? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
+        def self.<strong>update</strong>(subscription : String | <a href="../Stripe/Subscription.html">Subscription</a>, cancel_at_period_end : Bool | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, customer : String | <a href="../Stripe/Customer.html">Customer</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, coupon : String? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, metadata : Hash? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, items : U? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>, add_invoice_items : U? | <a href="../Stripe/Unset.html">Unset</a> = <span class="t">Unset</span>.<span class="k">new</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
 
-        <a class="method-permalink" href="#update(subscription:String%7CSubscription,cancel_at_period_end:Bool=Unset.new,customer:String%7CCustomer?%7CUnset=Unset.new,coupon:String?%7CUnset=Unset.new,default_source:String%7CToken?%7CUnset=Unset.new,default_payment_method:String%7CToken?%7CUnset=Unset.new,metadata:Hash?%7CUnset=Unset.new,items:U?%7CUnset=Unset.new):SubscriptionforallT,U-class-method">#</a>
+        <a class="method-permalink" href="#update(subscription:String%7CSubscription,cancel_at_period_end:Bool%7CUnset=Unset.new,customer:String%7CCustomer?%7CUnset=Unset.new,coupon:String?%7CUnset=Unset.new,default_source:String%7CToken?%7CUnset=Unset.new,default_payment_method:String%7CToken?%7CUnset=Unset.new,metadata:Hash?%7CUnset=Unset.new,items:U?%7CUnset=Unset.new,add_invoice_items:U?%7CUnset=Unset.new):SubscriptionforallT,U-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/update_subscription.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/update_subscription.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -993,7 +1013,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/delete_subscription.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/delete_subscription.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1009,7 +1029,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/delete_subscription.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/delete_subscription.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1025,7 +1045,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/list_subscription.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/list_subscription.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1041,7 +1061,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1057,7 +1077,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/methods/core/subscriptions/retrieve_subscription.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1085,7 +1105,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1101,7 +1121,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1117,7 +1137,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1133,7 +1153,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1149,7 +1169,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1165,7 +1185,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1181,7 +1201,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L45" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1197,7 +1217,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1213,7 +1233,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1229,7 +1249,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1245,7 +1265,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1261,7 +1281,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1277,7 +1297,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1293,7 +1313,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1309,7 +1329,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1325,7 +1345,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="discount:Stripe::Discount?-instance-method">
+      <div class="signature">
+        
+        def <strong>discount</strong> : <a href="../Stripe/Discount.html">Stripe::Discount</a>?
+
+        <a class="method-permalink" href="#discount:Stripe::Discount?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1341,7 +1377,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1357,7 +1393,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1373,7 +1409,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1389,7 +1425,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L61" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1405,7 +1441,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1421,7 +1457,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1437,7 +1473,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1453,7 +1489,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1469,7 +1505,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L70" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1485,7 +1521,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L73" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1501,7 +1537,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/fcc45fbf26a6dd8bd5f8d83006d7aef9051ce26a/src/stripe/objects/core/subscription.cr#L76" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/subscription.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>

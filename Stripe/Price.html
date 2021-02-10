@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="stripe">
-  <title>Stripe::List(T) - stripe master</title>
+  <title>Stripe::Price - stripe master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -306,7 +306,7 @@
       
     </li>
   
-  <li class=" current" data-id="stripe/Stripe/List" data-name="stripe::list(t)">
+  <li class=" " data-id="stripe/Stripe/List" data-name="stripe::list(t)">
       <a href="../Stripe/List.html">List</a>
       
     </li>
@@ -421,7 +421,7 @@
       
     </li>
   
-  <li class=" " data-id="stripe/Stripe/Price" data-name="stripe::price">
+  <li class=" current" data-id="stripe/Stripe/Price" data-name="stripe::price">
       <a href="../Stripe/Price.html">Price</a>
       
     </li>
@@ -570,12 +570,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Stripe::List(T)
+  <span class="kind">class</span> Stripe::Price
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Stripe/List.html">Stripe::List(T)</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Stripe/Price.html">Stripe::Price</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -593,8 +593,6 @@
     Included Modules
   </h2>
   <ul class="other-types-list">
-    
-      <li class="other-type">Enumerable(T)</li>
     
       <li class="other-type">JSON::Serializable</li>
     
@@ -619,8 +617,8 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L1" target="_blank">
-        stripe/objects/core/list.cr
+      <a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L1" target="_blank">
+        stripe/objects/core/price.cr
       </a>
     
     <br/>
@@ -662,29 +660,62 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#data:Array(T)-instance-method" class="signature"><strong>#data</strong> : Array(T)</a>
+        <a href="#active:Bool?-instance-method" class="signature"><strong>#active</strong> : Bool?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#each(&)-instance-method" class="signature"><strong>#each</strong>(&)</a>
-        
-          <div class="summary"><p>Must yield this collection's elements to the block.</p></div>
+        <a href="#billing_scheme:String?-instance-method" class="signature"><strong>#billing_scheme</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_more:Bool-instance-method" class="signature"><strong>#has_more</strong> : Bool</a>
+        <a href="#created:Time-instance-method" class="signature"><strong>#created</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#total_count:Int32?-instance-method" class="signature"><strong>#total_count</strong> : Int32?</a>
+        <a href="#currency:String?-instance-method" class="signature"><strong>#currency</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#url:String-instance-method" class="signature"><strong>#url</strong> : String</a>
+        <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#livemode:Bool-instance-method" class="signature"><strong>#livemode</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#metadata:Hash(String,String)?-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nickname:String?-instance-method" class="signature"><strong>#nickname</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#product:String%7CNil%7CStripe::Product%7CNil-instance-method" class="signature"><strong>#product</strong> : String | Nil | Stripe::Product | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type:String?-instance-method" class="signature"><strong>#type</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unit_amount:Int32?-instance-method" class="signature"><strong>#unit_amount</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unit_amount_decimal:String?-instance-method" class="signature"><strong>#unit_amount_decimal</strong> : String?</a>
         
       </li>
     
@@ -695,16 +726,6 @@
 
 
 <div class="methods-inherited">
-  
-    
-
-
-    
-
-
-    
-
-
   
     
 
@@ -759,7 +780,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -778,91 +799,194 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="data:Array(T)-instance-method">
+    <div class="entry-detail" id="active:Bool?-instance-method">
       <div class="signature">
         
-        def <strong>data</strong> : Array(T)
+        def <strong>active</strong> : Bool?
 
-        <a class="method-permalink" href="#data:Array(T)-instance-method">#</a>
+        <a class="method-permalink" href="#active:Bool?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="each(&)-instance-method">
+    <div class="entry-detail" id="billing_scheme:String?-instance-method">
       <div class="signature">
         
-        def <strong>each</strong>(&)
+        def <strong>billing_scheme</strong> : String?
 
-        <a class="method-permalink" href="#each(&)-instance-method">#</a>
+        <a class="method-permalink" href="#billing_scheme:String?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-            <div class="doc-inherited">
-              Description copied from module Enumerable(T)
-            </div>
-          
-          <p>Must yield this collection's elements to the block.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="has_more:Bool-instance-method">
+    <div class="entry-detail" id="created:Time-instance-method">
       <div class="signature">
         
-        def <strong>has_more</strong> : Bool
+        def <strong>created</strong> : Time
 
-        <a class="method-permalink" href="#has_more:Bool-instance-method">#</a>
+        <a class="method-permalink" href="#created:Time-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="total_count:Int32?-instance-method">
+    <div class="entry-detail" id="currency:String?-instance-method">
       <div class="signature">
         
-        def <strong>total_count</strong> : Int32?
+        def <strong>currency</strong> : String?
 
-        <a class="method-permalink" href="#total_count:Int32?-instance-method">#</a>
+        <a class="method-permalink" href="#currency:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="url:String-instance-method">
+    <div class="entry-detail" id="id:String-instance-method">
       <div class="signature">
         
-        def <strong>url</strong> : String
+        def <strong>id</strong> : String
 
-        <a class="method-permalink" href="#url:String-instance-method">#</a>
+        <a class="method-permalink" href="#id:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/list.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="livemode:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>livemode</strong> : Bool
+
+        <a class="method-permalink" href="#livemode:Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="metadata:Hash(String,String)?-instance-method">
+      <div class="signature">
+        
+        def <strong>metadata</strong> : Hash(String, String)?
+
+        <a class="method-permalink" href="#metadata:Hash(String,String)?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nickname:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>nickname</strong> : String?
+
+        <a class="method-permalink" href="#nickname:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="product:String|Nil|Stripe::Product|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>product</strong> : String | Nil | <a href="../Stripe/Product.html">Stripe::Product</a> | Nil
+
+        <a class="method-permalink" href="#product:String%7CNil%7CStripe::Product%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong> : String?
+
+        <a class="method-permalink" href="#type:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unit_amount:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>unit_amount</strong> : Int32?
+
+        <a class="method-permalink" href="#unit_amount:Int32?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unit_amount_decimal:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>unit_amount_decimal</strong> : String?
+
+        <a class="method-permalink" href="#unit_amount_decimal:String?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/41f6dc460da1c7a2bd86ea8b4e97cd0391058842/src/stripe/objects/core/price.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
