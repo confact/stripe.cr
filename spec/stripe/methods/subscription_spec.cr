@@ -15,6 +15,17 @@ describe Stripe::Subscription do
 
     subscription = Stripe::Subscription.retrieve("asddad")
     subscription.id.should eq("sub_H0TJvm2aKdakJ7")
+    subscription.items.should be_truthy
+    if items = subscription.items
+      price_item = items.data[1]
+      price_item.price.try(&.id).should eq("price_HC8jEpscAGZb8v")
+    end
+    subscription.discount.try(&.coupon).try(&.id).should eq("25_5OFF")
+    promotion_code = subscription.discount.try(&.promotion_code)
+    promotion_code.should be_a(Stripe::PromotionCode)
+    if promotion_code.is_a?(Stripe::PromotionCode)
+      promotion_code.id.should eq("promo_1IHHgbA10aTTSdyp5WqdgzWW")
+    end
   end
 
   it "listing subscriptions" do
