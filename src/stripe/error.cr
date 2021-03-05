@@ -20,3 +20,11 @@ class Stripe::Error < Exception
   property message : String?
   property param : String?
 end
+
+class Stripe::SignatureVerificationError < Stripe::Error
+  property sig_header : String
+  def initialize(message, sig_header)
+    @message = message
+    @sig_header = sig_header
+  end
+end

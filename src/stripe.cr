@@ -1,5 +1,6 @@
 require "json"
 require "http/client"
+require "openssl/hmac"
 require "./ext/**"
 
 class Stripe
