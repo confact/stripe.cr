@@ -8,7 +8,7 @@ class Stripe::Event
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time?
   getter object : String?
-  getter data : Stripe::Event::Data?
+  getter data : Stripe::Event::Data
   getter api_version : String?
   getter id : String?
   getter type : String?
