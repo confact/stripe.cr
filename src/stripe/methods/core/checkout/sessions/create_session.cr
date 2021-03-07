@@ -9,7 +9,8 @@ class Stripe::Checkout::Session
     customer : String? | Stripe::Customer? = nil,
     customer_email : String? = nil,
     line_items : Array(NamedTuple(quantity: Int32, price: String))? = nil,
-    expand : Array(String)? = nil
+    expand : Array(String)? = nil,
+    subscription_data : NamedTuple(metadata : Hash(String, String)?)? = nil
   ) : Stripe::Checkout::Session
     customer = customer.not_nil!.id if customer.is_a?(Customer)
 
