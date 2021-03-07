@@ -7,16 +7,16 @@ class Stripe::Event
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time?
-
-  @[JSON::Field(key: "object")]
-  getter object_type : String?
-
-  @[JSON::Field(root: "data")]
-  getter object : Stripe::Checkout::Session? | Stripe::Subscription?
-
+  getter object : String?
+  getter data : Stripe::Event::Data?
   getter api_version : String?
   getter id : String?
   getter type : String?
   getter livemode : Bool?
   getter pending_webhooks : Int32?
+end
+
+class Stripe::Event::Data
+  include JSON::Serializable
+  getter object : Stripe::Checkout::Session? | Stripe::Subscription?
 end
