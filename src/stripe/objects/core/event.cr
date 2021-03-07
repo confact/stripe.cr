@@ -9,7 +9,7 @@ class Stripe::Event
   getter created : Time?
   getter id : String?
   getter type : String?
-  getter object : String?
+  getter object : String? | Stripe::Checkout::Session? | Stripe::Subscription?
   getter amount : Int32?
   getter client_secret : String?
   getter currency : String?
