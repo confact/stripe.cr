@@ -17,7 +17,7 @@ class Stripe::Checkout::Session
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(mode payment_method_types cancel_url success_url client_reference_id customer customer_email line_items expand) %}
+    {% for x in %w(mode payment_method_types cancel_url success_url client_reference_id customer customer_email line_items expand subscription_data) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
