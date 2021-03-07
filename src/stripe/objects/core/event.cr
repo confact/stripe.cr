@@ -11,7 +11,7 @@ class Stripe::Event
   @[JSON::Field(key: "object")]
   getter object_type : String?
 
-  @[JSON::Field(root: "data", key: "object")]
+  @[JSON::Field(root: "data")]
   getter object : Stripe::Checkout::Session? | Stripe::Subscription?
 
   getter api_version : String?
