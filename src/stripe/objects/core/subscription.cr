@@ -77,6 +77,7 @@ class Stripe::Subscription
   getter latest_invoice : String? | Stripe::Invoice?
   getter pending_setup_intent : String? | Stripe::SetupIntent?
   getter schedule : String?
+  getter metadata : Hash(String, String)?
 
   getter plan : Stripe::Plan?
 
