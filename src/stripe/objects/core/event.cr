@@ -18,5 +18,5 @@ end
 
 class Stripe::Event::Data
   include JSON::Serializable
-  getter object : Stripe::Checkout::Session? | Stripe::Subscription? | Stripe::Price?
+  getter object : Stripe::Checkout::Session? | Stripe::Subscription?
 end
