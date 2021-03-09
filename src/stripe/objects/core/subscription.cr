@@ -65,6 +65,7 @@ class Stripe::Subscription
   getter pending_setup_intent : String? | Stripe::SetupIntent?
   getter quantity : Int32
   getter schedule : String?
+  getter metadata : Hash(String, String)?
 
   getter plan : Stripe::Plan?
 
