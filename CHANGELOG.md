@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3
+
+### Misc improvements
+
+- Crystal v1.0 support added
+
 ## v1.2
 
 ### API updates
