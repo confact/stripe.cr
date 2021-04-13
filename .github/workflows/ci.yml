@@ -16,7 +16,8 @@ jobs:
       fail-fast: false
       matrix:
         crystal_version:
-          - latest
+          - 0.36.1
+          - 1.0.0
         experimental: [false]
         include:
           - crystal_version: nightly
@@ -46,7 +47,7 @@ jobs:
 
       - name: Install shards
         if: steps.crystal-cache.outputs.cache-hit != 'true'
-        run: shards check || shards install
+        run: shards check || shards install --ignore-crystal-version
 
       - name: Crystal Ameba Linter
         run: ./bin/ameba
