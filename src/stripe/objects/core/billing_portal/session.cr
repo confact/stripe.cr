@@ -4,6 +4,7 @@ class Stripe::BillingPortal::Session
 
   getter id : String
   getter object : String? = "billing_portal.session"
+  getter configuration : String?
 
   getter return_url : String
 
