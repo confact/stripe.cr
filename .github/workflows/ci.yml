@@ -28,7 +28,7 @@ jobs:
     container: crystallang/crystal:${{ matrix.crystal_version }}-alpine
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
 
       - name: Check format
         run: crystal tool format --check
