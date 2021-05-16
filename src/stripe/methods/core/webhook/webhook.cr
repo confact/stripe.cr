@@ -1,7 +1,6 @@
 # Adapted from https://github.com/stripe/stripe-ruby/blob/master/lib/stripe/webhook.rb
 
-module Stripe
-  module Webhook
+  class Stripe::Webhook
     DEFAULT_TOLERANCE = 300
 
     # Initializes an Event object from a JSON payload.
@@ -111,4 +110,3 @@ module Stripe
       end
     end
   end
-end
