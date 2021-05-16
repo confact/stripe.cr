@@ -256,7 +256,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Dispute evidence
 
-- [ ] Event
+- [x] Event
 
 - [ ] File
 
