@@ -316,7 +316,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 ##### Products
 
-- [ ] Create a product
+- [x] Create a product
 
 - [ ] Retrieve a product
 
