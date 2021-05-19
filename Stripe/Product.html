@@ -617,14 +617,21 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/methods/core/products/create_product.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/methods/core/products/create_product.cr#L1" target="_blank">
         stripe/methods/core/products/create_product.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/methods/core/products/list_product.cr#L1" target="_blank">
+        stripe/methods/core/products/list_product.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L1" target="_blank">
         stripe/objects/core/product.cr
       </a>
     
@@ -658,6 +665,23 @@
   </ul>
 
 
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#list(active:Bool?=nil,created:Hash(String,Int32)?=nil,ids:Array(String)?=nil,shippable:Bool?=nil,url:String?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Product)-class-method" class="signature"><strong>.list</strong>(active : Bool? = <span class="n">nil</span>, created : Hash(String, Int32)? = <span class="n">nil</span>, ids : Array(String)? = <span class="n">nil</span>, shippable : Bool? = <span class="n">nil</span>, url : String? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::Product)</a>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -707,7 +731,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#statement_descriptor:String-instance-method" class="signature"><strong>#statement_descriptor</strong> : String</a>
+        <a href="#statement_descriptor:String?-instance-method" class="signature"><strong>#statement_descriptor</strong> : String?</a>
         
       </li>
     
@@ -717,7 +741,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#unit_label:String-instance-method" class="signature"><strong>#unit_label</strong> : String</a>
+        <a href="#unit_label:String?-instance-method" class="signature"><strong>#unit_label</strong> : String?</a>
         
       </li>
     
@@ -787,7 +811,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/methods/core/products/create_product.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/methods/core/products/create_product.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -803,13 +827,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
   
 
 
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="list(active:Bool?=nil,created:Hash(String,Int32)?=nil,ids:Array(String)?=nil,shippable:Bool?=nil,url:String?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Product)-class-method">
+      <div class="signature">
+        
+        def self.<strong>list</strong>(active : Bool? = <span class="n">nil</span>, created : Hash(String, Int32)? = <span class="n">nil</span>, ids : Array(String)? = <span class="n">nil</span>, shippable : Bool? = <span class="n">nil</span>, url : String? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../Stripe/List.html">List</a>(<a href="../Stripe/Product.html">Stripe::Product</a>)
+
+        <a class="method-permalink" href="#list(active:Bool?=nil,created:Hash(String,Int32)?=nil,ids:Array(String)?=nil,shippable:Bool?=nil,url:String?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Product)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/methods/core/products/list_product.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 
@@ -833,7 +883,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -849,7 +899,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -865,7 +915,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -881,7 +931,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -897,7 +947,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -913,7 +963,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -929,23 +979,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="statement_descriptor:String-instance-method">
+    <div class="entry-detail" id="statement_descriptor:String?-instance-method">
       <div class="signature">
         
-        def <strong>statement_descriptor</strong> : String
+        def <strong>statement_descriptor</strong> : String?
 
-        <a class="method-permalink" href="#statement_descriptor:String-instance-method">#</a>
+        <a class="method-permalink" href="#statement_descriptor:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -961,23 +1011,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="unit_label:String-instance-method">
+    <div class="entry-detail" id="unit_label:String?-instance-method">
       <div class="signature">
         
-        def <strong>unit_label</strong> : String
+        def <strong>unit_label</strong> : String?
 
-        <a class="method-permalink" href="#unit_label:String-instance-method">#</a>
+        <a class="method-permalink" href="#unit_label:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -993,7 +1043,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/d68de1a7603c5ecddb71fe040ba3335c4dfaddac/src/stripe/objects/core/product.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/2ddc6d4812fd12dbf9853f72021e9af86e5d6e20/src/stripe/objects/core/product.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
