@@ -16,6 +16,6 @@ describe Stripe::Webhook do
       scheme: "v1"
     )
     event = Stripe::Webhook.construct_event(payload, header, secret)
-    event.data.object.id.should eq("prod_JTgbc7dgwVuto4")
+    event.type.should eq("product.updated")
   end
 end
