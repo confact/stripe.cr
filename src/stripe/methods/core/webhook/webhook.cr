@@ -41,7 +41,7 @@ class Stripe::Webhook
     # Extracts the timestamp and the signature(s) with the desired scheme
     # from the header
     private def self.get_timestamp_and_signatures(header : String, scheme : String) : Tuple(Time, Array(String))
-      list_items = header.split(',').map { |i| i.split("=", 2) } # ameba:disable Style/VerboseBlock
+      list_items = header.split(',').map(&.split("=", 2))
       timestamp = (list_items.select { |i| i[0] == "t" }[0][1]).to_i
       signatures = list_items.select { |i| i[0] == scheme }.map { |i| i[1] }
       {Time.unix(timestamp), signatures}
