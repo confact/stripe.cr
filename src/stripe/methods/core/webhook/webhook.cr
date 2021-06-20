@@ -83,7 +83,7 @@ class Stripe::Webhook
         )
       end
 
-      if timestamp.to_unix.to_i < Time.utc.to_unix.to_i - tolerance
+      if tolerance && timestamp.to_unix.to_i < Time.utc.to_unix.to_i - tolerance
         raise SignatureVerificationError.new(
           "Timestamp outside the tolerance zone (#{timestamp})",
           header: header, param: payload
