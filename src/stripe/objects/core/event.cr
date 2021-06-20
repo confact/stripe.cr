@@ -15,7 +15,12 @@ class Stripe::Event
   # Stripe::Sku | Stripe::SubscriptionSchedule | Stripe::Topup | Stripe::Transfer |
   class Data
     include JSON::Serializable
+
+    @[JSON::Field(converter: Stripe::EventPayloadObjectConverter)]
     getter object : StripeObject
+
+    @[JSON::Field(ignore)]
+    getter previous_attributes : JSON::Any?
   end
 
   getter id : String
@@ -33,4 +38,46 @@ class Stripe::Event
   getter pending_webhooks : Int32
 
   getter type : String
+end
+
+module Stripe::EventPayloadObjectConverter
+  STRIPE_OBJECT_TYPES = [
+    "customer",
+    "product",
+    "invoice",
+    "subscription",
+    "price",
+    "coupon",
+    "plan",
+    "balance",
+    "charge",
+    "payout",
+    "payment_intent",
+    "setup_intent",
+    "promotion_code",
+    "source",
+    "tax_rate",
+  ]
+
+  macro stripe_object_mapping
+       {% begin %}
+      {
+        {% for item in STRIPE_OBJECT_TYPES %}
+    {{item.id}}: {{"Stripe::#{item.camelcase.id}".id}},
+  {% end %}
+      }
+ {% end %}
+  end
+
+  def stripe_object_type_discriminator(identifier : String)
+    stripe_object_mapping[identifier]
+  end
+
+  def self.from_json(value : JSON::PullParser)
+    object_json = value.read_raw
+    object_identifier = JSON.parse(object_json)["object"].to_s
+    stripe_object_mapping[object_identifier].from_json(object_json)
+  rescue
+    puts value.read_raw
+  end
 end
