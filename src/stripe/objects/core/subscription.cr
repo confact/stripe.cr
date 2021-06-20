@@ -63,7 +63,6 @@ class Stripe::Subscription
   getter livemode : Bool?
   getter latest_invoice : String? | Stripe::Invoice?
   getter pending_setup_intent : String? | Stripe::SetupIntent?
-  getter quantity : Int32
   getter schedule : String?
 
   getter plan : Stripe::Plan?

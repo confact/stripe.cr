@@ -1,0 +1,30 @@
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "prod_JTgbc7dgwVuto4",
+      "object": "product",
+      "active": true,
+      "attributes": [],
+      "created": 1620930329,
+      "description": "Plan Premium test",
+      "images": [
+        "https://files.stripe.com/links/MDB8YWNjdF8xSXFpd0ZKTjVGcmt1dktofGZsX3Rlc3RfTWZsd3Rsa1ZJMHBLOEdzRlFLaDB5bElW00FhECO8uS"
+      ],
+      "livemode": false,
+      "metadata": {
+        "tier": "premium"
+      },
+      "name": "Plan Premium",
+      "package_dimensions": null,
+      "shippable": null,
+      "statement_descriptor": null,
+      "type": "service",
+      "unit_label": null,
+      "updated": 1621044691,
+      "url": null
+    }
+  ],
+  "has_more": false,
+  "url": "/v1/products"
+}

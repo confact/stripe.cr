@@ -15,7 +15,7 @@ class Stripe::Product
   getter updated : Time
 
   getter livemode : Bool
-  getter statement_descriptor : String
+  getter statement_descriptor : String?
   getter type : String
-  getter unit_label : String
+  getter unit_label : String?
 end

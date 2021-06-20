@@ -312,7 +312,17 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Update a price
 
-- [ ] List all prices
+- [x] List all prices
+
+##### Products
+
+- [x] Create a product
+
+- [ ] Retrieve a product
+
+- [ ] Update a product
+
+- [x] List all products
 
 ##### Discounts
 
