@@ -40,26 +40,25 @@ class Stripe::Event
   getter type : String
 end
 
-module Stripe::EventPayloadObjectConverter
-  STRIPE_OBJECT_TYPES = [
-    "customer",
-    "product",
-    "invoice",
-    "subscription",
-    "price",
-    "coupon",
-    "plan",
-    "balance",
-    "charge",
-    "payout",
-    "payment_intent",
-    "setup_intent",
-    "promotion_code",
-    "source",
-    "tax_rate",
-  ]
+STRIPE_OBJECT_TYPES = [
+  "customer",
+  "product",
+  "invoice",
+  "subscription",
+  "price",
+  "coupon",
+  "plan",
+  "balance",
+  "charge",
+  "payout",
+  "payment_intent",
+  "setup_intent",
+  "promotion_code",
+  "source",
+  "tax_rate",
+]
 
-  macro stripe_object_mapping
+macro stripe_object_mapping
        {% begin %}
       {
         {% for item in STRIPE_OBJECT_TYPES %}
@@ -69,10 +68,7 @@ module Stripe::EventPayloadObjectConverter
  {% end %}
   end
 
-  def stripe_object_type_discriminator(identifier : String)
-    stripe_object_mapping[identifier]
-  end
-
+module Stripe::EventPayloadObjectConverter
   def self.from_json(value : JSON::PullParser)
     object_json = value.read_raw
     object_identifier = JSON.parse(object_json)["object"].to_s
