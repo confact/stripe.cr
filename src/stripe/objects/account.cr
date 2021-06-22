@@ -52,46 +52,11 @@ class Stripe::Account
   class Company
     include JSON::Serializable
 
-    class Address
-      include JSON::Serializable
+    getter address : Stripe::Address
 
-      getter city : String
-      getter country : String # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-      getter line1 : String
-      getter line2 : String
-      getter postal_code : String
-      getter state : String
-    end
+    getter address_kana : Stripe::AddressJP
 
-    getter address : Address
-
-    class AddressKana
-      include JSON::Serializable
-
-      getter city : String
-      getter country : String # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-      getter line1 : String
-      getter line2 : String
-      getter postal_code : String
-      getter state : String
-      getter town : String
-    end
-
-    getter address_kana : AddressKana
-
-    class AddressKanji
-      include JSON::Serializable
-
-      getter city : String
-      getter country : String # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-      getter line1 : String
-      getter line2 : String
-      getter postal_code : String
-      getter state : String
-      getter town : String
-    end
-
-    getter address_kanji : AddressKanji
+    getter address_kanji : Stripe::AddressJP
 
     getter directors_provided : Bool
     getter executives_provided : Bool
@@ -179,9 +144,9 @@ class Stripe::Account
     getter id : String
     getter object : String = "person"
     getter account : String
-    getter address : Address
-    getter address_kana : AddressKana
-    getter address_kanji : AddressKanji
+    getter address : Stripe::Address
+    getter address_kana : Stripe::AddressJP
+    getter address_kanji : Stripe::AddressJP
     @[JSON::Field(converter: Time::EpochConverter)]
     getter created : Time?
 
@@ -193,27 +158,27 @@ class Stripe::Account
       getter year : Int32
     end
 
-    getter dob : DateOfBirth
-    getter email : String
-    getter first_name : String
-    getter first_name_kana : String
-    getter first_name_kanji : String
-    getter gender : String
-    getter id_number_provided : Bool
-    getter last_name : String
-    getter last_name_kana : String
-    getter last_name_kanji : String
-    getter maiden_name : String
-    getter metadata : JSON::ANY
-    getter nationality : String
-    getter phone : String
+    getter dob : DateOfBirth?
+    getter email : String?
+    getter first_name : String?
+    getter first_name_kana : String?
+    getter first_name_kanji : String?
+    getter gender : String?
+    getter id_number_provided : Bool?
+    getter last_name : String?
+    getter last_name_kana : String?
+    getter last_name_kanji : String?
+    getter maiden_name : String?
+    getter metadata : JSON::Any?
+    getter nationality : String?
+    getter phone : String?
 
     enum PoliticalExposure
       Existing
       None
     end
 
-    getter political_exposure : PoliticalExposure
+    getter political_exposure : PoliticalExposure?
 
     class Relationship
       include JSON::Serializable
@@ -284,40 +249,39 @@ class Stripe::Account
           VerificationRequiresAdditionalMemorandumOfAssociations
         end
 
-        getter code : Code
-
-        getter reason : String
-        getter requirement : String
+        getter code : Code?
+        getter reason : String?
+        getter requirement : String?
       end
 
-      getter errors : Errors
+      getter errors : Errors?
 
-      getter eventually_due : Array(String)
+      getter eventually_due : Array(String)?
 
-      getter past_due : Array(String)
-      getter pending_verification : Array(String)
+      getter past_due : Array(String)?
+      getter pending_verification : Array(String)?
     end
 
-    getter requirements : Requirements
+    getter requirements : Requirements?
     getter ssn_last_4_provided : Bool?
 
     class Verification
       include JSON::Serializable
 
-      getter additional_document : Document
-      getter details : String
-      getter details_code : DetailsCode
-      getter document : Document
+      getter additional_document : Document?
+      getter details : String?
+      getter details_code : DetailsCode?
+      getter document : Document?
     end
 
-    getter verification : Verification
+    getter verification : Verification?
   end
 
   getter individual : Individual?
 
-  getter metadata : JSON::Any
+  getter metadata : JSON::Any?
 
-  getter requirements : Requirements
+  getter requirements : Requirements?
 
   class TOSAcceptance
     include JSON::Serializable
@@ -333,15 +297,15 @@ class Stripe::Account
 
   class BusinessProfile
     include JSON::Serializable
-    getter mcc : String
-    getter name : String
-    getter product_description : String
-    getter support_address : Address
-    getter support_email : String
-    getter support_phone : String
-    getter support_url : String
-    getter terms_of_service_url : String
-    getter url : String
+    getter mcc : String?
+    getter name : String?
+    getter product_description : String?
+    getter support_address : Stripe::Address?
+    getter support_email : String?
+    getter support_phone : String?
+    getter support_url : String?
+    getter terms_of_service_url : String?
+    getter url : String?
   end
 
   getter business_profile : BusinessProfile
