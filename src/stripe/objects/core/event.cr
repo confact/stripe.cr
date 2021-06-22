@@ -19,7 +19,7 @@ class Stripe::Event
     @[JSON::Field(converter: Stripe::EventPayloadObjectConverter)]
     getter object : StripeObject
 
-    @[JSON::Field(ignore)]
+    # @[JSON::Field(ignore)]
     getter previous_attributes : JSON::Any?
   end
 

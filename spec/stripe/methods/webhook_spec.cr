@@ -16,7 +16,8 @@ describe Stripe::Webhook do
       scheme: "v1"
     )
     event = Stripe::Webhook.construct_event(payload, header, secret)
-    event.type.should eq("product.updated")
+
+    {event.type, event.data.object.is_a?(Stripe::Product), event.data.previous_attributes}.should eq({"product.updated", true, {"metadata" => {"tier" => nil}, "updated" => 1620930329}})
   end
   it "Raises on wrong secret" do
     timestamp = Time.utc
