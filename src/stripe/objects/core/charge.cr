@@ -83,9 +83,9 @@ class Stripe::Charge
   getter application : String?
   getter application_fee : String?
   getter application_fee_amount : Int32?
-  getter balance_transaction : String? # Expandable to Stripe::BalanceTransaction
+  getter balance_transaction : String? # | Stripe::BalanceTransaction
 
-  class BilingDetails
+  class BillingDetails
     include JSON::Serializable
 
     getter address : Stripe::Shipping::Address
@@ -94,7 +94,7 @@ class Stripe::Charge
     getter phone : String?
   end
 
-  getter billing_details : BilingDetails?
+  getter billing_details : BillingDetails?
 
   getter captured : Bool?
 
@@ -112,8 +112,8 @@ class Stripe::Charge
   getter invoice : String? | Stripe::Invoice?
   getter livemode : Bool
   getter metadata : Hash(String, String)?
-  getter on_behalf_of : String? # Expandable to Stripe::Account
-  getter order : String?        # Expandable to Stripe::Order
+  getter on_behalf_of : String? # | Stripe::Account
+  getter order : String?        # | Stripe::Order
   getter outcome : Outcome?
   getter paid : Bool?
   getter payment_intent : String?
@@ -125,19 +125,19 @@ class Stripe::Charge
   getter review : String?
   getter shipping : Shipping?
   getter source : PaymentMethods::Card
-  getter source_transfer : String? # Expandable to Stripe::Account
+  getter source_transfer : String? # | Stripe::Account
   getter statement_descriptor : String?
   getter statement_descriptor_suffix : String?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Charge::Status))]
   getter status : Status
 
-  getter transfer : String? # Expandable to Stripe::Account
+  getter transfer : String? # | Stripe::Account
 
   class TransferData
     include JSON::Serializable
     getter amount : Int32?
-    getter destination : String? # Expandable to Stripe::Account
+    getter destination : String? # | Stripe::Account
   end
 
   getter transfer_data : TransferData?
