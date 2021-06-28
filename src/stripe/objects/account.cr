@@ -31,7 +31,6 @@ class Stripe::Account
     getter card_payments : CapabilityValue?
     getter cartes_bancaires_payments : CapabilityValue?
     getter eps_payments : CapabilityValue?
-    getter card_payments : CapabilityValue?
     getter fpx_payments : CapabilityValue?
     getter giropay_payments : CapabilityValue?
     getter grabpay_payments : CapabilityValue?
@@ -268,10 +267,20 @@ class Stripe::Account
     class Verification
       include JSON::Serializable
 
-      getter additional_document : Document?
+      getter additional_document : Company::Verification::Document?
       getter details : String?
+      enum DetailsCode
+        DocumentAddressMismatch
+        DocumentDobMismatch
+        DocumentDuplicateType
+        DocumentIdNumberMismatch
+        DocumentNameMismatch
+        DocumentNationalityMismatch
+        FailedKeyedIdentity
+        FailedOther
+      end
       getter details_code : DetailsCode?
-      getter document : Document?
+      getter document : Company::Verification::Document?
     end
 
     getter verification : Verification?
@@ -281,7 +290,7 @@ class Stripe::Account
 
   getter metadata : JSON::Any?
 
-  getter requirements : Requirements?
+  getter requirements : Individual::Requirements?
 
   class TOSAcceptance
     include JSON::Serializable
@@ -326,5 +335,93 @@ class Stripe::Account
   getter details_submitted : Bool
   getter external_accounts : List(Account)
   getter payouts_enabled : Bool
-  getter settings : Settings
+
+  class Settings
+    include JSON::Serializable
+
+    class BacsDebitPayments
+      include JSON::Serializable
+      getter display_name : String
+    end
+
+    getter bacs_debit_payments : BacsDebitPayments?
+
+    class Branding
+      include JSON::Serializable
+      getter icon : String? # expandable file_object
+      getter logo : String? # expandable file_object
+      getter primary_color : String?
+      getter secondary_color : String?
+    end
+
+    getter branding : Branding?
+
+    class CardIssuing
+      include JSON::Serializable
+      getter tos_acceptance : TOSAcceptance
+    end
+
+    getter card_issuing : CardIssuing?
+
+    class CardPayments
+      include JSON::Serializable
+
+      class DeclineOn
+        include JSON::Serializable
+        getter avs_failure : Bool
+        getter cvc_failure : Bool
+      end
+
+      getter decline_on : DeclineOn?
+      getter statement_descriptor_prefix : String?
+    end
+
+    getter card_payments : CardPayments?
+
+    class Dashboard
+      include JSON::Serializable
+      getter display_name : String?
+      getter timezone : String?
+    end
+
+    getter dashboard : Dashboard
+
+    class Payments
+      include JSON::Serializable
+
+      getter statement_descriptor : String?
+      getter statement_descriptor_kana : String?
+      getter statement_descriptor_kanji : String?
+    end
+
+    getter payments : Payments?
+
+    class Payouts
+      include JSON::Serializable
+
+      getter debit_negative_balances : Bool?
+
+      class Schedule
+        include JSON::Serializable
+        getter delay_days : Int32
+        getter interval : String
+        getter monthly_anchor : Int32
+        getter weekly_anchor : String
+      end
+
+      getter schedule : Schedule?
+      getter statement_descriptor : String?
+    end
+
+    getter payouts : Payouts
+
+    class SepaDebitPayments
+      include JSON::Serializable
+      getter creditor_id : String?
+    end
+
+    getter sepa_debit_payments : SepaDebitPayments?
+  end
+
+  getter settings : Settings?
 end
