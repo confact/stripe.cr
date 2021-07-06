@@ -1,3 +1,4 @@
+@[EventPayload]
 class Stripe::Refund
   include JSON::Serializable
 

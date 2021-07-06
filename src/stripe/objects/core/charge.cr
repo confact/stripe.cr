@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/charges/object
+@[EventPayload]
 class Stripe::Charge
   include JSON::Serializable
 

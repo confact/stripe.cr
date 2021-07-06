@@ -1,3 +1,4 @@
+@[EventPayload]
 class Stripe::SetupIntent
   include JSON::Serializable
 
