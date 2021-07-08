@@ -53,9 +53,9 @@ class Stripe::Account
 
     getter address : Stripe::Address?
 
-    getter address_kana : Stripe::AddressJP?
+    getter address_kana : Stripe::Address?
 
-    getter address_kanji : Stripe::AddressJP?
+    getter address_kanji : Stripe::Address?
 
     getter directors_provided : Bool?
     getter executives_provided : Bool?
@@ -144,8 +144,8 @@ class Stripe::Account
     getter object : String = "person"
     getter account : String?
     getter address : Stripe::Address?
-    getter address_kana : Stripe::AddressJP?
-    getter address_kanji : Stripe::AddressJP?
+    getter address_kana : Stripe::Address?
+    getter address_kanji : Stripe::Address?
     @[JSON::Field(converter: Time::EpochConverter)]
     getter created : Time?
 
