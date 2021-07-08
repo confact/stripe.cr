@@ -11,7 +11,7 @@ class Stripe::Account
     GovernmentEntity
   end
 
-  getter business_type : BusinessType
+  getter business_type : BusinessType?
 
   class Capabilities
     include JSON::Serializable
@@ -46,27 +46,27 @@ class Stripe::Account
     getter transfers : CapabilityValue?
   end
 
-  getter capabilities : Capabilities
+  getter capabilities : Capabilities?
 
   class Company
     include JSON::Serializable
 
-    getter address : Stripe::Address
+    getter address : Stripe::Address?
 
-    getter address_kana : Stripe::AddressJP
+    getter address_kana : Stripe::AddressJP?
 
-    getter address_kanji : Stripe::AddressJP
+    getter address_kanji : Stripe::AddressJP?
 
-    getter directors_provided : Bool
-    getter executives_provided : Bool
+    getter directors_provided : Bool?
+    getter executives_provided : Bool?
 
-    getter name : String
-    getter name_kana : String
-    getter name_kanji : String
+    getter name : String?
+    getter name_kana : String?
+    getter name_kanji : String?
 
-    getter owners_provided : Bool
+    getter owners_provided : Bool?
 
-    getter phone : String
+    getter phone : String?
 
     enum Structure
       GovernmentInstrumentality
@@ -91,22 +91,22 @@ class Stripe::Account
       Llc
     end
 
-    getter structure : Structure
+    getter structure : Structure?
 
-    getter tax_id_provided : Bool
-    getter tax_id_registrar : String
-    getter vat_id_provided : Bool
+    getter tax_id_provided : Bool?
+    getter tax_id_registrar : String?
+    getter vat_id_provided : Bool?
 
     class Verification
       include JSON::Serializable
 
-      getter document : Document
+      getter document : Document?
 
       class Document
         include JSON::Serializable
 
-        getter back : String
-        getter details : String
+        getter back : String?
+        getter details : String?
 
         enum DetailsCode
           DocumentCorrupt
@@ -125,27 +125,27 @@ class Stripe::Account
           DocumentTooLarge
         end
 
-        getter details_code : DetailsCode
+        getter details_code : DetailsCode?
 
-        getter back : String
+        getter back : String?
       end
     end
 
-    getter verification : Verification
+    getter verification : Verification?
   end
 
-  getter country : String
-  getter email : String
+  getter country : String?
+  getter email : String?
 
   class Individual
     include JSON::Serializable
 
     getter id : String
     getter object : String = "person"
-    getter account : String
-    getter address : Stripe::Address
-    getter address_kana : Stripe::AddressJP
-    getter address_kanji : Stripe::AddressJP
+    getter account : String?
+    getter address : Stripe::Address?
+    getter address_kana : Stripe::AddressJP?
+    getter address_kanji : Stripe::AddressJP?
     @[JSON::Field(converter: Time::EpochConverter)]
     getter created : Time?
 
@@ -181,23 +181,23 @@ class Stripe::Account
 
     class Relationship
       include JSON::Serializable
-      getter director : Bool
-      getter executive : Bool
-      getter owner : Bool
-      getter percent_ownership : Float64
-      getter representative : Bool
-      getter title : String
+      getter director : Bool?
+      getter executive : Bool?
+      getter owner : Bool?
+      getter percent_ownership : Float64?
+      getter representative : Bool?
+      getter title : String?
     end
 
-    getter relationship : Relationship
+    getter relationship : Relationship?
 
     class Requirements
       include JSON::Serializable
       @[JSON::Field(converter: Time::EpochConverter)]
       getter current_deadline : Time?
-      getter currently_due : Array(String)
+      getter currently_due : Array(String)?
 
-      class Errors
+      class Error
         include JSON::Serializable
 
         enum Code
@@ -253,7 +253,7 @@ class Stripe::Account
         getter requirement : String?
       end
 
-      getter errors : Errors?
+      getter errors : Array(Error?)
 
       getter eventually_due : Array(String)?
 
@@ -295,14 +295,14 @@ class Stripe::Account
   class TOSAcceptance
     include JSON::Serializable
     @[JSON::Field(converter: Time::EpochConverter)]
-    getter date : Time
-    getter ip : String
-    getter service_agreement : String
-    getter user_agent : String
+    getter date : Time?
+    getter ip : String?
+    getter service_agreement : String?
+    getter user_agent : String?
   end
 
-  getter tos_acceptance : TOSAcceptance
-  getter type : String
+  getter tos_acceptance : TOSAcceptance?
+  getter type : String?
 
   class BusinessProfile
     include JSON::Serializable
@@ -317,31 +317,31 @@ class Stripe::Account
     getter url : String?
   end
 
-  getter business_profile : BusinessProfile
-  getter charges_enabled : Bool
+  getter business_profile : BusinessProfile?
+  getter charges_enabled : Bool?
 
   class Controller
     include JSON::Serializable
 
-    getter is_controller : Bool
-    getter type : String
+    getter is_controller : Bool?
+    getter type : String?
   end
 
   getter controller : Controller?
 
   @[JSON::Field(converter: Time::EpochConverter)]
-  getter created : Time
-  getter default_currency : String
-  getter details_submitted : Bool
-  getter external_accounts : List(Account)
-  getter payouts_enabled : Bool
+  getter created : Time?
+  getter default_currency : String?
+  getter details_submitted : Bool?
+  getter external_accounts : List(Account)?
+  getter payouts_enabled : Bool?
 
   class Settings
     include JSON::Serializable
 
     class BacsDebitPayments
       include JSON::Serializable
-      getter display_name : String
+      getter display_name : String?
     end
 
     getter bacs_debit_payments : BacsDebitPayments?
@@ -358,7 +358,7 @@ class Stripe::Account
 
     class CardIssuing
       include JSON::Serializable
-      getter tos_acceptance : TOSAcceptance
+      getter tos_acceptance : TOSAcceptance?
     end
 
     getter card_issuing : CardIssuing?
@@ -368,8 +368,8 @@ class Stripe::Account
 
       class DeclineOn
         include JSON::Serializable
-        getter avs_failure : Bool
-        getter cvc_failure : Bool
+        getter avs_failure : Bool?
+        getter cvc_failure : Bool?
       end
 
       getter decline_on : DeclineOn?
@@ -384,7 +384,7 @@ class Stripe::Account
       getter timezone : String?
     end
 
-    getter dashboard : Dashboard
+    getter dashboard : Dashboard?
 
     class Payments
       include JSON::Serializable
@@ -403,17 +403,17 @@ class Stripe::Account
 
       class Schedule
         include JSON::Serializable
-        getter delay_days : Int32
-        getter interval : String
-        getter monthly_anchor : Int32
-        getter weekly_anchor : String
+        getter delay_days : Int32?
+        getter interval : String?
+        getter monthly_anchor : Int32?
+        getter weekly_anchor : String?
       end
 
       getter schedule : Schedule?
       getter statement_descriptor : String?
     end
 
-    getter payouts : Payouts
+    getter payouts : Payouts?
 
     class SepaDebitPayments
       include JSON::Serializable
