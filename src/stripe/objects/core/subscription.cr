@@ -2,6 +2,8 @@
 class Stripe::Subscription
   include JSON::Serializable
 
+  retrieve
+
   enum Status
     Incomplete
     IncompleteExpired

@@ -1,6 +1,8 @@
 class Stripe::Source
   include JSON::Serializable
 
+  retrieve
+
   enum Status
     Canceled
     Chargeable
