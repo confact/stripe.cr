@@ -2,6 +2,8 @@
 class Stripe::Refund
   include JSON::Serializable
 
+  retrieve
+
   enum FailureReason
     LostOrStolenCard
     ExpiredOrCanceledCard
