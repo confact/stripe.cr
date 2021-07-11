@@ -229,6 +229,24 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [ ] Delete a invoice
 
 - [x] List all invoices
+##### Files
+
+- [ ] Create a file
+
+- [x] Retrieve a file
+
+- [ ] Update a file
+
+- [ ] List all files
+##### File Links
+
+- [ ] Create a file link
+
+- [x] Retrieve a file link
+
+- [ ] Update a file link
+
+- [ ] List all file links
 
 ### Objects
 
@@ -258,9 +276,9 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Event
 
-- [ ] File
+- [X] File
 
-- [ ] File link
+- [X] File link
 
 - [ ] Payout
 
