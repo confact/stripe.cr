@@ -1,0 +1,129 @@
+{
+  "id": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+  "object": "file",
+  "created": 1489796822,
+  "expires_at": null,
+  "filename": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+  "links": {
+    "object": "list",
+    "data": [
+      {
+        "id": "link_1JAsT12eZvKYlo2CZ9FEJQC9",
+        "object": "file_link",
+        "created": 1625732419,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfdldCem5NUU9GMkUxZWJnNUxuMEU4RW9y00BjonxZ5K"
+      },
+      {
+        "id": "link_1JAsSy2eZvKYlo2CJSAwIQmu",
+        "object": "file_link",
+        "created": 1625732416,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfOUZkRHZkSlFpTW9iMzl0UnpiY2ZjaG5a00XeYRL5aH"
+      },
+      {
+        "id": "link_1JAsSx2eZvKYlo2Cw5C8iIfh",
+        "object": "file_link",
+        "created": 1625732415,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfU2tuUWh0elJKWm5EN0oxOVZWeHBXVTZa00y1rBVq54"
+      },
+      {
+        "id": "link_1JAsSv2eZvKYlo2CGOC4xPMW",
+        "object": "file_link",
+        "created": 1625732413,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfcFFNc2xMbDlMQ1NSSzVZMExhRU45YW5a00LAJb5xDG"
+      },
+      {
+        "id": "link_1JAsSt2eZvKYlo2Cn8l5QWpW",
+        "object": "file_link",
+        "created": 1625732411,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfVnNMeUFDU0s1VTlTQXVEWGZXc1FEY3V400rvzOPybn"
+      },
+      {
+        "id": "link_1JAsSW2eZvKYlo2CFNrmwnHm",
+        "object": "file_link",
+        "created": 1625732388,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfSU5XNnhTOWJtdDRRUGNaSzBNRUJzT09l00IfCcQQGJ"
+      },
+      {
+        "id": "link_1JAsSU2eZvKYlo2Cyzw1905C",
+        "object": "file_link",
+        "created": 1625732386,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfWjRldHN3U1NNbHRIYzliRkhadEF0dlFQ00OhSLTmRN"
+      },
+      {
+        "id": "link_1JAsSP2eZvKYlo2Ctgb3sA3x",
+        "object": "file_link",
+        "created": 1625732381,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfR0ZmVlphSGJVMko5UnNjTHY0ZDRGVFBz00qM6EU2rj"
+      },
+      {
+        "id": "link_1JAsSN2eZvKYlo2CDtBg6zmZ",
+        "object": "file_link",
+        "created": 1625732379,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfNndxY3k4WVd0RWFzUUdGdGhOWTFQbWZj007lIwYUb4"
+      },
+      {
+        "id": "link_1JAsSJ2eZvKYlo2CGnoPTy3R",
+        "object": "file_link",
+        "created": 1625732375,
+        "expired": false,
+        "expires_at": null,
+        "file": "file_19yVPO2eZvKYlo2CIrGjfyCO",
+        "livemode": false,
+        "metadata": {},
+        "url": "https://files.stripe.com/links/MDB8YWNjdF8xMDMyRDgyZVp2S1lsbzJDfGZsX3Rlc3RfajZPd01aSDRtNk9ET1Iwc0dqY2FTZUw30047cKTAgW"
+      }
+    ],
+    "has_more": true,
+    "url": "/v1/file_links?file=file_19yVPO2eZvKYlo2CIrGjfyCO"
+  },
+  "purpose": "dispute_evidence",
+  "size": 31273,
+  "title": null,
+  "type": "jpg",
+  "url": "https://files.stripe.com/v1/files/file_19yVPO2eZvKYlo2CIrGjfyCO/contents"
+}
