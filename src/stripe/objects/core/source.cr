@@ -1,3 +1,4 @@
+@[EventPayload]
 class Stripe::Source
   include JSON::Serializable
 

@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/coupons/object
+@[EventPayload]
 class Stripe::Coupon
   include JSON::Serializable
 

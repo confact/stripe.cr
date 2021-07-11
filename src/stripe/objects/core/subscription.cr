@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/subscriptions/object
+@[EventPayload]
 class Stripe::Subscription
   include JSON::Serializable
 

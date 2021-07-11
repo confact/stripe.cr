@@ -1,3 +1,4 @@
+@[EventPayload]
 class Stripe::Product
   include JSON::Serializable
 

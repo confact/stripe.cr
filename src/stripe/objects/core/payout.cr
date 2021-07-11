@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/payouts/object
+@[EventPayload]
 class Stripe::Payout
   include JSON::Serializable
 

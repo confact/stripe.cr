@@ -51,4 +51,28 @@ class Stripe
   end
 end
 
+annotation EventPayload
+end
+
 require "./stripe/**"
+
+# This is needed for Stripe::Event.
+# The only way I found to have a Payload complete Union is to call the macro after requiring all the files.
+
+macro event_payload_objects_union
+  {% begin %}
+    alias Payload = {{"Union(#{Object.all_subclasses.select(&.annotation(EventPayload)).splat})".id}}
+{% end %}
+end
+
+macro stripe_object_mapping
+  {% begin %}
+          {
+        {% for item in Object.all_subclasses.select(&.annotation(EventPayload)) %}
+    {{"#{item.id.gsub(/Stripe::/, "").underscore.id}".id}}: {{item.id}},
+  {% end %}
+      }
+{% end %}
+end
+
+event_payload_objects_union

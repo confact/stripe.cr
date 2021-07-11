@@ -1,0 +1,44 @@
+{
+  "id": "evt_1IrCyVJN5FrkuvKhbHhhuS0B",
+  "object": "event",
+  "api_version": "2020-08-27",
+  "created": 1621044691,
+  "data": {
+    "object": {
+      "id": "prod_JTgbc7dgwVuto4",
+      "object": "product",
+      "active": true,
+      "attributes": [],
+      "created": 1620930329,
+      "description": "Plan Premium test",
+      "images": [
+        "https://files.stripe.com/links/MDB8YWNjdF8xSXFpd0ZKTjVGcmt1dktofGZsX3Rlc3RfTWZsd3Rsa1ZJMHBLOEdzRlFLaDB5bElW00FhECO8uS"
+      ],
+      "livemode": false,
+      "metadata": {
+        "tier": "premium"
+      },
+      "name": "Plan Premium",
+      "package_dimensions": null,
+      "shippable": null,
+      "statement_descriptor": null,
+      "type": "service",
+      "unit_label": null,
+      "updated": 1621044691,
+      "url": null
+    },
+    "previous_attributes": {
+      "metadata": {
+        "tier": null
+      },
+      "updated": 1620930329
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 0,
+  "request": {
+    "id": "req_RXlkgjj2SWzNjM",
+    "idempotency_key": null
+  },
+  "type": "product.updated"
+}
