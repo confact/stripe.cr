@@ -1,3 +1,4 @@
+@[EventPayload]
 class Stripe::TaxRate
   include JSON::Serializable
 

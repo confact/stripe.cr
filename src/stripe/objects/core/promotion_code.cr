@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/promotion_codes/object
+@[EventPayload]
 class Stripe::PromotionCode
   include JSON::Serializable
 

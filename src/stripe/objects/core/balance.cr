@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/balance/balance_object
+@[EventPayload]
 class Stripe::Balance
   include JSON::Serializable
 
