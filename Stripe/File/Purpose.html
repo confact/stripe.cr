@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="stripe">
-  <title>Stripe::Customer::TaxInfo - stripe master</title>
+  <title>Stripe::File::Purpose - stripe master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -216,7 +216,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="stripe/Stripe/Customer" data-name="stripe::customer">
+  <li class="parent " data-id="stripe/Stripe/Customer" data-name="stripe::customer">
       <a href="../../Stripe/Customer.html">Customer</a>
       
         <ul>
@@ -226,7 +226,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="stripe/Stripe/Customer/TaxInfo" data-name="stripe::customer::taxinfo">
+  <li class="parent " data-id="stripe/Stripe/Customer/TaxInfo" data-name="stripe::customer::taxinfo">
       <a href="../../Stripe/Customer/TaxInfo.html">TaxInfo</a>
       
         <ul>
@@ -281,12 +281,12 @@
       
     </li>
   
-  <li class="parent " data-id="stripe/Stripe/File" data-name="stripe::file">
+  <li class="parent open current" data-id="stripe/Stripe/File" data-name="stripe::file">
       <a href="../../Stripe/File.html">File</a>
       
         <ul>
   
-  <li class=" " data-id="stripe/Stripe/File/Purpose" data-name="stripe::file::purpose">
+  <li class=" current" data-id="stripe/Stripe/File/Purpose" data-name="stripe::file::purpose">
       <a href="../../Stripe/File/Purpose.html">Purpose</a>
       
     </li>
@@ -590,33 +590,17 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Stripe::Customer::TaxInfo
+  <span class="kind">enum</span> Stripe::File::Purpose
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Stripe/Customer/TaxInfo.html">Stripe::Customer::TaxInfo</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
 
 
 
-
-
-  <h2>
-    <a id="included-modules" class="anchor" href="#included-modules">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Included Modules
-  </h2>
-  <ul class="other-types-list">
-    
-      <li class="other-type">JSON::Serializable</li>
-    
-  </ul>
 
 
 
@@ -637,8 +621,8 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/customer/customer.cr#L5" target="_blank">
-        stripe/objects/core/customer/customer.cr
+      <a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L6" target="_blank">
+        stripe/objects/core/file.cr
       </a>
     
     <br/>
@@ -646,24 +630,91 @@
 
 
 
-
-
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
+      Enum Members
+    </h2>
+  
+  <dl>
     
-      <li class="entry-summary">
-        <a href="#new(pull:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
-        
-      </li>
+      <dt class="entry-const" id="AccountRequirement">
+        <strong>AccountRequirement</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
     
-  </ul>
+      <dt class="entry-const" id="AdditionalVerification">
+        <strong>AdditionalVerification</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="BusinessIcon">
+        <strong>BusinessIcon</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="BusinessLogo">
+        <strong>BusinessLogo</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="CustomerSignature">
+        <strong>CustomerSignature</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DisputeEvidence">
+        <strong>DisputeEvidence</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DocumentProviderIdentityDocument">
+        <strong>DocumentProviderIdentityDocument</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FinanceReportRun">
+        <strong>FinanceReportRun</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="IdentityDocument">
+        <strong>IdentityDocument</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="IdentityDocumentDownloadable">
+        <strong>IdentityDocumentDownloadable</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PciDocument">
+        <strong>PciDocument</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Selfie">
+        <strong>Selfie</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SigmaScheduledQuery">
+        <strong>SigmaScheduledQuery</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="TaxDocumentUserUpload">
+        <strong>TaxDocumentUserUpload</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
 
 
 
@@ -680,12 +731,72 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#tax_id:String-instance-method" class="signature"><strong>#tax_id</strong> : String</a>
+        <a href="#account_requirement?-instance-method" class="signature"><strong>#account_requirement?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:Type-instance-method" class="signature"><strong>#type</strong> : Type</a>
+        <a href="#additional_verification?-instance-method" class="signature"><strong>#additional_verification?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#business_icon?-instance-method" class="signature"><strong>#business_icon?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#business_logo?-instance-method" class="signature"><strong>#business_logo?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#customer_signature?-instance-method" class="signature"><strong>#customer_signature?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dispute_evidence?-instance-method" class="signature"><strong>#dispute_evidence?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#document_provider_identity_document?-instance-method" class="signature"><strong>#document_provider_identity_document?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#finance_report_run?-instance-method" class="signature"><strong>#finance_report_run?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#identity_document?-instance-method" class="signature"><strong>#identity_document?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#identity_document_downloadable?-instance-method" class="signature"><strong>#identity_document_downloadable?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pci_document?-instance-method" class="signature"><strong>#pci_document?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#selfie?-instance-method" class="signature"><strong>#selfie?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sigma_scheduled_query?-instance-method" class="signature"><strong>#sigma_scheduled_query?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tax_document_user_upload?-instance-method" class="signature"><strong>#tax_document_user_upload?</strong></a>
         
       </li>
     
@@ -727,34 +838,18 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
-
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(pull : JSON::PullParser)
-
-        <a class="method-permalink" href="#new(pull:JSON::PullParser)-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/customer/customer.cr#L6" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
@@ -769,34 +864,226 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="tax_id:String-instance-method">
+    <div class="entry-detail" id="account_requirement?-instance-method">
       <div class="signature">
         
-        def <strong>tax_id</strong> : String
+        def <strong>account_requirement?</strong>
 
-        <a class="method-permalink" href="#tax_id:String-instance-method">#</a>
+        <a class="method-permalink" href="#account_requirement?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/customer/customer.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="type:Type-instance-method">
+    <div class="entry-detail" id="additional_verification?-instance-method">
       <div class="signature">
         
-        def <strong>type</strong> : <a href="../../Stripe/Customer/TaxInfo/Type.html">Type</a>
+        def <strong>additional_verification?</strong>
 
-        <a class="method-permalink" href="#type:Type-instance-method">#</a>
+        <a class="method-permalink" href="#additional_verification?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/customer/customer.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="business_icon?-instance-method">
+      <div class="signature">
+        
+        def <strong>business_icon?</strong>
+
+        <a class="method-permalink" href="#business_icon?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="business_logo?-instance-method">
+      <div class="signature">
+        
+        def <strong>business_logo?</strong>
+
+        <a class="method-permalink" href="#business_logo?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="customer_signature?-instance-method">
+      <div class="signature">
+        
+        def <strong>customer_signature?</strong>
+
+        <a class="method-permalink" href="#customer_signature?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dispute_evidence?-instance-method">
+      <div class="signature">
+        
+        def <strong>dispute_evidence?</strong>
+
+        <a class="method-permalink" href="#dispute_evidence?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="document_provider_identity_document?-instance-method">
+      <div class="signature">
+        
+        def <strong>document_provider_identity_document?</strong>
+
+        <a class="method-permalink" href="#document_provider_identity_document?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finance_report_run?-instance-method">
+      <div class="signature">
+        
+        def <strong>finance_report_run?</strong>
+
+        <a class="method-permalink" href="#finance_report_run?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="identity_document?-instance-method">
+      <div class="signature">
+        
+        def <strong>identity_document?</strong>
+
+        <a class="method-permalink" href="#identity_document?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="identity_document_downloadable?-instance-method">
+      <div class="signature">
+        
+        def <strong>identity_document_downloadable?</strong>
+
+        <a class="method-permalink" href="#identity_document_downloadable?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pci_document?-instance-method">
+      <div class="signature">
+        
+        def <strong>pci_document?</strong>
+
+        <a class="method-permalink" href="#pci_document?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="selfie?-instance-method">
+      <div class="signature">
+        
+        def <strong>selfie?</strong>
+
+        <a class="method-permalink" href="#selfie?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sigma_scheduled_query?-instance-method">
+      <div class="signature">
+        
+        def <strong>sigma_scheduled_query?</strong>
+
+        <a class="method-permalink" href="#sigma_scheduled_query?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tax_document_user_upload?-instance-method">
+      <div class="signature">
+        
+        def <strong>tax_document_user_upload?</strong>
+
+        <a class="method-permalink" href="#tax_document_user_upload?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/bf3b78b8c54455eb43378de4c45a300aca57c970/src/stripe/objects/core/file.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
