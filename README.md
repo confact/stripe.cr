@@ -306,7 +306,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 #### Connect
 
-- [ ] Account
+- [x] Account
 
 - [ ] Login link
 

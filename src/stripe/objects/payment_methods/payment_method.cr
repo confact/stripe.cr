@@ -4,7 +4,7 @@ class Stripe::PaymentMethod
   class BillingDetails
     include JSON::Serializable
 
-    getter address : Stripe::Shipping::Address?
+    getter address : Stripe::Address?
     getter email : String?
     getter name : String?
     getter phone : String?
