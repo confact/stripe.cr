@@ -1,4 +1,5 @@
-macro retrieve
+module StripeMethods
+  macro retrieve
 {% begin %}
   def self.retrieve(id : String)
     response = Stripe.client.get("/v1/#{"{{@type.id.gsub(/Stripe::/, "").underscore}}"}s/#{id}")
@@ -14,4 +15,5 @@ macro retrieve
     retrieve({{@type.id.gsub(/Stripe::/, "").downcase.id}}.id)
   end
 {% end %}
+end
 end
