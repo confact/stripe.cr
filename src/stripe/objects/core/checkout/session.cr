@@ -1,6 +1,9 @@
 # https://stripe.com/docs/api/checkout/sessions/object
 class Stripe::Checkout::Session
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   enum Mode
     Payment
