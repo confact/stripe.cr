@@ -1,5 +1,8 @@
 class Stripe::PaymentMethod
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   class BillingDetails
     include JSON::Serializable
