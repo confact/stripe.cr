@@ -2,6 +2,9 @@
 
 class Stripe::FileLink
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   getter id : String
   getter type : String?

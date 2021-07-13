@@ -1,8 +1,9 @@
 @[EventPayload]
 class Stripe::Source
   include JSON::Serializable
+  include StripeMethods
 
-  retrieve
+  add_retrieve_method
 
   enum Status
     Canceled

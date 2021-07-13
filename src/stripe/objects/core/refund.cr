@@ -1,8 +1,9 @@
 @[EventPayload]
 class Stripe::Refund
   include JSON::Serializable
+  include StripeMethods
 
-  retrieve
+  add_retrieve_method
 
   enum FailureReason
     LostOrStolenCard
