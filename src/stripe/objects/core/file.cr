@@ -1,5 +1,6 @@
 # https://stripe.com/docs/api/files/object
 
+@[EventPayload]
 class Stripe::File
   include JSON::Serializable
 

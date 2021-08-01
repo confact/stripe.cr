@@ -1,4 +1,6 @@
 # https://stripe.com/docs/api/checkout/sessions/object
+
+@[EventPayload]
 class Stripe::Checkout::Session
   include JSON::Serializable
 

@@ -1,4 +1,5 @@
 # https://stripe.com/docs/api/customer_portal
+
 class Stripe::BillingPortal::Session
   include JSON::Serializable
 

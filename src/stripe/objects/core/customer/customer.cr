@@ -1,4 +1,6 @@
 # https://stripe.com/docs/api/customers/object
+
+@[EventPayload]
 class Stripe::Customer
   include JSON::Serializable
 

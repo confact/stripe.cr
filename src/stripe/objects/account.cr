@@ -1,4 +1,6 @@
 # https://stripe.com/docs/api/accounts/object
+
+@[EventPayload]
 class Stripe::Account
   include JSON::Serializable
 
