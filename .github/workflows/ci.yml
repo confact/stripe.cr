@@ -26,10 +26,13 @@ jobs:
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
-    container: crystallang/crystal:${{ matrix.crystal_version }}-alpine
 
     steps:
       - uses: actions/checkout@v2.3.4
+
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: ${{ matrix.crystal_version }}
 
       - name: Check format
         run: crystal tool format --check
