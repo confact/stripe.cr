@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.4
+
+### API additions
+
+- Added support for [`Stripe::File`](https://stripe.com/docs/api/files) (https://github.com/confact/stripe.cr/pull/32)
+- Added support for [`Stripe::FileLink`](https://stripe.com/docs/api/file_links) (https://github.com/confact/stripe.cr/pull/32)
+- Added support for [`Stripe::Account`](https://stripe.com/docs/api/accounts) (https://github.com/confact/stripe.cr/pull/31)
+- Added support for [`Event`](https://stripe.com/docs/api/events) objects (https://github.com/confact/stripe.cr/pull/26)
+- Added support for verifying [webhooks](https://stripe.com/docs/webhooks/signatures) via `Stripe::Webhook` (https://github.com/confact/stripe.cr/pull/26)
+- Updated [`Stripe::Charge`](https://stripe.com/docs/api/charges) (https://github.com/confact/stripe.cr/pull/30)
+- Added support for [`Stripe::Product#list`](https://stripe.com/docs/api/skus/list#list_skus-product) (https://github.com/confact/stripe.cr/pull/25)
+
 ## v1.3
 
 ### Misc improvements

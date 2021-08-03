@@ -1,6 +1,6 @@
 name: stripe
 description: A Stripe API wrapper for the Crystal language
-version: 1.3.0
+version: 1.4.0
 
 license: MIT
 
