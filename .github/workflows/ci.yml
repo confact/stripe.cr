@@ -19,6 +19,7 @@ jobs:
           - 0.36.1
           - 1.0.0
           - 1.1.1
+          - latest
         experimental: [false]
         include:
           - crystal_version: nightly
@@ -36,6 +37,7 @@ jobs:
 
       - name: Check format
         run: crystal tool format --check
+        if: matrix.crystal_version == 'latest'
 
       - name: Set up Crystal cache
         uses: actions/cache@v2.1.6
@@ -55,6 +57,7 @@ jobs:
 
       - name: Crystal Ameba Linter
         run: ./bin/ameba
+        if: matrix.crystal_version == 'latest'
 
       - name: Run tests
         run: crystal spec
