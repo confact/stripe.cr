@@ -18,6 +18,8 @@ jobs:
         crystal_version:
           - 0.36.1
           - 1.0.0
+          - 1.1.1
+          - latest
         experimental: [false]
         include:
           - crystal_version: nightly
@@ -25,13 +27,17 @@ jobs:
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
-    container: crystallang/crystal:${{ matrix.crystal_version }}-alpine
 
     steps:
       - uses: actions/checkout@v2.3.4
 
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: ${{ matrix.crystal_version }}
+
       - name: Check format
         run: crystal tool format --check
+        if: matrix.crystal_version == 'latest'
 
       - name: Set up Crystal cache
         uses: actions/cache@v2.1.6
@@ -51,6 +57,7 @@ jobs:
 
       - name: Crystal Ameba Linter
         run: ./bin/ameba
+        if: matrix.crystal_version == 'latest'
 
       - name: Run tests
         run: crystal spec
