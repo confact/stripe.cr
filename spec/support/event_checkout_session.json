@@ -1,0 +1,59 @@
+{
+  "id": "evt_1JI9XrIShMssj1NZBYViMOrJ",
+  "object": "event",
+  "api_version": "2020-08-27",
+  "created": 1627466362,
+  "data": {
+    "object": {
+      "id": "cs_test_a1CRnkRd9bgUN5UGxrPNxt2lAd9TYZAeA66k0BXrwm4clxo9C4RpunJJWn",
+      "object": "checkout.session",
+      "allow_promotion_codes": null,
+      "amount_subtotal": 500,
+      "amount_total": 500,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://server.bonk.com/pay-subscription-cancel",
+      "client_reference_id": null,
+      "currency": "usd",
+      "customer": "cus_JuBmL8HkpSaHuE",
+      "customer_details": {
+        "email": "honk@bonk.com",
+        "tax_exempt": "none",
+        "tax_ids": []
+      },
+      "customer_email": null,
+      "livemode": false,
+      "locale": null,
+      "metadata": {},
+      "mode": "subscription",
+      "payment_intent": null,
+      "payment_method_options": {},
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "setup_intent": null,
+      "shipping": null,
+      "shipping_address_collection": null,
+      "submit_type": null,
+      "subscription": "sub_Jw1bkVOkXItiJG",
+      "success_url": "https://server.bonk.com/pay-subscription-success",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "url": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 3,
+  "request": {
+    "id": "req_cILsoLL5w184zR",
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}

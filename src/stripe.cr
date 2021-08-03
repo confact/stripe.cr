@@ -69,7 +69,7 @@ macro stripe_object_mapping
   {% begin %}
           {
         {% for item in Object.all_subclasses.select(&.annotation(EventPayload)) %}
-    {{"#{item.id.gsub(/Stripe::/, "").underscore.id}".id}}: {{item.id}},
+    {{"#{item.id.gsub(/Stripe::/, "").underscore.gsub(/::/, ".").id}"}} => {{item.id}},
   {% end %}
       }
 {% end %}
