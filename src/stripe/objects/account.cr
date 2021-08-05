@@ -3,6 +3,9 @@
 @[EventPayload]
 class Stripe::Account
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   getter id : String
 

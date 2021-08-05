@@ -2,6 +2,9 @@
 @[EventPayload]
 class Stripe::Subscription
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   enum Status
     Incomplete

@@ -1,6 +1,9 @@
 @[EventPayload]
 class Stripe::TaxRate
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   getter id : String
   getter inclusive : Bool

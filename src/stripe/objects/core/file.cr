@@ -3,6 +3,9 @@
 @[EventPayload]
 class Stripe::File
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   enum Purpose
     AccountRequirement
