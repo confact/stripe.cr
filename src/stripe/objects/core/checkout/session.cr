@@ -6,6 +6,13 @@ class Stripe::Checkout::Session
   include StripeMethods
 
   add_retrieve_method
+  add_list_method(
+    payment_intent : String? | Stripe::PaymentIntent? = nil,
+    subscription : String? | Stripe::Subscription? = nil,
+    limit : Int32? = nil,
+    starting_after : String? = nil,
+    ending_before : String? = nil
+  )
 
   enum Mode
     Payment
