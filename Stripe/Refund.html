@@ -866,6 +866,11 @@
       
     </li>
   
+  <li class=" " data-id="stripe/StripeMethods" data-name="stripemethods">
+      <a href="../StripeMethods.html">StripeMethods</a>
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -901,6 +906,8 @@
     
       <li class="other-type">JSON::Serializable</li>
     
+      <li class="other-type"><a href="../StripeMethods.html">StripeMethods</a></li>
+    
   </ul>
 
 
@@ -922,21 +929,14 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/refunds/create_refund.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/refunds/create_refund.cr#L1" target="_blank">
         stripe/methods/core/refunds/create_refund.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/refunds/retrieve_refund.cr#L1" target="_blank">
-        stripe/methods/core/refunds/retrieve_refund.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L2" target="_blank">
         stripe/objects/core/refund.cr
       </a>
     
@@ -967,11 +967,6 @@
         
       </li>
     
-      <li class="entry-summary">
-        <a href="#retrieve(id:String):Refund-class-method" class="signature"><strong>.retrieve</strong>(id : String) : Refund</a>
-        
-      </li>
-    
   </ul>
 
 
@@ -987,7 +982,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#retrieve(refund:Refund)-class-method" class="signature"><strong>.retrieve</strong>(refund : Refund)</a>
+        <a href="#retrieve(id:String)-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#retrieve(refund:Stripe::Refund)-class-method" class="signature"><strong>.retrieve</strong>(refund : Stripe::Refund)</a>
         
       </li>
     
@@ -1113,6 +1113,16 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
@@ -1136,7 +1146,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/refunds/create_refund.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/refunds/create_refund.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1152,23 +1162,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L3" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="retrieve(id:String):Refund-class-method">
-      <div class="signature">
-        
-        def self.<strong>retrieve</strong>(id : String) : <a href="../Stripe/Refund.html">Refund</a>
-
-        <a class="method-permalink" href="#retrieve(id:String):Refund-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/refunds/retrieve_refund.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1185,18 +1179,34 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="retrieve(refund:Refund)-class-method">
+    <div class="entry-detail" id="retrieve(id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>retrieve</strong>(refund : <a href="../Stripe/Refund.html">Refund</a>)
+        def self.<strong>retrieve</strong>(id : String)
 
-        <a class="method-permalink" href="#retrieve(refund:Refund)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve(id:String)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/refunds/retrieve_refund.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="retrieve(refund:Stripe::Refund)-class-method">
+      <div class="signature">
+        
+        def self.<strong>retrieve</strong>(refund : <a href="../Stripe/Refund.html">Stripe::Refund</a>)
+
+        <a class="method-permalink" href="#retrieve(refund:Stripe::Refund)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1224,7 +1234,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1240,7 +1250,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1256,7 +1266,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1272,7 +1282,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1298,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1304,7 +1314,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1320,7 +1330,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1336,7 +1346,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1352,7 +1362,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1368,7 +1378,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1384,7 +1394,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1400,7 +1410,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1416,7 +1426,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1432,7 +1442,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/refund.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/refund.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>

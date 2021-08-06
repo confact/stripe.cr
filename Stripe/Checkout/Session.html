@@ -866,6 +866,11 @@
       
     </li>
   
+  <li class=" " data-id="stripe/StripeMethods" data-name="stripemethods">
+      <a href="../../StripeMethods.html">StripeMethods</a>
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -894,7 +899,7 @@
     Overview
   </h2>
 
-  <p>https://stripe.com/docs/api/checkout/sessions/retrieve</p>
+  <p>https://stripe.com/docs/api/checkout/sessions/list</p>
 
 
 
@@ -911,6 +916,8 @@
   <ul class="other-types-list">
     
       <li class="other-type">JSON::Serializable</li>
+    
+      <li class="other-type"><a href="../../StripeMethods.html">StripeMethods</a></li>
     
   </ul>
 
@@ -933,28 +940,21 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/create_session.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/checkout/sessions/create_session.cr#L2" target="_blank">
         stripe/methods/core/checkout/sessions/create_session.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/list_sessions.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/checkout/sessions/list_sessions.cr#L2" target="_blank">
         stripe/methods/core/checkout/sessions/list_sessions.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/retrieve_session.cr#L2" target="_blank">
-        stripe/methods/core/checkout/sessions/retrieve_session.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L4" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L4" target="_blank">
         stripe/objects/core/checkout/session.cr
       </a>
     
@@ -1010,7 +1010,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve(session:Session)-class-method" class="signature"><strong>.retrieve</strong>(session : Session)</a>
+        <a href="#retrieve(checkout_session:Stripe::Checkout::Session)-class-method" class="signature"><strong>.retrieve</strong>(checkout_session : Stripe::Checkout::Session)</a>
         
       </li>
     
@@ -1186,6 +1186,16 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
@@ -1209,7 +1219,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1237,7 +1247,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/create_session.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/checkout/sessions/create_session.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1253,7 +1263,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/list_sessions.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/checkout/sessions/list_sessions.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1269,23 +1279,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/retrieve_session.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="retrieve(session:Session)-class-method">
+    <div class="entry-detail" id="retrieve(checkout_session:Stripe::Checkout::Session)-class-method">
       <div class="signature">
         
-        def self.<strong>retrieve</strong>(session : <a href="../../Stripe/Checkout/Session.html">Session</a>)
+        def self.<strong>retrieve</strong>(checkout_session : <a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>)
 
-        <a class="method-permalink" href="#retrieve(session:Session)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve(checkout_session:Stripe::Checkout::Session)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/checkout/sessions/retrieve_session.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,7 +1323,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1329,7 +1339,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,7 +1355,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L61" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1361,7 +1371,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L61" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1377,7 +1387,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1393,7 +1403,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1409,7 +1419,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1425,7 +1435,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1441,7 +1451,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1457,7 +1467,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1473,7 +1483,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L45" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1489,7 +1499,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1505,7 +1515,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1521,7 +1531,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1537,7 +1547,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1553,7 +1563,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1569,7 +1579,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1585,7 +1595,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1601,7 +1611,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1617,7 +1627,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1633,7 +1643,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1649,7 +1659,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1665,7 +1675,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L76" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L79" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1681,7 +1691,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/checkout/session.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/checkout/session.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>

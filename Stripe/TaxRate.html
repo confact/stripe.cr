@@ -866,6 +866,11 @@
       
     </li>
   
+  <li class=" " data-id="stripe/StripeMethods" data-name="stripemethods">
+      <a href="../StripeMethods.html">StripeMethods</a>
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -901,6 +906,8 @@
     
       <li class="other-type">JSON::Serializable</li>
     
+      <li class="other-type"><a href="../StripeMethods.html">StripeMethods</a></li>
+    
   </ul>
 
 
@@ -922,21 +929,14 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/tax_rates/create_tax_rate.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/tax_rates/create_tax_rate.cr#L1" target="_blank">
         stripe/methods/core/tax_rates/create_tax_rate.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/tax_rates/retrieve_tax_rate.cr#L1" target="_blank">
-        stripe/methods/core/tax_rates/retrieve_tax_rate.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L2" target="_blank">
         stripe/objects/core/tax_rate.cr
       </a>
     
@@ -967,11 +967,6 @@
         
       </li>
     
-      <li class="entry-summary">
-        <a href="#retrieve(id:String):TaxRate-class-method" class="signature"><strong>.retrieve</strong>(id : String) : TaxRate</a>
-        
-      </li>
-    
   </ul>
 
 
@@ -987,7 +982,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#retrieve(tax_rate:TaxRate)-class-method" class="signature"><strong>.retrieve</strong>(tax_rate : TaxRate)</a>
+        <a href="#retrieve(id:String)-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#retrieve(taxrate:Stripe::TaxRate)-class-method" class="signature"><strong>.retrieve</strong>(taxrate : Stripe::TaxRate)</a>
         
       </li>
     
@@ -1093,6 +1093,16 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
@@ -1116,7 +1126,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/tax_rates/create_tax_rate.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/methods/core/tax_rates/create_tax_rate.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1132,23 +1142,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L3" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="retrieve(id:String):TaxRate-class-method">
-      <div class="signature">
-        
-        def self.<strong>retrieve</strong>(id : String) : <a href="../Stripe/TaxRate.html">TaxRate</a>
-
-        <a class="method-permalink" href="#retrieve(id:String):TaxRate-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/tax_rates/retrieve_tax_rate.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1165,18 +1159,34 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="retrieve(tax_rate:TaxRate)-class-method">
+    <div class="entry-detail" id="retrieve(id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>retrieve</strong>(tax_rate : <a href="../Stripe/TaxRate.html">TaxRate</a>)
+        def self.<strong>retrieve</strong>(id : String)
 
-        <a class="method-permalink" href="#retrieve(tax_rate:TaxRate)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve(id:String)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/methods/core/tax_rates/retrieve_tax_rate.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="retrieve(taxrate:Stripe::TaxRate)-class-method">
+      <div class="signature">
+        
+        def self.<strong>retrieve</strong>(taxrate : <a href="../Stripe/TaxRate.html">Stripe::TaxRate</a>)
+
+        <a class="method-permalink" href="#retrieve(taxrate:Stripe::TaxRate)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,7 +1214,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,7 +1230,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1236,7 +1246,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,7 +1262,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1268,7 +1278,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1284,7 +1294,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1300,7 +1310,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1316,7 +1326,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1332,7 +1342,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1348,7 +1358,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/3f9a53d2fe6d5a6b4e7adbab99958275192fc5f2/src/stripe/objects/core/tax_rate.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/57bc8a0d44d3c23b1bb3ff70c7ede8005b896971/src/stripe/objects/core/tax_rate.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
