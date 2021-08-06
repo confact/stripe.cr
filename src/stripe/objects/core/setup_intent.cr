@@ -1,6 +1,9 @@
 @[EventPayload]
 class Stripe::SetupIntent
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   enum Status
     RequiresPaymentMethod

@@ -3,6 +3,9 @@
 @[EventPayload]
 class Stripe::Customer
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   class TaxInfo
     include JSON::Serializable
