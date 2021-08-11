@@ -5,7 +5,7 @@ class Stripe::Event
 
   class Request
     include JSON::Serializable
-    getter id : String
+    getter id : String?
     getter idempotency_key : String?
   end
 
