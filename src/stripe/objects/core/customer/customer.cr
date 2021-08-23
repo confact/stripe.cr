@@ -6,6 +6,13 @@ class Stripe::Customer
   include StripeMethods
 
   add_retrieve_method
+  add_list_method(
+    email : String? = nil,
+    created : Hash(String, Int32)? = nil,
+    limit : Int32? = nil,
+    starting_after : String? = nil,
+    ending_before : String? = nil
+  )
 
   class TaxInfo
     include JSON::Serializable
