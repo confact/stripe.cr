@@ -13,6 +13,7 @@ class Stripe::Subscription
     starting_after : String? = nil,
     ending_before : String? = nil
   )
+  add_delete_method
 
   enum Status
     Incomplete

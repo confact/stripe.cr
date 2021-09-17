@@ -13,6 +13,7 @@ class Stripe::Customer
     starting_after : String? = nil,
     ending_before : String? = nil
   )
+  add_delete_method
 
   class TaxInfo
     include JSON::Serializable
