@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.0.0">
+<meta name="generator" content="Crystal Docs 1.1.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -878,46 +878,35 @@
 
 
 <div class="main-content">
-<h1><a id="stripe" class="anchor" href="#stripe">
-  <svg class="octicon-link" aria-hidden="true">
+<h1><a id="stripe" class="anchor" href="#stripe">  <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Stripe</h1>
-
-<p><img src="https://github.com/confact/stripe.cr/workflows/Shard%20CI/badge.svg" alt="Shard CI"/>
-<a href="https://confact.github.io/stripe.cr"><img src="https://img.shields.io/website?down_color=red&down_message=Offline&label=API%20Documentation&up_message=Online&url=https%3A%2F%2Fconfact.github.io%2Fstripe.cr%2F" alt="API Documentation Website"/></a>
-<a href="https://github.com/confact/stripe.cr/releases"><img src="https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release" alt="GitHub release"/></a></p>
-
+<p><img src="https://github.com/confact/stripe.cr/workflows/Shard%20CI/badge.svg" alt="Shard CI" />
+<a href="https://confact.github.io/stripe.cr"><img src="https://img.shields.io/website?down_color=red&amp;down_message=Offline&amp;label=API%20Documentation&amp;up_message=Online&amp;url=https://confact.github.io/stripe.cr/" alt="API Documentation Website" /></a>
+<a href="https://github.com/confact/stripe.cr/releases"><img src="https://img.shields.io/github/release/confact/stripe.cr.svg?label=Release" alt="GitHub release" /></a></p>
 <p>Stripe API wrapper for Crystal.</p>
-
-<p>This version (>1.0) is changed to follow Ruby's method and class structure. We will follow <code>Stripe::Class.method</code> but follow crystal parameters to take care of the types automatically.</p>
-
+<p>This version (&gt;1.0) is changed to follow Ruby's method and class structure. We will follow <code>Stripe::Class.method</code> but follow crystal parameters to take care of the types automatically.</p>
 <h3><a id="notice" class="anchor" href="#notice">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Notice</h3>
-
 <p>This api wrapper was tested on api version <code>2020-03-02</code> but have been trying to make it flexible with <code>String?</code> and correspondent in the types.</p>
-
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Installation</h2>
-
 <p>Add this to your application's <code>shard.yml</code>:</p>
-
 <pre><code class="language-yaml">dependencies:
   stripe:
     github: confact/stripe.cr</code></pre>
-
 <h2><a id="usage" class="anchor" href="#usage">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Usage</h2>
-
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;stripe&quot;</span>
 
 <span class="t">Stripe</span>.api_key <span class="o">=</span> <span class="s">&quot;YOUR_API_TOKEN&quot;</span>
@@ -931,35 +920,26 @@ token <span class="o">=</span> <span class="t">Stripe</span><span class="t">::</
 
 customer <span class="o">=</span> <span class="t">Stripe</span><span class="t">::</span><span class="t">Customer</span>.create(source: token)
 charge <span class="o">=</span> <span class="t">Stripe</span><span class="t">::</span><span class="t">Charge</span>.create(amount: <span class="n">1000</span>, currency: <span class="s">&quot;usd&quot;</span>, customer: customer)</code></pre>
-
 <h3><a id="custom-api-version" class="anchor" href="#custom-api-version">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>custom API version</h3>
-
 <p>You can set custom api version if needed.
 Version need to be set before first api call is called. otherwise it won't be used.</p>
-
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;stripe&quot;</span>
 
 <span class="t">Stripe</span>.api_key <span class="o">=</span> <span class="s">&quot;YOUR_API_TOKEN&quot;</span>
 <span class="t">Stripe</span>.version <span class="o">=</span> <span class="s">&quot;2019-03-29&quot;</span></code></pre>
-
 <h3><a id="example-of-setting-up-a-subscription" class="anchor" href="#example-of-setting-up-a-subscription">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Example of setting up a subscription</h3>
-
 <p>Here is a simple way to setup a subscription by using payment_method.</p>
-
 <p>Follow the instruction for setting up an subscription at stripe: <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a></p>
-
 <p>When the step is at server code, check the code below that is corresponding towards the ruby code for same step.</p>
-
 <p>Setting up an customer:</p>
-
 <pre><code class="language-crystal">  token = params['StripeToken'] # or what the param for the token is called for you.
   customer = Stripe::Customer.create(email: email,
                          description: name, # just example
@@ -967,434 +947,570 @@ Version need to be set before first api call is called. otherwise it won't be us
                          # depends what you do in the frontend to handle the token.
                          invoice_settings: { default_payment_method: token })
 </code></pre>
-
 <p>create a subscription with that customer:</p>
-
 <pre><code class="language-crystal"><span class="t">Stripe</span><span class="t">::</span><span class="t">Subscription</span>.create(customer: customer,
 plan: <span class="t">STRIPE_PLAN_ID</span>,
 expand: [<span class="s">&quot;latest_invoice.payment_intent&quot;</span>]) <span class="c"># yes - create_subscription support expand.</span></code></pre>
-
 <p>The rest is frontend to check SCA and more. You should not need to do more than this on the backend.</p>
-
 <p>But follow <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a> for the frontend part to make sure it works for SCA and other things.</p>
-
 <h2><a id="progress" class="anchor" href="#progress">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Progress</h2>
-
 <h3><a id="api-methods" class="anchor" href="#api-methods">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>API methods</h3>
-
 <h4><a id="core" class="anchor" href="#core">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Core</h4>
-
 <h5><a id="balance" class="anchor" href="#balance">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Balance</h5>
-
-<ul><li>[x] Retrieve balance</li></ul>
-
-<ul><li>[ ] Retrieve a balance transaction</li></ul>
-
-<ul><li>[ ] List all balance history</li></ul>
-
+<ul>
+<li>
+<p>[x] Retrieve balance</p>
+</li>
+<li>
+<p>[ ] Retrieve a balance transaction</p>
+</li>
+<li>
+<p>[ ] List all balance history</p>
+</li>
+</ul>
 <h5><a id="charges" class="anchor" href="#charges">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Charges</h5>
-
-<ul><li>[x] Create a charge</li></ul>
-
-<ul><li>[x] Retrieve a charge</li></ul>
-
-<ul><li>[ ] Update a charge</li></ul>
-
-<ul><li>[ ] Capture a charge</li></ul>
-
-<ul><li>[ ] List all charges</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a charge</p>
+</li>
+<li>
+<p>[x] Retrieve a charge</p>
+</li>
+<li>
+<p>[ ] Update a charge</p>
+</li>
+<li>
+<p>[ ] Capture a charge</p>
+</li>
+<li>
+<p>[ ] List all charges</p>
+</li>
+</ul>
 <h5><a id="sources" class="anchor" href="#sources">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Sources</h5>
-
-<ul><li>[x] Create a source</li></ul>
-
-<ul><li>[x] Retrieve a source</li></ul>
-
-<ul><li>[x] Attach a source to customer</li></ul>
-
-<ul><li>[x] Detach a source from customer</li></ul>
-
-<ul><li>[ ] Update a source</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a source</p>
+</li>
+<li>
+<p>[x] Retrieve a source</p>
+</li>
+<li>
+<p>[x] Attach a source to customer</p>
+</li>
+<li>
+<p>[x] Detach a source from customer</p>
+</li>
+<li>
+<p>[ ] Update a source</p>
+</li>
+</ul>
 <h5><a id="subscriptions" class="anchor" href="#subscriptions">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Subscriptions</h5>
-
-<ul><li>[x] Create a Subscription</li></ul>
-
-<ul><li>[x] Retrieve a Subscription</li></ul>
-
-<ul><li>[x] Update a Subscription</li></ul>
-
-<ul><li>[x] Delete a Subscription</li></ul>
-
-<ul><li>[x] List all Subscriptions</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a Subscription</p>
+</li>
+<li>
+<p>[x] Retrieve a Subscription</p>
+</li>
+<li>
+<p>[x] Update a Subscription</p>
+</li>
+<li>
+<p>[x] Delete a Subscription</p>
+</li>
+<li>
+<p>[x] List all Subscriptions</p>
+</li>
+</ul>
 <h5><a id="setup-intent" class="anchor" href="#setup-intent">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Setup Intent</h5>
-
-<ul><li>[x] Create a Setup Intent</li></ul>
-
-<ul><li>[x] Retrieve a Setup Intent</li></ul>
-
-<ul><li>[x] Confirm a Setup Intent</li></ul>
-
-<ul><li>[ ] Update a Setup Intent</li></ul>
-
-<ul><li>[ ] Cancel a Setup Intent</li></ul>
-
-<ul><li>[ ] Delete a Setup Intent</li></ul>
-
-<ul><li>[x] List all Setup Intents</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a Setup Intent</p>
+</li>
+<li>
+<p>[x] Retrieve a Setup Intent</p>
+</li>
+<li>
+<p>[x] Confirm a Setup Intent</p>
+</li>
+<li>
+<p>[ ] Update a Setup Intent</p>
+</li>
+<li>
+<p>[ ] Cancel a Setup Intent</p>
+</li>
+<li>
+<p>[ ] Delete a Setup Intent</p>
+</li>
+<li>
+<p>[x] List all Setup Intents</p>
+</li>
+</ul>
 <h5><a id="payment-intent" class="anchor" href="#payment-intent">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Payment Intent</h5>
-
-<ul><li>[x] Create a Payment Intent</li></ul>
-
-<ul><li>[x] Retrieve a Payment Intent</li></ul>
-
-<ul><li>[x] Confirm a Payment Intent</li></ul>
-
-<ul><li>[ ] Update a Payment Intent</li></ul>
-
-<ul><li>[ ] Cancel a Payment Intent</li></ul>
-
-<ul><li>[ ] Delete a Payment Intent</li></ul>
-
-<ul><li>[x] List all Payment Intents</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a Payment Intent</p>
+</li>
+<li>
+<p>[x] Retrieve a Payment Intent</p>
+</li>
+<li>
+<p>[x] Confirm a Payment Intent</p>
+</li>
+<li>
+<p>[ ] Update a Payment Intent</p>
+</li>
+<li>
+<p>[ ] Cancel a Payment Intent</p>
+</li>
+<li>
+<p>[ ] Delete a Payment Intent</p>
+</li>
+<li>
+<p>[x] List all Payment Intents</p>
+</li>
+</ul>
 <h5><a id="customers" class="anchor" href="#customers">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Customers</h5>
-
-<ul><li>[x] Create a customer</li></ul>
-
-<ul><li>[x] Retrieve a customer</li></ul>
-
-<ul><li>[x] Update a customer</li></ul>
-
-<ul><li>[x] Delete a customer</li></ul>
-
-<ul><li>[x] List all customers</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a customer</p>
+</li>
+<li>
+<p>[x] Retrieve a customer</p>
+</li>
+<li>
+<p>[x] Update a customer</p>
+</li>
+<li>
+<p>[x] Delete a customer</p>
+</li>
+<li>
+<p>[x] List all customers</p>
+</li>
+</ul>
 <h5><a id="customer-tax-i-ds" class="anchor" href="#customer-tax-i-ds">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Customer Tax IDs</h5>
-
-<ul><li>[x] Create a customer tax ID</li></ul>
-
-<ul><li>[x] Retrieve a customer tax ID</li></ul>
-
-<ul><li>[x] Delete a customer tax ID</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a customer tax ID</p>
+</li>
+<li>
+<p>[x] Retrieve a customer tax ID</p>
+</li>
+<li>
+<p>[x] Delete a customer tax ID</p>
+</li>
+</ul>
 <h5><a id="refund" class="anchor" href="#refund">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Refund</h5>
-
-<ul><li>[x] Create a refund</li></ul>
-
-<ul><li>[x] Retrieve a refund</li></ul>
-
-<ul><li>[ ] Update a refund</li></ul>
-
-<ul><li>[ ] List all refunds</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a refund</p>
+</li>
+<li>
+<p>[x] Retrieve a refund</p>
+</li>
+<li>
+<p>[ ] Update a refund</p>
+</li>
+<li>
+<p>[ ] List all refunds</p>
+</li>
+</ul>
 <h5><a id="tax-rate" class="anchor" href="#tax-rate">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Tax Rate</h5>
-
-<ul><li>[x] Create a tax rate</li></ul>
-
-<ul><li>[x] retrieve a tax rate</li></ul>
-
-<ul><li>[ ] Update a tax rate</li></ul>
-
-<ul><li>[ ] List all tax rates</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a tax rate</p>
+</li>
+<li>
+<p>[x] retrieve a tax rate</p>
+</li>
+<li>
+<p>[ ] Update a tax rate</p>
+</li>
+<li>
+<p>[ ] List all tax rates</p>
+</li>
+</ul>
 <h5><a id="tokens" class="anchor" href="#tokens">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Tokens</h5>
-
-<ul><li>[x] Create a card token</li></ul>
-
-<ul><li>[ ] Create a bank account token</li></ul>
-
-<ul><li>[ ] Create a PII token</li></ul>
-
-<ul><li>[ ] Create an account token</li></ul>
-
-<ul><li>[ ] Retrieve a token</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a card token</p>
+</li>
+<li>
+<p>[ ] Create a bank account token</p>
+</li>
+<li>
+<p>[ ] Create a PII token</p>
+</li>
+<li>
+<p>[ ] Create an account token</p>
+</li>
+<li>
+<p>[ ] Retrieve a token</p>
+</li>
+</ul>
 <h5><a id="invoices" class="anchor" href="#invoices">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Invoices</h5>
-
-<ul><li>[x] Create a invoice</li></ul>
-
-<ul><li>[x] Retrieve a invoice</li></ul>
-
-<ul><li>[x] Update a invoice</li></ul>
-
-<ul><li>[ ] Delete a invoice</li></ul>
-
-<ul><li>[x] List all invoices</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a invoice</p>
+</li>
+<li>
+<p>[x] Retrieve a invoice</p>
+</li>
+<li>
+<p>[x] Update a invoice</p>
+</li>
+<li>
+<p>[ ] Delete a invoice</p>
+</li>
+<li>
+<p>[x] List all invoices</p>
+</li>
+</ul>
 <h5><a id="files" class="anchor" href="#files">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Files</h5>
-
-<ul><li>[ ] Create a file</li></ul>
-
-<ul><li>[x] Retrieve a file</li></ul>
-
-<ul><li>[ ] Update a file</li></ul>
-
-<ul><li>[ ] List all files</li></ul>
-
+<ul>
+<li>
+<p>[ ] Create a file</p>
+</li>
+<li>
+<p>[x] Retrieve a file</p>
+</li>
+<li>
+<p>[ ] Update a file</p>
+</li>
+<li>
+<p>[ ] List all files</p>
+</li>
+</ul>
 <h5><a id="file-links" class="anchor" href="#file-links">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>File Links</h5>
-
-<ul><li>[ ] Create a file link</li></ul>
-
-<ul><li>[x] Retrieve a file link</li></ul>
-
-<ul><li>[ ] Update a file link</li></ul>
-
-<ul><li>[ ] List all file links</li></ul>
-
+<ul>
+<li>
+<p>[ ] Create a file link</p>
+</li>
+<li>
+<p>[x] Retrieve a file link</p>
+</li>
+<li>
+<p>[ ] Update a file link</p>
+</li>
+<li>
+<p>[ ] List all file links</p>
+</li>
+</ul>
 <h3><a id="objects" class="anchor" href="#objects">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Objects</h3>
-
-<h4><a id="core" class="anchor" href="#core">
+<h4><a id="core-1" class="anchor" href="#core-1">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Core</h4>
-
-<ul><li>[x] Balance</li></ul>
-
-<ul><li>[ ] Balance transaction</li></ul>
-
-<ul><li>[x] Charge</li></ul>
-
-<ul><li>[x] Plan</li></ul>
-
-<ul><li>[x] Product</li></ul>
-
-<ul><li>[x] Customer</li></ul>
-
-<ul><li>[x] Customer Tax ID</li></ul>
-
-<ul><li>[x] Subscription</li></ul>
-
-<ul><li>[x] Invoice</li></ul>
-
-<ul><li>[ ] Dispute</li></ul>
-
-<ul><li>[ ] Dispute evidence</li></ul>
-
-<ul><li>[x] Event</li></ul>
-
-<ul><li>[X] File</li></ul>
-
-<ul><li>[X] File link</li></ul>
-
-<ul><li>[ ] Payout</li></ul>
-
-<ul><li>[x] Refund</li></ul>
-
-<ul><li>[x] Tax Rate</li></ul>
-
-<ul><li>[x] Token</li></ul>
-
-<ul><li>[x] Payment Intent</li></ul>
-
-<ul><li>[x] Setup Intent</li></ul>
-
+<ul>
+<li>
+<p>[x] Balance</p>
+</li>
+<li>
+<p>[ ] Balance transaction</p>
+</li>
+<li>
+<p>[x] Charge</p>
+</li>
+<li>
+<p>[x] Plan</p>
+</li>
+<li>
+<p>[x] Product</p>
+</li>
+<li>
+<p>[x] Customer</p>
+</li>
+<li>
+<p>[x] Customer Tax ID</p>
+</li>
+<li>
+<p>[x] Subscription</p>
+</li>
+<li>
+<p>[x] Invoice</p>
+</li>
+<li>
+<p>[ ] Dispute</p>
+</li>
+<li>
+<p>[ ] Dispute evidence</p>
+</li>
+<li>
+<p>[x] Event</p>
+</li>
+<li>
+<p>[X] File</p>
+</li>
+<li>
+<p>[X] File link</p>
+</li>
+<li>
+<p>[ ] Payout</p>
+</li>
+<li>
+<p>[x] Refund</p>
+</li>
+<li>
+<p>[x] Tax Rate</p>
+</li>
+<li>
+<p>[x] Token</p>
+</li>
+<li>
+<p>[x] Payment Intent</p>
+</li>
+<li>
+<p>[x] Setup Intent</p>
+</li>
+</ul>
 <h4><a id="payment-methods" class="anchor" href="#payment-methods">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Payment methods</h4>
-
-<ul><li>[x] Payment Method</li></ul>
-
-<ul><li>[x] Bank account</li></ul>
-
-<ul><li>[x] Card</li></ul>
-
-<ul><li>[x] Source</li></ul>
-
-<ul><li>[x] Attach a payment method to a customer</li></ul>
-
+<ul>
+<li>
+<p>[x] Payment Method</p>
+</li>
+<li>
+<p>[x] Bank account</p>
+</li>
+<li>
+<p>[x] Card</p>
+</li>
+<li>
+<p>[x] Source</p>
+</li>
+<li>
+<p>[x] Attach a payment method to a customer</p>
+</li>
+</ul>
 <h4><a id="connect" class="anchor" href="#connect">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Connect</h4>
-
-<ul><li>[x] Account</li></ul>
-
-<ul><li>[ ] Login link</li></ul>
-
-<ul><li>[ ] Application fee refund</li></ul>
-
-<ul><li>[ ] Application fee</li></ul>
-
-<ul><li>[ ] Country spec</li></ul>
-
-<ul><li>[ ] Top-up</li></ul>
-
-<ul><li>[ ] Transfer</li></ul>
-
-<ul><li>[ ] Transfer reversal</li></ul>
-
+<ul>
+<li>
+<p>[x] Account</p>
+</li>
+<li>
+<p>[ ] Login link</p>
+</li>
+<li>
+<p>[ ] Application fee refund</p>
+</li>
+<li>
+<p>[ ] Application fee</p>
+</li>
+<li>
+<p>[ ] Country spec</p>
+</li>
+<li>
+<p>[ ] Top-up</p>
+</li>
+<li>
+<p>[ ] Transfer</p>
+</li>
+<li>
+<p>[ ] Transfer reversal</p>
+</li>
+</ul>
 <h5><a id="prices" class="anchor" href="#prices">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Prices</h5>
-
-<ul><li>[ ] Create a price</li></ul>
-
-<ul><li>[ ] Retrieve a price</li></ul>
-
-<ul><li>[ ] Update a price</li></ul>
-
-<ul><li>[x] List all prices</li></ul>
-
+<ul>
+<li>
+<p>[ ] Create a price</p>
+</li>
+<li>
+<p>[ ] Retrieve a price</p>
+</li>
+<li>
+<p>[ ] Update a price</p>
+</li>
+<li>
+<p>[x] List all prices</p>
+</li>
+</ul>
 <h5><a id="products" class="anchor" href="#products">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Products</h5>
-
-<ul><li>[x] Create a product</li></ul>
-
-<ul><li>[ ] Retrieve a product</li></ul>
-
-<ul><li>[ ] Update a product</li></ul>
-
-<ul><li>[x] List all products</li></ul>
-
+<ul>
+<li>
+<p>[x] Create a product</p>
+</li>
+<li>
+<p>[ ] Retrieve a product</p>
+</li>
+<li>
+<p>[ ] Update a product</p>
+</li>
+<li>
+<p>[x] List all products</p>
+</li>
+</ul>
 <h5><a id="discounts" class="anchor" href="#discounts">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Discounts</h5>
-
-<ul><li>[ ] Create a discount</li></ul>
-
-<ul><li>[ ] Retrieve a discount</li></ul>
-
-<ul><li>[ ] Update a discount</li></ul>
-
-<ul><li>[ ] List all discounts</li></ul>
-
+<ul>
+<li>
+<p>[ ] Create a discount</p>
+</li>
+<li>
+<p>[ ] Retrieve a discount</p>
+</li>
+<li>
+<p>[ ] Update a discount</p>
+</li>
+<li>
+<p>[ ] List all discounts</p>
+</li>
+</ul>
 <h5><a id="promotion-codes" class="anchor" href="#promotion-codes">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Promotion codes</h5>
-
-<ul><li>[ ] Create a promotion code</li></ul>
-
-<ul><li>[ ] Retrieve a promotion code</li></ul>
-
-<ul><li>[ ] Update a promotion codes</li></ul>
-
-<ul><li>[ ] List all promotion codes</li></ul>
-
+<ul>
+<li>
+<p>[ ] Create a promotion code</p>
+</li>
+<li>
+<p>[ ] Retrieve a promotion code</p>
+</li>
+<li>
+<p>[ ] Update a promotion codes</p>
+</li>
+<li>
+<p>[ ] List all promotion codes</p>
+</li>
+</ul>
 <h5><a id="coupons" class="anchor" href="#coupons">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Coupons</h5>
-
-<ul><li>[ ] Create a coupon</li></ul>
-
-<ul><li>[ ] Retrieve a coupon</li></ul>
-
-<ul><li>[ ] Update a coupon</li></ul>
-
-<ul><li>[ ] List all coupons</li></ul>
-
+<ul>
+<li>
+<p>[ ] Create a coupon</p>
+</li>
+<li>
+<p>[ ] Retrieve a coupon</p>
+</li>
+<li>
+<p>[ ] Update a coupon</p>
+</li>
+<li>
+<p>[ ] List all coupons</p>
+</li>
+</ul>
 <h2><a id="development" class="anchor" href="#development">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Development</h2>
-
 <p><span class="flag orange">TODO</span>  Write development instructions here</p>
-
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Contributing</h2>
-
-<ol><li>Fork it (&lt;https://github.com/confact/stripe.cr/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
-
+<ol>
+<li>Fork it (<a href="https://github.com/confact/stripe.cr/fork">https://github.com/confact/stripe.cr/fork</a>)</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
 <h2><a id="contributors" class="anchor" href="#contributors">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Contributors</h2>
-
-<ul><li><a href="https://github.com/confact">confact</a> Håkan Nylén - maintainer,</li><li><a href="https://github.com/vladfaust">vladfaust</a> Vlad Faust - creator</li></ul>
+<ul>
+<li><a href="https://github.com/confact">confact</a> Håkan Nylén - maintainer,</li>
+<li><a href="https://github.com/vladfaust">vladfaust</a> Vlad Faust - creator</li>
+</ul>
 </div>
 </body>
 </html>

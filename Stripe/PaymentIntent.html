@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.0.0">
+<meta name="generator" content="Crystal Docs 1.1.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -929,21 +929,21 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/payment_intents/confirm_payment_intent.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/payment_intents/confirm_payment_intent.cr#L1" target="_blank">
         stripe/methods/core/payment_intents/confirm_payment_intent.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/payment_intents/create_payment_intent.cr#L1" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/payment_intents/create_payment_intent.cr#L1" target="_blank">
         stripe/methods/core/payment_intents/create_payment_intent.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L2" target="_blank">
         stripe/objects/core/payment_intent.cr
       </a>
     
@@ -965,17 +965,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#confirm(intent:String%7CPaymentIntent?=nil,payment_method:String%7CToken%7CPaymentMethods::Card%7CPaymentMethods::BankAccount?=nil,receipt_email:String?=nil,return_url:String?=nil):PaymentIntentforallT,U-class-method" class="signature"><strong>.confirm</strong>(intent : String | PaymentIntent? = <span class="n">nil</span>, payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = <span class="n">nil</span>, receipt_email : String? = <span class="n">nil</span>, return_url : String? = <span class="n">nil</span>) : PaymentIntent forall T, U</a>
+        <a href="#confirm%28intent%3AString%7CPaymentIntent%3F%3Dnil%2Cpayment_method%3AString%7CToken%7CPaymentMethods%3A%3ACard%7CPaymentMethods%3A%3ABankAccount%3F%3Dnil%2Creceipt_email%3AString%3F%3Dnil%2Creturn_url%3AString%3F%3Dnil%29%3APaymentIntentforallT%2CU-class-method" class="signature"><strong>.confirm</strong>(intent : String | PaymentIntent? = <span class="n">nil</span>, payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = <span class="n">nil</span>, receipt_email : String? = <span class="n">nil</span>, return_url : String? = <span class="n">nil</span>) : PaymentIntent forall T, U</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create(amount:Int32,currency:String,confirm:Bool?=nil,customer:String%7CStripe::Customer?=nil,description:String?=nil,metadata:Hash(String,String)?=nil,on_behalf_of:String?=nil,usage:String?=nil,payment_method:String%7CToken%7CPaymentMethods::Card%7CPaymentMethods::BankAccount?=nil,return_url:String?=nil,payment_method_types:Array(String)?=nil,receipt_email:String?=nil,setup_future_usage:String?=nil,transfer_group:String?=nil,capture_method:String?=nil,expand:Array(String)?=nil):PaymentIntentforallT,U-class-method" class="signature"><strong>.create</strong>(amount : Int32, currency : String, confirm : Bool? = <span class="n">nil</span>, customer : String | Stripe::Customer? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, on_behalf_of : String? = <span class="n">nil</span>, usage : String? = <span class="n">nil</span>, payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = <span class="n">nil</span>, return_url : String? = <span class="n">nil</span>, payment_method_types : Array(String)? = <span class="n">nil</span>, receipt_email : String? = <span class="n">nil</span>, setup_future_usage : String? = <span class="n">nil</span>, transfer_group : String? = <span class="n">nil</span>, capture_method : String? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : PaymentIntent forall T, U</a>
+        <a href="#create%28amount%3AInt32%2Ccurrency%3AString%2Cconfirm%3ABool%3F%3Dnil%2Ccustomer%3AString%7CStripe%3A%3ACustomer%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%2Con_behalf_of%3AString%3F%3Dnil%2Cusage%3AString%3F%3Dnil%2Cpayment_method%3AString%7CToken%7CPaymentMethods%3A%3ACard%7CPaymentMethods%3A%3ABankAccount%3F%3Dnil%2Creturn_url%3AString%3F%3Dnil%2Cpayment_method_types%3AArray%28String%29%3F%3Dnil%2Creceipt_email%3AString%3F%3Dnil%2Csetup_future_usage%3AString%3F%3Dnil%2Ctransfer_group%3AString%3F%3Dnil%2Ccapture_method%3AString%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3APaymentIntentforallT%2CU-class-method" class="signature"><strong>.create</strong>(amount : Int32, currency : String, confirm : Bool? = <span class="n">nil</span>, customer : String | Stripe::Customer? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, on_behalf_of : String? = <span class="n">nil</span>, usage : String? = <span class="n">nil</span>, payment_method : String | Token | PaymentMethods::Card | PaymentMethods::BankAccount? = <span class="n">nil</span>, return_url : String? = <span class="n">nil</span>, payment_method_types : Array(String)? = <span class="n">nil</span>, receipt_email : String? = <span class="n">nil</span>, setup_future_usage : String? = <span class="n">nil</span>, transfer_group : String? = <span class="n">nil</span>, capture_method : String? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : PaymentIntent forall T, U</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(pull:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
         
       </li>
     
@@ -994,17 +994,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#list(customer:String?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::PaymentIntent)-class-method" class="signature"><strong>.list</strong>(customer : String? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::PaymentIntent)</a>
+        <a href="#list%28customer%3AString%3F%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3APaymentIntent%29-class-method" class="signature"><strong>.list</strong>(customer : String? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::PaymentIntent)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve(id:String)-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
+        <a href="#retrieve%28id%3AString%29-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve(paymentintent:Stripe::PaymentIntent)-class-method" class="signature"><strong>.retrieve</strong>(paymentintent : Stripe::PaymentIntent)</a>
+        <a href="#retrieve%28paymentintent%3AStripe%3A%3APaymentIntent%29-class-method" class="signature"><strong>.retrieve</strong>(paymentintent : Stripe::PaymentIntent)</a>
         
       </li>
     
@@ -1023,72 +1023,72 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#application:String?-instance-method" class="signature"><strong>#application</strong> : String?</a>
+        <a href="#application%3AString%3F-instance-method" class="signature"><strong>#application</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#cancellation_reason:String?-instance-method" class="signature"><strong>#cancellation_reason</strong> : String?</a>
+        <a href="#cancellation_reason%3AString%3F-instance-method" class="signature"><strong>#cancellation_reason</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#client_secret:String?-instance-method" class="signature"><strong>#client_secret</strong> : String?</a>
+        <a href="#client_secret%3AString%3F-instance-method" class="signature"><strong>#client_secret</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created:Time?-instance-method" class="signature"><strong>#created</strong> : Time?</a>
+        <a href="#created%3ATime%3F-instance-method" class="signature"><strong>#created</strong> : Time?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#customer:String?-instance-method" class="signature"><strong>#customer</strong> : String?</a>
+        <a href="#customer%3AString%3F-instance-method" class="signature"><strong>#customer</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description:String?-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
+        <a href="#id%3AString-instance-method" class="signature"><strong>#id</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#last_setup_error:Hash(String,String%7CPaymentMethods::Card%7CPaymentMethods::BankAccount)?-instance-method" class="signature"><strong>#last_setup_error</strong> : Hash(String, String | PaymentMethods::Card | PaymentMethods::BankAccount)?</a>
+        <a href="#last_setup_error%3AHash%28String%2CString%7CPaymentMethods%3A%3ACard%7CPaymentMethods%3A%3ABankAccount%29%3F-instance-method" class="signature"><strong>#last_setup_error</strong> : Hash(String, String | PaymentMethods::Card | PaymentMethods::BankAccount)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#livemode:Bool-instance-method" class="signature"><strong>#livemode</strong> : Bool</a>
+        <a href="#livemode%3ABool-instance-method" class="signature"><strong>#livemode</strong> : Bool</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata:Hash(String,String)?-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
+        <a href="#metadata%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#payment_method:String?-instance-method" class="signature"><strong>#payment_method</strong> : String?</a>
+        <a href="#payment_method%3AString%3F-instance-method" class="signature"><strong>#payment_method</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#payment_method_types:Array(String)?-instance-method" class="signature"><strong>#payment_method_types</strong> : Array(String)?</a>
+        <a href="#payment_method_types%3AArray%28String%29%3F-instance-method" class="signature"><strong>#payment_method_types</strong> : Array(String)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status?-instance-method" class="signature"><strong>#status</strong> : Status?</a>
+        <a href="#status%3AStatus%3F-instance-method" class="signature"><strong>#status</strong> : Status?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#usage:String?-instance-method" class="signature"><strong>#usage</strong> : String?</a>
+        <a href="#usage%3AString%3F-instance-method" class="signature"><strong>#usage</strong> : String?</a>
         
       </li>
     
@@ -1157,13 +1157,13 @@
         
         def self.<strong>confirm</strong>(intent : String | <a href="../Stripe/PaymentIntent.html">PaymentIntent</a>? = <span class="n">nil</span>, payment_method : String | <a href="../Stripe/Token.html">Token</a> | <a href="../Stripe/PaymentMethods/Card.html">PaymentMethods::Card</a> | <a href="../Stripe/PaymentMethods/BankAccount.html">PaymentMethods::BankAccount</a>? = <span class="n">nil</span>, receipt_email : String? = <span class="n">nil</span>, return_url : String? = <span class="n">nil</span>) : <a href="../Stripe/PaymentIntent.html">PaymentIntent</a> forall T, U
 
-        <a class="method-permalink" href="#confirm(intent:String%7CPaymentIntent?=nil,payment_method:String%7CToken%7CPaymentMethods::Card%7CPaymentMethods::BankAccount?=nil,receipt_email:String?=nil,return_url:String?=nil):PaymentIntentforallT,U-class-method">#</a>
+        <a class="method-permalink" href="#confirm%28intent%3AString%7CPaymentIntent%3F%3Dnil%2Cpayment_method%3AString%7CToken%7CPaymentMethods%3A%3ACard%7CPaymentMethods%3A%3ABankAccount%3F%3Dnil%2Creceipt_email%3AString%3F%3Dnil%2Creturn_url%3AString%3F%3Dnil%29%3APaymentIntentforallT%2CU-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/payment_intents/confirm_payment_intent.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/payment_intents/confirm_payment_intent.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1173,13 +1173,13 @@
         
         def self.<strong>create</strong>(amount : Int32, currency : String, confirm : Bool? = <span class="n">nil</span>, customer : String | <a href="../Stripe/Customer.html">Stripe::Customer</a>? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, on_behalf_of : String? = <span class="n">nil</span>, usage : String? = <span class="n">nil</span>, payment_method : String | <a href="../Stripe/Token.html">Token</a> | <a href="../Stripe/PaymentMethods/Card.html">PaymentMethods::Card</a> | <a href="../Stripe/PaymentMethods/BankAccount.html">PaymentMethods::BankAccount</a>? = <span class="n">nil</span>, return_url : String? = <span class="n">nil</span>, payment_method_types : Array(String)? = <span class="n">nil</span>, receipt_email : String? = <span class="n">nil</span>, setup_future_usage : String? = <span class="n">nil</span>, transfer_group : String? = <span class="n">nil</span>, capture_method : String? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/PaymentIntent.html">PaymentIntent</a> forall T, U
 
-        <a class="method-permalink" href="#create(amount:Int32,currency:String,confirm:Bool?=nil,customer:String%7CStripe::Customer?=nil,description:String?=nil,metadata:Hash(String,String)?=nil,on_behalf_of:String?=nil,usage:String?=nil,payment_method:String%7CToken%7CPaymentMethods::Card%7CPaymentMethods::BankAccount?=nil,return_url:String?=nil,payment_method_types:Array(String)?=nil,receipt_email:String?=nil,setup_future_usage:String?=nil,transfer_group:String?=nil,capture_method:String?=nil,expand:Array(String)?=nil):PaymentIntentforallT,U-class-method">#</a>
+        <a class="method-permalink" href="#create%28amount%3AInt32%2Ccurrency%3AString%2Cconfirm%3ABool%3F%3Dnil%2Ccustomer%3AString%7CStripe%3A%3ACustomer%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%2Con_behalf_of%3AString%3F%3Dnil%2Cusage%3AString%3F%3Dnil%2Cpayment_method%3AString%7CToken%7CPaymentMethods%3A%3ACard%7CPaymentMethods%3A%3ABankAccount%3F%3Dnil%2Creturn_url%3AString%3F%3Dnil%2Cpayment_method_types%3AArray%28String%29%3F%3Dnil%2Creceipt_email%3AString%3F%3Dnil%2Csetup_future_usage%3AString%3F%3Dnil%2Ctransfer_group%3AString%3F%3Dnil%2Ccapture_method%3AString%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3APaymentIntentforallT%2CU-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/payment_intents/create_payment_intent.cr#L2" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/payment_intents/create_payment_intent.cr#L2" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1189,13 +1189,13 @@
         
         def self.<strong>new</strong>(pull : JSON::PullParser)
 
-        <a class="method-permalink" href="#new(pull:JSON::PullParser)-class-method">#</a>
+        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1217,13 +1217,13 @@
         
         def self.<strong>list</strong>(customer : String? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../Stripe/List.html">List</a>(<a href="../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a>)
 
-        <a class="method-permalink" href="#list(customer:String?=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::PaymentIntent)-class-method">#</a>
+        <a class="method-permalink" href="#list%28customer%3AString%3F%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3APaymentIntent%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1233,13 +1233,13 @@
         
         def self.<strong>retrieve</strong>(id : String)
 
-        <a class="method-permalink" href="#retrieve(id:String)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve%28id%3AString%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1249,13 +1249,13 @@
         
         def self.<strong>retrieve</strong>(paymentintent : <a href="../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a>)
 
-        <a class="method-permalink" href="#retrieve(paymentintent:Stripe::PaymentIntent)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve%28paymentintent%3AStripe%3A%3APaymentIntent%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1277,13 +1277,13 @@
         
         def <strong>application</strong> : String?
 
-        <a class="method-permalink" href="#application:String?-instance-method">#</a>
+        <a class="method-permalink" href="#application%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1293,13 +1293,13 @@
         
         def <strong>cancellation_reason</strong> : String?
 
-        <a class="method-permalink" href="#cancellation_reason:String?-instance-method">#</a>
+        <a class="method-permalink" href="#cancellation_reason%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1309,13 +1309,13 @@
         
         def <strong>client_secret</strong> : String?
 
-        <a class="method-permalink" href="#client_secret:String?-instance-method">#</a>
+        <a class="method-permalink" href="#client_secret%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1325,13 +1325,13 @@
         
         def <strong>created</strong> : Time?
 
-        <a class="method-permalink" href="#created:Time?-instance-method">#</a>
+        <a class="method-permalink" href="#created%3ATime%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1341,13 +1341,13 @@
         
         def <strong>customer</strong> : String?
 
-        <a class="method-permalink" href="#customer:String?-instance-method">#</a>
+        <a class="method-permalink" href="#customer%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1357,13 +1357,13 @@
         
         def <strong>description</strong> : String?
 
-        <a class="method-permalink" href="#description:String?-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1373,13 +1373,13 @@
         
         def <strong>id</strong> : String
 
-        <a class="method-permalink" href="#id:String-instance-method">#</a>
+        <a class="method-permalink" href="#id%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1389,13 +1389,13 @@
         
         def <strong>last_setup_error</strong> : Hash(String, String | <a href="../Stripe/PaymentMethods/Card.html">PaymentMethods::Card</a> | <a href="../Stripe/PaymentMethods/BankAccount.html">PaymentMethods::BankAccount</a>)?
 
-        <a class="method-permalink" href="#last_setup_error:Hash(String,String%7CPaymentMethods::Card%7CPaymentMethods::BankAccount)?-instance-method">#</a>
+        <a class="method-permalink" href="#last_setup_error%3AHash%28String%2CString%7CPaymentMethods%3A%3ACard%7CPaymentMethods%3A%3ABankAccount%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1405,13 +1405,13 @@
         
         def <strong>livemode</strong> : Bool
 
-        <a class="method-permalink" href="#livemode:Bool-instance-method">#</a>
+        <a class="method-permalink" href="#livemode%3ABool-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1421,13 +1421,13 @@
         
         def <strong>metadata</strong> : Hash(String, String)?
 
-        <a class="method-permalink" href="#metadata:Hash(String,String)?-instance-method">#</a>
+        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1437,13 +1437,13 @@
         
         def <strong>payment_method</strong> : String?
 
-        <a class="method-permalink" href="#payment_method:String?-instance-method">#</a>
+        <a class="method-permalink" href="#payment_method%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1453,13 +1453,13 @@
         
         def <strong>payment_method_types</strong> : Array(String)?
 
-        <a class="method-permalink" href="#payment_method_types:Array(String)?-instance-method">#</a>
+        <a class="method-permalink" href="#payment_method_types%3AArray%28String%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1469,13 +1469,13 @@
         
         def <strong>status</strong> : <a href="../Stripe/PaymentIntent/Status.html">Status</a>?
 
-        <a class="method-permalink" href="#status:Status?-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1485,13 +1485,13 @@
         
         def <strong>usage</strong> : String?
 
-        <a class="method-permalink" href="#usage:String?-instance-method">#</a>
+        <a class="method-permalink" href="#usage%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/payment_intent.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/payment_intent.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>

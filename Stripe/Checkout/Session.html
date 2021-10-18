@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.0.0">
+<meta name="generator" content="Crystal Docs 1.1.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -940,14 +940,14 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/checkout/sessions/create_session.cr#L2" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/checkout/sessions/create_session.cr#L2" target="_blank">
         stripe/methods/core/checkout/sessions/create_session.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L4" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L4" target="_blank">
         stripe/objects/core/checkout/session.cr
       </a>
     
@@ -969,7 +969,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(pull:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
         
       </li>
     
@@ -988,22 +988,22 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create(mode:String%7CStripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?%7CStripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple(quantity:Int32,price:String))?=nil,expand:Array(String)?=nil):Stripe::Checkout::Session-class-method" class="signature"><strong>.create</strong>(mode : String | Stripe::Checkout::Session::Mode, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | Stripe::Customer? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Stripe::Checkout::Session</a>
+        <a href="#create%28mode%3AString%7CStripe%3A%3ACheckout%3A%3ASession%3A%3AMode%2Cpayment_method_types%3AArray%28String%29%2Ccancel_url%3AString%2Csuccess_url%3AString%2Cclient_reference_id%3AString%3F%3Dnil%2Ccustomer%3AString%3F%7CStripe%3A%3ACustomer%3F%3Dnil%2Ccustomer_email%3AString%3F%3Dnil%2Cline_items%3AArray%28NamedTuple%28quantity%3AInt32%2Cprice%3AString%29%29%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3AStripe%3A%3ACheckout%3A%3ASession-class-method" class="signature"><strong>.create</strong>(mode : String | Stripe::Checkout::Session::Mode, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | Stripe::Customer? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Stripe::Checkout::Session</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#list(payment_intent:String%7CNil%7CStripe::PaymentIntent%7CNil=nil,subscription:String%7CNil%7CStripe::Subscription%7CNil=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Checkout::Session)-class-method" class="signature"><strong>.list</strong>(payment_intent : String | Nil | Stripe::PaymentIntent | Nil = <span class="n">nil</span>, subscription : String | Nil | Stripe::Subscription | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::Checkout::Session)</a>
+        <a href="#list%28payment_intent%3AString%7CNil%7CStripe%3A%3APaymentIntent%7CNil%3Dnil%2Csubscription%3AString%7CNil%7CStripe%3A%3ASubscription%7CNil%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3ACheckout%3A%3ASession%29-class-method" class="signature"><strong>.list</strong>(payment_intent : String | Nil | Stripe::PaymentIntent | Nil = <span class="n">nil</span>, subscription : String | Nil | Stripe::Subscription | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::Checkout::Session)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve(id:String)-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
+        <a href="#retrieve%28id%3AString%29-class-method" class="signature"><strong>.retrieve</strong>(id : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve(checkout_session:Stripe::Checkout::Session)-class-method" class="signature"><strong>.retrieve</strong>(checkout_session : Stripe::Checkout::Session)</a>
+        <a href="#retrieve%28checkout_session%3AStripe%3A%3ACheckout%3A%3ASession%29-class-method" class="signature"><strong>.retrieve</strong>(checkout_session : Stripe::Checkout::Session)</a>
         
       </li>
     
@@ -1022,122 +1022,122 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#allow_promotion_codes:Bool?-instance-method" class="signature"><strong>#allow_promotion_codes</strong> : Bool?</a>
+        <a href="#allow_promotion_codes%3ABool%3F-instance-method" class="signature"><strong>#allow_promotion_codes</strong> : Bool?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#amount_subtotal:Int32?-instance-method" class="signature"><strong>#amount_subtotal</strong> : Int32?</a>
+        <a href="#amount_subtotal%3AInt32%3F-instance-method" class="signature"><strong>#amount_subtotal</strong> : Int32?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#amount_total:Int32?-instance-method" class="signature"><strong>#amount_total</strong> : Int32?</a>
+        <a href="#amount_total%3AInt32%3F-instance-method" class="signature"><strong>#amount_total</strong> : Int32?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#billing_address_collection:BillingAddressCollection?-instance-method" class="signature"><strong>#billing_address_collection</strong> : BillingAddressCollection?</a>
+        <a href="#billing_address_collection%3ABillingAddressCollection%3F-instance-method" class="signature"><strong>#billing_address_collection</strong> : BillingAddressCollection?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#cancel_url:String-instance-method" class="signature"><strong>#cancel_url</strong> : String</a>
+        <a href="#cancel_url%3AString-instance-method" class="signature"><strong>#cancel_url</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#client_reference_id:String?-instance-method" class="signature"><strong>#client_reference_id</strong> : String?</a>
+        <a href="#client_reference_id%3AString%3F-instance-method" class="signature"><strong>#client_reference_id</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#currency:String?-instance-method" class="signature"><strong>#currency</strong> : String?</a>
+        <a href="#currency%3AString%3F-instance-method" class="signature"><strong>#currency</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method" class="signature"><strong>#customer</strong> : String | Nil | Stripe::Customer | Nil</a>
+        <a href="#customer%3AString%7CNil%7CStripe%3A%3ACustomer%7CNil-instance-method" class="signature"><strong>#customer</strong> : String | Nil | Stripe::Customer | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#customer_email:String?-instance-method" class="signature"><strong>#customer_email</strong> : String?</a>
+        <a href="#customer_email%3AString%3F-instance-method" class="signature"><strong>#customer_email</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id:String-instance-method" class="signature"><strong>#id</strong> : String</a>
+        <a href="#id%3AString-instance-method" class="signature"><strong>#id</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#line_items:Array(Hash(String,String%7CInt32))?-instance-method" class="signature"><strong>#line_items</strong> : Array(Hash(String, String | Int32))?</a>
+        <a href="#line_items%3AArray%28Hash%28String%2CString%7CInt32%29%29%3F-instance-method" class="signature"><strong>#line_items</strong> : Array(Hash(String, String | Int32))?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#livemode:Bool?-instance-method" class="signature"><strong>#livemode</strong> : Bool?</a>
+        <a href="#livemode%3ABool%3F-instance-method" class="signature"><strong>#livemode</strong> : Bool?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata:Hash(String,String)?-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
+        <a href="#metadata%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mode:String%7CMode-instance-method" class="signature"><strong>#mode</strong> : String | Mode</a>
+        <a href="#mode%3AString%7CMode-instance-method" class="signature"><strong>#mode</strong> : String | Mode</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#object:String?-instance-method" class="signature"><strong>#object</strong> : String?</a>
+        <a href="#object%3AString%3F-instance-method" class="signature"><strong>#object</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#payment_intent:String%7CNil%7CStripe::PaymentIntent%7CNil-instance-method" class="signature"><strong>#payment_intent</strong> : String | Nil | Stripe::PaymentIntent | Nil</a>
+        <a href="#payment_intent%3AString%7CNil%7CStripe%3A%3APaymentIntent%7CNil-instance-method" class="signature"><strong>#payment_intent</strong> : String | Nil | Stripe::PaymentIntent | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#payment_method_types:Array(String)-instance-method" class="signature"><strong>#payment_method_types</strong> : Array(String)</a>
+        <a href="#payment_method_types%3AArray%28String%29-instance-method" class="signature"><strong>#payment_method_types</strong> : Array(String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#payment_status:PaymentStatus-instance-method" class="signature"><strong>#payment_status</strong> : PaymentStatus</a>
+        <a href="#payment_status%3APaymentStatus-instance-method" class="signature"><strong>#payment_status</strong> : PaymentStatus</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#setup_intent:String%7CNil%7CStripe::SetupIntent%7CNil-instance-method" class="signature"><strong>#setup_intent</strong> : String | Nil | Stripe::SetupIntent | Nil</a>
+        <a href="#setup_intent%3AString%7CNil%7CStripe%3A%3ASetupIntent%7CNil-instance-method" class="signature"><strong>#setup_intent</strong> : String | Nil | Stripe::SetupIntent | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#shipping:Hash(String,String%7CHash(String,String))?-instance-method" class="signature"><strong>#shipping</strong> : Hash(String, String | Hash(String, String))?</a>
+        <a href="#shipping%3AHash%28String%2CString%7CHash%28String%2CString%29%29%3F-instance-method" class="signature"><strong>#shipping</strong> : Hash(String, String | Hash(String, String))?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#shipping_address_collection:Hash(String,Array(String))?-instance-method" class="signature"><strong>#shipping_address_collection</strong> : Hash(String, Array(String))?</a>
+        <a href="#shipping_address_collection%3AHash%28String%2CArray%28String%29%29%3F-instance-method" class="signature"><strong>#shipping_address_collection</strong> : Hash(String, Array(String))?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#submit_type:SubmitType?-instance-method" class="signature"><strong>#submit_type</strong> : SubmitType?</a>
+        <a href="#submit_type%3ASubmitType%3F-instance-method" class="signature"><strong>#submit_type</strong> : SubmitType?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#subscription:String%7CNil%7CStripe::Subscription%7CNil-instance-method" class="signature"><strong>#subscription</strong> : String | Nil | Stripe::Subscription | Nil</a>
+        <a href="#subscription%3AString%7CNil%7CStripe%3A%3ASubscription%7CNil-instance-method" class="signature"><strong>#subscription</strong> : String | Nil | Stripe::Subscription | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#success_url:String-instance-method" class="signature"><strong>#success_url</strong> : String</a>
+        <a href="#success_url%3AString-instance-method" class="signature"><strong>#success_url</strong> : String</a>
         
       </li>
     
@@ -1206,13 +1206,13 @@
         
         def self.<strong>new</strong>(pull : JSON::PullParser)
 
-        <a class="method-permalink" href="#new(pull:JSON::PullParser)-class-method">#</a>
+        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,13 +1234,13 @@
         
         def self.<strong>create</strong>(mode : String | <a href="../../Stripe/Checkout/Session/Mode.html">Stripe::Checkout::Session::Mode</a>, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | <a href="../../Stripe/Customer.html">Stripe::Customer</a>? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>
 
-        <a class="method-permalink" href="#create(mode:String%7CStripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?%7CStripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple(quantity:Int32,price:String))?=nil,expand:Array(String)?=nil):Stripe::Checkout::Session-class-method">#</a>
+        <a class="method-permalink" href="#create%28mode%3AString%7CStripe%3A%3ACheckout%3A%3ASession%3A%3AMode%2Cpayment_method_types%3AArray%28String%29%2Ccancel_url%3AString%2Csuccess_url%3AString%2Cclient_reference_id%3AString%3F%3Dnil%2Ccustomer%3AString%3F%7CStripe%3A%3ACustomer%3F%3Dnil%2Ccustomer_email%3AString%3F%3Dnil%2Cline_items%3AArray%28NamedTuple%28quantity%3AInt32%2Cprice%3AString%29%29%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3AStripe%3A%3ACheckout%3A%3ASession-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/checkout/sessions/create_session.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/checkout/sessions/create_session.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1250,13 +1250,13 @@
         
         def self.<strong>list</strong>(payment_intent : String | Nil | <a href="../../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a> | Nil = <span class="n">nil</span>, subscription : String | Nil | <a href="../../Stripe/Subscription.html">Stripe::Subscription</a> | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../../Stripe/List.html">List</a>(<a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>)
 
-        <a class="method-permalink" href="#list(payment_intent:String%7CNil%7CStripe::PaymentIntent%7CNil=nil,subscription:String%7CNil%7CStripe::Subscription%7CNil=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Checkout::Session)-class-method">#</a>
+        <a class="method-permalink" href="#list%28payment_intent%3AString%7CNil%7CStripe%3A%3APaymentIntent%7CNil%3Dnil%2Csubscription%3AString%7CNil%7CStripe%3A%3ASubscription%7CNil%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3ACheckout%3A%3ASession%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,13 +1266,13 @@
         
         def self.<strong>retrieve</strong>(id : String)
 
-        <a class="method-permalink" href="#retrieve(id:String)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve%28id%3AString%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1282,13 +1282,13 @@
         
         def self.<strong>retrieve</strong>(checkout_session : <a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>)
 
-        <a class="method-permalink" href="#retrieve(checkout_session:Stripe::Checkout::Session)-class-method">#</a>
+        <a class="method-permalink" href="#retrieve%28checkout_session%3AStripe%3A%3ACheckout%3A%3ASession%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1310,13 +1310,13 @@
         
         def <strong>allow_promotion_codes</strong> : Bool?
 
-        <a class="method-permalink" href="#allow_promotion_codes:Bool?-instance-method">#</a>
+        <a class="method-permalink" href="#allow_promotion_codes%3ABool%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1326,13 +1326,13 @@
         
         def <strong>amount_subtotal</strong> : Int32?
 
-        <a class="method-permalink" href="#amount_subtotal:Int32?-instance-method">#</a>
+        <a class="method-permalink" href="#amount_subtotal%3AInt32%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1342,13 +1342,13 @@
         
         def <strong>amount_total</strong> : Int32?
 
-        <a class="method-permalink" href="#amount_total:Int32?-instance-method">#</a>
+        <a class="method-permalink" href="#amount_total%3AInt32%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1358,13 +1358,13 @@
         
         def <strong>billing_address_collection</strong> : <a href="../../Stripe/Checkout/Session/BillingAddressCollection.html">BillingAddressCollection</a>?
 
-        <a class="method-permalink" href="#billing_address_collection:BillingAddressCollection?-instance-method">#</a>
+        <a class="method-permalink" href="#billing_address_collection%3ABillingAddressCollection%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1374,13 +1374,13 @@
         
         def <strong>cancel_url</strong> : String
 
-        <a class="method-permalink" href="#cancel_url:String-instance-method">#</a>
+        <a class="method-permalink" href="#cancel_url%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L48" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1390,13 +1390,13 @@
         
         def <strong>client_reference_id</strong> : String?
 
-        <a class="method-permalink" href="#client_reference_id:String?-instance-method">#</a>
+        <a class="method-permalink" href="#client_reference_id%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1406,13 +1406,13 @@
         
         def <strong>currency</strong> : String?
 
-        <a class="method-permalink" href="#currency:String?-instance-method">#</a>
+        <a class="method-permalink" href="#currency%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L73" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L73" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1422,13 +1422,13 @@
         
         def <strong>customer</strong> : String | Nil | <a href="../../Stripe/Customer.html">Stripe::Customer</a> | Nil
 
-        <a class="method-permalink" href="#customer:String%7CNil%7CStripe::Customer%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#customer%3AString%7CNil%7CStripe%3A%3ACustomer%7CNil-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1438,13 +1438,13 @@
         
         def <strong>customer_email</strong> : String?
 
-        <a class="method-permalink" href="#customer_email:String?-instance-method">#</a>
+        <a class="method-permalink" href="#customer_email%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1454,13 +1454,13 @@
         
         def <strong>id</strong> : String
 
-        <a class="method-permalink" href="#id:String-instance-method">#</a>
+        <a class="method-permalink" href="#id%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,13 +1470,13 @@
         
         def <strong>line_items</strong> : Array(Hash(String, String | Int32))?
 
-        <a class="method-permalink" href="#line_items:Array(Hash(String,String%7CInt32))?-instance-method">#</a>
+        <a class="method-permalink" href="#line_items%3AArray%28Hash%28String%2CString%7CInt32%29%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L55" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1486,13 +1486,13 @@
         
         def <strong>livemode</strong> : Bool?
 
-        <a class="method-permalink" href="#livemode:Bool?-instance-method">#</a>
+        <a class="method-permalink" href="#livemode%3ABool%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1502,13 +1502,13 @@
         
         def <strong>metadata</strong> : Hash(String, String)?
 
-        <a class="method-permalink" href="#metadata:Hash(String,String)?-instance-method">#</a>
+        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1518,13 +1518,13 @@
         
         def <strong>mode</strong> : String | <a href="../../Stripe/Checkout/Session/Mode.html">Mode</a>
 
-        <a class="method-permalink" href="#mode:String%7CMode-instance-method">#</a>
+        <a class="method-permalink" href="#mode%3AString%7CMode-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L45" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1534,13 +1534,13 @@
         
         def <strong>object</strong> : String?
 
-        <a class="method-permalink" href="#object:String?-instance-method">#</a>
+        <a class="method-permalink" href="#object%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1550,13 +1550,13 @@
         
         def <strong>payment_intent</strong> : String | Nil | <a href="../../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a> | Nil
 
-        <a class="method-permalink" href="#payment_intent:String%7CNil%7CStripe::PaymentIntent%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#payment_intent%3AString%7CNil%7CStripe%3A%3APaymentIntent%7CNil-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1566,13 +1566,13 @@
         
         def <strong>payment_method_types</strong> : Array(String)
 
-        <a class="method-permalink" href="#payment_method_types:Array(String)-instance-method">#</a>
+        <a class="method-permalink" href="#payment_method_types%3AArray%28String%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1582,13 +1582,13 @@
         
         def <strong>payment_status</strong> : <a href="../../Stripe/Checkout/Session/PaymentStatus.html">PaymentStatus</a>
 
-        <a class="method-permalink" href="#payment_status:PaymentStatus-instance-method">#</a>
+        <a class="method-permalink" href="#payment_status%3APaymentStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L61" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L61" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1598,13 +1598,13 @@
         
         def <strong>setup_intent</strong> : String | Nil | <a href="../../Stripe/SetupIntent.html">Stripe::SetupIntent</a> | Nil
 
-        <a class="method-permalink" href="#setup_intent:String%7CNil%7CStripe::SetupIntent%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#setup_intent%3AString%7CNil%7CStripe%3A%3ASetupIntent%7CNil-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1614,13 +1614,13 @@
         
         def <strong>shipping</strong> : Hash(String, String | Hash(String, String))?
 
-        <a class="method-permalink" href="#shipping:Hash(String,String%7CHash(String,String))?-instance-method">#</a>
+        <a class="method-permalink" href="#shipping%3AHash%28String%2CString%7CHash%28String%2CString%29%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L79" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L79" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1630,13 +1630,13 @@
         
         def <strong>shipping_address_collection</strong> : Hash(String, Array(String))?
 
-        <a class="method-permalink" href="#shipping_address_collection:Hash(String,Array(String))?-instance-method">#</a>
+        <a class="method-permalink" href="#shipping_address_collection%3AHash%28String%2CArray%28String%29%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1646,13 +1646,13 @@
         
         def <strong>submit_type</strong> : <a href="../../Stripe/Checkout/Session/SubmitType.html">SubmitType</a>?
 
-        <a class="method-permalink" href="#submit_type:SubmitType?-instance-method">#</a>
+        <a class="method-permalink" href="#submit_type%3ASubmitType%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1662,13 +1662,13 @@
         
         def <strong>subscription</strong> : String | Nil | <a href="../../Stripe/Subscription.html">Stripe::Subscription</a> | Nil
 
-        <a class="method-permalink" href="#subscription:String%7CNil%7CStripe::Subscription%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#subscription%3AString%7CNil%7CStripe%3A%3ASubscription%7CNil-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1678,13 +1678,13 @@
         
         def <strong>success_url</strong> : String
 
-        <a class="method-permalink" href="#success_url:String-instance-method">#</a>
+        <a class="method-permalink" href="#success_url%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/objects/core/checkout/session.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/objects/core/checkout/session.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>

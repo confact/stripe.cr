@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.0.0">
+<meta name="generator" content="Crystal Docs 1.1.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -911,7 +911,7 @@
   </h2>
   
     
-      <a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/webhook/webhook.cr#L20" target="_blank">
+      <a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/webhook/webhook.cr#L20" target="_blank">
         stripe/methods/core/webhook/webhook.cr
       </a>
     
@@ -954,21 +954,21 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#compute_signature(timestamp:Time,payload:String,secret:String):String-class-method" class="signature"><strong>.compute_signature</strong>(timestamp : Time, payload : String, secret : String) : String</a>
+        <a href="#compute_signature%28timestamp%3ATime%2Cpayload%3AString%2Csecret%3AString%29%3AString-class-method" class="signature"><strong>.compute_signature</strong>(timestamp : Time, payload : String, secret : String) : String</a>
         
           <div class="summary"><p>Computes a webhook signature given a time (probably the current time), a payload, and a signing secret.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#generate_header(timestamp:Time,signature:String,scheme:String=EXPECTED_SCHEME):String-class-method" class="signature"><strong>.generate_header</strong>(timestamp : Time, signature : String, scheme : String = <span class="t">EXPECTED_SCHEME</span>) : String</a>
+        <a href="#generate_header%28timestamp%3ATime%2Csignature%3AString%2Cscheme%3AString%3DEXPECTED_SCHEME%29%3AString-class-method" class="signature"><strong>.generate_header</strong>(timestamp : Time, signature : String, scheme : String = <span class="t">EXPECTED_SCHEME</span>) : String</a>
         
           <div class="summary"><p>Generates a value that would be added to a <code><a href="../../Stripe.html">Stripe</a>-<a href="../../Stripe/Webhook/Signature.html">Signature</a></code> for a given webhook payload.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#verify_header(payload:String,header:String,secret:String,tolerance:Int32?=nil):Bool-class-method" class="signature"><strong>.verify_header</strong>(payload : String, header : String, secret : String, tolerance : Int32? = <span class="n">nil</span>) : Bool</a>
+        <a href="#verify_header%28payload%3AString%2Cheader%3AString%2Csecret%3AString%2Ctolerance%3AInt32%3F%3Dnil%29%3ABool-class-method" class="signature"><strong>.verify_header</strong>(payload : String, header : String, secret : String, tolerance : Int32? = <span class="n">nil</span>) : Bool</a>
         
           <div class="summary"><p>Verifies the signature header for a given payload.</p></div>
         
@@ -1003,7 +1003,7 @@
         
         def self.<strong>compute_signature</strong>(timestamp : Time, payload : String, secret : String) : String
 
-        <a class="method-permalink" href="#compute_signature(timestamp:Time,payload:String,secret:String):String-class-method">#</a>
+        <a class="method-permalink" href="#compute_signature%28timestamp%3ATime%2Cpayload%3AString%2Csecret%3AString%29%3AString-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -1015,7 +1015,7 @@ a payload, and a signing secret.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/webhook/webhook.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/webhook/webhook.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1025,14 +1025,13 @@ a payload, and a signing secret.</p>
         
         def self.<strong>generate_header</strong>(timestamp : Time, signature : String, scheme : String = <span class="t">EXPECTED_SCHEME</span>) : String
 
-        <a class="method-permalink" href="#generate_header(timestamp:Time,signature:String,scheme:String=EXPECTED_SCHEME):String-class-method">#</a>
+        <a class="method-permalink" href="#generate_header%28timestamp%3ATime%2Csignature%3AString%2Cscheme%3AString%3DEXPECTED_SCHEME%29%3AString-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Generates a value that would be added to a <code><a href="../../Stripe.html">Stripe</a>-<a href="../../Stripe/Webhook/Signature.html">Signature</a></code> for a
 given webhook payload.</p>
-
 <p>Note that this isn't needed to verify webhooks in any way, and is
 mainly here for use in test cases (those that are both within this
 project and without).</p>
@@ -1041,7 +1040,7 @@ project and without).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/webhook/webhook.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/webhook/webhook.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1051,25 +1050,27 @@ project and without).</p>
         
         def self.<strong>verify_header</strong>(payload : String, header : String, secret : String, tolerance : Int32? = <span class="n">nil</span>) : Bool
 
-        <a class="method-permalink" href="#verify_header(payload:String,header:String,secret:String,tolerance:Int32?=nil):Bool-class-method">#</a>
+        <a class="method-permalink" href="#verify_header%28payload%3AString%2Cheader%3AString%2Csecret%3AString%2Ctolerance%3AInt32%3F%3Dnil%29%3ABool-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Verifies the signature header for a given payload.</p>
-
 <p>Raises a SignatureVerificationError in the following cases:</p>
-
-<ul><li>the header does not match the expected format</li><li>no signatures found with the expected scheme</li><li>no signatures matching the expected signature</li><li>a tolerance is provided and the timestamp is not within the
-  tolerance</li></ul>
-
+<ul>
+<li>the header does not match the expected format</li>
+<li>no signatures found with the expected scheme</li>
+<li>no signatures matching the expected signature</li>
+<li>a tolerance is provided and the timestamp is not within the
+tolerance</li>
+</ul>
 <p>Returns true otherwise</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/confact/stripe.cr/blob/bff822ef95cac0af3cdead7369cafbc37ddaf4d6/src/stripe/methods/core/webhook/webhook.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/confact/stripe.cr/blob/8578a892799c88886462a55624db9205aa75dcd2/src/stripe/methods/core/webhook/webhook.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
