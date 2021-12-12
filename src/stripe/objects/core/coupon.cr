@@ -2,6 +2,9 @@
 @[EventPayload]
 class Stripe::Coupon
   include JSON::Serializable
+  include StripeMethods
+
+  add_retrieve_method
 
   getter id : String
 
