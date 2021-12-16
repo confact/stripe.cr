@@ -95,7 +95,7 @@ class Stripe::Webhook
   end
 end
 
-class SignatureVerificationError < Exception
+class Stripe::SignatureVerificationError < Exception
   include JSON::Serializable
   property message : String?
   property param : String?
