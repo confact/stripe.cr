@@ -51,7 +51,7 @@ describe Stripe::Webhook do
       signature,
       scheme: "v1"
     )
-    expect_raises(SignatureVerificationError) do
+    expect_raises(Stripe::SignatureVerificationError) do
       Stripe::Webhook.construct_event(payload, header, "wrong_secret")
     end
   end
@@ -69,7 +69,7 @@ describe Stripe::Webhook do
       signature,
       scheme: "v1"
     )
-    expect_raises(SignatureVerificationError) do
+    expect_raises(Stripe::SignatureVerificationError) do
       Stripe::Webhook.construct_event(payload, header, secret)
     end
   end
