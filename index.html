@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.1.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -940,7 +940,7 @@ Version need to be set before first api call is called. otherwise it won't be us
 <p>Follow the instruction for setting up an subscription at stripe: <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a></p>
 <p>When the step is at server code, check the code below that is corresponding towards the ruby code for same step.</p>
 <p>Setting up an customer:</p>
-<pre><code class="language-crystal">  token = params['StripeToken'] # or what the param for the token is called for you.
+<pre><code class="language-crystal">  token = params[&#39;StripeToken&#39;] # or what the param for the token is called for you.
   customer = Stripe::Customer.create(email: email,
                          description: name, # just example
                          payment_method: token, # or token.payment_method.id
