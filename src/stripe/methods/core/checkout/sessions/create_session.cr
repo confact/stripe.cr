@@ -13,7 +13,7 @@ class Stripe::Checkout::Session
     subscription_data : NamedTuple(metadata: Hash(String, String)?)? = nil,
     allow_promotion_codes : Bool? = nil,
     metadata : Hash(String, String)? = nil,
-    discounts : Array(NamedTuple(coupon: String))? = nil
+    discounts : Array(NamedTuple(coupon: String) | NamedTuple(promotion_code: String))? = nil
   ) : Stripe::Checkout::Session
     customer = customer.not_nil!.id if customer.is_a?(Customer)
 
