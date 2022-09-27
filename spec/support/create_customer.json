@@ -49,7 +49,7 @@
     ]
   },
   "discount": null,
-  "account_balance": 0,
+  "balance": 0,
   "currency": "usd",
   "default_source": "card_1234567890ABCDEFghijklmn"
 }

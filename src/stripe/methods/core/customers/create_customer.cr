@@ -1,6 +1,6 @@
 class Stripe::Customer
   def self.create(
-    account_balance : Int32? = nil,
+    balance : Int32? = nil,
     coupon : String? = nil,
     default_source : String | Token? = nil,
     name : String | Token? = nil,
@@ -33,7 +33,7 @@ class Stripe::Customer
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(account_balance coupon default_source payment_method name description email phone invoice_prefix invoice_settings metadata shipping source tax_info expand) %}
+    {% for x in %w(balance coupon default_source payment_method name description email phone invoice_prefix invoice_settings metadata shipping source tax_info expand) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 

@@ -41,7 +41,7 @@ class Stripe::Customer
   end
 
   getter id : String
-  getter account_balance : Int32?
+  getter balance : Int32?
 
   getter deleted : Bool? = false
 
