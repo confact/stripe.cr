@@ -55,6 +55,7 @@ class Stripe::Checkout::Session
   getter line_items : Array(Hash(String, String | Int32))?
 
   getter metadata : Hash(String, String)?
+  getter payment_intent_data : Hash(String, String)?
 
   getter payment_intent : String? | Stripe::PaymentIntent?
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::PaymentStatus))]
