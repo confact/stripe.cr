@@ -984,7 +984,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28mode%3AString%7CStripe%3A%3ACheckout%3A%3ASession%3A%3AMode%2Cpayment_method_types%3AArray%28String%29%2Ccancel_url%3AString%2Csuccess_url%3AString%2Cclient_reference_id%3AString%3F%3Dnil%2Ccustomer%3AString%3F%7CStripe%3A%3ACustomer%3F%3Dnil%2Ccustomer_email%3AString%3F%3Dnil%2Cline_items%3AArray%28NamedTuple%28quantity%3AInt32%2Cprice%3AString%29%29%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%2Csubscription_data%3ANamedTuple%28metadata%3AHash%28String%2CString%29%3F%29%3F%3Dnil%2Callow_promotion_codes%3ABool%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%2Cdiscounts%3AArray%28NamedTuple%28coupon%3AString%29%7CNamedTuple%28promotion_code%3AString%29%29%3F%3Dnil%29%3AStripe%3A%3ACheckout%3A%3ASession-class-method" class="signature"><strong>.create</strong>(mode : String | Stripe::Checkout::Session::Mode, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | Stripe::Customer? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>, subscription_data : NamedTuple(metadata: Hash(String, String)?)? = <span class="n">nil</span>, allow_promotion_codes : Bool? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, discounts : Array(NamedTuple(coupon: String) | NamedTuple(promotion_code: String))? = <span class="n">nil</span>) : Stripe::Checkout::Session</a>
+        <a href="#create%28mode%3AString%7CStripe%3A%3ACheckout%3A%3ASession%3A%3AMode%2Cpayment_method_types%3AArray%28String%29%2Ccancel_url%3AString%2Csuccess_url%3AString%2Cclient_reference_id%3AString%3F%3Dnil%2Ccustomer%3AString%3F%7CStripe%3A%3ACustomer%3F%3Dnil%2Ccustomer_email%3AString%3F%3Dnil%2Cline_items%3AArray%28NamedTuple%28quantity%3AInt32%2Cprice%3AString%29%29%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%2Csubscription_data%3ANamedTuple%28metadata%3AHash%28String%2CString%29%3F%29%3F%3Dnil%2Callow_promotion_codes%3ABool%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%2Cdiscounts%3AArray%28NamedTuple%28coupon%3AString%29%7CNamedTuple%28promotion_code%3AString%29%29%3F%3Dnil%2Cpayment_intent_data%3AHash%28String%2CString%29%3F%3Dnil%29%3AStripe%3A%3ACheckout%3A%3ASession-class-method" class="signature"><strong>.create</strong>(mode : String | Stripe::Checkout::Session::Mode, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | Stripe::Customer? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>, subscription_data : NamedTuple(metadata: Hash(String, String)?)? = <span class="n">nil</span>, allow_promotion_codes : Bool? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, discounts : Array(NamedTuple(coupon: String) | NamedTuple(promotion_code: String))? = <span class="n">nil</span>, payment_intent_data : Hash(String, String)? = <span class="n">nil</span>) : Stripe::Checkout::Session</a>
         
       </li>
     
@@ -1094,6 +1094,11 @@
     
       <li class="entry-summary">
         <a href="#payment_intent%3AString%7CNil%7CStripe%3A%3APaymentIntent%7CNil-instance-method" class="signature"><strong>#payment_intent</strong> : String | Nil | Stripe::PaymentIntent | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payment_intent_data%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#payment_intent_data</strong> : Hash(String, String)?</a>
         
       </li>
     
@@ -1223,12 +1228,12 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="create(mode:String|Stripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?|Stripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple(quantity:Int32,price:String))?=nil,expand:Array(String)?=nil,subscription_data:NamedTuple(metadata:Hash(String,String)?)?=nil,allow_promotion_codes:Bool?=nil,metadata:Hash(String,String)?=nil,discounts:Array(NamedTuple(coupon:String)|NamedTuple(promotion_code:String))?=nil):Stripe::Checkout::Session-class-method">
+    <div class="entry-detail" id="create(mode:String|Stripe::Checkout::Session::Mode,payment_method_types:Array(String),cancel_url:String,success_url:String,client_reference_id:String?=nil,customer:String?|Stripe::Customer?=nil,customer_email:String?=nil,line_items:Array(NamedTuple(quantity:Int32,price:String))?=nil,expand:Array(String)?=nil,subscription_data:NamedTuple(metadata:Hash(String,String)?)?=nil,allow_promotion_codes:Bool?=nil,metadata:Hash(String,String)?=nil,discounts:Array(NamedTuple(coupon:String)|NamedTuple(promotion_code:String))?=nil,payment_intent_data:Hash(String,String)?=nil):Stripe::Checkout::Session-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(mode : String | <a href="../../Stripe/Checkout/Session/Mode.html">Stripe::Checkout::Session::Mode</a>, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | <a href="../../Stripe/Customer.html">Stripe::Customer</a>? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>, subscription_data : NamedTuple(metadata: Hash(String, String)?)? = <span class="n">nil</span>, allow_promotion_codes : Bool? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, discounts : Array(NamedTuple(coupon: String) | NamedTuple(promotion_code: String))? = <span class="n">nil</span>) : <a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>
+        def self.<strong>create</strong>(mode : String | <a href="../../Stripe/Checkout/Session/Mode.html">Stripe::Checkout::Session::Mode</a>, payment_method_types : Array(String), cancel_url : String, success_url : String, client_reference_id : String? = <span class="n">nil</span>, customer : String? | <a href="../../Stripe/Customer.html">Stripe::Customer</a>? = <span class="n">nil</span>, customer_email : String? = <span class="n">nil</span>, line_items : Array(NamedTuple(quantity: Int32, price: String))? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>, subscription_data : NamedTuple(metadata: Hash(String, String)?)? = <span class="n">nil</span>, allow_promotion_codes : Bool? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>, discounts : Array(NamedTuple(coupon: String) | NamedTuple(promotion_code: String))? = <span class="n">nil</span>, payment_intent_data : Hash(String, String)? = <span class="n">nil</span>) : <a href="../../Stripe/Checkout/Session.html">Stripe::Checkout::Session</a>
 
-        <a class="method-permalink" href="#create%28mode%3AString%7CStripe%3A%3ACheckout%3A%3ASession%3A%3AMode%2Cpayment_method_types%3AArray%28String%29%2Ccancel_url%3AString%2Csuccess_url%3AString%2Cclient_reference_id%3AString%3F%3Dnil%2Ccustomer%3AString%3F%7CStripe%3A%3ACustomer%3F%3Dnil%2Ccustomer_email%3AString%3F%3Dnil%2Cline_items%3AArray%28NamedTuple%28quantity%3AInt32%2Cprice%3AString%29%29%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%2Csubscription_data%3ANamedTuple%28metadata%3AHash%28String%2CString%29%3F%29%3F%3Dnil%2Callow_promotion_codes%3ABool%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%2Cdiscounts%3AArray%28NamedTuple%28coupon%3AString%29%7CNamedTuple%28promotion_code%3AString%29%29%3F%3Dnil%29%3AStripe%3A%3ACheckout%3A%3ASession-class-method">#</a>
+        <a class="method-permalink" href="#create%28mode%3AString%7CStripe%3A%3ACheckout%3A%3ASession%3A%3AMode%2Cpayment_method_types%3AArray%28String%29%2Ccancel_url%3AString%2Csuccess_url%3AString%2Cclient_reference_id%3AString%3F%3Dnil%2Ccustomer%3AString%3F%7CStripe%3A%3ACustomer%3F%3Dnil%2Ccustomer_email%3AString%3F%3Dnil%2Cline_items%3AArray%28NamedTuple%28quantity%3AInt32%2Cprice%3AString%29%29%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%2Csubscription_data%3ANamedTuple%28metadata%3AHash%28String%2CString%29%3F%29%3F%3Dnil%2Callow_promotion_codes%3ABool%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%2Cdiscounts%3AArray%28NamedTuple%28coupon%3AString%29%7CNamedTuple%28promotion_code%3AString%29%29%3F%3Dnil%2Cpayment_intent_data%3AHash%28String%2CString%29%3F%3Dnil%29%3AStripe%3A%3ACheckout%3A%3ASession-class-method">#</a>
       </div>
       
       <br/>
@@ -1507,6 +1512,20 @@
         def <strong>payment_intent</strong> : String | Nil | <a href="../../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a> | Nil
 
         <a class="method-permalink" href="#payment_intent%3AString%7CNil%7CStripe%3A%3APaymentIntent%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payment_intent_data:Hash(String,String)?-instance-method">
+      <div class="signature">
+        
+        def <strong>payment_intent_data</strong> : Hash(String, String)?
+
+        <a class="method-permalink" href="#payment_intent_data%3AHash%28String%2CString%29%3F-instance-method">#</a>
       </div>
       
       <br/>
