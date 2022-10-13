@@ -31,5 +31,8 @@
       "price": "price_H5ggYwtDq4fbrJ",
       "quantity": 2
     }
-  ]
+  ],
+  "payment_intent_data": {
+    "receipt_email": "example@yahoo.com"
+  }
 }
