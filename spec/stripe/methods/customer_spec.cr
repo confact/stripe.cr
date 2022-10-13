@@ -8,6 +8,7 @@ describe Stripe::Customer do
     customer = Stripe::Customer.create(email: "test@ex.com", description: "test")
     customer.id.should eq("abcdefghijklmnop")
     customer.sources.not_nil!.data.first.id.should eq("card_1234567890ABCDEFghijklmn")
+    customer.balance.should eq(0)
   end
 
   it "retrieve customer" do
