@@ -7,7 +7,6 @@ class Stripe::Subscription
   add_retrieve_method
   add_list_method(
     customer : String? = nil,
-    plan : String? = nil,
     status : String? | Stripe::Subscription::Status? = nil,
     limit : Int32? = nil,
     starting_after : String? = nil,
