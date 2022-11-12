@@ -32,7 +32,6 @@ class Stripe::Subscription
 
     getter billing_thresholds : Hash(String, Int32)?
 
-    getter plan : Stripe::Plan?
     getter price : Stripe::Price?
 
     @[JSON::Field(converter: Time::EpochConverter)]
@@ -78,8 +77,6 @@ class Stripe::Subscription
   getter pending_setup_intent : String? | Stripe::SetupIntent?
   getter schedule : String?
   getter metadata : Hash(String, String)?
-
-  getter plan : Stripe::Plan?
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter start : Time?

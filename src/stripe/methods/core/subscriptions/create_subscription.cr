@@ -2,7 +2,6 @@ class Stripe::Subscription
   def self.create(
     customer : String | Customer? = nil,
     coupon : String? = nil,
-    plan : String? = nil,
     default_source : String | Token? = nil,
     default_payment_method : String | Token? = nil,
     off_session : Bool? = nil,
@@ -22,7 +21,7 @@ class Stripe::Subscription
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(customer coupon plan default_source off_session metadata default_payment_method items add_invoice_items expand trial_end) %}
+    {% for x in %w(customer coupon default_source off_session metadata default_payment_method items add_invoice_items expand trial_end) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 

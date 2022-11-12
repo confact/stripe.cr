@@ -5,7 +5,7 @@ describe Stripe::Subscription do
     WebMock.stub(:post, "https://api.stripe.com/v1/subscriptions")
       .to_return(status: 200, body: File.read("spec/support/create_subscription.json"), headers: {"Content-Type" => "application/json"})
 
-    subscription = Stripe::Subscription.create(customer: "sdsadaada", plan: "monthly")
+    subscription = Stripe::Subscription.create(customer: "sdsadaada")
     subscription.id.should eq("sub_H0TJvm2aKdakJ7")
   end
 

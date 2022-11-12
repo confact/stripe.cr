@@ -6,7 +6,6 @@ class Stripe::Invoice
   add_retrieve_method
   add_list_method(
     customer : String? = nil,
-    plan : String? = nil,
     status : String? | Stripe::Invoice::Status? = nil,
     limit : Int32? = nil,
     starting_after : String? = nil,
@@ -49,7 +48,7 @@ class Stripe::Invoice
 
     getter period : Hash(String, Int32)?
 
-    getter plan : Stripe::Plan?
+    getter price : Stripe::Price?
 
     getter subscription : String? | Stripe::Subscription?
     getter subscription_item : String?
