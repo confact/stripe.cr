@@ -76,7 +76,6 @@ create a subscription with that customer:
 
 ```crystal
 Stripe::Subscription.create(customer: customer,
-plan: STRIPE_PLAN_ID,
 expand: ["latest_invoice.payment_intent"]) # yes - create_subscription support expand.
 ```
 
@@ -257,8 +256,6 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 - [ ] Balance transaction
 
 - [x] Charge
-
-- [x] Plan
 
 - [x] Product
 

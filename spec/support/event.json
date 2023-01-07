@@ -10,7 +10,7 @@
       "active": true,
       "attributes": [],
       "created": 1620930329,
-      "description": "Plan Premium test",
+      "description": "Product Premium test",
       "images": [
         "https://files.stripe.com/links/MDB8YWNjdF8xSXFpd0ZKTjVGcmt1dktofGZsX3Rlc3RfTWZsd3Rsa1ZJMHBLOEdzRlFLaDB5bElW00FhECO8uS"
       ],
@@ -18,7 +18,7 @@
       "metadata": {
         "tier": "premium"
       },
-      "name": "Plan Premium",
+      "name": "Product Premium",
       "package_dimensions": null,
       "shippable": null,
       "statement_descriptor": null,
