@@ -711,11 +711,6 @@
       
     </li>
   
-  <li class=" " data-id="stripe/Stripe/Plan" data-name="stripe::plan">
-      <a href="Stripe/Plan.html">Plan</a>
-      
-    </li>
-  
   <li class=" " data-id="stripe/Stripe/Price" data-name="stripe::price">
       <a href="Stripe/Price.html">Price</a>
       
@@ -949,7 +944,6 @@ Version need to be set before first api call is called. otherwise it won't be us
 </code></pre>
 <p>create a subscription with that customer:</p>
 <pre><code class="language-crystal"><span class="t">Stripe</span><span class="t">::</span><span class="t">Subscription</span>.create(customer: customer,
-plan: <span class="t">STRIPE_PLAN_ID</span>,
 expand: [<span class="s">&quot;latest_invoice.payment_intent&quot;</span>]) <span class="c"># yes - create_subscription support expand.</span></code></pre>
 <p>The rest is frontend to check SCA and more. You should not need to do more than this on the backend.</p>
 <p>But follow <a href="https://stripe.com/docs/billing/subscriptions/set-up-subscription">https://stripe.com/docs/billing/subscriptions/set-up-subscription</a> for the frontend part to make sure it works for SCA and other things.</p>
@@ -1283,9 +1277,6 @@ expand: [<span class="s">&quot;latest_invoice.payment_intent&quot;</span>]) <spa
 </li>
 <li>
 <p>[x] Charge</p>
-</li>
-<li>
-<p>[x] Plan</p>
 </li>
 <li>
 <p>[x] Product</p>

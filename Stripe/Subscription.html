@@ -711,11 +711,6 @@
       
     </li>
   
-  <li class=" " data-id="stripe/Stripe/Plan" data-name="stripe::plan">
-      <a href="../Stripe/Plan.html">Plan</a>
-      
-    </li>
-  
   <li class=" " data-id="stripe/Stripe/Price" data-name="stripe::price">
       <a href="../Stripe/Price.html">Price</a>
       
@@ -970,7 +965,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28customer%3AString%7CCustomer%3F%3Dnil%2Ccoupon%3AString%3F%3Dnil%2Cplan%3AString%3F%3Dnil%2Cdefault_source%3AString%7CToken%3F%3Dnil%2Cdefault_payment_method%3AString%7CToken%3F%3Dnil%2Coff_session%3ABool%3F%3Dnil%2Cmetadata%3AHash%3F%3Dnil%2Citems%3AU%3F%3Dnil%2Cadd_invoice_items%3AU%3F%3Dnil%2Ctrial_end%3ATime%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3ASubscriptionforallT%2CU-class-method" class="signature"><strong>.create</strong>(customer : String | Customer? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | Token? = <span class="n">nil</span>, default_payment_method : String | Token? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, add_invoice_items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Subscription forall T, U</a>
+        <a href="#create%28customer%3AString%7CCustomer%3F%3Dnil%2Ccoupon%3AString%3F%3Dnil%2Cdefault_source%3AString%7CToken%3F%3Dnil%2Cdefault_payment_method%3AString%7CToken%3F%3Dnil%2Coff_session%3ABool%3F%3Dnil%2Cmetadata%3AHash%3F%3Dnil%2Citems%3AU%3F%3Dnil%2Cadd_invoice_items%3AU%3F%3Dnil%2Ctrial_end%3ATime%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3ASubscriptionforallT%2CU-class-method" class="signature"><strong>.create</strong>(customer : String | Customer? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, default_source : String | Token? = <span class="n">nil</span>, default_payment_method : String | Token? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, add_invoice_items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Subscription forall T, U</a>
         
       </li>
     
@@ -1009,7 +1004,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#list%28customer%3AString%3F%3Dnil%2Cplan%3AString%3F%3Dnil%2Cstatus%3AString%7CNil%7CStripe%3A%3ASubscription%3A%3AStatus%7CNil%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3ASubscription%29-class-method" class="signature"><strong>.list</strong>(customer : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, status : String | Nil | Stripe::Subscription::Status | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::Subscription)</a>
+        <a href="#list%28customer%3AString%3F%3Dnil%2Cstatus%3AString%7CNil%7CStripe%3A%3ASubscription%3A%3AStatus%7CNil%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3ASubscription%29-class-method" class="signature"><strong>.list</strong>(customer : String? = <span class="n">nil</span>, status : String | Nil | Stripe::Subscription::Status | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : List(Stripe::Subscription)</a>
         
       </li>
     
@@ -1153,11 +1148,6 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#plan%3AStripe%3A%3APlan%3F-instance-method" class="signature"><strong>#plan</strong> : Stripe::Plan?</a>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#schedule%3AString%3F-instance-method" class="signature"><strong>#schedule</strong> : String?</a>
         
       </li>
@@ -1237,12 +1227,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="create(customer:String|Customer?=nil,coupon:String?=nil,plan:String?=nil,default_source:String|Token?=nil,default_payment_method:String|Token?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,add_invoice_items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">
+    <div class="entry-detail" id="create(customer:String|Customer?=nil,coupon:String?=nil,default_source:String|Token?=nil,default_payment_method:String|Token?=nil,off_session:Bool?=nil,metadata:Hash?=nil,items:U?=nil,add_invoice_items:U?=nil,trial_end:Time?=nil,expand:Array(String)?=nil):SubscriptionforallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(customer : String | <a href="../Stripe/Customer.html">Customer</a>? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, add_invoice_items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
+        def self.<strong>create</strong>(customer : String | <a href="../Stripe/Customer.html">Customer</a>? = <span class="n">nil</span>, coupon : String? = <span class="n">nil</span>, default_source : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, default_payment_method : String | <a href="../Stripe/Token.html">Token</a>? = <span class="n">nil</span>, off_session : Bool? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, items : U? = <span class="n">nil</span>, add_invoice_items : U? = <span class="n">nil</span>, trial_end : Time? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/Subscription.html">Subscription</a> forall T, U
 
-        <a class="method-permalink" href="#create%28customer%3AString%7CCustomer%3F%3Dnil%2Ccoupon%3AString%3F%3Dnil%2Cplan%3AString%3F%3Dnil%2Cdefault_source%3AString%7CToken%3F%3Dnil%2Cdefault_payment_method%3AString%7CToken%3F%3Dnil%2Coff_session%3ABool%3F%3Dnil%2Cmetadata%3AHash%3F%3Dnil%2Citems%3AU%3F%3Dnil%2Cadd_invoice_items%3AU%3F%3Dnil%2Ctrial_end%3ATime%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3ASubscriptionforallT%2CU-class-method">#</a>
+        <a class="method-permalink" href="#create%28customer%3AString%7CCustomer%3F%3Dnil%2Ccoupon%3AString%3F%3Dnil%2Cdefault_source%3AString%7CToken%3F%3Dnil%2Cdefault_payment_method%3AString%7CToken%3F%3Dnil%2Coff_session%3ABool%3F%3Dnil%2Cmetadata%3AHash%3F%3Dnil%2Citems%3AU%3F%3Dnil%2Cadd_invoice_items%3AU%3F%3Dnil%2Ctrial_end%3ATime%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3ASubscriptionforallT%2CU-class-method">#</a>
       </div>
       
       <br/>
@@ -1319,12 +1309,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="list(customer:String?=nil,plan:String?=nil,status:String|Nil|Stripe::Subscription::Status|Nil=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Subscription)-class-method">
+    <div class="entry-detail" id="list(customer:String?=nil,status:String|Nil|Stripe::Subscription::Status|Nil=nil,limit:Int32?=nil,starting_after:String?=nil,ending_before:String?=nil):List(Stripe::Subscription)-class-method">
       <div class="signature">
         
-        def self.<strong>list</strong>(customer : String? = <span class="n">nil</span>, plan : String? = <span class="n">nil</span>, status : String | Nil | <a href="../Stripe/Subscription/Status.html">Stripe::Subscription::Status</a> | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../Stripe/List.html">List</a>(<a href="../Stripe/Subscription.html">Stripe::Subscription</a>)
+        def self.<strong>list</strong>(customer : String? = <span class="n">nil</span>, status : String | Nil | <a href="../Stripe/Subscription/Status.html">Stripe::Subscription::Status</a> | Nil = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, starting_after : String? = <span class="n">nil</span>, ending_before : String? = <span class="n">nil</span>) : <a href="../Stripe/List.html">List</a>(<a href="../Stripe/Subscription.html">Stripe::Subscription</a>)
 
-        <a class="method-permalink" href="#list%28customer%3AString%3F%3Dnil%2Cplan%3AString%3F%3Dnil%2Cstatus%3AString%7CNil%7CStripe%3A%3ASubscription%3A%3AStatus%7CNil%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3ASubscription%29-class-method">#</a>
+        <a class="method-permalink" href="#list%28customer%3AString%3F%3Dnil%2Cstatus%3AString%7CNil%7CStripe%3A%3ASubscription%3A%3AStatus%7CNil%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cstarting_after%3AString%3F%3Dnil%2Cending_before%3AString%3F%3Dnil%29%3AList%28Stripe%3A%3ASubscription%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1687,20 +1677,6 @@
         def <strong>pending_setup_intent</strong> : String | Nil | <a href="../Stripe/SetupIntent.html">Stripe::SetupIntent</a> | Nil
 
         <a class="method-permalink" href="#pending_setup_intent%3AString%7CNil%7CStripe%3A%3ASetupIntent%7CNil-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="plan:Stripe::Plan?-instance-method">
-      <div class="signature">
-        
-        def <strong>plan</strong> : <a href="../Stripe/Plan.html">Stripe::Plan</a>?
-
-        <a class="method-permalink" href="#plan%3AStripe%3A%3APlan%3F-instance-method">#</a>
       </div>
       
       <br/>
