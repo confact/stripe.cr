@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.5
+
+### API changes
+- Remove deprecated [`Stripe::Plans`](https://stripe.com/docs/api/plans) (https://github.com/confact/stripe.cr/pull/55)
+- Added support for [`Stripe::Coupon#retrieve`](https://stripe.com/docs/api/coupons/retrieve) (https://github.com/confact/stripe.cr/pull/43)
+
+### Misc improvements
+- Add metadata, subscription_data, and payment_method_types to Checkout::Session (https://github.com/confact/stripe.cr/pull/43)
+- Added support for list helper method (https://github.com/confact/stripe.cr/pull/40)
+- Add payment intent data to Checkout::Session (https://github.com/confact/stripe.cr/pull/52)
+- Make request.id optional for `Stripe::Event` (https://github.com/confact/stripe.cr/pull/41)
+- Update account_balance to balance for Customer (https://github.com/confact/stripe.cr/pull/50)
+- Add promotion_code as discount to Checkout::Session (https://github.com/confact/stripe.cr/pull/49)
+- Added support for delete helper method (https://github.com/confact/stripe.cr/pull/42)
+- Fix bug with incorrect params in list helper method (https://github.com/confact/stripe.cr/pull/58)
+
 ## v1.4
 
 ### API additions
