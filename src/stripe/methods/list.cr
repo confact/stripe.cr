@@ -8,7 +8,7 @@ module StripeMethods
   builder = ParamsBuilder.new(io)
 
   {% for x in arguments.map &.var.id %}
-    builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
+    builder.add({{x.stringify}}, {{x.id}}) unless {{x.id}}.nil?
   {% end %}
 
   response = Stripe.client.get("/v1/#{"{{@type.id.gsub(/Stripe::/, "").underscore.gsub(/::/, "/")}}"}s", form: io.to_s)
