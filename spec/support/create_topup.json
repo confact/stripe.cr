@@ -1,0 +1,62 @@
+{
+  "id": "tu_1MlzdzAxmG8F6OKs3s9THxGZ",
+  "object": "topup",
+  "amount": 2000,
+  "balance_transaction": null,
+  "created": 1678907151,
+  "currency": "usd",
+  "description": "Top-up for Jenny Rosen",
+  "destination_balance": null,
+  "expected_availability_date": 1678907151,
+  "failure_code": null,
+  "failure_message": null,
+  "livemode": false,
+  "metadata": {},
+  "source": {
+    "id": "src_1MlzdyAxmG8F6OKspe6j8oqO",
+    "object": "source",
+    "ach_debit": {
+      "bank_name": "STRIPE TEST BANK",
+      "country": "US",
+      "fingerprint": "5DWksIgjzP1zDsTK",
+      "last4": "6789",
+      "routing_number": "110000000",
+      "type": "individual"
+    },
+    "amount": null,
+    "client_secret": "src_client_secret_kSNjkmY8jle4kCk7wKy5Fgj5",
+    "code_verification": {
+      "attempts_remaining": 3,
+      "status": "succeeded"
+    },
+    "created": 1678907150,
+    "currency": "usd",
+    "flow": "code_verification",
+    "livemode": false,
+    "metadata": {},
+    "owner": {
+      "address": {
+        "city": null,
+        "country": "US",
+        "line1": null,
+        "line2": null,
+        "postal_code": null,
+        "state": null
+      },
+      "email": null,
+      "name": "Jenny Rosen",
+      "phone": null,
+      "verified_address": null,
+      "verified_email": null,
+      "verified_name": null,
+      "verified_phone": null
+    },
+    "statement_descriptor": null,
+    "status": "chargeable",
+    "type": "ach_debit",
+    "usage": "reusable"
+  },
+  "statement_descriptor": "Top-up",
+  "status": "pending",
+  "transfer_group": null
+}

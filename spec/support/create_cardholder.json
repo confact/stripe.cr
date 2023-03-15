@@ -1,0 +1,50 @@
+{
+  "id": "ich_1MlvlEAxmG8F6OKsfTUZ00Co",
+  "object": "issuing.cardholder",
+  "billing": {
+    "address": {
+      "line1": "1234 Main Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "US",
+      "postal_code": "94111"
+    }
+  },
+  "company": null,
+  "created": 1678892224,
+  "email": "jenny.rosen@example.com",
+  "individual": {
+    "card_issuing": {
+      "user_terms_acceptance": {
+        "date": 1678892224,
+        "ip": "92.144.135.140",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0"
+      }
+    },
+    "dob": null,
+    "first_name": "Bolo",
+    "last_name": "Michelin",
+    "verification": {
+      "document": {
+        "back": null,
+        "front": null
+      }
+    }
+  },
+  "livemode": false,
+  "metadata": {},
+  "name": "Jenny Rosen",
+  "phone_number": "+18888675309",
+  "requirements": {
+    "disabled_reason": null,
+    "past_due": []
+  },
+  "spending_controls": {
+    "allowed_categories": [],
+    "blocked_categories": [],
+    "spending_limits": [],
+    "spending_limits_currency": null
+  },
+  "status": "active",
+  "type": "individual"
+}

@@ -3,30 +3,6 @@ class Stripe::Issuing::Card
   include StripeMethods
 
   add_retrieve_method
-  add_list_method(
-     id : String,
-     cancellation_reason : CancellationReason?,
-     cardholder : String | Issuing::CardHolder,
-     currency : String,
-     exp_month : Int32,
-     exp_year : Int32,
-     last4 : String,
-     metadata : Hash(String, String),
-     status : Status,
-     type : Type,
-     object : String,
-     brand : String,
-     created : Time,
-     cvc : String?,
-     livemode : Bool,
-     number : String?,
-     replaced_by : String?,
-     replacement_for : String?,
-     replacement_reason : ReplacementReason?,
-     shipping : Hash(String, String)? ,
-     spending_controls : Hash(String, String?)? ,
-     wallets : Hash(String, String?)?)
-
   enum ReplacementReason
     Lost
     Stolen
@@ -126,7 +102,7 @@ class Stripe::Issuing::Card
 
   getter id : String
   getter cancellation_reason : CancellationReason?
-  getter cardholder : String | Issuing::CardHolder
+  getter cardholder : String | Issuing::Cardholder
   getter currency : String
   getter exp_month : Int32
   getter exp_year : Int32
