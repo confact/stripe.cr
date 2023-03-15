@@ -1,0 +1,89 @@
+{
+  "id": "ic_1LfRCcAxmG8F6OKs45gKnnNe",
+  "object": "issuing.card",
+  "brand": "Visa",
+  "cancellation_reason": null,
+  "cardholder": {
+    "id": "ich_1LfQnkAxmG8F6OKsMEKb6sWF",
+    "object": "issuing.cardholder",
+    "billing": {
+      "address": {
+        "city": "East Billyborough",
+        "country": "US",
+        "line1": "27880 Angelica Green",
+        "line2": null,
+        "postal_code": "YU5 1MP",
+        "state": "MO"
+      }
+    },
+    "company": null,
+    "created": 1662566912,
+    "email": "qmiller+test1@manas.com.ar",
+    "individual": {
+      "card_issuing": null,
+      "dob": null,
+      "first_name": "Daisha",
+      "last_name": "Bosco",
+      "verification": {
+        "document": {
+          "back": null,
+          "front": null
+        }
+      }
+    },
+    "livemode": false,
+    "metadata": {},
+    "name": "Daisha Bosco",
+    "phone_number": null,
+    "requirements": {
+      "disabled_reason": null,
+      "past_due": []
+    },
+    "spending_controls": {
+      "allowed_categories": [],
+      "blocked_categories": [],
+      "spending_limits": [],
+      "spending_limits_currency": null
+    },
+    "status": "active",
+    "type": "individual"
+  },
+  "created": 1662568454,
+  "currency": "usd",
+  "exp_month": 8,
+  "exp_year": 2025,
+  "last4": "0021",
+  "livemode": false,
+  "metadata": {
+    "proposal.description": "my first proposal"
+  },
+  "replaced_by": null,
+  "replacement_for": null,
+  "replacement_reason": null,
+  "shipping": null,
+  "spending_controls": {
+    "allowed_categories": null,
+    "blocked_categories": null,
+    "spending_limits": [
+      {
+        "amount": 400000,
+        "categories": [],
+        "interval": "all_time"
+      }
+    ],
+    "spending_limits_currency": "usd"
+  },
+  "status": "active",
+  "type": "virtual",
+  "wallets": {
+    "apple_pay": {
+      "eligible": true,
+      "ineligible_reason": null
+    },
+    "google_pay": {
+      "eligible": true,
+      "ineligible_reason": null
+    },
+    "primary_account_identifier": null
+  }
+}
