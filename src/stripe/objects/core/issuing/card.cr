@@ -29,8 +29,9 @@ class Stripe::Issuing::Card
 
   struct SpendingControls
     include JSON::Serializable
+
     struct SpendingLimits
-    include JSON::Serializable
+      include JSON::Serializable
       enum Interval
         PerAuthorization
         Daily
@@ -39,10 +40,11 @@ class Stripe::Issuing::Card
         Yearly
         AllTime
       end
-        property amount : Int32?
-        property categories : Array(String)?
-        property interval : Interval?
+      property amount : Int32?
+      property categories : Array(String)?
+      property interval : Interval?
     end
+
     property allowed_categories : Array(String)?
     property blocked_categories : Array(String)?
     property spending_limits : Array(SpendingLimits)?
@@ -87,6 +89,7 @@ class Stripe::Issuing::Card
       include JSON::Serializable
       property eori_number : String?
     end
+
     property name : String
     property address : Address
     property customs : Customs
@@ -98,7 +101,6 @@ class Stripe::Issuing::Card
     property tracking_url : String?
     property type : Type?
   end
-
 
   getter id : String
   getter cancellation_reason : CancellationReason?
@@ -130,5 +132,4 @@ class Stripe::Issuing::Card
 
   getter spending_controls : SpendingControls
   getter? wallets : Hash(String, Hash(String, String | Bool | Nil)?)?
-
 end

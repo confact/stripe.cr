@@ -1,10 +1,10 @@
 class Stripe::Issuing::Cardholder
-  def self.update(id : String , params = {} of String => String)
+  def self.update(id : String, params = {} of String => String)
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
     params.each do |key, value|
-       builder.add("#{key}", value)
+      builder.add("#{key}", value)
     end
 
     response = Stripe.client.post("/v1/issuing/cardholders/#{id}", form: io.to_s)

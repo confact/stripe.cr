@@ -5,13 +5,13 @@ describe Stripe::Topup do
     WebMock.stub(:post, "https://api.stripe.com/v1/topups")
       .to_return(status: 200, body: File.read("spec/support/create_topup.json"), headers: {"Content-Type" => "application/json"})
 
-     topup = Stripe::Topup.create({
-          amount: 2000,
-          currency: "usd",
-          description: "Top-up for Jenny Rosen",
-          statement_descriptor: "Top-up",
-        })
-      topup.id.should eq("tu_1MlzdzAxmG8F6OKs3s9THxGZ")
+    topup = Stripe::Topup.create({
+      amount:               2000,
+      currency:             "usd",
+      description:          "Top-up for Jenny Rosen",
+      statement_descriptor: "Top-up",
+    })
+    topup.id.should eq("tu_1MlzdzAxmG8F6OKs3s9THxGZ")
   end
 
   it "retrieve topup" do
@@ -27,9 +27,9 @@ describe Stripe::Topup do
       .to_return(status: 200, body: File.read("spec/support/update_topup.json"), headers: {"Content-Type" => "application/json"})
 
     topup = Stripe::Topup.update(
-              "tu_1MlykwAxmG8F6OKsQ6VVzqIi",
-              {metadata: {order_id: "6735"}},
-            )
+      "tu_1MlykwAxmG8F6OKsQ6VVzqIi",
+      {metadata: {order_id: "6735"}},
+    )
     topup.metadata["order_id"].should eq("6735")
   end
 
@@ -40,5 +40,4 @@ describe Stripe::Topup do
     topup = Stripe::Topup.cancel("tu_1MlykwAxmG8F6OKsQ6VVzqIi")
     topup.status.should eq("canceled")
   end
-
 end

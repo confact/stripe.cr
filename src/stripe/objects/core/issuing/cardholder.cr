@@ -11,6 +11,7 @@ class Stripe::Issuing::Cardholder
 
   struct Billing
     include JSON::Serializable
+
     struct Address
       include JSON::Serializable
       property city : String?
@@ -20,6 +21,7 @@ class Stripe::Issuing::Cardholder
       property postal_code : String?
       property state : String?
     end
+
     property address : Address?
   end
 
@@ -30,19 +32,22 @@ class Stripe::Issuing::Cardholder
 
   struct Individual
     include JSON::Serializable
+
     struct CardIssuing
       include JSON::Serializable
+
       struct UserTermsAcceptance
         include JSON::Serializable
         property date : Time?
         property ip : String?
         user_agent : String?
       end
+
       property user_terms_acceptance : Hash(String, String | Int32)?
     end
+
     property card_issuing : CardIssuing?
   end
-
 
   getter id : String
   getter billing : Billing?

@@ -1,11 +1,10 @@
 class Stripe::Issuing::Card
-  def self.update( id : String, params = {} of String => String) : self
-
+  def self.update(id : String, params = {} of String => String) : self
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
     params.each do |key, value|
-       builder.add("#{key}", value)
+      builder.add("#{key}", value)
     end
 
     response = Stripe.client.post("/v1/issuing/cards/#{id}", form: io.to_s)
@@ -15,5 +14,4 @@ class Stripe::Issuing::Card
       raise Error.from_json(response.body, "error")
     end
   end
-
 end
