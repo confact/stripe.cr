@@ -13,7 +13,7 @@ describe Stripe::Issuing::Card do
     card.id.should eq("ic_1LfRCcAxmG8F6OKs45gKnnNe")
   end
 
-  it "retrive card" do
+  it "retrieve card" do
     WebMock.stub(:get, "https://api.stripe.com/v1/issuing/cards/ic_1LfRCcAxmG8F6OKs45gKnnNe")
       .to_return(status: 200, body: File.read("spec/support/retrieve_card.json"), headers: {"Content-Type" => "application/json"})
 
