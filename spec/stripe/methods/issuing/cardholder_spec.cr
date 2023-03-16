@@ -28,7 +28,7 @@ describe Stripe::Issuing::Cardholder do
     WebMock.stub(:post, "https://api.stripe.com/v1/issuing/cardholders/ich_1MlvlEAxmG8F6OKsfTUZ00Co")
       .to_return(status: 200, body: File.read("spec/support/update_cardholder.json"), headers: {"Content-Type" => "application/json"})
 
-    cardholder = Stripe::Issuing::Cardholder.update("ich_1MlvlEAxmG8F6OKsfTUZ00Co", {email: "bmichelin@manas.tech"})
-    cardholder.email.should eq("bmichelin@manas.tech")
+    cardholder = Stripe::Issuing::Cardholder.update("ich_1MlvlEAxmG8F6OKsfTUZ00Co", {email: "bmichelin@exemple.tech"})
+    cardholder.email.should eq("bmichelin@exemple.tech")
   end
 end
