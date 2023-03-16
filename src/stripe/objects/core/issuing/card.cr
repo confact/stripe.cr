@@ -3,6 +3,40 @@ class Stripe::Issuing::Card
   include StripeMethods
 
   add_retrieve_method
+  add_create_method(
+    cardholder : String,
+    currency : String,
+    type : String,
+    metadata : Hash | NamedTuple? = nil,
+    status : String? = nil,
+    replacement_for : String? = nil,
+    replacement_reason : String? = nil,
+    shpping : String? = nil,
+    spending_controls : String? = nil,
+  )
+  add_update_method(
+    status : String? = nil,
+    cancellation_reason : String? = nil,
+    metadata : Hash | NamedTuple? = nil,
+    pin : Hash(String, String)? = nil,
+    spending_controls : String? = nil,
+  )
+  add_list_method(
+    cardholder : String? = nil,
+    type : String? = nil,
+    created : Hash(String, Int32)? = nil,
+    limit : Int32? = nil,
+    exp_month : Int32? = nil,
+    exp_year : Int32? = nil,
+    last4 : Int32? = nil,
+    starting_after : String? = nil,
+    ending_before : String? = nil
+  )
+  getter replacement_for : String?
+  getter replacement_reason : ReplacementReason?
+  getter shipping : Shipping?
+
+  getter spending_controls : SpendingControls
   enum ReplacementReason
     Lost
     Stolen

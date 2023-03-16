@@ -4,6 +4,42 @@ class Stripe::Issuing::Cardholder
 
   add_retrieve_method
 
+  add_create_method(
+    billing : Hash | NamedTuple,
+    name : String,
+    type : String,
+    email : String? = nil,
+    metadata : Hash | NamedTuple? = nil,
+    phone_number : String? = nil,
+    company : Hash? =nil,
+    individual : Hash? =nil,
+    spending_controls : Hash? =nil,
+    status : String? = nil,
+  )
+
+  add_update_method(
+    billing : Hash? = nil,
+    name : String? = nil,
+    email : String? = nil,
+    metadata : Hash(String, String)? = nil,
+    phone_number : String? = nil,
+    company : Hash? =nil,
+    individual : Hash? =nil,
+    spending_controls : Hash? =nil,
+    status : String? = nil,
+  )
+
+  add_list_method(
+    email : String? = nil,
+    phone_number : String? = nil,
+    status : String? = nil,
+    type : String? = nil,
+    created : Hash(String, Int32)? = nil,
+    limit : Int32? = nil,
+    starting_after : String? = nil,
+    ending_before : String? = nil
+  )
+
   enum Type
     Individual
     Company

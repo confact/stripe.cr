@@ -1,9 +1,9 @@
 module StripeMethods
   extend self
 
-  macro add_list_method(*arguments)
+  macro add_create_method(*arguments)
 {% begin %}
-  def self.list({{*arguments}})
+  def self.create({{*arguments}})
   io = IO::Memory.new
   builder = ParamsBuilder.new(io)
 
@@ -11,10 +11,10 @@ module StripeMethods
     builder.add({{x.stringify}}, {{x.id}}) unless {{x.id}}.nil?
   {% end %}
 
-  response = Stripe.client.get("/v1/#{"{{@type.id.gsub(/Stripe::/, "").underscore.gsub(/::/, "/")}}"}s", form: io.to_s)
+  response = Stripe.client.post("/v1/#{"{{@type.id.gsub(/Stripe::/, "").underscore.gsub(/::/, "/")}}"}s", form: io.to_s)
 
   if response.status_code == 200
-    List({{@type.id}}).from_json(response.body)
+    {{@type.id}}.from_json(response.body)
   else
     raise Error.from_json(response.body, "error")
   end
