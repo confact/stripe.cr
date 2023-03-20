@@ -5,15 +5,15 @@ class Stripe::Issuing::Cardholder
   add_retrieve_method
 
   add_create_method(
-    billing : Hash | NamedTuple,
+    billing : Hash(String, String) | NamedTuple | Billing,
     name : String,
     type : String,
     email : String? = nil,
-    metadata : Hash | NamedTuple? = nil,
+    metadata : Hash(String, String) | NamedTuple? = nil,
     phone_number : String? = nil,
-    company : Hash? =nil,
-    individual : Hash? =nil,
-    spending_controls : Hash? =nil,
+    company : Company? = nil,
+    individual : Individual? = nil,
+    spending_controls : Hash(String, Int32)? = nil,
     status : String? = nil,
   )
 
