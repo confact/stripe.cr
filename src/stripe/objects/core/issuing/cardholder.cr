@@ -4,31 +4,6 @@ class Stripe::Issuing::Cardholder
 
   add_retrieve_method
 
-  add_create_method(
-    billing : Hash(String, String) | NamedTuple | Billing,
-    name : String,
-    type : String,
-    email : String? = nil,
-    metadata : Hash(String, String) | NamedTuple? = nil,
-    phone_number : String? = nil,
-    company : Company? = nil,
-    individual : Individual? = nil,
-    spending_controls : Hash(String, Int32)? = nil,
-    status : String? = nil,
-  )
-
-  add_update_method(
-    billing : Hash? = nil,
-    name : String? = nil,
-    email : String? = nil,
-    metadata : Hash(String, String)? = nil,
-    phone_number : String? = nil,
-    company : Hash? =nil,
-    individual : Hash? =nil,
-    spending_controls : Hash? =nil,
-    status : String? = nil,
-  )
-
   add_list_method(
     email : String? = nil,
     phone_number : String? = nil,
@@ -100,4 +75,55 @@ class Stripe::Issuing::Cardholder
   getter? livemode : Bool
   getter requirements : Hash(String, String | Array(String) | Nil)?
   getter spending_controls : Card::SpendingControls?
+
+  def self.update( id : String,
+                  billing : NamedTuple? = nil, 
+                  email : String? = nil ,
+                  metadata : Hash(String, String)? = nil,
+                  phone_number : String?  = nil,
+                  company : Company ? = nil,
+                  individual : Individual?  = nil,
+                  spending_controls :  NamedTuple? = nil,
+                  status : String? = nil)
+    io = IO::Memory.new
+    builder = ParamsBuilder.new(io)
+
+    {% for x in %w(billing metadata phone_number company individual spending_controls status) %}
+      builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
+    {% end %}
+
+    response = Stripe.client.post("/v1/issuing/cardholders/#{id}", form: io.to_s)
+    if response.status_code == 200
+        Stripe::Issuing::Cardholder.from_json(response.body)
+    else
+      raise Error.from_json(response.body, "error")
+    end
+  end
+
+  def  self.create( billing : NamedTuple,
+                    name : String,
+                    type : String,
+                    email : String? ,
+                    metadata : NamedTuple = nil,
+                    phone_number : String?  = nil,
+                    company : Company?  = nil,
+                    individual : Individual?  = nil,
+                    spending_controls :  NamedTuple  = nil,
+                    status : String? = nil ) : Stripe::Issuing::Cardholder
+
+    io = IO::Memory.new
+    builder = ParamsBuilder.new(io)
+
+    {% for x in %w(type billing name metadata phone_number company individual spending_controls status) %}
+      builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
+    {% end %}
+
+    response = Stripe.client.post("/v1/issuing/cardholders", form: io.to_s)
+
+    if response.status_code == 200
+      Stripe::Issuing::Cardholder.from_json(response.body)
+    else
+      raise Error.from_json(response.body, "error")
+    end
+  end
 end

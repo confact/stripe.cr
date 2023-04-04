@@ -74,14 +74,14 @@ class Stripe::Issuing::Card
         Yearly
         AllTime
       end
-      property amount : Int32?
+      property amount : Int32 = 0
       property categories : Array(String)?
       property interval : Interval?
     end
 
     property allowed_categories : Array(String)?
     property blocked_categories : Array(String)?
-    property spending_limits : Array(SpendingLimits)?
+    property spending_limits : Array(SpendingLimits) = [] of SpendingLimits
     property spending_limits_currency : String?
   end
 
