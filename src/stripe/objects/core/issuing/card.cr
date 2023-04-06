@@ -2,7 +2,6 @@ class Stripe::Issuing::Card
   include JSON::Serializable
   include StripeMethods
 
-  add_retrieve_method
   add_create_method(
     cardholder : String,
     currency : String,
@@ -166,4 +165,22 @@ class Stripe::Issuing::Card
 
   getter spending_controls : SpendingControls
   getter? wallets : Hash(String, Hash(String, String | Bool | Nil)?)?
+
+  def self.retrieve(id : String, expand : Array(String)? = nil)
+
+      io = IO::Memory.new
+      builder = ParamsBuilder.new(io)
+
+      {% for x in %w(expand) %}
+        builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
+      {% end %}
+
+      response = Stripe.client.get("/v1/issuing/cards/#{id}", form: io.to_s)
+
+      if response.status_code == 200
+        Card.from_json(response.body)
+      else
+        raise Error.from_json(response.body, "error")
+      end
+  end
 end

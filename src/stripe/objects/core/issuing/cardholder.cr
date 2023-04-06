@@ -63,7 +63,7 @@ class Stripe::Issuing::Cardholder
   getter id : String
   getter billing : Billing?
   getter email : String?
-  getter metadata : Hash(String, String)?
+  getter metadata : Hash(String, String) = {} of String => String
   getter name : String?
   getter phone_number : String?
   getter type : Type
@@ -77,7 +77,7 @@ class Stripe::Issuing::Cardholder
   getter spending_controls : Card::SpendingControls?
 
   def self.update( id : String,
-                  billing : NamedTuple? = nil, 
+                  billing : NamedTuple? = nil,
                   email : String? = nil ,
                   metadata : Hash(String, String)? = nil,
                   phone_number : String?  = nil,
