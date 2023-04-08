@@ -88,7 +88,7 @@ class Stripe::Issuing::Cardholder
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(billing metadata phone_number company individual spending_controls status) %}
+    {% for x in %w(billing metadata phone_number company individual spending_controls status email) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
@@ -114,7 +114,7 @@ class Stripe::Issuing::Cardholder
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(type billing name metadata phone_number company individual spending_controls status) %}
+    {% for x in %w(type email billing name metadata phone_number company individual spending_controls status) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
