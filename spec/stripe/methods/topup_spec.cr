@@ -6,9 +6,9 @@ describe Stripe::Topup do
       .to_return(status: 200, body: File.read("spec/support/create_topup.json"), headers: {"Content-Type" => "application/json"})
 
     topup = Stripe::Topup.create(
-      amount:               2000,
-      currency:             "usd",
-      description:          "Top-up for Jenny Rosen",
+      amount: 2000,
+      currency: "usd",
+      description: "Top-up for Jenny Rosen",
       statement_descriptor: "Top-up",
     )
     topup.id.should eq("tu_1MlzdzAxmG8F6OKs3s9THxGZ")

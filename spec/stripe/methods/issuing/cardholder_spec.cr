@@ -6,11 +6,11 @@ describe Stripe::Issuing::Cardholder do
       .to_return(status: 200, body: File.read("spec/support/create_cardholder.json"), headers: {"Content-Type" => "application/json"})
 
     cardholder = Stripe::Issuing::Cardholder.create(
-      type:         "individual",
-      name:         "Jenny Rosen",
-      email:        "jenny.rosen@example.com",
+      type: "individual",
+      name: "Jenny Rosen",
+      email: "jenny.rosen@example.com",
       phone_number: "+18888675309",
-      billing:      {
+      billing: {
         address: {
           line1:       "1234 Main Street",
           city:        "San Francisco",

@@ -35,7 +35,7 @@ class Stripe::ParamsBuilder < HTTP::Params::Builder
         case v
         when Enum then add(_key, v.to_s.underscore)
         else
-            add(_key, v)
+          add(_key, v)
         end
       end
     end

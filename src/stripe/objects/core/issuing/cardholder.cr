@@ -76,14 +76,14 @@ class Stripe::Issuing::Cardholder
   getter requirements : Hash(String, String | Array(String) | Nil)?
   getter spending_controls : Card::SpendingControls?
 
-  def self.update( id : String,
+  def self.update(id : String,
                   billing : NamedTuple? = nil,
-                  email : String? = nil ,
+                  email : String? = nil,
                   metadata : Hash(String, String)? = nil,
-                  phone_number : String?  = nil,
-                  company : Company ? = nil,
-                  individual : Individual?  = nil,
-                  spending_controls :  NamedTuple? = nil,
+                  phone_number : String? = nil,
+                  company : Company? = nil,
+                  individual : Individual? = nil,
+                  spending_controls : NamedTuple? = nil,
                   status : String? = nil)
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
@@ -94,23 +94,22 @@ class Stripe::Issuing::Cardholder
 
     response = Stripe.client.post("/v1/issuing/cardholders/#{id}", form: io.to_s)
     if response.status_code == 200
-        Stripe::Issuing::Cardholder.from_json(response.body)
+      Stripe::Issuing::Cardholder.from_json(response.body)
     else
       raise Error.from_json(response.body, "error")
     end
   end
 
-  def  self.create( billing : NamedTuple,
-                    name : String,
-                    type : String,
-                    email : String? ,
-                    metadata : NamedTuple = nil,
-                    phone_number : String?  = nil,
-                    company : Company?  = nil,
-                    individual : Individual?  = nil,
-                    spending_controls :  NamedTuple  = nil,
-                    status : String? = nil ) : Stripe::Issuing::Cardholder
-
+  def self.create(billing : NamedTuple,
+                  name : String,
+                  type : String,
+                  email : String?,
+                  metadata : NamedTuple = nil,
+                  phone_number : String? = nil,
+                  company : Company? = nil,
+                  individual : Individual? = nil,
+                  spending_controls : NamedTuple = nil,
+                  status : String? = nil) : Stripe::Issuing::Cardholder
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 

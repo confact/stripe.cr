@@ -7,8 +7,8 @@ describe Stripe::Issuing::Card do
 
     card = Stripe::Issuing::Card.create(
       cardholder: "ich_1MlyDKAxmG8F6OKs88GEi3K3",
-      currency:   "usd",
-      type:       "virtual",
+      currency: "usd",
+      type: "virtual",
     )
     card.id.should eq("ic_1LfRCcAxmG8F6OKs45gKnnNe")
   end
