@@ -11,6 +11,7 @@ class Stripe::PaymentMethods::BankAccount
     Validated
     Verified
     Verification_failed
+    Pending
     Errored
   end
 
