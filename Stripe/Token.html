@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.5.0">
+<meta name="generator" content="Crystal Docs 1.6.2">
 <meta name="crystal_docs.project_version" content="1.5.0">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -958,7 +958,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28card%3AT%3F%3Dnil%2Ccustomer%3AString%7CCustomer%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3ATokenforallT-class-method" class="signature"><strong>.create</strong>(card : T? = <span class="n">nil</span>, customer : String | Customer? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : Token forall T</a>
+        <a href="#create%28card%3AT%7CNil%3Dnil%2Ccustomer%3AString%7CCustomer%7CNil%3Dnil%2Cexpand%3AArray%28String%29%7CNil%3Dnil%29%3ATokenforallT-class-method" class="signature"><strong>.create</strong>(card : T | Nil = <span class="n">nil</span>, customer : String | Customer | Nil = <span class="n">nil</span>, expand : Array(String) | Nil = <span class="n">nil</span>) : Token forall T</a>
         
       </li>
     
@@ -984,17 +984,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#bank_account%3APaymentMethods%3A%3ABankAccount%3F-instance-method" class="signature"><strong>#bank_account</strong> : PaymentMethods::BankAccount?</a>
+        <a href="#bank_account%3APaymentMethods%3A%3ABankAccount%7CNil-instance-method" class="signature"><strong>#bank_account</strong> : PaymentMethods::BankAccount | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#card%3APaymentMethods%3A%3ACard%3F-instance-method" class="signature"><strong>#card</strong> : PaymentMethods::Card?</a>
+        <a href="#card%3APaymentMethods%3A%3ACard%7CNil-instance-method" class="signature"><strong>#card</strong> : PaymentMethods::Card | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#client_ip%3AString%3F-instance-method" class="signature"><strong>#client_ip</strong> : String?</a>
+        <a href="#client_ip%3AString%7CNil-instance-method" class="signature"><strong>#client_ip</strong> : String | Nil</a>
         
       </li>
     
@@ -1073,12 +1073,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="create(card:T?=nil,customer:String|Customer?=nil,expand:Array(String)?=nil):TokenforallT-class-method">
+    <div class="entry-detail" id="create(card:T|Nil=nil,customer:String|Customer|Nil=nil,expand:Array(String)|Nil=nil):TokenforallT-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(card : T? = <span class="n">nil</span>, customer : String | <a href="../Stripe/Customer.html">Customer</a>? = <span class="n">nil</span>, expand : Array(String)? = <span class="n">nil</span>) : <a href="../Stripe/Token.html">Token</a> forall T
+        def self.<strong>create</strong>(card : T | Nil = <span class="n">nil</span>, customer : String | <a href="../Stripe/Customer.html">Customer</a> | Nil = <span class="n">nil</span>, expand : Array(String) | Nil = <span class="n">nil</span>) : <a href="../Stripe/Token.html">Token</a> forall T
 
-        <a class="method-permalink" href="#create%28card%3AT%3F%3Dnil%2Ccustomer%3AString%7CCustomer%3F%3Dnil%2Cexpand%3AArray%28String%29%3F%3Dnil%29%3ATokenforallT-class-method">#</a>
+        <a class="method-permalink" href="#create%28card%3AT%7CNil%3Dnil%2Ccustomer%3AString%7CCustomer%7CNil%3Dnil%2Cexpand%3AArray%28String%29%7CNil%3Dnil%29%3ATokenforallT-class-method">#</a>
       </div>
       
       <br/>
@@ -1115,12 +1115,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="bank_account:PaymentMethods::BankAccount?-instance-method">
+    <div class="entry-detail" id="bank_account:PaymentMethods::BankAccount|Nil-instance-method">
       <div class="signature">
         
-        def <strong>bank_account</strong> : <a href="../Stripe/PaymentMethods/BankAccount.html">PaymentMethods::BankAccount</a>?
+        def <strong>bank_account</strong> : <a href="../Stripe/PaymentMethods/BankAccount.html">PaymentMethods::BankAccount</a> | Nil
 
-        <a class="method-permalink" href="#bank_account%3APaymentMethods%3A%3ABankAccount%3F-instance-method">#</a>
+        <a class="method-permalink" href="#bank_account%3APaymentMethods%3A%3ABankAccount%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1129,12 +1129,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="card:PaymentMethods::Card?-instance-method">
+    <div class="entry-detail" id="card:PaymentMethods::Card|Nil-instance-method">
       <div class="signature">
         
-        def <strong>card</strong> : <a href="../Stripe/PaymentMethods/Card.html">PaymentMethods::Card</a>?
+        def <strong>card</strong> : <a href="../Stripe/PaymentMethods/Card.html">PaymentMethods::Card</a> | Nil
 
-        <a class="method-permalink" href="#card%3APaymentMethods%3A%3ACard%3F-instance-method">#</a>
+        <a class="method-permalink" href="#card%3APaymentMethods%3A%3ACard%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1143,12 +1143,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="client_ip:String?-instance-method">
+    <div class="entry-detail" id="client_ip:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>client_ip</strong> : String?
+        def <strong>client_ip</strong> : String | Nil
 
-        <a class="method-permalink" href="#client_ip%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#client_ip%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>

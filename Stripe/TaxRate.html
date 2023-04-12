@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.5.0">
+<meta name="generator" content="Crystal Docs 1.6.2">
 <meta name="crystal_docs.project_version" content="1.5.0">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -949,7 +949,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28display_name%3AString%2Cinclusive%3ABool%2Cpercentage%3AInt32%2Cactive%3ABool%3Dtrue%2Cdescription%3AString%3F%3Dnil%2Cjurisdiction%3AString%3F%3Dnil%29%3ATaxRateforallT%2CU-class-method" class="signature"><strong>.create</strong>(display_name : String, inclusive : Bool, percentage : Int32, active : Bool = <span class="n">true</span>, description : String? = <span class="n">nil</span>, jurisdiction : String? = <span class="n">nil</span>) : TaxRate forall T, U</a>
+        <a href="#create%28display_name%3AString%2Cinclusive%3ABool%2Cpercentage%3AInt32%2Cactive%3ABool%3Dtrue%2Cdescription%3AString%7CNil%3Dnil%2Cjurisdiction%3AString%7CNil%3Dnil%29%3ATaxRateforallT%2CU-class-method" class="signature"><strong>.create</strong>(display_name : String, inclusive : Bool, percentage : Int32, active : Bool = <span class="n">true</span>, description : String | Nil = <span class="n">nil</span>, jurisdiction : String | Nil = <span class="n">nil</span>) : TaxRate forall T, U</a>
         
       </li>
     
@@ -1007,12 +1007,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#customer%3AString%3F-instance-method" class="signature"><strong>#customer</strong> : String?</a>
+        <a href="#customer%3AString%7CNil-instance-method" class="signature"><strong>#customer</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description%3AString%7CNil-instance-method" class="signature"><strong>#description</strong> : String | Nil</a>
         
       </li>
     
@@ -1027,22 +1027,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#jurisdiction%3AString%3F-instance-method" class="signature"><strong>#jurisdiction</strong> : String?</a>
+        <a href="#jurisdiction%3AString%7CNil-instance-method" class="signature"><strong>#jurisdiction</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
+        <a href="#metadata%3AHash%28String%2CString%29%7CNil-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#object%3AString%3F-instance-method" class="signature"><strong>#object</strong> : String?</a>
+        <a href="#object%3AString%7CNil-instance-method" class="signature"><strong>#object</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#percentage%3AFloat32%3F-instance-method" class="signature"><strong>#percentage</strong> : Float32?</a>
+        <a href="#percentage%3AFloat32%7CNil-instance-method" class="signature"><strong>#percentage</strong> : Float32 | Nil</a>
         
       </li>
     
@@ -1106,12 +1106,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="create(display_name:String,inclusive:Bool,percentage:Int32,active:Bool=true,description:String?=nil,jurisdiction:String?=nil):TaxRateforallT,U-class-method">
+    <div class="entry-detail" id="create(display_name:String,inclusive:Bool,percentage:Int32,active:Bool=true,description:String|Nil=nil,jurisdiction:String|Nil=nil):TaxRateforallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(display_name : String, inclusive : Bool, percentage : Int32, active : Bool = <span class="n">true</span>, description : String? = <span class="n">nil</span>, jurisdiction : String? = <span class="n">nil</span>) : <a href="../Stripe/TaxRate.html">TaxRate</a> forall T, U
+        def self.<strong>create</strong>(display_name : String, inclusive : Bool, percentage : Int32, active : Bool = <span class="n">true</span>, description : String | Nil = <span class="n">nil</span>, jurisdiction : String | Nil = <span class="n">nil</span>) : <a href="../Stripe/TaxRate.html">TaxRate</a> forall T, U
 
-        <a class="method-permalink" href="#create%28display_name%3AString%2Cinclusive%3ABool%2Cpercentage%3AInt32%2Cactive%3ABool%3Dtrue%2Cdescription%3AString%3F%3Dnil%2Cjurisdiction%3AString%3F%3Dnil%29%3ATaxRateforallT%2CU-class-method">#</a>
+        <a class="method-permalink" href="#create%28display_name%3AString%2Cinclusive%3ABool%2Cpercentage%3AInt32%2Cactive%3ABool%3Dtrue%2Cdescription%3AString%7CNil%3Dnil%2Cjurisdiction%3AString%7CNil%3Dnil%29%3ATaxRateforallT%2CU-class-method">#</a>
       </div>
       
       <br/>
@@ -1214,12 +1214,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="customer:String?-instance-method">
+    <div class="entry-detail" id="customer:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>customer</strong> : String?
+        def <strong>customer</strong> : String | Nil
 
-        <a class="method-permalink" href="#customer%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#customer%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1228,12 +1228,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String?-instance-method">
+    <div class="entry-detail" id="description:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : String?
+        def <strong>description</strong> : String | Nil
 
-        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1270,12 +1270,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="jurisdiction:String?-instance-method">
+    <div class="entry-detail" id="jurisdiction:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>jurisdiction</strong> : String?
+        def <strong>jurisdiction</strong> : String | Nil
 
-        <a class="method-permalink" href="#jurisdiction%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#jurisdiction%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1284,12 +1284,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="metadata:Hash(String,String)?-instance-method">
+    <div class="entry-detail" id="metadata:Hash(String,String)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>metadata</strong> : Hash(String, String)?
+        def <strong>metadata</strong> : Hash(String, String) | Nil
 
-        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1298,12 +1298,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="object:String?-instance-method">
+    <div class="entry-detail" id="object:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>object</strong> : String?
+        def <strong>object</strong> : String | Nil
 
-        <a class="method-permalink" href="#object%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#object%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1312,12 +1312,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="percentage:Float32?-instance-method">
+    <div class="entry-detail" id="percentage:Float32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>percentage</strong> : Float32?
+        def <strong>percentage</strong> : Float32 | Nil
 
-        <a class="method-permalink" href="#percentage%3AFloat32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#percentage%3AFloat32%7CNil-instance-method">#</a>
       </div>
       
       <br/>

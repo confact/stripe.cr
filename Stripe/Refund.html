@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.5.0">
+<meta name="generator" content="Crystal Docs 1.6.2">
 <meta name="crystal_docs.project_version" content="1.5.0">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -949,7 +949,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28charge%3AString%7CStripe%3A%3ACharge%3F%3Dnil%2Camount%3AInt32%3F%3Dnil%2Cmetadata%3AHash%3F%3Dnil%2Cpayment_intent%3AString%7CStripe%3A%3APaymentIntent%3F%3Dnil%2Creason%3AString%3F%3Dnil%29%3ARefundforallT%2CU-class-method" class="signature"><strong>.create</strong>(charge : String | Stripe::Charge? = <span class="n">nil</span>, amount : Int32? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, payment_intent : String | Stripe::PaymentIntent? = <span class="n">nil</span>, reason : String? = <span class="n">nil</span>) : Refund forall T, U</a>
+        <a href="#create%28charge%3AString%7CStripe%3A%3ACharge%7CNil%3Dnil%2Camount%3AInt32%7CNil%3Dnil%2Cmetadata%3AHash%7CNil%3Dnil%2Cpayment_intent%3AString%7CStripe%3A%3APaymentIntent%7CNil%3Dnil%2Creason%3AString%7CNil%3Dnil%29%3ARefundforallT%2CU-class-method" class="signature"><strong>.create</strong>(charge : String | Stripe::Charge | Nil = <span class="n">nil</span>, amount : Int32 | Nil = <span class="n">nil</span>, metadata : Hash | Nil = <span class="n">nil</span>, payment_intent : String | Stripe::PaymentIntent | Nil = <span class="n">nil</span>, reason : String | Nil = <span class="n">nil</span>) : Refund forall T, U</a>
         
       </li>
     
@@ -1002,7 +1002,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#balance_transaction%3AString%3F-instance-method" class="signature"><strong>#balance_transaction</strong> : String?</a>
+        <a href="#balance_transaction%3AString%7CNil-instance-method" class="signature"><strong>#balance_transaction</strong> : String | Nil</a>
         
       </li>
     
@@ -1022,12 +1022,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#failure_balance_transaction%3AString%3F-instance-method" class="signature"><strong>#failure_balance_transaction</strong> : String?</a>
+        <a href="#failure_balance_transaction%3AString%7CNil-instance-method" class="signature"><strong>#failure_balance_transaction</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#failure_reason%3AFailureReason%3F-instance-method" class="signature"><strong>#failure_reason</strong> : FailureReason?</a>
+        <a href="#failure_reason%3AFailureReason%7CNil-instance-method" class="signature"><strong>#failure_reason</strong> : FailureReason | Nil</a>
         
       </li>
     
@@ -1037,7 +1037,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
+        <a href="#metadata%3AHash%28String%2CString%29%7CNil-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String) | Nil</a>
         
       </li>
     
@@ -1047,17 +1047,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#reason%3AReason%3F-instance-method" class="signature"><strong>#reason</strong> : Reason?</a>
+        <a href="#reason%3AReason%7CNil-instance-method" class="signature"><strong>#reason</strong> : Reason | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#receipt_number%3AString%3F-instance-method" class="signature"><strong>#receipt_number</strong> : String?</a>
+        <a href="#receipt_number%3AString%7CNil-instance-method" class="signature"><strong>#receipt_number</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source_transfer_reversal%3AString%3F-instance-method" class="signature"><strong>#source_transfer_reversal</strong> : String?</a>
+        <a href="#source_transfer_reversal%3AString%7CNil-instance-method" class="signature"><strong>#source_transfer_reversal</strong> : String | Nil</a>
         
       </li>
     
@@ -1126,12 +1126,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="create(charge:String|Stripe::Charge?=nil,amount:Int32?=nil,metadata:Hash?=nil,payment_intent:String|Stripe::PaymentIntent?=nil,reason:String?=nil):RefundforallT,U-class-method">
+    <div class="entry-detail" id="create(charge:String|Stripe::Charge|Nil=nil,amount:Int32|Nil=nil,metadata:Hash|Nil=nil,payment_intent:String|Stripe::PaymentIntent|Nil=nil,reason:String|Nil=nil):RefundforallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(charge : String | <a href="../Stripe/Charge.html">Stripe::Charge</a>? = <span class="n">nil</span>, amount : Int32? = <span class="n">nil</span>, metadata : Hash? = <span class="n">nil</span>, payment_intent : String | <a href="../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a>? = <span class="n">nil</span>, reason : String? = <span class="n">nil</span>) : <a href="../Stripe/Refund.html">Refund</a> forall T, U
+        def self.<strong>create</strong>(charge : String | <a href="../Stripe/Charge.html">Stripe::Charge</a> | Nil = <span class="n">nil</span>, amount : Int32 | Nil = <span class="n">nil</span>, metadata : Hash | Nil = <span class="n">nil</span>, payment_intent : String | <a href="../Stripe/PaymentIntent.html">Stripe::PaymentIntent</a> | Nil = <span class="n">nil</span>, reason : String | Nil = <span class="n">nil</span>) : <a href="../Stripe/Refund.html">Refund</a> forall T, U
 
-        <a class="method-permalink" href="#create%28charge%3AString%7CStripe%3A%3ACharge%3F%3Dnil%2Camount%3AInt32%3F%3Dnil%2Cmetadata%3AHash%3F%3Dnil%2Cpayment_intent%3AString%7CStripe%3A%3APaymentIntent%3F%3Dnil%2Creason%3AString%3F%3Dnil%29%3ARefundforallT%2CU-class-method">#</a>
+        <a class="method-permalink" href="#create%28charge%3AString%7CStripe%3A%3ACharge%7CNil%3Dnil%2Camount%3AInt32%7CNil%3Dnil%2Cmetadata%3AHash%7CNil%3Dnil%2Cpayment_intent%3AString%7CStripe%3A%3APaymentIntent%7CNil%3Dnil%2Creason%3AString%7CNil%3Dnil%29%3ARefundforallT%2CU-class-method">#</a>
       </div>
       
       <br/>
@@ -1220,12 +1220,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="balance_transaction:String?-instance-method">
+    <div class="entry-detail" id="balance_transaction:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>balance_transaction</strong> : String?
+        def <strong>balance_transaction</strong> : String | Nil
 
-        <a class="method-permalink" href="#balance_transaction%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#balance_transaction%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1276,12 +1276,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="failure_balance_transaction:String?-instance-method">
+    <div class="entry-detail" id="failure_balance_transaction:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>failure_balance_transaction</strong> : String?
+        def <strong>failure_balance_transaction</strong> : String | Nil
 
-        <a class="method-permalink" href="#failure_balance_transaction%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#failure_balance_transaction%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1290,12 +1290,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="failure_reason:FailureReason?-instance-method">
+    <div class="entry-detail" id="failure_reason:FailureReason|Nil-instance-method">
       <div class="signature">
         
-        def <strong>failure_reason</strong> : <a href="../Stripe/Refund/FailureReason.html">FailureReason</a>?
+        def <strong>failure_reason</strong> : <a href="../Stripe/Refund/FailureReason.html">FailureReason</a> | Nil
 
-        <a class="method-permalink" href="#failure_reason%3AFailureReason%3F-instance-method">#</a>
+        <a class="method-permalink" href="#failure_reason%3AFailureReason%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1318,12 +1318,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="metadata:Hash(String,String)?-instance-method">
+    <div class="entry-detail" id="metadata:Hash(String,String)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>metadata</strong> : Hash(String, String)?
+        def <strong>metadata</strong> : Hash(String, String) | Nil
 
-        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1346,12 +1346,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="reason:Reason?-instance-method">
+    <div class="entry-detail" id="reason:Reason|Nil-instance-method">
       <div class="signature">
         
-        def <strong>reason</strong> : <a href="../Stripe/Refund/Reason.html">Reason</a>?
+        def <strong>reason</strong> : <a href="../Stripe/Refund/Reason.html">Reason</a> | Nil
 
-        <a class="method-permalink" href="#reason%3AReason%3F-instance-method">#</a>
+        <a class="method-permalink" href="#reason%3AReason%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1360,12 +1360,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="receipt_number:String?-instance-method">
+    <div class="entry-detail" id="receipt_number:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>receipt_number</strong> : String?
+        def <strong>receipt_number</strong> : String | Nil
 
-        <a class="method-permalink" href="#receipt_number%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#receipt_number%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1374,12 +1374,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="source_transfer_reversal:String?-instance-method">
+    <div class="entry-detail" id="source_transfer_reversal:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>source_transfer_reversal</strong> : String?
+        def <strong>source_transfer_reversal</strong> : String | Nil
 
-        <a class="method-permalink" href="#source_transfer_reversal%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#source_transfer_reversal%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>

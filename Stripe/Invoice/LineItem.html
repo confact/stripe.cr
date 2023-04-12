@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.5.0">
+<meta name="generator" content="Crystal Docs 1.6.2">
 <meta name="crystal_docs.project_version" content="1.5.0">
 <meta name="crystal_docs.project_name" content="stripe">
 
@@ -966,7 +966,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28customer%3AString%7CCustomer%2Ccurrency%3AString%2Camount%3AInt32%3F%3Dnil%2Cquantity%3AInt32%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cunit_amount%3AInt32%3F%3Dnil%2Cinvoice%3AString%7CInvoice%3F%3Dnil%2Csubscription%3AString%7CSubscription%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%29%3AInvoice%3A%3ALineItemforallT%2CU-class-method" class="signature"><strong>.create</strong>(customer : String | Customer, currency : String, amount : Int32? = <span class="n">nil</span>, quantity : Int32? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, unit_amount : Int32? = <span class="n">nil</span>, invoice : String | Invoice? = <span class="n">nil</span>, subscription : String | Subscription? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>) : Invoice::LineItem forall T, U</a>
+        <a href="#create%28customer%3AString%7CCustomer%2Ccurrency%3AString%2Camount%3AInt32%7CNil%3Dnil%2Cquantity%3AInt32%7CNil%3Dnil%2Cdescription%3AString%7CNil%3Dnil%2Cunit_amount%3AInt32%7CNil%3Dnil%2Cinvoice%3AString%7CInvoice%7CNil%3Dnil%2Csubscription%3AString%7CSubscription%7CNil%3Dnil%2Cmetadata%3AHash%28String%2CString%29%7CNil%3Dnil%29%3AInvoice%3A%3ALineItemforallT%2CU-class-method" class="signature"><strong>.create</strong>(customer : String | Customer, currency : String, amount : Int32 | Nil = <span class="n">nil</span>, quantity : Int32 | Nil = <span class="n">nil</span>, description : String | Nil = <span class="n">nil</span>, unit_amount : Int32 | Nil = <span class="n">nil</span>, invoice : String | Invoice | Nil = <span class="n">nil</span>, subscription : String | Subscription | Nil = <span class="n">nil</span>, metadata : Hash(String, String) | Nil = <span class="n">nil</span>) : Invoice::LineItem forall T, U</a>
         
       </li>
     
@@ -985,27 +985,27 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#amount%3AInt32%3F-instance-method" class="signature"><strong>#amount</strong> : Int32?</a>
+        <a href="#amount%3AInt32%7CNil-instance-method" class="signature"><strong>#amount</strong> : Int32 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created%3ATime%3F-instance-method" class="signature"><strong>#created</strong> : Time?</a>
+        <a href="#created%3ATime%7CNil-instance-method" class="signature"><strong>#created</strong> : Time | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#currency%3AString%3F-instance-method" class="signature"><strong>#currency</strong> : String?</a>
+        <a href="#currency%3AString%7CNil-instance-method" class="signature"><strong>#currency</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description%3AString%7CNil-instance-method" class="signature"><strong>#description</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#discountable%3ABool%3F-instance-method" class="signature"><strong>#discountable</strong> : Bool?</a>
+        <a href="#discountable%3ABool%7CNil-instance-method" class="signature"><strong>#discountable</strong> : Bool | Nil</a>
         
       </li>
     
@@ -1015,7 +1015,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#invoice_item%3AString%3F-instance-method" class="signature"><strong>#invoice_item</strong> : String?</a>
+        <a href="#invoice_item%3AString%7CNil-instance-method" class="signature"><strong>#invoice_item</strong> : String | Nil</a>
         
       </li>
     
@@ -1025,17 +1025,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String)?</a>
+        <a href="#metadata%3AHash%28String%2CString%29%7CNil-instance-method" class="signature"><strong>#metadata</strong> : Hash(String, String) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#period%3AHash%28String%2CInt32%29%3F-instance-method" class="signature"><strong>#period</strong> : Hash(String, Int32)?</a>
+        <a href="#period%3AHash%28String%2CInt32%29%7CNil-instance-method" class="signature"><strong>#period</strong> : Hash(String, Int32) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#price%3AStripe%3A%3APrice%3F-instance-method" class="signature"><strong>#price</strong> : Stripe::Price?</a>
+        <a href="#price%3AStripe%3A%3APrice%7CNil-instance-method" class="signature"><strong>#price</strong> : Stripe::Price | Nil</a>
         
       </li>
     
@@ -1055,17 +1055,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#subscription_item%3AString%3F-instance-method" class="signature"><strong>#subscription_item</strong> : String?</a>
+        <a href="#subscription_item%3AString%7CNil-instance-method" class="signature"><strong>#subscription_item</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#tax_rates%3AArray%28Stripe%3A%3ATaxRate%29%3F-instance-method" class="signature"><strong>#tax_rates</strong> : Array(Stripe::TaxRate)?</a>
+        <a href="#tax_rates%3AArray%28Stripe%3A%3ATaxRate%29%7CNil-instance-method" class="signature"><strong>#tax_rates</strong> : Array(Stripe::TaxRate) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type%3AString%3F-instance-method" class="signature"><strong>#type</strong> : String?</a>
+        <a href="#type%3AString%7CNil-instance-method" class="signature"><strong>#type</strong> : String | Nil</a>
         
       </li>
     
@@ -1145,12 +1145,12 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="create(customer:String|Customer,currency:String,amount:Int32?=nil,quantity:Int32?=nil,description:String?=nil,unit_amount:Int32?=nil,invoice:String|Invoice?=nil,subscription:String|Subscription?=nil,metadata:Hash(String,String)?=nil):Invoice::LineItemforallT,U-class-method">
+    <div class="entry-detail" id="create(customer:String|Customer,currency:String,amount:Int32|Nil=nil,quantity:Int32|Nil=nil,description:String|Nil=nil,unit_amount:Int32|Nil=nil,invoice:String|Invoice|Nil=nil,subscription:String|Subscription|Nil=nil,metadata:Hash(String,String)|Nil=nil):Invoice::LineItemforallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(customer : String | <a href="../../Stripe/Customer.html">Customer</a>, currency : String, amount : Int32? = <span class="n">nil</span>, quantity : Int32? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, unit_amount : Int32? = <span class="n">nil</span>, invoice : String | <a href="../../Stripe/Invoice.html">Invoice</a>? = <span class="n">nil</span>, subscription : String | <a href="../../Stripe/Subscription.html">Subscription</a>? = <span class="n">nil</span>, metadata : Hash(String, String)? = <span class="n">nil</span>) : <a href="../../Stripe/Invoice/LineItem.html">Invoice::LineItem</a> forall T, U
+        def self.<strong>create</strong>(customer : String | <a href="../../Stripe/Customer.html">Customer</a>, currency : String, amount : Int32 | Nil = <span class="n">nil</span>, quantity : Int32 | Nil = <span class="n">nil</span>, description : String | Nil = <span class="n">nil</span>, unit_amount : Int32 | Nil = <span class="n">nil</span>, invoice : String | <a href="../../Stripe/Invoice.html">Invoice</a> | Nil = <span class="n">nil</span>, subscription : String | <a href="../../Stripe/Subscription.html">Subscription</a> | Nil = <span class="n">nil</span>, metadata : Hash(String, String) | Nil = <span class="n">nil</span>) : <a href="../../Stripe/Invoice/LineItem.html">Invoice::LineItem</a> forall T, U
 
-        <a class="method-permalink" href="#create%28customer%3AString%7CCustomer%2Ccurrency%3AString%2Camount%3AInt32%3F%3Dnil%2Cquantity%3AInt32%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cunit_amount%3AInt32%3F%3Dnil%2Cinvoice%3AString%7CInvoice%3F%3Dnil%2Csubscription%3AString%7CSubscription%3F%3Dnil%2Cmetadata%3AHash%28String%2CString%29%3F%3Dnil%29%3AInvoice%3A%3ALineItemforallT%2CU-class-method">#</a>
+        <a class="method-permalink" href="#create%28customer%3AString%7CCustomer%2Ccurrency%3AString%2Camount%3AInt32%7CNil%3Dnil%2Cquantity%3AInt32%7CNil%3Dnil%2Cdescription%3AString%7CNil%3Dnil%2Cunit_amount%3AInt32%7CNil%3Dnil%2Cinvoice%3AString%7CInvoice%7CNil%3Dnil%2Csubscription%3AString%7CSubscription%7CNil%3Dnil%2Cmetadata%3AHash%28String%2CString%29%7CNil%3Dnil%29%3AInvoice%3A%3ALineItemforallT%2CU-class-method">#</a>
       </div>
       
       <br/>
@@ -1171,12 +1171,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="amount:Int32?-instance-method">
+    <div class="entry-detail" id="amount:Int32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>amount</strong> : Int32?
+        def <strong>amount</strong> : Int32 | Nil
 
-        <a class="method-permalink" href="#amount%3AInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#amount%3AInt32%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1185,12 +1185,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created:Time?-instance-method">
+    <div class="entry-detail" id="created:Time|Nil-instance-method">
       <div class="signature">
         
-        def <strong>created</strong> : Time?
+        def <strong>created</strong> : Time | Nil
 
-        <a class="method-permalink" href="#created%3ATime%3F-instance-method">#</a>
+        <a class="method-permalink" href="#created%3ATime%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1199,12 +1199,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="currency:String?-instance-method">
+    <div class="entry-detail" id="currency:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>currency</strong> : String?
+        def <strong>currency</strong> : String | Nil
 
-        <a class="method-permalink" href="#currency%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#currency%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1213,12 +1213,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String?-instance-method">
+    <div class="entry-detail" id="description:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : String?
+        def <strong>description</strong> : String | Nil
 
-        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1227,12 +1227,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="discountable:Bool?-instance-method">
+    <div class="entry-detail" id="discountable:Bool|Nil-instance-method">
       <div class="signature">
         
-        def <strong>discountable</strong> : Bool?
+        def <strong>discountable</strong> : Bool | Nil
 
-        <a class="method-permalink" href="#discountable%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#discountable%3ABool%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1255,12 +1255,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="invoice_item:String?-instance-method">
+    <div class="entry-detail" id="invoice_item:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>invoice_item</strong> : String?
+        def <strong>invoice_item</strong> : String | Nil
 
-        <a class="method-permalink" href="#invoice_item%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#invoice_item%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1283,12 +1283,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="metadata:Hash(String,String)?-instance-method">
+    <div class="entry-detail" id="metadata:Hash(String,String)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>metadata</strong> : Hash(String, String)?
+        def <strong>metadata</strong> : Hash(String, String) | Nil
 
-        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#metadata%3AHash%28String%2CString%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1297,12 +1297,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="period:Hash(String,Int32)?-instance-method">
+    <div class="entry-detail" id="period:Hash(String,Int32)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>period</strong> : Hash(String, Int32)?
+        def <strong>period</strong> : Hash(String, Int32) | Nil
 
-        <a class="method-permalink" href="#period%3AHash%28String%2CInt32%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#period%3AHash%28String%2CInt32%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1311,12 +1311,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="price:Stripe::Price?-instance-method">
+    <div class="entry-detail" id="price:Stripe::Price|Nil-instance-method">
       <div class="signature">
         
-        def <strong>price</strong> : <a href="../../Stripe/Price.html">Stripe::Price</a>?
+        def <strong>price</strong> : <a href="../../Stripe/Price.html">Stripe::Price</a> | Nil
 
-        <a class="method-permalink" href="#price%3AStripe%3A%3APrice%3F-instance-method">#</a>
+        <a class="method-permalink" href="#price%3AStripe%3A%3APrice%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1367,12 +1367,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="subscription_item:String?-instance-method">
+    <div class="entry-detail" id="subscription_item:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>subscription_item</strong> : String?
+        def <strong>subscription_item</strong> : String | Nil
 
-        <a class="method-permalink" href="#subscription_item%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#subscription_item%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1381,12 +1381,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="tax_rates:Array(Stripe::TaxRate)?-instance-method">
+    <div class="entry-detail" id="tax_rates:Array(Stripe::TaxRate)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>tax_rates</strong> : Array(<a href="../../Stripe/TaxRate.html">Stripe::TaxRate</a>)?
+        def <strong>tax_rates</strong> : Array(<a href="../../Stripe/TaxRate.html">Stripe::TaxRate</a>) | Nil
 
-        <a class="method-permalink" href="#tax_rates%3AArray%28Stripe%3A%3ATaxRate%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#tax_rates%3AArray%28Stripe%3A%3ATaxRate%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1395,12 +1395,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="type:String?-instance-method">
+    <div class="entry-detail" id="type:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>type</strong> : String?
+        def <strong>type</strong> : String | Nil
 
-        <a class="method-permalink" href="#type%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#type%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
