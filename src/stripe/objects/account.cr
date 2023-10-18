@@ -15,7 +15,7 @@ class Stripe::Account
     Standard
   end
 
-enum BusinessType
+  enum BusinessType
     Individual
     Company
     NonProfit
