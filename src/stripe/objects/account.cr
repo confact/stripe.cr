@@ -9,13 +9,20 @@ class Stripe::Account
 
   getter id : String
 
-  enum BusinessType
+  enum Type
+    Custom
+    Express
+    Standard
+  end
+
+enum BusinessType
     Individual
     Company
     NonProfit
     GovernmentEntity
   end
 
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Account::BusinessType))]
   getter business_type : BusinessType?
 
   class Capabilities
@@ -307,7 +314,9 @@ class Stripe::Account
   end
 
   getter tos_acceptance : TOSAcceptance?
-  getter type : String?
+
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Account::Type))]
+  getter type : Stripe::Account::Type?
 
   class BusinessProfile
     include JSON::Serializable
