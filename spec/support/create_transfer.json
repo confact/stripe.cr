@@ -1,0 +1,24 @@
+{
+  "id": "tr_1O35gKA10aTTSdypCEXB1LV7",
+  "object": "transfer",
+  "amount": 400,
+  "amount_reversed": 0,
+  "balance_transaction": "txn_1GdnI0A10aTTSdypuNTGblaz",
+  "created": 1697758272,
+  "currency": "usd",
+  "description": null,
+  "destination": "acct_1GdkO0A10aTTSdyp",
+  "destination_payment": "py_OqnGUy20Pcr9u3",
+  "livemode": false,
+  "metadata": {},
+  "reversals": {
+    "object": "list",
+    "data": [],
+    "has_more": false,
+    "url": "/v1/transfers/tr_1O35gKA10aTTSdypCEXB1LV7/reversals"
+  },
+  "reversed": false,
+  "source_transaction": null,
+  "source_type": "card",
+  "transfer_group": "ORDER_95"
+}
