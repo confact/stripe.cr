@@ -305,7 +305,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [x] Account
 
-- [ ] Login link
+- [x] Account link
 
 - [ ] Application fee refund
 
@@ -315,7 +315,7 @@ But follow [https://stripe.com/docs/billing/subscriptions/set-up-subscription](h
 
 - [ ] Top-up
 
-- [ ] Transfer
+- [x] Transfer
 
 - [ ] Transfer reversal
 
