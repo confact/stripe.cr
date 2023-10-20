@@ -144,7 +144,23 @@ class Stripe::Account
     end
 
     getter verification : Verification?
+
+    def initialize(@name, @address = nil, @phone = nil)
+    end
+
+    def to_h
+      data = Hash(String, String | Bool | Hash(String, String | Nil) | Nil).new
+      {% for x in %w(directors_provided executives_provided name owners_provided phone tax_id_provided tax_id_registrar vat_id_provided ) %}
+        data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+      {% end %}
+      if a = address
+        data["address"] = a.to_h
+      end
+      data
+    end
   end
+
+  getter company : Company?
 
   getter country : String?
   getter email : String?
@@ -152,7 +168,7 @@ class Stripe::Account
   class Individual
     include JSON::Serializable
 
-    getter id : String
+    getter id : String?
     getter object : String = "person"
     getter account : String?
     getter address : Stripe::Address?
@@ -296,6 +312,20 @@ class Stripe::Account
     end
 
     getter verification : Verification?
+
+    def initialize(@first_name, @last_name, @maiden_name = nil, @address = nil, @phone = nil, @email = nil)
+    end
+
+    def to_h
+      data = Hash(String, String | Bool | Nil | Hash(String, String | Nil)).new
+      {% for x in %w(email first_name gender last_name maiden_name nationality phone ) %}
+        data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+      {% end %}
+      if a = address
+        data["address"] = a.to_h
+      end
+      data
+    end
   end
 
   getter individual : Individual?

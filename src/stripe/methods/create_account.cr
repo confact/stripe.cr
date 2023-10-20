@@ -5,8 +5,8 @@ class Stripe::Account
     email : String? = nil,
     capabilities : Array(String)? = nil,
     business_type : String | Stripe::Account::BusinessType? = nil,
-    company : Stripe::Account::Individual? = nil,
-    individual : Stripe::Account::Company? = nil,
+    company : Stripe::Account::Company? = nil,
+    individual : Stripe::Account::Individual? = nil,
     metadata : Hash? = nil,
     tos_acceptance : Stripe::Account::TOSAcceptance? = nil,
     default_currency : String? = nil,
@@ -18,7 +18,7 @@ class Stripe::Account
     type = type.to_s.downcase if type.is_a?(Stripe::Account::Type)
     business_type = business_type.to_s.downcase if business_type.is_a?(Stripe::Account::BusinessType)
 
-    {% for x in %w(type country email business_type company individual metadata tos_acceptance default_currency settings) %}
+    {% for x in %w(type country email business_type metadata tos_acceptance default_currency settings) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
@@ -28,6 +28,9 @@ class Stripe::Account
         builder.add("capabilities[#{capability.downcase}][requested]", true)
       end
     end
+
+    builder.add("company", company.to_h) if company.is_a?(Stripe::Account::Company)
+    builder.add("individual", individual.to_h) if individual.is_a?(Stripe::Account::Individual)
 
     response = Stripe.client.post("/v1/accounts", form: io.to_s)
 
