@@ -1,6 +1,6 @@
 class Stripe::Account
-  def self.create(
-    type : String | Stripe::Account::Type,
+  def self.update(
+    account : String | Stripe::Account,
     country : String? = nil,
     email : String? = nil,
     capabilities : Array(String)? = nil,
@@ -15,10 +15,11 @@ class Stripe::Account
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    type = type.to_s.downcase if type.is_a?(Stripe::Account::Type)
-    business_type = business_type.to_s.downcase if business_type.is_a?(Stripe::Account::BusinessType)
+    account = account.id if account.is_a?(Account)
 
-    {% for x in %w(type country email business_type metadata default_currency settings) %}
+    business_type = business_type.to_s.downcase if business_type.is_a?(Account::BusinessType)
+
+    {% for x in %w(country email business_type metadata default_currency settings) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
@@ -29,11 +30,11 @@ class Stripe::Account
       end
     end
 
-    builder.add("company", company.to_h) if company.is_a?(Stripe::Account::Company)
-    builder.add("individual", individual.to_h) if individual.is_a?(Stripe::Account::Individual)
+    builder.add("company", company.to_h) if company.is_a?(Account::Company)
+    builder.add("individual", individual.to_h) if individual.is_a?(Account::Individual)
     builder.add("tos_acceptance", tos_acceptance.to_h) if tos_acceptance.is_a?(Account::TOSAcceptance)
 
-    response = Stripe.client.post("/v1/accounts", form: io.to_s)
+    response = Stripe.client.post("/v1/accounts/#{account}", form: io.to_s)
 
     if response.status_code == 200
       Account.from_json(response.body)

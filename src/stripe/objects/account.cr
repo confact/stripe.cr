@@ -341,6 +341,20 @@ class Stripe::Account
     getter ip : String?
     getter service_agreement : String?
     getter user_agent : String?
+
+    def initialize(@date, @ip, @service_agreement = nil, @user_agent = nil)
+    end
+
+    def to_h
+      data = Hash(String, String | Int32 | Nil).new
+      {% for x in %w(ip service_agreement user_agent) %}
+        data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+      {% end %}
+      if accepted_date = date
+        data["date"] = accepted_date.to_unix.to_i
+      end
+      data
+    end
   end
 
   getter tos_acceptance : TOSAcceptance?
