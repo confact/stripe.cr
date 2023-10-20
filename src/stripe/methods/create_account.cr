@@ -1,10 +1,10 @@
 class Stripe::Account
   def self.create(
-    type : Stripe::Account::Type,
+    type : String | Stripe::Account::Type,
     country : String? = nil,
     email : String? = nil,
-    capabilities : Stripe::Account::Capabilities? = nil,
-    business_type : Stripe::Account::BusinessType? = nil,
+    capabilities : Array(String)? = nil,
+    business_type : String | Stripe::Account::BusinessType? = nil,
     company : Stripe::Account::Individual? = nil,
     individual : Stripe::Account::Company? = nil,
     metadata : Hash? = nil,
@@ -15,11 +15,19 @@ class Stripe::Account
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    type = type.to_s.downcase
+    type = type.to_s.downcase if type.is_a?(Stripe::Account::Type)
+    business_type = business_type.to_s.downcase if business_type.is_a?(Stripe::Account::BusinessType)
 
-    {% for x in %w(type country email capabilities business_type company individual metadata tos_acceptance default_currency settings) %}
+    {% for x in %w(type country email business_type company individual metadata tos_acceptance default_currency settings) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
+
+    if capabilities.is_a?(Array)
+      capabilities.each do |capability|
+        # tried fancier invocations like Hash{capability.downcase => {"requested" => true}} but broke the tests
+        builder.add("capabilities[#{capability.downcase}][requested]", true)
+      end
+    end
 
     response = Stripe.client.post("/v1/accounts", form: io.to_s)
 
