@@ -277,6 +277,7 @@ class Stripe::Account
         end
 
         getter code : Code?
+        getter detailed_code : String?
         getter reason : String?
         getter requirement : String?
       end
