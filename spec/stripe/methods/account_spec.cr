@@ -29,6 +29,7 @@ describe Stripe::Account do
         phone: "111-2222",
         email: "johhnydoe@example.com",
       ),
+      settings: Stripe::Account::Settings.from_json %({"payments": {"statement_descriptor": "Revshare"}})
     )
     account.id.should eq("acct_7772D82eZvKYlo2C")
   end
@@ -56,7 +57,8 @@ describe Stripe::Account do
         date: Time.local,
         ip: "127.0.0.1",
         user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3018",
-      )
+      ),
+      settings: Stripe::Account::Settings.from_json %({"payments": {"statement_descriptor": "Revshare"}})
     )
     account.id.should eq("acct_7772D82eZvKYlo2C")
   end

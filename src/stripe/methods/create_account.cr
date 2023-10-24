@@ -18,9 +18,13 @@ class Stripe::Account
     type = type.to_s.downcase if type.is_a?(Stripe::Account::Type)
     business_type = business_type.to_s.downcase if business_type.is_a?(Stripe::Account::BusinessType)
 
-    {% for x in %w(type country email business_type metadata default_currency settings) %}
+    {% for x in %w(type country email business_type metadata default_currency) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
+
+    if s = settings
+      builder.add "settings", s.to_json
+    end
 
     if capabilities.is_a?(Array)
       capabilities.each do |capability|
