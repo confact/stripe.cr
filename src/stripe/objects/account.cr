@@ -145,12 +145,11 @@ class Stripe::Account
 
     getter verification : Verification?
 
-    def initialize(@name, @address = nil, @phone = nil)
-    end
+    def initialize(@name, @address = nil, @phone = nil); end
 
     def to_h
       data = Hash(String, String | Bool | Hash(String, String | Nil) | Nil).new
-      {% for x in %w(directors_provided executives_provided name owners_provided phone tax_id_provided tax_id_registrar vat_id_provided ) %}
+      {% for x in %w(directors_provided executives_provided name owners_provided phone tax_id_provided tax_id_registrar vat_id_provided) %}
         data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
       {% end %}
       if a = address
@@ -354,12 +353,11 @@ class Stripe::Account
 
     getter verification : Verification?
 
-    def initialize(@first_name, @last_name, @maiden_name = nil, @address = nil, @phone = nil, @email = nil)
-    end
+    def initialize(@first_name, @last_name, @maiden_name = nil, @address = nil, @phone = nil, @email = nil); end
 
     def to_h
       data = Hash(String, String | Bool | Nil | Hash(String, String | Nil)).new
-      {% for x in %w(email first_name gender last_name maiden_name nationality phone ) %}
+      {% for x in %w(email first_name gender last_name maiden_name nationality phone) %}
         data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
       {% end %}
       if a = address
@@ -383,8 +381,7 @@ class Stripe::Account
     getter service_agreement : String?
     getter user_agent : String?
 
-    def initialize(@date, @ip, @service_agreement = nil, @user_agent = nil)
-    end
+    def initialize(@date, @ip, @service_agreement = nil, @user_agent = nil); end
 
     def to_h
       data = Hash(String, String | Int32 | Nil).new
@@ -441,6 +438,8 @@ class Stripe::Account
     class BacsDebitPayments
       include JSON::Serializable
       getter display_name : String?
+
+      def initialize(@display_name = nil); end
     end
 
     getter bacs_debit_payments : BacsDebitPayments?
@@ -451,6 +450,8 @@ class Stripe::Account
       getter logo : String? # expandable file_object
       getter primary_color : String?
       getter secondary_color : String?
+
+      def initialize(@icon = nil, @logo = nil, @primary_color = nil, @secondary_color = nil); end
     end
 
     getter branding : Branding?
@@ -458,6 +459,8 @@ class Stripe::Account
     class CardIssuing
       include JSON::Serializable
       getter tos_acceptance : TOSAcceptance?
+
+      def initialize(@tos_acceptance = nil); end
     end
 
     getter card_issuing : CardIssuing?
@@ -469,10 +472,14 @@ class Stripe::Account
         include JSON::Serializable
         getter avs_failure : Bool?
         getter cvc_failure : Bool?
+
+        def initialize(@avs_failure = nil, @cvc_failure = nil); end
       end
 
       getter decline_on : DeclineOn?
       getter statement_descriptor_prefix : String?
+
+      def initialize(@decline_on = nil, @statement_descriptor_prefix = nil); end
     end
 
     getter card_payments : CardPayments?
@@ -481,6 +488,8 @@ class Stripe::Account
       include JSON::Serializable
       getter display_name : String?
       getter timezone : String?
+
+      def initialize(@display_name = nil, @timezone = nil); end
     end
 
     getter dashboard : Dashboard?
@@ -491,6 +500,8 @@ class Stripe::Account
       getter statement_descriptor : String?
       getter statement_descriptor_kana : String?
       getter statement_descriptor_kanji : String?
+
+      def initialize(@statement_descriptor = nil, @statement_descriptor_kana = nil, @statement_descriptor_kanji = nil); end
     end
 
     getter payments : Payments?
@@ -506,10 +517,14 @@ class Stripe::Account
         getter interval : String?
         getter monthly_anchor : Int32?
         getter weekly_anchor : String?
+
+        def initialize(@delay_days = nil, @interval = nil, @monthly_anchor = nil, @weekly_anchor = nil); end
       end
 
       getter schedule : Schedule?
       getter statement_descriptor : String?
+
+      def initialize(@schedule = nil, @statement_descriptor = nil); end
     end
 
     getter payouts : Payouts?
@@ -517,9 +532,13 @@ class Stripe::Account
     class SepaDebitPayments
       include JSON::Serializable
       getter creditor_id : String?
+
+      def initialize(@creditor_id = nil); end
     end
 
     getter sepa_debit_payments : SepaDebitPayments?
+
+    def initialize(@bacs_debit_payments = nil, @branding = nil, @card_issuing = nil, @card_payments = nil, @dashboard = nil, @payments = nil, @payouts = nil, @sepa_debit_payments = nil); end
   end
 
   getter settings : Settings?
