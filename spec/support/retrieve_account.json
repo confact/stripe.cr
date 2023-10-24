@@ -44,7 +44,14 @@
       "tos_acceptance.ip"
     ],
     "disabled_reason": "requirements.past_due",
-    "errors": [],
+    "errors": [
+      {
+        "code": "invalid_format",
+        "detailed_code": "invalid_statement_descriptor_business_mismatch",
+        "reason": "Your statement descriptor must be similar to your business name, legal entity name, or ",
+        "requirement": "settings.payments.statement_descriptor"
+      }
+    ],
     "eventually_due": [
       "business_profile.product_description",
       "business_profile.support_phone",
@@ -55,6 +62,29 @@
     ],
     "past_due": [],
     "pending_verification": []
+  },
+  "future_requirements": {
+    "alternatives": [],
+    "current_deadline": null,
+    "currently_due": [
+      "settings.payments.statement_descriptor"
+    ],
+    "disabled_reason": null,
+    "errors": [
+      {
+        "code": "invalid_format",
+        "detailed_code": "invalid_statement_descriptor_business_mismatch",
+        "reason": "Your statement descriptor must be similar to your business name, legal entity name, or ",
+        "requirement": "settings.payments.statement_descriptor"
+      }
+    ],
+    "eventually_due": [
+      "settings.payments.statement_descriptor"
+    ],
+    "past_due": [],
+    "pending_verification": [
+      "business_profile.url"
+    ]
   },
   "settings": {
     "bacs_debit_payments": {},

@@ -231,7 +231,9 @@ class Stripe::Account
         enum Code
           InvalidAddressCityStatePostalCode
           InvalidStreetAddress
+          InvalidTosAcceptance
           InvalidValueOther
+          InvalidRepresentativeCountry
           VerificationDocumentAddressMismatch
           VerificationDocumentAddressMissing
           VerificationDocumentCorrupt
@@ -268,16 +270,54 @@ class Stripe::Account
           VerificationFailedKeyedIdentity
           VerificationFailedKeyedMatch
           VerificationFailedNameMatch
+          VerifcationFailedResidentialAddress
           VerificationFailedTaxIdMatch
           VerificationFailedTaxIdNotIssued
           VerificationFailedOther
           VerificationMissingOwners
           VerificationMissingExecutives
           VerificationRequiresAdditionalMemorandumOfAssociations
+          VerificationMissingDirectors
+          VerificationDirectorsMismatch
+          VerificationExtraneousDirectors
+          VerificationDocumentDirectorsMismatch
+          InvalidDobAgeUnder18
+          InvalidDobAgeUnderMinimum
+          InvalidBusinessProfileName
+          InvalidStatementDescriptorDenylisted
+          InvalidStatementDescriptorPrefixDenylisted
+          InvalidStatementDescriptorLength
+          InvalidStatementDescriptorBusinessMismatch
+          InvalidStatementDescriptorPrefixMismatch
+          InvalidUrlFormat
+          InvalidUrlDenylisted
+          InvalidTaxId
+          InvalidUrlWebsiteInaccessible
+          InvalidUrlWebPresenceDetected
+          InvalidUrlWebsiteOther
+          InvalidUrlWebsiteIncomplete
+          InvalidUrlWebsiteIncompleteCustomerServiceDetails
+          InvalidUrlWebsiteIncompleteReturnPolicy
+          InvalidUrlWebsiteIncompleteRefundPolicy
+          InvalidUrlWebsiteIncompleteCancellationPolicy
+          InvalidUrlWebsiteIncompleteLegalRestrictions
+          InvalidUrlWebsiteIncompleteTermsAndConditions
+          InvalidUrlWebsiteIncompleteUnderConstruction
+          InvalidUrlWebsiteInaccessiblePasswordProtected
+          InvalidUrlWebsiteInaccessibleGeoblocked
+          InvalidUrlWebsiteEmpty
+          InvalidUrlWebsiteBusinessInformationMismatch
+          InvalidTaxIdFormat
+          InvalidBusinessProfileNameDenylisted
+          InvalidCompanyNameDenylisted
+          InvalidDobAgeOverMaximum
+          InvalidProductDescriptionLength
+          InvalidProductDescriptionUrlMatch
+          InvalidAddressHighwayContractBox
+          InvalidAddressPrivateMailbox
         end
 
-        getter code : Code?
-        getter detailed_code : String?
+        getter code : String?
         getter reason : String?
         getter requirement : String?
       end
