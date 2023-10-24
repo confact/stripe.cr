@@ -356,7 +356,7 @@ class Stripe::Account
     def initialize(@first_name, @last_name, @maiden_name = nil, @address = nil, @phone = nil, @email = nil); end
 
     def to_h
-      data = Hash(String, String | Bool | Nil | Hash(String, String | Nil)).new
+      data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Nil)).new
       {% for x in %w(email first_name gender last_name maiden_name nationality phone) %}
         data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
       {% end %}
@@ -384,7 +384,7 @@ class Stripe::Account
     def initialize(@date, @ip, @service_agreement = nil, @user_agent = nil); end
 
     def to_h
-      data = Hash(String, String | Int32 | Nil).new
+      data = Hash(String, String | Bool | Int32 | Nil).new
       {% for x in %w(ip service_agreement user_agent) %}
         data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
       {% end %}
@@ -440,6 +440,14 @@ class Stripe::Account
       getter display_name : String?
 
       def initialize(@display_name = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(display_name) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+        data
+      end
     end
 
     getter bacs_debit_payments : BacsDebitPayments?
@@ -452,6 +460,14 @@ class Stripe::Account
       getter secondary_color : String?
 
       def initialize(@icon = nil, @logo = nil, @primary_color = nil, @secondary_color = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(icon logo primary_color secondary_color) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+        data
+      end
     end
 
     getter branding : Branding?
@@ -461,6 +477,14 @@ class Stripe::Account
       getter tos_acceptance : TOSAcceptance?
 
       def initialize(@tos_acceptance = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        if submodel = tos_acceptance
+          data["tos_acceptance"] = submodel.to_h
+        end
+        data
+      end
     end
 
     getter card_issuing : CardIssuing?
@@ -474,12 +498,34 @@ class Stripe::Account
         getter cvc_failure : Bool?
 
         def initialize(@avs_failure = nil, @cvc_failure = nil); end
+
+        def to_h
+          data = Hash(String, String | Bool | Int32 | Nil).new
+          {% for x in %w(avs_failure cvc_failure) %}
+            data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+          {% end %}
+
+          data
+        end
       end
 
       getter decline_on : DeclineOn?
       getter statement_descriptor_prefix : String?
 
       def initialize(@decline_on = nil, @statement_descriptor_prefix = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(statement_descriptor_prefix) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+
+        if submodel = decline_on
+          data["decline_on"] = submodel.to_h
+        end
+
+        data
+      end
     end
 
     getter card_payments : CardPayments?
@@ -490,6 +536,14 @@ class Stripe::Account
       getter timezone : String?
 
       def initialize(@display_name = nil, @timezone = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(display_name timezone) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+        data
+      end
     end
 
     getter dashboard : Dashboard?
@@ -502,6 +556,14 @@ class Stripe::Account
       getter statement_descriptor_kanji : String?
 
       def initialize(@statement_descriptor = nil, @statement_descriptor_kana = nil, @statement_descriptor_kanji = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(statement_descriptor statement_descriptor_kana statement_descriptor_kanji) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+        data
+      end
     end
 
     getter payments : Payments?
@@ -519,12 +581,33 @@ class Stripe::Account
         getter weekly_anchor : String?
 
         def initialize(@delay_days = nil, @interval = nil, @monthly_anchor = nil, @weekly_anchor = nil); end
+
+        def to_h
+          data = Hash(String, String | Bool | Int32 | Nil).new
+          {% for x in %w(delay_days interval monthly_anchor weekly_anchor) %}
+            data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+          {% end %}
+          data
+        end
       end
 
       getter schedule : Schedule?
       getter statement_descriptor : String?
 
       def initialize(@schedule = nil, @statement_descriptor = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(statement_descriptor) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+
+        if s = schedule
+          data["schedule"] = s.to_h
+        end
+
+        data
+      end
     end
 
     getter payouts : Payouts?
@@ -534,11 +617,29 @@ class Stripe::Account
       getter creditor_id : String?
 
       def initialize(@creditor_id = nil); end
+
+      def to_h
+        data = Hash(String, String | Bool | Int32 | Nil | Hash(String, String | Bool | Int32 | Nil)).new
+        {% for x in %w(creditor_id) %}
+          data[{{x}}] = {{x.id}} unless {{x.id}}.nil?
+        {% end %}
+        data
+      end
     end
 
     getter sepa_debit_payments : SepaDebitPayments?
 
     def initialize(@bacs_debit_payments = nil, @branding = nil, @card_issuing = nil, @card_payments = nil, @dashboard = nil, @payments = nil, @payouts = nil, @sepa_debit_payments = nil); end
+
+    def to_h
+      data = Hash(String, Hash(String, String | Int32 | Bool | Nil | Hash(String, String | Bool | Int32 | Nil))).new
+      {% for x in %w(bacs_debit_payments branding card_issuing card_payments dashboard payments sepa_debit_payments) %}
+        if subrecord = {{x.id}}
+          data[{{x}}] = subrecord.to_h
+        end
+      {% end %}
+      data
+    end
   end
 
   getter settings : Settings?

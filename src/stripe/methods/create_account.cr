@@ -23,7 +23,7 @@ class Stripe::Account
     {% end %}
 
     if s = settings
-      builder.add "settings", s.to_json
+      builder.add "settings", s.to_h
     end
 
     if capabilities.is_a?(Array)
