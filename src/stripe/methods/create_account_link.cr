@@ -2,14 +2,15 @@ class Stripe::AccountLink
   def self.create(
     account : String | Stripe::Account,
     refresh_url : String,
-    return_url : String
+    return_url : String,
+    type : String = "account_onboarding"
   ) : AccountLink forall T, U
     account = account.id if account.is_a?(Stripe::Account)
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)
 
-    {% for x in %w(account refresh_url return_url) %}
+    {% for x in %w(account refresh_url return_url type) %}
         builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
       {% end %}
 
