@@ -5,6 +5,29 @@ class Stripe::Checkout::Session
   include JSON::Serializable
   include StripeMethods
 
+  # Nested structures for customer_details
+  class CustomerAddress
+    include JSON::Serializable
+    
+    getter city : String?
+    getter country : String?
+    getter line1 : String?
+    getter line2 : String?
+    getter postal_code : String?
+    getter state : String?
+  end
+
+  class CustomerDetails
+    include JSON::Serializable
+    
+    getter address : CustomerAddress?
+    getter email : String?
+    getter name : String?
+    getter phone : String?
+    getter tax_exempt : String?
+    getter tax_ids : Array(String)?
+  end
+
   add_retrieve_method
   add_list_method(
     payment_intent : String? | Stripe::PaymentIntent? = nil,
@@ -83,7 +106,7 @@ class Stripe::Checkout::Session
   
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::CustomerCreation))]
   getter customer_creation : CustomerCreation?
-  getter customer_details : Hash(String, String | Hash(String, String) | Array(String)?)?
+  getter customer_details : CustomerDetails?
   getter discounts : Array(Hash(String, JSON::Any))?
   getter expires_at : Int64?
   getter invoice : String? | Stripe::Invoice?
