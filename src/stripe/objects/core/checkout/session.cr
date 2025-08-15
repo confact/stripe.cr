@@ -8,7 +8,7 @@ class Stripe::Checkout::Session
   # Nested structures for customer_details
   class CustomerAddress
     include JSON::Serializable
-    
+
     getter city : String?
     getter country : String?
     getter line1 : String?
