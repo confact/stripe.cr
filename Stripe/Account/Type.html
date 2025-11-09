@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="stripe">
-  <title>Stripe::Balance::Funds - stripe 1.6.0</title>
+  <title>Stripe::Account::Type - stripe 1.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -97,7 +97,7 @@
       
         <ul>
   
-  <li class="parent " data-id="stripe/Stripe/Account" data-name="stripe::account">
+  <li class="parent open current" data-id="stripe/Stripe/Account" data-name="stripe::account">
       <a href="../../Stripe/Account.html">Account</a>
       
         <ul>
@@ -312,7 +312,7 @@
       
     </li>
   
-  <li class=" " data-id="stripe/Stripe/Account/Type" data-name="stripe::account::type">
+  <li class=" current" data-id="stripe/Stripe/Account/Type" data-name="stripe::account::type">
       <a href="../../Stripe/Account/Type.html">Type</a>
       
     </li>
@@ -332,12 +332,12 @@
       
     </li>
   
-  <li class="parent open current" data-id="stripe/Stripe/Balance" data-name="stripe::balance">
+  <li class="parent " data-id="stripe/Stripe/Balance" data-name="stripe::balance">
       <a href="../../Stripe/Balance.html">Balance</a>
       
         <ul>
   
-  <li class=" current" data-id="stripe/Stripe/Balance/Funds" data-name="stripe::balance::funds">
+  <li class=" " data-id="stripe/Stripe/Balance/Funds" data-name="stripe::balance::funds">
       <a href="../../Stripe/Balance/Funds.html">Funds</a>
       
     </li>
@@ -912,13 +912,12 @@
 <h1 class="type-name">
 
   <span class="kind">
-    class
-  </span> Stripe::<wbr>Balance::<wbr>Funds
+    enum
+  </span> Stripe::<wbr>Account::<wbr>Type
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Stripe/Balance/Funds.html">Stripe::Balance::Funds</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -927,21 +926,6 @@
 
 
 
-
-
-  <h2>
-    <a id="included-modules" class="anchor" href="#included-modules">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Included Modules
-  </h2>
-  <ul class="other-types-list">
-    
-      <li class="other-type">JSON::Serializable</li>
-    
-  </ul>
 
 
 
@@ -962,38 +946,45 @@
   </h2>
   
     
-      stripe/objects/core/balance.cr
+      stripe/objects/account.cr
     
     <br/>
   
 
 
 
-
-
   
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
+      Enum Members
+    </h2>
+  
+  <dl>
     
-      <li class="entry-summary">
-        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
-        
-      </li>
+      <dt class="entry-const" id="Custom">
+        <strong>Custom</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
     
-      <li class="entry-summary">
-        <a href="#new%28%2A%2C__pull_for_json_serializablepull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(*, __pull_for_json_serializable pull : JSON::PullParser)</a>
-        
-      </li>
+      <dt class="entry-const" id="Express">
+        <strong>Express</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
     
-  </ul>
+      <dt class="entry-const" id="Standard">
+        <strong>Standard</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+  </dl>
 
+
+
+  
 
   
 
@@ -1011,17 +1002,23 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#amount%3AInt32-instance-method" class="signature"><strong>#amount</strong> : Int32</a>
+        <a href="#custom%3F-instance-method" class="signature"><strong>#custom?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Stripe/Account/Type.html#Custom">Custom</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#currency%3AString-instance-method" class="signature"><strong>#currency</strong> : String</a>
+        <a href="#express%3F-instance-method" class="signature"><strong>#express?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Stripe/Account/Type.html#Express">Express</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source_types%3AHash%28String%2CInt32%29%7CNil-instance-method" class="signature"><strong>#source_types</strong> : Hash(String, Int32) | Nil</a>
+        <a href="#standard%3F-instance-method" class="signature"><strong>#standard?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../../Stripe/Account/Type.html#Standard">Standard</a></code></p></div>
         
       </li>
     
@@ -1070,47 +1067,22 @@
 
 
     
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
   </div>
 
   
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(pull : JSON::PullParser)
-
-        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(*,__pull_for_json_serializablepull:JSON::PullParser)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(*, __pull_for_json_serializable pull : JSON::PullParser)
-
-        <a class="method-permalink" href="#new%28%2A%2C__pull_for_json_serializablepull%3AJSON%3A%3APullParser%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-
 
   
 
@@ -1126,13 +1098,18 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="amount:Int32-instance-method">
+    <div class="entry-detail" id="custom?-instance-method">
       <div class="signature">
         
-        def <strong>amount</strong> : Int32
+        def <strong>custom?</strong>
 
-        <a class="method-permalink" href="#amount%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#custom%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Stripe/Account/Type.html#Custom">Custom</a></code></p>
+        </div>
       
       <br/>
       <div>
@@ -1140,13 +1117,18 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="currency:String-instance-method">
+    <div class="entry-detail" id="express?-instance-method">
       <div class="signature">
         
-        def <strong>currency</strong> : String
+        def <strong>express?</strong>
 
-        <a class="method-permalink" href="#currency%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#express%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Stripe/Account/Type.html#Express">Express</a></code></p>
+        </div>
       
       <br/>
       <div>
@@ -1154,13 +1136,18 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="source_types:Hash(String,Int32)|Nil-instance-method">
+    <div class="entry-detail" id="standard?-instance-method">
       <div class="signature">
         
-        def <strong>source_types</strong> : Hash(String, Int32) | Nil
+        def <strong>standard?</strong>
 
-        <a class="method-permalink" href="#source_types%3AHash%28String%2CInt32%29%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#standard%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../../Stripe/Account/Type.html#Standard">Standard</a></code></p>
+        </div>
       
       <br/>
       <div>
