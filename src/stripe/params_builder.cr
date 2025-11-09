@@ -13,7 +13,7 @@ class Stripe::ParamsBuilder < HTTP::Params::Builder
     end
   end
 
-  def add(key, value : Number | Bool)
+  def add(key, value : Int32 | Int64 | Bool)
     add(key, value.to_s)
   end
 
