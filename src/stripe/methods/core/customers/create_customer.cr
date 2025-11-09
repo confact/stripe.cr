@@ -18,14 +18,14 @@ class Stripe::Customer
   ) : Customer forall T, U
     case source
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
-      source = source.not_nil!.id
+      source = source.id
     when Nil
       source = nil
     end
 
     case payment_method
     when Token, Stripe::PaymentMethod
-      payment_method = payment_method.not_nil!.id
+      payment_method = payment_method.id
     when Nil
       payment_method = nil
     end

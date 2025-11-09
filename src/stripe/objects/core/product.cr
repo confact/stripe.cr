@@ -17,7 +17,7 @@ class Stripe::Product
   getter id : String
 
   getter name : String
-  getter active : Bool
+  getter? active : Bool
   getter description : String?
   getter metadata : Hash(String, String)?
 
@@ -27,7 +27,7 @@ class Stripe::Product
   @[JSON::Field(converter: Time::EpochConverter)]
   getter updated : Time
 
-  getter livemode : Bool
+  getter? livemode : Bool
   getter statement_descriptor : String?
   getter type : String
   getter unit_label : String?

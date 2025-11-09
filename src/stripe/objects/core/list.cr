@@ -3,11 +3,11 @@ class Stripe::List(T)
   include Enumerable(T)
 
   getter data : Array(T)
-  getter has_more : Bool
+  getter? has_more : Bool
   getter total_count : Int32?
   getter url : String
 
-  def each(&block)
+  def each(&)
     data.each do |i|
       yield i
     end

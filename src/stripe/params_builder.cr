@@ -27,7 +27,7 @@ class Stripe::ParamsBuilder < HTTP::Params::Builder
       else
         if path
           _path = path.dup.push(k.to_s)
-          _key = _path.first + _path[1..-1].join("") { |p| "[#{p}]" }
+          _key = _path.first + _path[1..-1].join("") { |path_part| "[#{path_part}]" }
         else
           _key = "#{key}[#{k}]"
         end

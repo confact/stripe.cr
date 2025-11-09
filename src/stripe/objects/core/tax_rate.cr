@@ -6,10 +6,10 @@ class Stripe::TaxRate
   add_retrieve_method
 
   getter id : String
-  getter inclusive : Bool
+  getter? inclusive : Bool
   getter object : String?
   getter customer : String?
-  getter active : Bool
+  getter? active : Bool
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time

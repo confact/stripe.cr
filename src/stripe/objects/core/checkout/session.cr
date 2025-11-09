@@ -38,6 +38,12 @@ class Stripe::Checkout::Session
     Donate
   end
 
+  enum Status
+    Open
+    Complete
+    Expired
+  end
+
   getter id : String
   getter object : String? = "checkout.session"
 
@@ -83,6 +89,45 @@ class Stripe::Checkout::Session
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::SubmitType))]
   getter submit_type : SubmitType?
+
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::Status))]
+  getter status : Status?
+
+  # Newer fields
+  @[JSON::Field(converter: Time::EpochConverter)]
+  getter created : Time?
+
+  getter url : String?
+
+  getter phone_number_collection : Hash(String, Bool)?
+  getter tax_id_collection : Hash(String, Bool)?
+  getter automatic_tax : Hash(String, String | Bool | Nil)?
+
+  getter payment_method_options : Hash(String, String | Bool | Int32 | Hash(String, String | Bool | Int32))?
+  getter payment_method_collection : String?
+  getter payment_method_configuration : String?
+  getter total_details : Hash(String, Int32)?
+
+  getter ui_mode : String?
+  getter return_url : String?
+  getter payment_link : String?
+
+  @[JSON::Field(converter: Time::EpochConverter)]
+  getter expires_at : Time?
+
+  getter invoice_creation : Hash(String, String | Bool | Hash(String, String | Bool))?
+  getter invoice : String? | Stripe::Invoice?
+  getter recovered_from : String?
+  getter customer_creation : String?
+  getter customer_details : Hash(String, Bool | String | Hash(String, String | Bool | Array(Hash(String, String))) | Array(Hash(String, String)) | Nil)?
+  getter consent : Hash(String, String | Bool | Nil)?
+  getter consent_collection : Hash(String, String | Bool | Nil)?
+  getter custom_fields : Array(Hash(String, String | Bool | Hash(String, String | Bool) | Array(Hash(String, String | Bool))))?
+  getter custom_text : Hash(String, String | Hash(String, String | Nil) | Nil)?
+  getter adaptive_pricing : Hash(String, String | Bool | Nil)?
+  getter shipping_cost : Hash(String, String | Int32 | Bool | Hash(String, String | Int32 | Bool))?
+  getter shipping_details : Hash(String, String | Hash(String, String | Hash(String, String)) | Nil)?
+  getter shipping_options : Array(Hash(String, String | Int32 | Bool | Hash(String, String | Int32 | Bool)))?
 
   getter subscription : String? | Stripe::Subscription?
 end

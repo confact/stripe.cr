@@ -27,6 +27,6 @@ class Stripe::Price
   getter billing_scheme : String?
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time
-  getter livemode : Bool
+  getter? livemode : Bool
   getter unit_amount_decimal : String?
 end

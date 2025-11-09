@@ -38,9 +38,9 @@ class Stripe::Payout
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time?
 
-  getter automatic : Bool
+  getter? automatic : Bool
 
-  getter livemode : Bool
+  getter? livemode : Bool
 
   getter failure_balance_transaction : String?
   getter failure_code : String?

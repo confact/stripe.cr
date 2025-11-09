@@ -11,10 +11,16 @@ class Stripe::Subscription
     trial_end : Time? = nil,
     expand : Array(String)? = nil
   ) : Subscription forall T, U
-    customer = customer.not_nil!.id if customer.is_a?(Customer)
+    if customer.is_a?(Customer)
+      customer = customer.id
+    end
 
-    default_source = default_source.not_nil!.id if default_source.is_a?(Token)
-    default_payment_method = default_payment_method.not_nil!.id if default_payment_method.is_a?(Token)
+    if default_source.is_a?(Token)
+      default_source = default_source.id
+    end
+    if default_payment_method.is_a?(Token)
+      default_payment_method = default_payment_method.id
+    end
 
     trial_end = trial_end.to_unix unless trial_end.nil?
 

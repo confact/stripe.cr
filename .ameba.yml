@@ -1,0 +1,6 @@
+Lint/UselessAssign:
+  Enabled: true
+  Excluded:
+    - src/stripe/objects/core/**/*.cr
+
+

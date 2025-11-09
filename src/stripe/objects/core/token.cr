@@ -16,9 +16,9 @@ class Stripe::Token
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time
-  getter livemode : Bool
+  getter? livemode : Bool
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Token::Type))]
   getter type : Type
-  getter used : Bool
+  getter? used : Bool
 end

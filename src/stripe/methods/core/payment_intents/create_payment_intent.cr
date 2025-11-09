@@ -23,7 +23,7 @@ class Stripe::PaymentIntent
     when String
       payment_method
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
-      payment_method = payment_method.not_nil!.id
+      payment_method = payment_method.id
     when Nil
       payment_method = nil
     end

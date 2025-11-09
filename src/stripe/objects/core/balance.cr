@@ -13,6 +13,6 @@ class Stripe::Balance
 
   getter available : Array(Funds)
   getter connect_reserved : Array(Funds)?
-  getter livemode : Bool
+  getter? livemode : Bool
   getter pending : Array(Funds)
 end

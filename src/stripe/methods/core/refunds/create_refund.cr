@@ -6,9 +6,13 @@ class Stripe::Refund
     payment_intent : String | Stripe::PaymentIntent? = nil,
     reason : String? = nil
   ) : Refund forall T, U
-    charge = charge.not_nil!.id if charge.is_a?(Stripe::Charge)
+    if charge.is_a?(Stripe::Charge)
+      charge = charge.id
+    end
 
-    payment_intent = payment_intent.not_nil!.id if payment_intent.is_a?(Stripe::PaymentIntent)
+    if payment_intent.is_a?(Stripe::PaymentIntent)
+      payment_intent = payment_intent.id
+    end
 
     io = IO::Memory.new
     builder = ParamsBuilder.new(io)

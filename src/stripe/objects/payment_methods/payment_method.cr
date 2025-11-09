@@ -20,7 +20,7 @@ class Stripe::PaymentMethod
   getter customer : String? | Stripe::Customer?
   getter description : String?
   getter type : String?
-  getter livemode : Bool
+  getter? livemode : Bool
 
   getter billing_details : BillingDetails?
 end

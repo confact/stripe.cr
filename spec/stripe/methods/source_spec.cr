@@ -11,7 +11,7 @@ describe Stripe::Source do
         email: "jenny.rosen@example.com",
       })
     source.id.should eq("src_1GU6ZMIfhoELGSZwMRGuGNbX")
-    source.owner.not_nil!.email.should eq("jenny.rosen@example.com")
+    source.owner.try(&.email).should eq("jenny.rosen@example.com")
   end
 
   it "retrieve source" do

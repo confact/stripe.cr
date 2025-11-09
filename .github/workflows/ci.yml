@@ -16,8 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         crystal_version:
-          - 1.5.0
-          - latest
+          - 1.16.0
         experimental: [false]
         include:
           - crystal_version: nightly

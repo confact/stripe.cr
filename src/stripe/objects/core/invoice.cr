@@ -40,9 +40,9 @@ class Stripe::Invoice
 
     getter invoice_item : String?
 
-    getter livemode : Bool
+    getter? livemode : Bool
 
-    getter proration : Bool
+    getter? proration : Bool
 
     getter metadata : Hash(String, String)?
 
@@ -70,8 +70,8 @@ class Stripe::Invoice
   getter amount_remaining : Int32?
   getter application_fee_amount : Int32?
   getter attempt_count : Int32
-  getter attempted : Bool
-  getter auto_advance : Bool
+  getter? attempted : Bool
+  getter? auto_advance : Bool
   getter billing : String?
   getter billing_reason : String?
   getter charge : String?
@@ -104,5 +104,5 @@ class Stripe::Invoice
   getter invoice_pdf : String?
   getter hosted_invoice_url : String?
 
-  getter livemode : Bool
+  getter? livemode : Bool
 end

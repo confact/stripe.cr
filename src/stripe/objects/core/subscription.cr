@@ -51,7 +51,7 @@ class Stripe::Subscription
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter cancel_at : Time?
-  getter cancel_at_period_end : Bool
+  getter? cancel_at_period_end : Bool
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter canceled_at : Time?

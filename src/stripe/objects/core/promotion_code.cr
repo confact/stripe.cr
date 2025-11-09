@@ -8,7 +8,7 @@ class Stripe::PromotionCode
   getter code : String
   getter coupon : Stripe::Coupon?
   getter metadata : Hash(String, String | Nil)?
-  getter active : Bool
+  getter? active : Bool
 
   @[JSON::Field(converter: Time::EpochConverter)]
   getter created : Time?
