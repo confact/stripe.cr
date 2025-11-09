@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.6
+### API additions
+- Checkout Sessions: add update, expire, and list line items endpoints.
+- New `Stripe::Checkout::LineItem` object.
+- Accounts/Account Links: enhancements and additional features (https://github.com/confact/stripe.cr/pull/67).
+
+### API changes
+- `Checkout::Session.create` parameters and `Checkout::Session` fields updated to align with the latest Stripe API.
+
+### Misc improvements
+- Update Checkout Session fixtures; add spec for listing session line items.
+- Crystal compatibility: `crystal: ">= 1.16.0"`, dev: `ameba ~> 1.6`.
+- PaymentMethods::BankAccount: add `Pending` status (#64).
+- CI: update GitHub Actions (checkout/cache/gh-pages) (#66–#70).
+
 ## v1.5
 
 ### API changes

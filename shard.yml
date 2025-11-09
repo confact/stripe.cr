@@ -1,6 +1,6 @@
 name: stripe
 description: A Stripe API wrapper for the Crystal language
-version: 1.5.0
+version: 1.6.0
 
 license: MIT
 
@@ -8,7 +8,7 @@ authors:
   - Vlad Faust <mail@vladfaust.com>
   - Håkan Nylén <hakan@dun.se>
 
-crystal: ">= 1.5.0"
+crystal: ">= 1.16.0"
 
 development_dependencies:
   webmock:
@@ -16,4 +16,4 @@ development_dependencies:
     branch: master
   ameba:
     github: crystal-ameba/ameba
-    version: 1.1
+    version: "~> 1.6"
