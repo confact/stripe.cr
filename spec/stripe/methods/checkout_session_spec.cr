@@ -24,4 +24,14 @@ describe Stripe::Checkout::Session do
     checkout_sessions = Stripe::Checkout::Session.list
     checkout_sessions.first.id.should eq("cs_test_Kkhdy5G3NRigIiMZr198DxpXUxirwrM1xFqGEt5zk5PH3AzDy7krza7g")
   end
+
+  it "lists checkout session line items" do
+    WebMock.stub(:get, "https://api.stripe.com/v1/checkout/sessions/cs_test_a1enSAC01IA3Ps2vL32mNoWKMCNmmfUGTeEeHXI5tLCvyFNGsdG2UNA7mr/line_items")
+      .to_return(status: 200, body: File.read("spec/support/list_checkout_session_line_items.json"), headers: {"Content-Type" => "application/json"})
+
+    items = Stripe::Checkout::Session.line_items("cs_test_a1enSAC01IA3Ps2vL32mNoWKMCNmmfUGTeEeHXI5tLCvyFNGsdG2UNA7mr")
+    items.first.id.should eq("li_1N4BEoLkdIwHu7ixWtXug1yk")
+    items.first.price.not_nil!.id.should eq("price_1N4AEsLkdIwHu7ix7Ssho8Cl")
+    items.first.quantity.should eq(2)
+  end
 end
