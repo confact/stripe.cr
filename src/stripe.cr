@@ -8,6 +8,7 @@ class Stripe
 
   @@api_key : String?
   @@version : String?
+  @@client : HTTP::Client?
 
   BASE_URL = URI.parse("https://api.stripe.com")
 
@@ -28,26 +29,29 @@ class Stripe
   end
 
   def self.client : HTTP::Client
-    return @@client.not_nil! unless @@client.nil?
-
-    self.reset_client
-
-    @@client.not_nil!
+    if client = @@client
+      client
+    else
+      reset_client
+    end
   end
 
-  def self.reset_client
-    @@client = HTTP::Client.new(BASE_URL)
+  def self.reset_client : HTTP::Client
+    client = HTTP::Client.new(BASE_URL)
 
-    if !@@version.nil?
-      @@client.not_nil!.before_request do |request|
+    if version = @@version
+      client.before_request do |request|
         request.headers["Authorization"] = "Bearer #{@@api_key}"
-        request.headers["Stripe-Version"] = @@version.not_nil!
+        request.headers["Stripe-Version"] = version
       end
     else
-      @@client.not_nil!.before_request do |request|
+      client.before_request do |request|
         request.headers["Authorization"] = "Bearer #{@@api_key}"
       end
     end
+
+    @@client = client
+    client
   end
 end
 

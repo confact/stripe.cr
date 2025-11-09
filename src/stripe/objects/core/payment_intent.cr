@@ -30,7 +30,7 @@ class Stripe::PaymentIntent
   getter customer : String?
   getter client_secret : String?
   getter description : String?
-  getter livemode : Bool
+  getter? livemode : Bool
   getter last_setup_error : Hash(String, String | PaymentMethods::Card | PaymentMethods::BankAccount)?
   getter metadata : Hash(String, String)?
   getter payment_method_types : Array(String)?

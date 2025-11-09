@@ -20,7 +20,7 @@ class Stripe::Charge
 
     case source
     when Token, PaymentMethods::Card, PaymentMethods::BankAccount
-      source = source.not_nil!.id
+      source = source.id
     when Nil
       source = nil
     end

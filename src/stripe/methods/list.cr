@@ -3,7 +3,7 @@ module StripeMethods
 
   macro add_list_method(*arguments)
 {% begin %}
-  def self.list({{*arguments}}) :  List({{@type.id}})
+  def self.list({{arguments.splat}}) :  List({{@type.id}})
   io = IO::Memory.new
   builder = ParamsBuilder.new(io)
 

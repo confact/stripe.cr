@@ -35,7 +35,7 @@ describe Stripe::Webhook do
     )
     event = Stripe::Webhook.construct_event(payload, header, secret)
 
-    {event.type, event.data.object.is_a?(Stripe::Checkout::Session), event.request.not_nil!.id}.should eq({"checkout.session.completed", true, "req_cILsoLL5w184zR"})
+    {event.type, event.data.object.is_a?(Stripe::Checkout::Session), event.request.try(&.id)}.should eq({"checkout.session.completed", true, "req_cILsoLL5w184zR"})
   end
   it "Raises on wrong secret" do
     timestamp = Time.utc

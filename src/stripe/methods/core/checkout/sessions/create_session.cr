@@ -10,20 +10,16 @@ class Stripe::Checkout::Session
     customer : String? | Stripe::Customer? = nil,
     customer_email : String? = nil,
     # Support both price and price_data styles
-    line_items : Array(
-      NamedTuple(quantity: Int32, price: String) |
-      NamedTuple(
-        quantity: Int32,
-        price_data: NamedTuple(
-          currency: String,
-          product_data: NamedTuple(name: String)?,
-          unit_amount: Int32?,
-          unit_amount_decimal: String?,
-          recurring: NamedTuple(interval: String, interval_count: Int32?)?,
-          tax_behavior: String?
-        )
-      )
-    )? = nil,
+    line_items : Array(NamedTuple(quantity: Int32, price: String) |
+                       NamedTuple(
+      quantity: Int32,
+      price_data: NamedTuple(
+        currency: String,
+        product_data: NamedTuple(name: String)?,
+        unit_amount: Int32?,
+        unit_amount_decimal: String?,
+        recurring: NamedTuple(interval: String, interval_count: Int32?)?,
+        tax_behavior: String?)))? = nil,
     expand : Array(String)? = nil,
     subscription_data : NamedTuple(metadata: Hash(String, String)?)? = nil,
     allow_promotion_codes : Bool? = nil,
@@ -58,7 +54,9 @@ class Stripe::Checkout::Session
     # After expiration recovery
     after_expiration : NamedTuple? = nil
   ) : Stripe::Checkout::Session
-    customer = customer.not_nil!.id if customer.is_a?(Customer)
+    if customer.is_a?(Customer)
+      customer = customer.id
+    end
 
     expires_at_unix = expires_at.try &.to_unix
 
@@ -66,41 +64,41 @@ class Stripe::Checkout::Session
     builder = ParamsBuilder.new(io)
 
     {% for x in %w(
-      mode
-      payment_method_types
-      cancel_url
-      success_url
-      client_reference_id
-      customer
-      customer_email
-      line_items
-      expand
-      subscription_data
-      allow_promotion_codes
-      metadata
-      discounts
-      payment_intent_data
-      billing_address_collection
-      automatic_tax
-      phone_number_collection
-      shipping_address_collection
-      shipping_options
-      submit_type
-      tax_id_collection
-      ui_mode
-      return_url
-      redirect_on_completion
-      customer_update
-      customer_creation
-      invoice_creation
-      payment_method_collection
-      payment_method_configuration
-      payment_method_options
-      consent_collection
-      custom_fields
-      custom_text
-      after_expiration
-    ) %}
+                  mode
+                  payment_method_types
+                  cancel_url
+                  success_url
+                  client_reference_id
+                  customer
+                  customer_email
+                  line_items
+                  expand
+                  subscription_data
+                  allow_promotion_codes
+                  metadata
+                  discounts
+                  payment_intent_data
+                  billing_address_collection
+                  automatic_tax
+                  phone_number_collection
+                  shipping_address_collection
+                  shipping_options
+                  submit_type
+                  tax_id_collection
+                  ui_mode
+                  return_url
+                  redirect_on_completion
+                  customer_update
+                  customer_creation
+                  invoice_creation
+                  payment_method_collection
+                  payment_method_configuration
+                  payment_method_options
+                  consent_collection
+                  custom_fields
+                  custom_text
+                  after_expiration
+                ) %}
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 

@@ -15,5 +15,3 @@ class Stripe::Checkout::LineItem
   getter price : Stripe::Price?
   getter quantity : Int32?
 end
-
-

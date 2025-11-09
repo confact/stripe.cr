@@ -76,7 +76,7 @@ class Stripe::Webhook
       end
 
       expected_sig = compute_signature(timestamp: timestamp, payload: payload, secret: secret)
-      unless signatures.any? { |s| Crypto::Subtle.constant_time_compare(expected_sig, s) }
+      unless signatures.any? { |signature| Crypto::Subtle.constant_time_compare(expected_sig, signature) }
         raise SignatureVerificationError.new(
           "No signatures found matching the expected signature for payload" + [expected_sig, signatures].to_s,
           header: header, param: payload

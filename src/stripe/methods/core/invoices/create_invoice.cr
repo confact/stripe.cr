@@ -17,7 +17,7 @@ class Stripe::Invoice
 
     case default_payment_method
     when Token, PaymentMethods::Card
-      default_payment_method = default_payment_method.not_nil!.id
+      default_payment_method = default_payment_method.id
     when Nil
       default_payment_method = nil
     end

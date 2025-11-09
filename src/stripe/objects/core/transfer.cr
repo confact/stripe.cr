@@ -18,9 +18,9 @@ class Stripe::Transfer
   getter description : String?
   getter destination : String?
   getter destination_payment : String?
-  getter livemode : Bool
+  getter? livemode : Bool
   getter metadata : Hash(String, String)?
-  getter reversed : Bool
+  getter? reversed : Bool
   getter source_transaction : String?
   getter source_type : String?
   getter transfer_group : String?

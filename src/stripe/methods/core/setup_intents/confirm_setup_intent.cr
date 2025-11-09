@@ -7,7 +7,7 @@ class Stripe::SetupIntent
     intent = intent.as(SetupIntent).id if intent.is_a?(SetupIntent)
 
     if payment_method.is_a?(Token | PaymentMethods::Card | PaymentMethods::BankAccount)
-      payment_method = payment_method.not_nil!.id
+      payment_method = payment_method.id
     end
 
     io = IO::Memory.new

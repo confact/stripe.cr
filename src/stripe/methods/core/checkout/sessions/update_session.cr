@@ -22,5 +22,3 @@ class Stripe::Checkout::Session
     end
   end
 end
-
-

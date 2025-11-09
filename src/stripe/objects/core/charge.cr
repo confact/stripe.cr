@@ -111,7 +111,7 @@ class Stripe::Charge
   getter failure_message : String?
   getter fraud_details : FraudDetails?
   getter invoice : String? | Stripe::Invoice?
-  getter livemode : Bool
+  getter? livemode : Bool
   getter metadata : Hash(String, String)?
   getter on_behalf_of : String? | Stripe::Account?
   getter order : String? # | Stripe::Order
@@ -121,7 +121,7 @@ class Stripe::Charge
   getter receipt_email : String?
   getter receipt_url : String?
   getter receipt_number : String?
-  getter refunded : Bool
+  getter? refunded : Bool
   getter refunds : List(Refund)
   getter review : String?
   getter shipping : Shipping?

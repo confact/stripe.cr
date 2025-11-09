@@ -122,7 +122,7 @@ class Stripe::Checkout::Session
   getter customer_details : Hash(String, Bool | String | Hash(String, String | Bool | Array(Hash(String, String))) | Array(Hash(String, String)) | Nil)?
   getter consent : Hash(String, String | Bool | Nil)?
   getter consent_collection : Hash(String, String | Bool | Nil)?
-  getter custom_fields : Array(Hash(String, String | Bool | Hash(String, String | Bool) | Array(Hash(String, String | Bool))) )?
+  getter custom_fields : Array(Hash(String, String | Bool | Hash(String, String | Bool) | Array(Hash(String, String | Bool))))?
   getter custom_text : Hash(String, String | Hash(String, String | Nil) | Nil)?
   getter adaptive_pricing : Hash(String, String | Bool | Nil)?
   getter shipping_cost : Hash(String, String | Int32 | Bool | Hash(String, String | Int32 | Bool))?

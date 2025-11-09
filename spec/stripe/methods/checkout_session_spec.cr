@@ -31,7 +31,7 @@ describe Stripe::Checkout::Session do
 
     items = Stripe::Checkout::Session.line_items("cs_test_a1enSAC01IA3Ps2vL32mNoWKMCNmmfUGTeEeHXI5tLCvyFNGsdG2UNA7mr")
     items.first.id.should eq("li_1N4BEoLkdIwHu7ixWtXug1yk")
-    items.first.price.not_nil!.id.should eq("price_1N4AEsLkdIwHu7ix7Ssho8Cl")
+    items.first.price.try(&.id).should eq("price_1N4AEsLkdIwHu7ix7Ssho8Cl")
     items.first.quantity.should eq(2)
   end
 end
