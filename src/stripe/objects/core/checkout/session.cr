@@ -5,6 +5,29 @@ class Stripe::Checkout::Session
   include JSON::Serializable
   include StripeMethods
 
+  # Nested structures for customer_details
+  class CustomerAddress
+    include JSON::Serializable
+
+    getter city : String?
+    getter country : String?
+    getter line1 : String?
+    getter line2 : String?
+    getter postal_code : String?
+    getter state : String?
+  end
+
+  class CustomerDetails
+    include JSON::Serializable
+    
+    getter address : CustomerAddress?
+    getter email : String?
+    getter name : String?
+    getter phone : String?
+    getter tax_exempt : String?
+    getter tax_ids : Array(String)?
+  end
+
   add_retrieve_method
   add_list_method(
     payment_intent : String? | Stripe::PaymentIntent? = nil,
@@ -38,6 +61,22 @@ class Stripe::Checkout::Session
     Donate
   end
 
+  enum CustomerCreation
+    Always
+    IfRequired
+  end
+
+  enum Status
+    Complete
+    Expired
+    Open
+  end
+
+  enum UIMode
+    Hosted
+    Embedded
+  end
+
   getter id : String
   getter object : String? = "checkout.session"
 
@@ -51,6 +90,47 @@ class Stripe::Checkout::Session
   getter client_reference_id : String?
   getter customer : String? | Stripe::Customer?
   getter customer_email : String?
+
+  # New fields from API response
+  getter adaptive_pricing : Hash(String, Bool)?
+  getter after_expiration : Hash(String, JSON::Any)?
+  getter automatic_tax : Hash(String, Bool | String?)?
+  getter client_secret : String?
+  getter collected_information : Hash(String, JSON::Any)?
+  getter consent : Hash(String, JSON::Any)?
+  getter consent_collection : Hash(String, JSON::Any)?
+  getter created : Int64?
+  getter currency_conversion : Hash(String, JSON::Any)?
+  getter custom_fields : Array(Hash(String, JSON::Any))?
+  getter custom_text : Hash(String, String?)?
+  
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::CustomerCreation))]
+  getter customer_creation : CustomerCreation?
+  getter customer_details : CustomerDetails?
+  getter discounts : Array(Hash(String, JSON::Any))?
+  getter expires_at : Int64?
+  getter invoice : String? | Stripe::Invoice?
+  getter invoice_creation : Hash(String, JSON::Any)?
+  getter locale : String?
+  getter origin_context : Hash(String, JSON::Any)?
+  getter payment_link : String?
+  getter payment_method_collection : String?
+  getter payment_method_configuration_details : Hash(String, JSON::Any)?
+  getter payment_method_options : Hash(String, Hash(String, String))?
+  getter permissions : Hash(String, JSON::Any)?
+  getter phone_number_collection : Hash(String, Bool)?
+  getter recovered_from : String?
+  getter saved_payment_method_options : Hash(String, Array(String) | String?)?
+  getter shipping_cost : Hash(String, JSON::Any)?
+  getter shipping_options : Array(Hash(String, JSON::Any))?
+  
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::Status))]
+  getter status : Status?
+  getter total_details : Hash(String, Int32)?
+  
+  @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::UIMode))]
+  getter ui_mode : UIMode?
+  getter wallet_options : Hash(String, JSON::Any)?
 
   getter line_items : Array(Hash(String, String | Int32))?
 
@@ -84,5 +164,5 @@ class Stripe::Checkout::Session
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Checkout::Session::SubmitType))]
   getter submit_type : SubmitType?
 
-  getter subscription : String? | Stripe::Subscription?
+  getter url : String?
 end
