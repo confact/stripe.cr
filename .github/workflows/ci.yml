@@ -37,7 +37,7 @@ jobs:
         if: matrix.crystal_version == 'latest'
 
       - name: Set up Crystal cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: crystal-cache
         with:
           path: |
